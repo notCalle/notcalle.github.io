@@ -12,7 +12,7 @@ email: calle+blog@discord.bofh.se
 description: > # this means to ignore newlines until "baseurl:"
   Random development ramblings, maybe.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://notcalle.github.io" # the base hostname & protocol for your site
+url: "http://blog.discord.bofh.se" # the base hostname & protocol for your site
 twitter_username: notcalle
 github_username:  notcalle
 
