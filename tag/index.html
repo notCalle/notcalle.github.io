@@ -1,0 +1,7 @@
+---
+layout: page
+title: Tags
+---
+{% for tag in site.tags %}
+<h2><a href="{{ tag | first }}/">{{ tag | first }}</a></h2></li>
+{% endfor %}

@@ -1,0 +1,37 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: not://files v3.0
+author: Calle Englund
+email: calle+blog@discord.bofh.se
+description: > # this means to ignore newlines until "baseurl:"
+  Random development ramblings, maybe.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://notcalle.github.io" # the base hostname & protocol for your site
+twitter_username: notcalle
+github_username:  notcalle
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      permalink: "/:year/:month/:day/:title/"
+  - scope:
+      path: "tag"
+    values:
+      layout: "tag"
+  - scope:
+      path: "category"
+    values:
+      layout: "category"
+
+# Build settings
+markdown: kramdown

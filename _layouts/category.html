@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <h1 class="page-heading">Posts in {{ page.title }}</h1>
+
+  <ul class="post-list">
+    {% for post in site.categories[page.category] %}
+      {% include post-item.html post=post %}
+    {% endfor %}
+  </ul>
+</div>

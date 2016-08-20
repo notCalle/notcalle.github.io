@@ -1,0 +1,13 @@
+<li>
+  <span class="post-meta">
+    {{ include.post.date | date: "%A, %Y-%m-%d" }}
+    {% if include.post.author %} • {{ include.post.author }} {% endif %}
+    {% if include.post.categories %} in
+      {% for category in include.post.categories %} 
+        <a href="/category/{{ category }}">{{ category }}</a>{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    {% endif %}
+  </span>
+  <div><a class="post-link" href="{{ include.post.url | prepend: site.baseurl }}">{{ include.post.title }}</a></div>
+  <div><i>{{ include.post.excerpt | strip_html | strip_newlines | truncate: 80 }}</i></div>
+</li>
