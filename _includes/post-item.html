@@ -8,7 +8,12 @@
       {% endfor %}
     {% endif %}
   </span>
-  <div><a class="post-link" href="{{ include.post.url | prepend: site.baseurl }}" >{{ include.post.title }}</a></div>
+  <div>
+    <a class="post-link" href="{{ include.post.url | prepend: site.baseurl }}" >
+      {% if include.post.path contains "_drafts/" %} [DRAFT] {% endif %}
+      {{ include.post.title }}
+    </a>
+  </div>
   <div><i>{{ include.post.excerpt | strip_html | strip_newlines | truncate: 80 }}</i></div>
   <a href="{{ include.post.url | prepend: site.baseurl }}#disqus_thread" data-disqus-identifier="{{ include.post.id }}">No comments</a>
 </li>
