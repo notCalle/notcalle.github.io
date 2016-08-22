@@ -51,6 +51,7 @@ paginate_path: "/page:num"
 # Plugins
 gems:
   - jekyll-redirect-from
+  - jekyll-gist
   - jekyll-seo-tag
   - jekyll-paginate
   - jekyll-feed
