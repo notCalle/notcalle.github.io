@@ -4,12 +4,36 @@ layout: index
 
 <div class="home">
 
-  <h1 class="page-heading">Most recent posts</h1>
+  <h1 class="page-heading">
+    {% if paginator.page == 1 %}
+      Most recent posts
+    {% else %}
+      Posts page {{ paginator.page }} of {{ paginator.total_pages }}
+    {% endif %}
+  </h1>
 
   <ul class="post-list">
-    {% for post in site.posts limit:10 %}
+    {% for post in paginator.posts %}
       {% include post-item.html post=post %}
     {% endfor %}
   </ul>
+  
+  <div class="pagination">
+    {% if paginator.previous_page %}
+      <a href="{{ site.base_url }}/" class="paginator">⏮</a>
+      <a href="{{ paginator.previous_page_path }}" class="paginator">⏪</a>
+    {% else %}
+      <span class="paginator">⏮</span>
+      <span class="paginator">⏪</span>
+    {% endif %}
+    <span class="page_number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+    {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path }}" class="paginator">⏩</a>
+      <a href="{{ site.base_url }}/page{{ paginator.total_pages }}/" class="paginator">⏭</a>
+    {% else %}
+      <span class="paginator">⏩</span>
+      <span class="paginator">⏭</span>
+    {% endif %}
+  </div>
 
 </div>
