@@ -2,6 +2,9 @@
 layout: post
 title: XCode build number from git
 category: devlog
+tags:
+- xcode
+- objc
 ---
 {% gist notCalle/af53a0b3ccac6123c8a2d2337a48dc6a %}
 
