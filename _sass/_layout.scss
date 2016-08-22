@@ -3,7 +3,6 @@
  */
 .site-header {
   background: $grey-color-light;
-    border-top: 5px solid $brand-color;
     border-bottom: 1px solid $brand-color;
     min-height: 56px;
 
@@ -185,6 +184,11 @@
     > li {
         margin-bottom: $spacing-unit;
     }
+}
+
+.post-item {
+  border: 1px solid $background-color;
+  &:hover { border: 1px solid $grey-color-light; }    
 }
 
 .post-meta {
