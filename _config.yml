@@ -47,6 +47,8 @@ exclude:
   - CNAME
 paginate: 5
 paginate_path: "/page:num"
+gist:
+  noscript: false
 
 # Plugins
 gems:
