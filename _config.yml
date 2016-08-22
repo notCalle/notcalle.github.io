@@ -53,6 +53,7 @@ gist:
 # Plugins
 gems:
   - jekyll-redirect-from
+  - jemoji
   - jekyll-gist
   - jekyll-seo-tag
   - jekyll-paginate
