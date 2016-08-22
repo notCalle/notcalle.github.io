@@ -20,19 +20,19 @@ layout: index
   
   <div class="pagination">
     {% if paginator.previous_page %}
-      <a href="{{ site.base_url }}/" class="paginator">⏮</a>
-      <a href="{{ paginator.previous_page_path }}" class="paginator">⏪</a>
+      <a href="{{ site.base_url }}/" class="paginator">Newest</a>
+      <a href="{{ paginator.previous_page_path }}" class="paginator">Newer</a>
     {% else %}
-      <span class="paginator">⏮</span>
-      <span class="paginator">⏪</span>
+      <span class="paginator">Newest</span>
+      <span class="paginator">Newer</span>
     {% endif %}
     <span class="page_number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
     {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path }}" class="paginator">⏩</a>
-      <a href="{{ site.base_url }}/page{{ paginator.total_pages }}/" class="paginator">⏭</a>
+      <a href="{{ paginator.next_page_path }}" class="paginator">Older</a>
+      <a href="{{ site.base_url }}/page{{ paginator.total_pages }}/" class="paginator">Oldest</a>
     {% else %}
-      <span class="paginator">⏩</span>
-      <span class="paginator">⏭</span>
+      <span class="paginator">Older</span>
+      <span class="paginator">Oldest</span>
     {% endif %}
   </div>
 
