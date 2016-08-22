@@ -5,4 +5,4 @@ layout: category
 ---
 # Development Log
 
-Post about software development.
+Random notes and ramblings, maybe about software development.
