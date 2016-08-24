@@ -3,37 +3,15 @@ layout: index
 ---
 
 <div class="home">
-
-  <h1 class="page-heading">
-    {% if paginator.page == 1 %}
-      Most recent posts
-    {% else %}
-      Posts page {{ paginator.page }} of {{ paginator.total_pages }}
-    {% endif %}
-  </h1>
-
   <ul class="post-list">
-    {% for post in paginator.posts %}
-      {% include post-item.html post=post %}
+    {% assign first_post=site.posts[0] %}
+    {% include post-content.html post=first_post %}
+
+    <li><h2>Other recent posts</h2></li>
+    
+    {% for post in site.related_posts %}
+      {% include post-excerpt.html post=post %}
     {% endfor %}
   </ul>
   
-  <div class="pagination">
-    {% if paginator.previous_page %}
-      <a href="{{ site.base_url }}/">Newest</a> |
-      <a href="{{ paginator.previous_page_path }}">Newer</a> |
-    {% else %}
-      <span>Newest</span> |
-      <span>Newer</span> |
-    {% endif %}
-    <span>Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
-    {% if paginator.next_page %}
-      | <a href="{{ paginator.next_page_path }}">Older</a>
-      | <a href="{{ site.base_url }}/page{{ paginator.total_pages }}/">Oldest</a>
-    {% else %}
-      | <span>Older</span>
-      | <span>Oldest</span>
-    {% endif %}
-  </div>
-
 </div>

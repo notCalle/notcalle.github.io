@@ -1,0 +1,21 @@
+<li class="post-item">
+  <div class="post-header">
+    <h1 class="post-title">
+      <a href="{{ include.post.url | prepend: site.baseurl }}" >
+        {% if include.post.path contains "_drafts/" %} [DRAFT] {% endif %}
+        {{ include.post.title }}
+      </a>
+    </h1>
+  </div>
+  <div class="post-content">
+    {{ include.post.content }}
+  </div>
+  <div class="post-meta">
+    {{ include.post.date | date: "%A, %Y-%m-%d" }}
+    {% if include.post.author %} • {{ include.post.author }} {% endif %}
+    {% include cat-tag.html post=include.post %}
+  </div>
+  <div class="post-meta">
+    <a href="{{ include.post.url | prepend: site.baseurl }}#disqus_thread" data-disqus-identifier="{{ include.post.id }}">No comments</a>
+  </div>
+</li>
