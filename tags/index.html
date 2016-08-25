@@ -11,8 +11,9 @@ title: Tags
   <details id="tag-{{ tag_name }}">
     <summary>
       <a name="{{ tag_name }}/" title="{{ tag_meta.title }}">#{{ tag_name }}</a>
-      <span class="post-meta">({{ tag_posts.size }}) — {{ tag_meta.description }}</span>
+      <span class="tag-meta">({{ tag_posts.size }})</span>
     </summary>
+    <span class="tag-meta">{{ tag_meta.description }}</span>
     <ul class="post-title-list">
       {% for post in tag_posts %}
         {% include post-title.html post=post %}
