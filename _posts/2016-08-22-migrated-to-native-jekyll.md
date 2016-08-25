@@ -1,4 +1,5 @@
 ---
+date: 2016-08-22T18:11:37+02:00
 layout: post
 title: Migrated to native Jekyll
 category: discord

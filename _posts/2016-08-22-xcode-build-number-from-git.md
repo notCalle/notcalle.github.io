@@ -1,4 +1,5 @@
 ---
+date: 2016-08-22T23:44:14+02:00
 layout: post
 title: XCode build number from git
 category: devlog
