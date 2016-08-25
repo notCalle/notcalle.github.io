@@ -1,0 +1,35 @@
+---
+layout: page
+title: Tags
+---
+{% assign tags=(site.tags|sort:0) %}
+{% for tag in tags %}
+  {% assign tag_name=tag[0] %}
+  {% assign tag_posts=tag[1] %}
+  {% assign tag_meta=site.data.tags[tag_name] %}
+
+  <details id="tag-{{ tag_name }}">
+    <summary>
+      <a name="{{ tag_name }}/" title="{{ tag_meta.title }}">#{{ tag_name }}</a>
+      <span class="post-meta">({{ tag_posts.size }}) — {{ tag_meta.description }}</span>
+    </summary>
+    <ul class="post-title-list">
+      {% for post in tag_posts %}
+        {% include post-title.html post=post %}
+      {% endfor %}
+    </ul>
+  </details>
+{% endfor %}
+
+<script type="text/javascript">
+(function () {
+  if (window.location.hash != "") {
+    var tagId = "tag-" + window.location.hash.slice(1);
+    var tagObject = document.getElementById(tagId);
+    var attribute = document.createAttribute("open");
+    attribute.value = "open";
+
+    tagObject.setAttributeNode(attribute);
+  }
+})();
+</script>

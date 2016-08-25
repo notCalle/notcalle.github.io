@@ -4,7 +4,7 @@
   {% endfor %}
 {% endif %}
 {% if include.post.tags.size > 0 %} about
-  {% for tag in include.post.tags %} 
-    <a href="/tag/{{ tag }}">{{ tag }}</a>{% unless forloop.last %},{% endunless %}
+  {% for tag in include.post.tags %}
+    <a href="/tags#{{ tag }}" title="{{ site.data.tags[tag].title }}">#{{ tag }}</a>{% unless forloop.last %},{% endunless %}
   {% endfor %}
 {% endif %}

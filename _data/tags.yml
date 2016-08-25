@@ -1,0 +1,39 @@
+devember:
+  title: Devember
+  description: 'About participation in <a href="http://devember.org">Devember</a>.'
+devember2015:
+  title: Devember 2015
+  description: 'About participation in <a href="http://devember.org">Devember</a> 2015.'
+gamedev:
+  title: Game Development
+  description: 'About (video) game development.'
+hourofcode:
+  title: Hour of Code
+  description: 'About coding for one hour per day.'
+isometric:
+  title: Isometric
+  description: 'About isometric perspective.'
+objc:
+  title: Objective C
+  description: 'About developement in Objective C.'
+opengameart:
+  title: OpenGameArt.Org
+  description: 'About using assets from <a href="http://opengameart.org">OpenGameArt.Org</a>.'
+pathfinding:
+  title: Pathfinding
+  description: 'About finding paths in graphs.'
+roguelike:
+  title: Rogue Like
+  description: 'About things vaguely resembling <a href="https://en.wikipedia.org/wiki/Roguelike">Rogue</a>.'
+ruby:
+  title: Ruby
+  description: 'About development in <a href="http://www.ruby-lang.org/">Ruby</a>.'
+spritekit:
+  title: SpriteKit
+  description: 'About using <a href="https://developer.apple.com/spritekit/">SpriteKit</a>.'
+swift:
+  title: Swift
+  description: 'About development in <a href="https://swift.org">Swift</a>.'
+xcode:
+  title: XCode
+  description: 'About using <a href="https://developer.apple.com/xcode/">XCode</a> for development.'
