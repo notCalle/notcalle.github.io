@@ -1,12 +1,12 @@
 devember:
   title: Devember
-  description: 'About participation in <a href="http://devember.org">Devember</a>.'
+  description: 'About participation in <a href="https://devember.org">Devember</a>.'
 devember2015:
   title: Devember 2015
-  description: 'About participation in <a href="http://devember.org">Devember</a> 2015.'
+  description: 'About my <a href="https://devember.org">Devember</a> 2015 <a href="https://github.com/notCalle/Devember2015/">project</a>.'
 devember2016:
   title: Devember 2016
-  description: 'About participation in <a href="http://devember.org">Devember</a> 2016.'
+  description: 'About my <a href="https://devember.org">Devember</a> 2016 <a href="https://github.com/notCalle/Devember2016/">project</a>.'
 gamedev:
   title: Game Development
   description: 'About (video) game development.'
