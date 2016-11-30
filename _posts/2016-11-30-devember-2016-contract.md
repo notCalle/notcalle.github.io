@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Devember 2016 Contract
+category: devlog
 tags:
 - devember
 - devember2016
