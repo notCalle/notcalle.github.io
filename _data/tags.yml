@@ -4,6 +4,9 @@ devember:
 devember2015:
   title: Devember 2015
   description: 'About participation in <a href="http://devember.org">Devember</a> 2015.'
+devember2016:
+  title: Devember 2016
+  description: 'About participation in <a href="http://devember.org">Devember</a> 2016.'
 gamedev:
   title: Game Development
   description: 'About (video) game development.'
