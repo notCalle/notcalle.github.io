@@ -51,7 +51,7 @@ gist:
   noscript: false
 
 # Plugins
-gems:
+plugins:
   - jekyll-redirect-from
   - jemoji
   - jekyll-gist
