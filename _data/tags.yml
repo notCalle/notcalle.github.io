@@ -7,6 +7,9 @@ devember2015:
 devember2016:
   title: Devember 2016
   description: 'About my <a href="https://devember.org">Devember</a> 2016 <a href="https://github.com/notCalle/Devember2016/">project</a>.'
+devember2018:
+  title: Devember 2018
+  description: 'About my <a href="https://devember.org">Devember</a> 2018 <a href="https://github.com/notCalle/glistening_ruby/">project</a>.'
 gamedev:
   title: Game Development
   description: 'About (video) game development.'
