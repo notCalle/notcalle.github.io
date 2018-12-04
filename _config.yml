@@ -60,3 +60,7 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
 
+# Jekyll Compose
+jekyll_compose:
+  auto_open: true
+
