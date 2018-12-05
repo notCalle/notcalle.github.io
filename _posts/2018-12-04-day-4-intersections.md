@@ -9,7 +9,9 @@ tags:
 title: Day 4, Intersections
 date: '2018-12-04T23:34:42+01:00'
 ---
-More math heavy stuff, calculating the positions along a ray, where it intersects a sphere. Turns out this is as simple as solving a quadratic equation, with some special coefficients. I'll need to come back and edit this with some formulae when I've befriended MathJax.
+More math heavy stuff, calculating the positions along a ray, where it intersects a sphere. Turns out this is as simple as solving a quadratic equation, with some special coefficients.
+
+$$\|\dot{O} + t\overrightarrow{D} - \dot{C}\|^2 = R^2$$
 
 ```ruby
 def intersect(ray)
