@@ -193,10 +193,11 @@
 
 .post-item {
   border: 1px solid $background-color;
-  &:hover { border: 1px solid $grey-color-light; }    
+  &:hover { border: 1px solid $grey-color-light; }
 }
 
 .post-meta {
+    clear: both;
     font-size: $small-font-size;
     color: $grey-color;
 }
@@ -255,5 +256,24 @@ div.post-link {
         @include media-query($on-laptop) {
             font-size: 18px;
         }
+    }
+
+    .clear {
+        clear: both;
+        margin: 0px;
+    }
+
+    .right {
+        clear: right;
+        float: right;
+        margin-left: 0.5em;
+        margin-bottom: 0.5em;
+    }
+
+    .left {
+        clear: left;
+        float: left;
+        margin-right: 0.5em;
+        margin-bottom: 0.5em;
     }
 }
