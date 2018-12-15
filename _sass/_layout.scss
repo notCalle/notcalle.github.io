@@ -276,4 +276,10 @@ div.post-link {
         margin-right: 0.5em;
         margin-bottom: 0.5em;
     }
+
+    @include media-query($on-palm) {
+       .left .right {
+           float: none;
+       }
+   }
 }
