@@ -1,45 +1,84 @@
+%YAML 1.1
+---
+adhd:
+  title: invisible challenges in a neurotypical world
+
+algebra:
+  title: applications of linear algebra (for computer graphics)
+
+
+celebration:
+  title: it was worth to celebrate at the time, perhaps?
+
 devember:
-  title: Devember
-  description: 'About participation in <a href="https://devember.org">Devember</a>.'
+  title: participation in Devember
+  description:
+    participation in the yearly <a href="https://devember.org">Devember</a>
+    daily coding challenge.
+
 devember2015:
-  title: Devember 2015
-  description: 'About my <a href="https://devember.org">Devember</a> 2015 <a href="https://github.com/notCalle/Devember2015/">project</a>.'
+  title: Devember 2015 game project
+  description:
+    my <a href="https://devember.org">Devember</a> 2015
+    <a href="https://github.com/notCalle/Devember2015/">game project</a>.
+
 devember2016:
-  title: Devember 2016
-  description: 'About my <a href="https://devember.org">Devember</a> 2016 <a href="https://github.com/notCalle/Devember2016/">project</a>.'
+  title: Devember 2016 game project
+  description:
+    my <a href="https://devember.org">Devember</a> 2016
+    <a href="https://github.com/notCalle/Devember2016/">game project</a>.
+
 devember2018:
-  title: Devember 2018
-  description: 'About my <a href="https://devember.org">Devember</a> 2018 <a href="https://github.com/notCalle/glistening_ruby/">project</a>.'
+  title: Devember 2018 ray tracer challenge
+  description:
+    my <a href="https://devember.org">Devember</a> 2018
+    <a href="https://github.com/notCalle/glistening_ruby/">ray tracer project</a>
+
+devember2019:
+  title: Devember 2019 ray tracer
+  description:
+    my <a href="https://devember.org">Devember</a> 2019
+    <a href="https://github.com/notCalle/swift-raytrace.git">ray tracer project</a>
+
 gamedev:
-  title: Game Development
-  description: 'About (video) game development.'
+  title: (video) game development
+
 hourofcode:
-  title: Hour of Code
-  description: 'About coding for one hour per day.'
+  title: coding for one hour per day
+
 isometric:
-  title: Isometric
-  description: 'About isometric perspective.'
+  title: viewing a world in isometric perspective
+
 objc:
-  title: Objective C
-  description: 'About developement in Objective C.'
+  title: coding in Objective C
+
 opengameart:
-  title: OpenGameArt.Org
-  description: 'About using assets from <a href="http://opengameart.org">OpenGameArt.Org</a>.'
+  title: using open game art assets
+  description:
+    using assets from <a href="http://opengameart.org">OpenGameArt.Org</a>.
+
 pathfinding:
-  title: Pathfinding
-  description: 'About finding paths in graphs.'
+  title: finding paths through graphs
+  description:
+
 roguelike:
-  title: Rogue Like
-  description: 'About things vaguely resembling <a href="https://en.wikipedia.org/wiki/Roguelike">Rogue</a>.'
+  title: vaguely resemling Rogue
+  description:
+
 ruby:
-  title: Ruby
-  description: 'About development in <a href="http://www.ruby-lang.org/">Ruby</a>.'
+  title: coding in Ruby
+
 spritekit:
-  title: SpriteKit
-  description: 'About using <a href="https://developer.apple.com/spritekit/">SpriteKit</a>.'
+  title: making games with SpriteKit
+
 swift:
-  title: Swift
-  description: 'About development in <a href="https://swift.org">Swift</a>.'
+  title: coding in Swift
+
 xcode:
-  title: XCode
-  description: 'About using <a href="https://developer.apple.com/xcode/">XCode</a> for development.'
+  title: using XCode for appleOS development
+
+zig:
+  title: coding in Zig
+  description:
+    living on the edge, and `master` branch of an evolving programming language.
+...
