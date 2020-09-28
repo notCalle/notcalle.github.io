@@ -6,7 +6,7 @@
 
 
 // Our variables
-$base-font-family: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-family: "Avenir Next", sans-serif;
 $base-font-size:   16px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
@@ -15,12 +15,17 @@ $base-line-height: 1.5;
 $spacing-unit:     30px;
 
 $brand-color:      #F15A29;
-//$grey-color:       #908880;
+
 $grey-color:       desaturate($brand-color, 85%);
 $grey-color-light: lighten($grey-color, 30%);
 $grey-color-dark:  darken($grey-color, 30%);
-$text-color:       lighten($grey-color, 40%);
-$background-color: darken($grey-color, 45%);
+
+$background-color:          darken($grey-color, 45%);
+$background-color-light:    lighten($background-color, 1%);
+$background-color-dark:     darken($background-color, 1%);
+
+$text-color:        lighten($grey-color, 40%);
+$text-color-dark:   darken($text-color, 25%);
 
 // Width of the content area
 $content-width:    800px;

@@ -101,10 +101,6 @@ a {
     color: $brand-color;
     text-decoration: none;
 
-    &:visited {
-        color: darken($brand-color, 15%);
-    }
-
     &:hover {
         color: $text-color;
         text-decoration: underline;
@@ -117,11 +113,9 @@ a {
  * Blockquotes
  */
 blockquote {
-    color: $grey-color;
-    border-left: 4px solid $grey-color-dark;
+    color: $text-color-dark;
+    border-left: 2px solid $text-color-dark;
     padding-left: $spacing-unit / 2;
-    font-size: 18px;
-    letter-spacing: -1px;
     font-style: italic;
 
     > :last-child {
@@ -137,7 +131,7 @@ blockquote {
 pre,
 code {
     font-size: 15px;
-    border: 1px solid $grey-color-dark;
+    border: 1px solid darken($background-color, 10%);
     border-radius: 3px;
 //    background-color: $grey-color-dark;
 }

@@ -1,12 +1,12 @@
 <li class="post-item">
   <span class="post-meta">
+    {% if include.post.path contains "_drafts/" %} <strong>DRAFT</strong> {% endif %}
     {{ include.post.date | date: "%Y-%m-%d" }}
     {% if include.post.author %} • {{ include.post.author }} {% endif %}
     —
   </span>
   <span class="post-link">
     <a href="{{ include.post.url | prepend: site.baseurl }}" >
-      {% if include.post.path contains "_drafts/" %} [DRAFT] {% endif %}
       {{ include.post.title }}
     </a>
   </span>
