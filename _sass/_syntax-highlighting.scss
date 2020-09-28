@@ -5,7 +5,12 @@
     @extend %vertical-rhythm;
 }
 
-.highlight pre { background-color: #272822; }
+.highlight pre {
+    background-color: $background-color;
+    border: 1px solid $background-color-dark;
+    border-radius: 10px;
+}
+
 .highlight .hll { background-color: #272822; }
 .highlight .c { color: #75715e } /* Comment */
 .highlight .err { color: #960050; background-color: #1e0010 } /* Error */
