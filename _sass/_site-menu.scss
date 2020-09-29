@@ -24,11 +24,15 @@
         background-color: darken($brand-color, 5%);
         &:hover {
             background-color: $brand-color;
+
+            .page-link {
+                color: $text-color;
+            }
         }
     }
 
     .page-link {
-        color: $text-color;
+        color: $background-color;
     }
 
     @include media-query($on-palm) {
@@ -72,7 +76,7 @@
             padding-bottom: 5px;
         }
 
-        input:checked + .menu {
+        .menu-toggle:checked + .menu {
             display: block;
         }
 
@@ -87,9 +91,6 @@
 
         .page-link {
             color: $brand-color;
-            &:hover {
-                color: $text-color;
-            }
         }
     }
 }

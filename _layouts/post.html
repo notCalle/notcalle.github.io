@@ -9,11 +9,11 @@ layout: default
     </h1>
   </header>
 
-  <div class="post-content" itemprop="articleBody">
+  <section class="post-content" itemprop="articleBody">
     {{ content }}
-  </div>
+  </section>
 
-  <div class="post-meta">
+  <footer class="post-meta">
     {% if page.path contains "_drafts/" %} <strong>DRAFT</strong> {% endif %}
     <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
       {{ page.date | date: "%A, %Y-%m-%d" }}
@@ -21,6 +21,6 @@ layout: default
     {% if page.author %} by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}
 
     {% include cat-tag.html post=page %}
-  </div>
+  </footer>
 
 </article>
