@@ -4,46 +4,14 @@ layout: index
 
 <div class="home">
 
-  <div class="pagination">
-    {% if paginator.previous_page %}
-      <a href="{{ site.base_url }}/posts">Newest</a> |
-      <a href="{{ paginator.previous_page_path }}">Newer</a> |
-    {% else %}
-      <span>Newest</span> |
-      <span>Newer</span> |
-    {% endif %}
-    <span>Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
-    {% if paginator.next_page %}
-      | <a href="{{ paginator.next_page_path }}">Older</a>
-      | <a href="{{ site.base_url }}/posts/page{{ paginator.total_pages }}">Oldest</a>
-    {% else %}
-      | <span>Older</span>
-      | <span>Oldest</span>
-    {% endif %}
-  </div>
+  {% include post-pagination.html %}
 
   <ul class="post-list">
     {% for post in paginator.posts %}
       {% include post-excerpt.html post=post %}
     {% endfor %}
   </ul>
-  
-  <div class="pagination">
-    {% if paginator.previous_page %}
-      <a href="{{ site.base_url }}/posts">Newest</a> |
-      <a href="{{ paginator.previous_page_path }}">Newer</a> |
-    {% else %}
-      <span>Newest</span> |
-      <span>Newer</span> |
-    {% endif %}
-    <span>Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
-    {% if paginator.next_page %}
-      | <a href="{{ paginator.next_page_path }}">Older</a>
-      | <a href="{{ site.base_url }}/posts/page{{ paginator.total_pages }}">Oldest</a>
-    {% else %}
-      | <span>Older</span>
-      | <span>Oldest</span>
-    {% endif %}
-  </div>
+
+  {% include post-pagination.html %}
 
 </div>
