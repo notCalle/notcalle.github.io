@@ -7,20 +7,30 @@
 | 1 | < | 5 |_6_| 7 |
 | 1 | < | 5 | 6 |_7_|
 {% endcomment %}
-{% assign first_page = paginator.page | minus: 2 | at_least: 1 %}
-{% assign last_page = first_page | plus: 4 %}
+{% assign first_page = paginator.page | minus: 3 %}
+{% assign last_page = paginator.page | plus: 3 %}
 {% assign penultimate_page = paginator.total_pages | minus: 1 %}
 {% capture base_url %}{{ site.base_url }}/posts{% endcapture %}
+{% if first_page < 1 %}
+  {% assign first_page = 1 %}
+  {% assign last_page = first_page | plus: 6 | at_most: paginator.total_pages %}
+{% elsif last_page > paginator.total_pages %}
+  {% assign last_page = paginator.total_pages %}
+  {% assign first_page = last_page | minus: 6 | at_least: 1 %}
+{% endif %}
 <nav class="pagination" role="menubar">
   {% if first_page > 1 %}
     <a class="menu-item" href="{{ base_url }}">1</a>
-    {% assign last_page = last_page | minus: 1 %}
+    {% assign first_page = first_page | plus: 1 %}
   {% endif %}
 
   {% if first_page > 2 %}
     <a class="menu-item" href="{{ base_url }}/page{{ first_page }}">&lt;</a>
-    {% assign first_page = first_page | plus: 2 %}
-    {% assign last_page = last_page | minus: 1 %}
+    {% assign first_page = first_page | plus: 1 %}
+  {% endif %}
+
+  {% if last_page < paginator.total_pages %}
+    {% assign last_page = last_page | minus: 2 %}
   {% endif %}
 
   {% for page in (first_page .. last_page) %}
