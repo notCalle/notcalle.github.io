@@ -4,14 +4,27 @@ layout: index
 
 <div class="home">
   <ul class="post-list">
-    {% assign first_post=site.posts[0] %}
-    {% include post-content.html post=first_post %}
+    {% assign first_post = site.posts | first %}
+    <li>{% include post-content.html post=first_post %}</li>
 
-    <li><h2>Other recent posts</h2></li>
-    
-    {% for post in site.posts offset:1 limit:5 %}
+    {% assign rest_posts = site.posts | shift %}
+
+    {% assign posts = "" | split: "," %}
+    {% for post in rest_posts offset:1 %}
+      {% for tag in first_post.tags %}
+        {% if post.tags contains tag %}
+          {% assign posts = posts | push: post %}
+          {% break %}
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+
+    {% for post in posts limit:5 %}
+      {% if forloop.first %}
+        <li><h2>Related posts</h2></li>
+      {% endif %}
       {% include post-excerpt.html post=post %}
     {% endfor %}
+
   </ul>
-  
 </div>
