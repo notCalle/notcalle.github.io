@@ -8,9 +8,9 @@
     {{ include.post.excerpt | strip_html | strip_newlines }}
   </blockquote>
   <div class="post-meta">
-    {% if include.post.path contains "_drafts/" %} <strong>DRAFT</strong> {% endif %}
+    {%- if include.post.path contains "_drafts/" %} <strong>DRAFT</strong> {% endif -%}
     {{ include.post.date | date: "%A, %Y-%m-%d" }}
-    {% if include.post.author %} • {{ include.post.author }} {% endif %}
-    {% include cat-tag.html post=include.post %}
+    {%- if include.post.author %} • {{ include.post.author }} {% endif -%}
+    {%- include cat-tag.html post=include.post %}
   </div>
 </li>

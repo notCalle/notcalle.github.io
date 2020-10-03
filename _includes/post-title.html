@@ -1,13 +1,14 @@
+{%- assign post = include.post -%}
 <li class="post-item">
   <span class="post-meta">
-    {% if include.post.path contains "_drafts/" %} <strong>DRAFT</strong> {% endif %}
-    {{ include.post.date | date: "%Y-%m-%d" }}
-    {% if include.post.author %} • {{ include.post.author }} {% endif %}
+    {%- if post.path contains "_drafts/" %} <strong>DRAFT</strong> {% endif -%}
+    {{ post.date | date: "%Y-%m-%d" }}
+    {%- if post.author %} • {{ author }} {% endif %}
     —
   </span>
   <span class="post-link">
-    <a href="{{ include.post.url | prepend: site.baseurl }}" >
-      {{ include.post.title }}
+    <a href="{{ post.url | prepend: site.baseurl }}" >
+      {{ post.title }}
     </a>
   </span>
 </li>
