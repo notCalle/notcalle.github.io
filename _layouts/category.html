@@ -8,9 +8,9 @@ layout: index
 
   <h1 class="page-heading">Posts in {{ page.title }}</h1>
 
-      {% include post-excerpt.html post=post %}
   <ul class="post-title-list">
     {%- for post in site.categories[page.category] -%}
+      {% include post-title.html post=post %}
     {%- endfor -%}
   </ul>
 </div>
