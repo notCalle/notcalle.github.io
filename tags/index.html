@@ -2,37 +2,11 @@
 layout: page
 title: Tags
 ---
-{% assign tags=site.tags | sort %}
-
-{% for tag in tags %}
-  {% assign tag_name=tag[0] %}
-  {% assign tag_posts=tag[1] %}
-  {% assign tag_meta=site.data.tags[tag_name] %}
-
-  <details class="tag-item" id="tag-{{ tag_name }}">
-    <summary>
-      <a name="{{ tag_name }}/" title="{{ tag_meta.title }}">
-        #{{ tag_name }}
-      </a>
-      <span class="tag-meta">
-        ({{ tag_posts.size }})
-      </span>
-      <span class="tag-meta">
-        {{ tag_meta.title }}
-      </span>
-    </summary>
-
-    <div class="tag-meta">
-      {{ tag_meta.description }}
-    </div>
-
-    <ul class="post-title-list">
-      {% for post in tag_posts %}
-        {% include post-title.html post=post %}
-      {% endfor %}
-    </ul>
-  </details>
-{% endfor %}
+{%- assign sorted_tags = site.tags | sort -%}
+{%- for tag in sorted_tags -%}
+  {%- assign tag_name = tag[0] -%}
+  {%- include tag-item.html name=tag_name -%}
+{%- endfor -%}
 
 <script type="text/javascript">
 (function () {

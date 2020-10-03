@@ -1,0 +1,38 @@
+{%- assign name=include.name -%}
+{%- assign meta=site.data.tags[name] -%}
+{%- assign show_title = include.show_title | default(true) -%}
+{%- assign excluded_posts = include.excluded_posts | default(false) -%}
+
+{%- assign posts = "" | split: "," -%}
+{%- for post in site.tags[name] -%}
+  {%- if excluded_posts contains post %}{% continue %}{% endif -%}
+  {%- assign posts = posts | push: post -%}
+{%- endfor -%}
+
+{%- if posts.size > 0 %}
+  <details class="tag-item" id="tag-{{ name }}">
+    <summary>
+      <a name="{{ name }}" title="{{ meta.title }}">
+        #{{ name }}
+      </a>
+      <span class="tag-meta">
+        ({{ posts.size }})
+      </span>
+      {%- if (show_title) %}
+        <span class="tag-meta">
+          {{ meta.title }}
+        </span>
+      {% endif -%}
+    </summary>
+
+    <div class="tag-meta">
+      {{ meta.description }}
+    </div>
+
+    <ul class="post-title-list">
+      {%- for post in posts -%}
+        {%- include post-title.html post=post -%}
+      {%- endfor -%}
+    </ul>
+  </details>
+{%- endif -%}
