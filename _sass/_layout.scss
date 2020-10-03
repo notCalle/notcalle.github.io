@@ -240,12 +240,17 @@ div.post-link {
     .max25 { max-width: 25%; }
     .max50 { max-width: 50%; }
 
-   //  @include media-query($on-palm) {
-   //     .left .right {
-   //         float: none;
-   //     }
-   // }
+    @include media-query($on-palm) {
+        .left .right {
+           float: none;
+        }
+    }
 
+    .spoiler {
+        color: $background-color;
+        font-style: unset;
+        background-color: $background-color;
+    }
 }
 
 .footnotes {
