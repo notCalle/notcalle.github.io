@@ -5,7 +5,7 @@ name: Deploy not://files v3.0
 on:
   push:
     branches:
-      - master
+      - main
   schedule:
     - cron: "34 5 * * *"
 
