@@ -27,4 +27,6 @@ jobs:
 
       - name: Build & Deploy
         uses: davids/jekyll-deploy@main
+        env:
+          GH_PAGES_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ...
