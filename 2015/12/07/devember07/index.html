@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<html>
-
-  <head>
+<html><head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -31,11 +29,7 @@
 
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 </head>
-
-
-  <body>
-
-    <header class="site-header">
+<body><header class="site-header">
   <div class="wrapper">
     <a class="site-title" href="/">not://files v3.0</a><nav class="site-nav" id="site-navigation" aria-label="Menu">
   <label for="site-menu-toggle" class="menu-icon" aria-label="Menu">
@@ -202,9 +196,7 @@
 </nav>
 </div>
 </header>
-
-
-    <section class="page-content">
+<section class="page-content">
       <div class="wrapper">
         <div class="home">
   <ul class="post-list">
@@ -215,19 +207,8 @@
         devember 7th — actors walk on top of map tiles
       </a>
     </h1>
-  </header>
-
-  <section class="post-content" itemprop="articleBody">
-    <p>Refactored movement from Player* to new superclass ActorSpriteNode.</p>
-
-<p>Actors will now stand on top of map tiles (with the assumption that the top surface is the isometric bounding box for the tile). No more walking inside walls and such ghostly nonsense.</p>
-
-<p>Actors has a limited step height that they can reach when moving, and can’t move between tiles with greater height difference (as measured in base tile halfwidth). This should probably be replaced with an ActionPoint cost function of step height in the future.</p>
-
-  </section>
-
-  <footer class="post-meta"><time datetime="2015-12-07T20:37:58+00:00" itemprop="datePublished">Monday, 2015-12-07</time>
-     in
+    <div class="post-meta"><time datetime="2015-12-07T20:37:58+00:00" itemprop="datePublished">Monday, 2015-12-07</time>
+       in
     <a href="/category/devlog">devlog</a>
    about
     <a href="/tags/#gamedev" title="(video) game development">
@@ -250,18 +231,26 @@
   
     <a href="/tags/#isometric" title="viewing a world in isometric perspective">
       #isometric</a>
-  </footer>
+  </div>
+  </header>
+
+  <section class="post-content" itemprop="articleBody">
+    <p>Refactored movement from Player* to new superclass ActorSpriteNode.</p>
+
+<p>Actors will now stand on top of map tiles (with the assumption that the top surface is the isometric bounding box for the tile). No more walking inside walls and such ghostly nonsense.</p>
+
+<p>Actors has a limited step height that they can reach when moving, and can’t move between tiles with greater height difference (as measured in base tile halfwidth). This should probably be replaced with an ActionPoint cost function of step height in the future.</p>
+
+  </section>
 </article>
 </li><li><h2>Related posts</h2></li><li class="post-item">
-  <div class="post-link">
-    <a href="/2015/12/08/devember08/" >
-      devember 8th — randomized maps
-    </a>
-  </div>
-  <blockquote class="post-excerpt">
-    Refactored lots of tile related stuff, so the tile templates can hold more information than just a texture image name, e.g. the stepHeight for a tile, so we can have tiles that are not perfectly flat, but still be walkable and have actors positioned correctly.
-  </blockquote>
-  <div class="post-meta">Tuesday, 2015-12-08 in
+  <header class="post-header">
+    <div class="post-link">
+      <a href="/2015/12/08/devember08/" >
+        devember 8th — randomized maps
+      </a>
+    </div>
+    <div class="post-meta">Tuesday, 2015-12-08 in
     <a href="/category/devlog">devlog</a>
    about
     <a href="/tags/#gamedev" title="(video) game development">
@@ -288,18 +277,57 @@
     <a href="/tags/#opengameart" title="using open game art assets">
       #opengameart</a>
   
-  </div>
+    </div>
+  </header>
+  <blockquote class="post-excerpt">
+    Refactored lots of tile related stuff, so the tile templates can hold more information than just a texture image name, e.g. the stepHeight for a tile, so we can have tiles that are not perfectly flat, but still be walkable and have actors positioned correctly.
+  </blockquote>
 </li>
 <li class="post-item">
-  <div class="post-link">
-    <a href="/2015/12/06/devember06/" >
-      devember 6th
-    </a>
-  </div>
+  <header class="post-header">
+    <div class="post-link">
+      <a href="/2015/12/06/devember06/" >
+        devember 6th
+      </a>
+    </div>
+    <div class="post-meta">Sunday, 2015-12-06 in
+    <a href="/category/devlog">devlog</a>
+   about
+    <a href="/tags/#gamedev" title="(video) game development">
+      #gamedev</a>,
+  
+    <a href="/tags/#devember" title="participation in Devember">
+      #devember</a>,
+  
+    <a href="/tags/#devember2015" title="Devember 2015 game project">
+      #devember2015</a>,
+  
+    <a href="/tags/#hourofcode" title="coding for one hour per day">
+      #hourofcode</a>,
+  
+    <a href="/tags/#objc" title="coding in Objective C">
+      #objc</a>,
+  
+    <a href="/tags/#spritekit" title="making games with SpriteKit">
+      #spritekit</a>,
+  
+    <a href="/tags/#isometric" title="viewing a world in isometric perspective">
+      #isometric</a>
+  
+    </div>
+  </header>
   <blockquote class="post-excerpt">
     Lighting broke yesterday because initialization code was moved into the wrong place. Sigh. Now we have working scene lighting again.
   </blockquote>
-  <div class="post-meta">Sunday, 2015-12-06 in
+</li>
+<li class="post-item">
+  <header class="post-header">
+    <div class="post-link">
+      <a href="/2015/12/05/devember05/" >
+        devember 5th
+      </a>
+    </div>
+    <div class="post-meta">Saturday, 2015-12-05 in
     <a href="/category/devlog">devlog</a>
    about
     <a href="/tags/#gamedev" title="(video) game development">
@@ -323,18 +351,20 @@
     <a href="/tags/#isometric" title="viewing a world in isometric perspective">
       #isometric</a>
   
-  </div>
-</li>
-<li class="post-item">
-  <div class="post-link">
-    <a href="/2015/12/05/devember05/" >
-      devember 5th
-    </a>
-  </div>
+    </div>
+  </header>
   <blockquote class="post-excerpt">
     Coding on the train today. WASD movement and simple dynamic lighting.For some reason lighting broke when making more sane spritenode tree structure.
   </blockquote>
-  <div class="post-meta">Saturday, 2015-12-05 in
+</li>
+<li class="post-item">
+  <header class="post-header">
+    <div class="post-link">
+      <a href="/2015/12/04/devember04/" >
+        devember 4th
+      </a>
+    </div>
+    <div class="post-meta">Friday, 2015-12-04 in
     <a href="/category/devlog">devlog</a>
    about
     <a href="/tags/#gamedev" title="(video) game development">
@@ -358,18 +388,20 @@
     <a href="/tags/#isometric" title="viewing a world in isometric perspective">
       #isometric</a>
   
-  </div>
-</li>
-<li class="post-item">
-  <div class="post-link">
-    <a href="/2015/12/04/devember04/" >
-      devember 4th
-    </a>
-  </div>
+    </div>
+  </header>
   <blockquote class="post-excerpt">
     Support for layered sprites on base tiles, for dynamic objects being displayed on top of floor tiles. Click to teleport player sprite to a tile.
   </blockquote>
-  <div class="post-meta">Friday, 2015-12-04 in
+</li>
+<li class="post-item">
+  <header class="post-header">
+    <div class="post-link">
+      <a href="/2015/12/03/devember03/" >
+        devember 3rd
+      </a>
+    </div>
+    <div class="post-meta">Thursday, 2015-12-03 in
     <a href="/category/devlog">devlog</a>
    about
     <a href="/tags/#gamedev" title="(video) game development">
@@ -393,50 +425,17 @@
     <a href="/tags/#isometric" title="viewing a world in isometric perspective">
       #isometric</a>
   
-  </div>
-</li>
-<li class="post-item">
-  <div class="post-link">
-    <a href="/2015/12/03/devember03/" >
-      devember 3rd
-    </a>
-  </div>
+    </div>
+  </header>
   <blockquote class="post-excerpt">
     Isometric coordinate transforms between tile grid positions and screen space sorted out. We can now display a z-sorted grid of floor tiles on screen, and pick tiles in the grid via screen coordinates.
   </blockquote>
-  <div class="post-meta">Thursday, 2015-12-03 in
-    <a href="/category/devlog">devlog</a>
-   about
-    <a href="/tags/#gamedev" title="(video) game development">
-      #gamedev</a>,
-  
-    <a href="/tags/#devember" title="participation in Devember">
-      #devember</a>,
-  
-    <a href="/tags/#devember2015" title="Devember 2015 game project">
-      #devember2015</a>,
-  
-    <a href="/tags/#hourofcode" title="coding for one hour per day">
-      #hourofcode</a>,
-  
-    <a href="/tags/#objc" title="coding in Objective C">
-      #objc</a>,
-  
-    <a href="/tags/#spritekit" title="making games with SpriteKit">
-      #spritekit</a>,
-  
-    <a href="/tags/#isometric" title="viewing a world in isometric perspective">
-      #isometric</a>
-  
-  </div>
 </li>
 </ul>
 </div>
 
       </div>
-    </section>
-
-    <footer class="site-footer">
+    </section><footer class="site-footer">
 
   <div class="wrapper">
 
@@ -469,16 +468,13 @@
       </div>
 
       <div class="footer-col footer-col-3">
-        <p>Random development ramblings, maybe.
-</p>
+        Random development ramblings, maybe.
+
       </div>
     </div>
 
   </div>
 
 </footer>
-
-
-  </body>
-
+</body>
 </html>

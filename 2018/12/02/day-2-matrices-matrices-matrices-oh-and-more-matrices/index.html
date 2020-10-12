@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<html>
-
-  <head>
+<html><head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -31,11 +29,7 @@
 
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 </head>
-
-
-  <body>
-
-    <header class="site-header">
+<body><header class="site-header">
   <div class="wrapper">
     <a class="site-title" href="/">not://files v3.0</a><nav class="site-nav" id="site-navigation" aria-label="Menu">
   <label for="site-menu-toggle" class="menu-icon" aria-label="Menu">
@@ -202,9 +196,7 @@
 </nav>
 </div>
 </header>
-
-
-    <section class="page-content">
+<section class="page-content">
       <div class="wrapper">
         <div class="home">
   <ul class="post-list">
@@ -215,26 +207,8 @@
         Day 2, Matrices, matrices, matrices. Oh, and more matrices
       </a>
     </h1>
-  </header>
-
-  <section class="post-content" itemprop="articleBody">
-    <p>Today was spent on a heavy chunk of <a href="https://en.wikipedia.org/wiki/Linear_algebra">linear algebra</a>, matrices. This is the foundation for everything else, so time well spent reimplementing what’s already in the stdlib, just to refresh my math skills. If there are still days left of Devember when I’m finished, I’ll come back and replace all this with the stdlib implementation instead, hoping I’m somewhat close to the same API.</p>
-
-<p>The next natural step, was defining the different transformations needed for all vector space calculations, and also happened to be the next chapter in the book.</p>
-
-<p>Now we’re almost ready for some real action.</p>
-
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">p</span> <span class="o">=</span> <span class="no">Point</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
-<span class="no">T</span> <span class="o">=</span> <span class="n">identity</span><span class="p">.</span><span class="nf">rotate_x</span><span class="p">(</span><span class="mf">0.25</span><span class="p">)</span> <span class="c1"># We're counting rotation in units of τ</span>
-<span class="no">T</span> <span class="o">*</span> <span class="nb">p</span>
-<span class="o">=&gt;</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
-</code></pre></div></div>
-
-
-  </section>
-
-  <footer class="post-meta"><time datetime="2018-12-02T22:45:24+00:00" itemprop="datePublished">Sunday, 2018-12-02</time>
-     in
+    <div class="post-meta"><time datetime="2018-12-02T22:45:24+00:00" itemprop="datePublished">Sunday, 2018-12-02</time>
+       in
     <a href="/category/devlog">devlog</a>
    about
     <a href="/tags/#devember" title="participation in Devember">
@@ -254,18 +228,64 @@
   
     <a href="/tags/#tauism" title="">
       #tauism</a>
-  </footer>
+  </div>
+  </header>
+
+  <section class="post-content" itemprop="articleBody">
+    <p>Today was spent on a heavy chunk of <a href="https://en.wikipedia.org/wiki/Linear_algebra">linear algebra</a>, matrices. This is the foundation for everything else, so time well spent reimplementing what’s already in the stdlib, just to refresh my math skills. If there are still days left of Devember when I’m finished, I’ll come back and replace all this with the stdlib implementation instead, hoping I’m somewhat close to the same API.</p>
+
+<p>The next natural step, was defining the different transformations needed for all vector space calculations, and also happened to be the next chapter in the book.</p>
+
+<p>Now we’re almost ready for some real action.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">p</span> <span class="o">=</span> <span class="no">Point</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="no">T</span> <span class="o">=</span> <span class="n">identity</span><span class="p">.</span><span class="nf">rotate_x</span><span class="p">(</span><span class="mf">0.25</span><span class="p">)</span> <span class="c1"># We're counting rotation in units of τ</span>
+<span class="no">T</span> <span class="o">*</span> <span class="nb">p</span>
+<span class="o">=&gt;</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+</code></pre></div></div>
+
+
+  </section>
 </article>
 </li><li><h2>Related posts</h2></li><li class="post-item">
-  <div class="post-link">
-    <a href="/2018/12/03/day-3-casting-rays-into-spheres/" >
-      Day 3, Casting rays into spheres
-    </a>
-  </div>
+  <header class="post-header">
+    <div class="post-link">
+      <a href="/2018/12/03/day-3-casting-rays-into-spheres/" >
+        Day 3, Casting rays into spheres
+      </a>
+    </div>
+    <div class="post-meta">Monday, 2018-12-03 in
+    <a href="/category/devlog">devlog</a>
+   about
+    <a href="/tags/#devember" title="participation in Devember">
+      #devember</a>,
+  
+    <a href="/tags/#devember2018" title="Devember 2018 ray tracer challenge">
+      #devember2018</a>,
+  
+    <a href="/tags/#hourofcode" title="coding for one hour per day">
+      #hourofcode</a>,
+  
+    <a href="/tags/#raytracerchallenge" title="">
+      #raytracerchallenge</a>,
+  
+    <a href="/tags/#ruby" title="coding in Ruby">
+      #ruby</a>
+  
+    </div>
+  </header>
   <blockquote class="post-excerpt">
     Finally some practical applications of the math heavy weekend, casting abstract rays at abstract spheres. Well, on a sliding scale from linear algebra to physical representation, it’s still a step in the direction.
   </blockquote>
-  <div class="post-meta">Monday, 2018-12-03 in
+</li>
+<li class="post-item">
+  <header class="post-header">
+    <div class="post-link">
+      <a href="/2018/12/01/day-1-overdoing-it/" >
+        Day 1, Overdoing it
+      </a>
+    </div>
+    <div class="post-meta">Saturday, 2018-12-01 in
     <a href="/category/devlog">devlog</a>
    about
     <a href="/tags/#devember" title="participation in Devember">
@@ -283,47 +303,20 @@
     <a href="/tags/#ruby" title="coding in Ruby">
       #ruby</a>
   
-  </div>
-</li>
-<li class="post-item">
-  <div class="post-link">
-    <a href="/2018/12/01/day-1-overdoing-it/" >
-      Day 1, Overdoing it
-    </a>
-  </div>
+    </div>
+  </header>
   <blockquote class="post-excerpt">
     The first proper day of Devember is here. Of course I overdid it and spent all day coding, instead of just that one hour.
   </blockquote>
-  <div class="post-meta">Saturday, 2018-12-01 in
-    <a href="/category/devlog">devlog</a>
-   about
-    <a href="/tags/#devember" title="participation in Devember">
-      #devember</a>,
-  
-    <a href="/tags/#devember2018" title="Devember 2018 ray tracer challenge">
-      #devember2018</a>,
-  
-    <a href="/tags/#hourofcode" title="coding for one hour per day">
-      #hourofcode</a>,
-  
-    <a href="/tags/#raytracerchallenge" title="">
-      #raytracerchallenge</a>,
-  
-    <a href="/tags/#ruby" title="coding in Ruby">
-      #ruby</a>
-  
-  </div>
 </li>
 <li class="post-item">
-  <div class="post-link">
-    <a href="/2018/11/30/day-0-tuple-basics/" >
-      Day 0, Tuple Basics
-    </a>
-  </div>
-  <blockquote class="post-excerpt">
-    Oops, I started a day early.
-  </blockquote>
-  <div class="post-meta">Friday, 2018-11-30 in
+  <header class="post-header">
+    <div class="post-link">
+      <a href="/2018/11/30/day-0-tuple-basics/" >
+        Day 0, Tuple Basics
+      </a>
+    </div>
+    <div class="post-meta">Friday, 2018-11-30 in
     <a href="/category/devlog">devlog</a>
    about
     <a href="/tags/#devember" title="participation in Devember">
@@ -344,18 +337,20 @@
     <a href="/tags/#raytracerchallenge" title="">
       #raytracerchallenge</a>
   
-  </div>
+    </div>
+  </header>
+  <blockquote class="post-excerpt">
+    Oops, I started a day early.
+  </blockquote>
 </li>
 <li class="post-item">
-  <div class="post-link">
-    <a href="/2018/11/29/devember-is-coming/" >
-      Devember is Coming
-    </a>
-  </div>
-  <blockquote class="post-excerpt">
-    It’s that time of the year again.
-  </blockquote>
-  <div class="post-meta">Thursday, 2018-11-29 in
+  <header class="post-header">
+    <div class="post-link">
+      <a href="/2018/11/29/devember-is-coming/" >
+        Devember is Coming
+      </a>
+    </div>
+    <div class="post-meta">Thursday, 2018-11-29 in
     <a href="/category/devlog">devlog</a>
    about
     <a href="/tags/#devember" title="participation in Devember">
@@ -367,18 +362,20 @@
     <a href="/tags/#hourofcode" title="coding for one hour per day">
       #hourofcode</a>
   
-  </div>
+    </div>
+  </header>
+  <blockquote class="post-excerpt">
+    It’s that time of the year again.
+  </blockquote>
 </li>
 <li class="post-item">
-  <div class="post-link">
-    <a href="/2016/12/21/momentum-lost/" >
-      Momentum Lost
-    </a>
-  </div>
-  <blockquote class="post-excerpt">
-    All the setbacks and distractions made me lose the momentum I needed to keep going at this thing, despite everything else that exhausts my energy.
-  </blockquote>
-  <div class="post-meta">Wednesday, 2016-12-21 in
+  <header class="post-header">
+    <div class="post-link">
+      <a href="/2016/12/21/momentum-lost/" >
+        Momentum Lost
+      </a>
+    </div>
+    <div class="post-meta">Wednesday, 2016-12-21 in
     <a href="/category/develop">develop</a>
    about
     <a href="/tags/#devember" title="participation in Devember">
@@ -387,15 +384,17 @@
     <a href="/tags/#devember2016" title="Devember 2016 game project">
       #devember2016</a>
   
-  </div>
+    </div>
+  </header>
+  <blockquote class="post-excerpt">
+    All the setbacks and distractions made me lose the momentum I needed to keep going at this thing, despite everything else that exhausts my energy.
+  </blockquote>
 </li>
 </ul>
 </div>
 
       </div>
-    </section>
-
-    <footer class="site-footer">
+    </section><footer class="site-footer">
 
   <div class="wrapper">
 
@@ -428,16 +427,13 @@
       </div>
 
       <div class="footer-col footer-col-3">
-        <p>Random development ramblings, maybe.
-</p>
+        Random development ramblings, maybe.
+
       </div>
     </div>
 
   </div>
 
 </footer>
-
-
-  </body>
-
+</body>
 </html>

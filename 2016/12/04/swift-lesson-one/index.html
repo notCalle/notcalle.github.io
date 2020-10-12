@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<html>
-
-  <head>
+<html><head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -31,11 +29,7 @@
 
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 </head>
-
-
-  <body>
-
-    <header class="site-header">
+<body><header class="site-header">
   <div class="wrapper">
     <a class="site-title" href="/">not://files v3.0</a><nav class="site-nav" id="site-navigation" aria-label="Menu">
   <label for="site-menu-toggle" class="menu-icon" aria-label="Menu">
@@ -202,9 +196,7 @@
 </nav>
 </div>
 </header>
-
-
-    <section class="page-content">
+<section class="page-content">
       <div class="wrapper">
         <div class="home">
   <ul class="post-list">
@@ -215,15 +207,8 @@
         Swift First Lesson
       </a>
     </h1>
-  </header>
-
-  <section class="post-content" itemprop="articleBody">
-    <p>The first lesson turns out to be about <a href="https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/AccessControl.html">access control</a>: nothing is <code class="language-plaintext highlighter-rouge">public</code> by default, even classes or their <code class="language-plaintext highlighter-rouge">init</code> methods. With <code class="language-plaintext highlighter-rouge">public</code> access to our classes the playground plays.</p>
-
-  </section>
-
-  <footer class="post-meta"><time datetime="2016-12-04T11:46:59+00:00" itemprop="datePublished">Sunday, 2016-12-04</time>
-     in
+    <div class="post-meta"><time datetime="2016-12-04T11:46:59+00:00" itemprop="datePublished">Sunday, 2016-12-04</time>
+       in
     <a href="/category/devlog">devlog</a>
    about
     <a href="/tags/#devember" title="participation in Devember">
@@ -234,18 +219,22 @@
   
     <a href="/tags/#swift" title="coding in Swift">
       #swift</a>
-  </footer>
+  </div>
+  </header>
+
+  <section class="post-content" itemprop="articleBody">
+    <p>The first lesson turns out to be about <a href="https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/AccessControl.html">access control</a>: nothing is <code class="language-plaintext highlighter-rouge">public</code> by default, even classes or their <code class="language-plaintext highlighter-rouge">init</code> methods. With <code class="language-plaintext highlighter-rouge">public</code> access to our classes the playground plays.</p>
+
+  </section>
 </article>
 </li><li><h2>Related posts</h2></li><li class="post-item">
-  <div class="post-link">
-    <a href="/2016/12/06/caching/" >
-      Caching?
-    </a>
-  </div>
-  <blockquote class="post-excerpt">
-    Spent at huge part of the hour today troubleshooting why my API change to an init method was not being seen by the playground. Weird caching bugs? No; it turns out that XCode was building for target instead of simulator, so the playground didn’t get a rebuilt version of the framework when I hit build. Still don’t know why that changed since last time, but oh well.
-  </blockquote>
-  <div class="post-meta">Tuesday, 2016-12-06 in
+  <header class="post-header">
+    <div class="post-link">
+      <a href="/2016/12/06/caching/" >
+        Caching?
+      </a>
+    </div>
+    <div class="post-meta">Tuesday, 2016-12-06 in
     <a href="/category/devlog">devlog</a>
    about
     <a href="/tags/#devember" title="participation in Devember">
@@ -260,18 +249,20 @@
     <a href="/tags/#xcode" title="using XCode for appleOS development">
       #xcode</a>
   
-  </div>
+    </div>
+  </header>
+  <blockquote class="post-excerpt">
+    Spent at huge part of the hour today troubleshooting why my API change to an init method was not being seen by the playground. Weird caching bugs? No; it turns out that XCode was building for target instead of simulator, so the playground didn’t get a rebuilt version of the framework when I hit build. Still don’t know why that changed since last time, but oh well.
+  </blockquote>
 </li>
 <li class="post-item">
-  <div class="post-link">
-    <a href="/2016/12/04/travel-day/" >
-      Travel Double Day
-    </a>
-  </div>
-  <blockquote class="post-excerpt">
-    This fell apart quickly, as expected, with a friday that began in CET and ends about now in EST, with 12 hours of air travel and such in between. But development evnvironment is now setup on laptop as well, so at least there’s hope for the following days.
-  </blockquote>
-  <div class="post-meta">Sunday, 2016-12-04 in
+  <header class="post-header">
+    <div class="post-link">
+      <a href="/2016/12/04/travel-day/" >
+        Travel Double Day
+      </a>
+    </div>
+    <div class="post-meta">Sunday, 2016-12-04 in
     <a href="/category/devlog">devlog</a>
    about
     <a href="/tags/#devember" title="participation in Devember">
@@ -280,18 +271,20 @@
     <a href="/tags/#devember2016" title="Devember 2016 game project">
       #devember2016</a>
   
-  </div>
+    </div>
+  </header>
+  <blockquote class="post-excerpt">
+    This fell apart quickly, as expected, with a friday that began in CET and ends about now in EST, with 12 hours of air travel and such in between. But development evnvironment is now setup on laptop as well, so at least there’s hope for the following days.
+  </blockquote>
 </li>
 <li class="post-item">
-  <div class="post-link">
-    <a href="/2016/12/02/second-of-devember/" >
-      Second of Devember
-    </a>
-  </div>
-  <blockquote class="post-excerpt">
-    Trying to sketch some basic structure for possibly hierarchical map definition, and trying (failing) to use a Swift Playground to try the framework code while sketching. The playground can import my framework, but the framework classes are not accessible for some reason. That’s all I got from one hour today.
-  </blockquote>
-  <div class="post-meta">Friday, 2016-12-02 in
+  <header class="post-header">
+    <div class="post-link">
+      <a href="/2016/12/02/second-of-devember/" >
+        Second of Devember
+      </a>
+    </div>
+    <div class="post-meta">Friday, 2016-12-02 in
     <a href="/category/devlog">devlog</a>
    about
     <a href="/tags/#devember" title="participation in Devember">
@@ -306,18 +299,20 @@
     <a href="/tags/#xcode" title="using XCode for appleOS development">
       #xcode</a>
   
-  </div>
+    </div>
+  </header>
+  <blockquote class="post-excerpt">
+    Trying to sketch some basic structure for possibly hierarchical map definition, and trying (failing) to use a Swift Playground to try the framework code while sketching. The playground can import my framework, but the framework classes are not accessible for some reason. That’s all I got from one hour today.
+  </blockquote>
 </li>
 <li class="post-item">
-  <div class="post-link">
-    <a href="/2016/12/01/first-of-devember/" >
-      First of Devember
-    </a>
-  </div>
-  <blockquote class="post-excerpt">
-    Not a single actual line of code written today, but development environment setup had to take priority. The way to manage Cocoa dependencies seems to be Carthage, so lets use that for our first known dependency, namely a new framework that will hold all reusable parts of the map handling and navigation code. Carthage looks somewhat similar to bundler of Ruby fame, so that’s nice.
-  </blockquote>
-  <div class="post-meta">Thursday, 2016-12-01 in
+  <header class="post-header">
+    <div class="post-link">
+      <a href="/2016/12/01/first-of-devember/" >
+        First of Devember
+      </a>
+    </div>
+    <div class="post-meta">Thursday, 2016-12-01 in
     <a href="/category/devlog">devlog</a>
    about
     <a href="/tags/#devember" title="participation in Devember">
@@ -329,18 +324,20 @@
     <a href="/tags/#xcode" title="using XCode for appleOS development">
       #xcode</a>
   
-  </div>
+    </div>
+  </header>
+  <blockquote class="post-excerpt">
+    Not a single actual line of code written today, but development environment setup had to take priority. The way to manage Cocoa dependencies seems to be Carthage, so lets use that for our first known dependency, namely a new framework that will hold all reusable parts of the map handling and navigation code. Carthage looks somewhat similar to bundler of Ruby fame, so that’s nice.
+  </blockquote>
 </li>
 <li class="post-item">
-  <div class="post-link">
-    <a href="/2016/11/30/devember-2016-contract/" >
-      Devember 2016 Contract
-    </a>
-  </div>
-  <blockquote class="post-excerpt">
-    I, Calle Englund, will participate to the next Devember. My Devember will be an iOS CRPG. I promise I will program for my Devember for at least an hour, every day of the next December. I will also write a daily public devlog and will make the produced code publicly available on the internet. No matter what, I will keep my promise.
-  </blockquote>
-  <div class="post-meta">Wednesday, 2016-11-30 in
+  <header class="post-header">
+    <div class="post-link">
+      <a href="/2016/11/30/devember-2016-contract/" >
+        Devember 2016 Contract
+      </a>
+    </div>
+    <div class="post-meta">Wednesday, 2016-11-30 in
     <a href="/category/devlog">devlog</a>
    about
     <a href="/tags/#devember" title="participation in Devember">
@@ -355,15 +352,17 @@
     <a href="/tags/#swift" title="coding in Swift">
       #swift</a>
   
-  </div>
+    </div>
+  </header>
+  <blockquote class="post-excerpt">
+    I, Calle Englund, will participate to the next Devember. My Devember will be an iOS CRPG. I promise I will program for my Devember for at least an hour, every day of the next December. I will also write a daily public devlog and will make the produced code publicly available on the internet. No matter what, I will keep my promise.
+  </blockquote>
 </li>
 </ul>
 </div>
 
       </div>
-    </section>
-
-    <footer class="site-footer">
+    </section><footer class="site-footer">
 
   <div class="wrapper">
 
@@ -396,16 +395,13 @@
       </div>
 
       <div class="footer-col footer-col-3">
-        <p>Random development ramblings, maybe.
-</p>
+        Random development ramblings, maybe.
+
       </div>
     </div>
 
   </div>
 
 </footer>
-
-
-  </body>
-
+</body>
 </html>

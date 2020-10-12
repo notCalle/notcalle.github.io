@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<html>
-
-  <head>
+<html><head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -31,11 +29,7 @@
 
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 </head>
-
-
-  <body>
-
-    <header class="site-header">
+<body><header class="site-header">
   <div class="wrapper">
     <a class="site-title" href="/">not://files v3.0</a><nav class="site-nav" id="site-navigation" aria-label="Menu">
   <label for="site-menu-toggle" class="menu-icon" aria-label="Menu">
@@ -202,9 +196,7 @@
 </nav>
 </div>
 </header>
-
-
-    <section class="page-content">
+<section class="page-content">
       <div class="wrapper">
         <div class="home">
   <ul class="post-list">
@@ -215,6 +207,25 @@
         All the things
       </a>
     </h1>
+    <div class="post-meta"><time datetime="2019-12-07T11:22:00+00:00" itemprop="datePublished">Saturday, 2019-12-07</time>
+       in
+    <a href="/category/devlog">devlog</a>
+   about
+    <a href="/tags/#devember" title="participation in Devember">
+      #devember</a>,
+  
+    <a href="/tags/#devember2019" title="Devember 2019 ray tracer">
+      #devember2019</a>,
+  
+    <a href="/tags/#hourofcode" title="coding for one hour per day">
+      #hourofcode</a>,
+  
+    <a href="/tags/#swift" title="coding in Swift">
+      #swift</a>,
+  
+    <a href="/tags/#raytracing" title="">
+      #raytracing</a>
+  </div>
   </header>
 
   <section class="post-content" itemprop="articleBody">
@@ -225,9 +236,15 @@
 <p><img src="/img/2019/12/grouped-spheres.png" alt="Group of spheres" /></p>
 
   </section>
-
-  <footer class="post-meta"><time datetime="2019-12-07T11:22:00+00:00" itemprop="datePublished">Saturday, 2019-12-07</time>
-     in
+</article>
+</li><li><h2>Related posts</h2></li><li class="post-item">
+  <header class="post-header">
+    <div class="post-link">
+      <a href="/2019/12/08/messy-shadows/" >
+        Messy shadows
+      </a>
+    </div>
+    <div class="post-meta">Sunday, 2019-12-08 in
     <a href="/category/devlog">devlog</a>
    about
     <a href="/tags/#devember" title="participation in Devember">
@@ -244,18 +261,21 @@
   
     <a href="/tags/#raytracing" title="">
       #raytracing</a>
-  </footer>
-</article>
-</li><li><h2>Related posts</h2></li><li class="post-item">
-  <div class="post-link">
-    <a href="/2019/12/08/messy-shadows/" >
-      Messy shadows
-    </a>
-  </div>
+  
+    </div>
+  </header>
   <blockquote class="post-excerpt">
     Apparently, I messed up some more vector algebra. Ray / surface hits currently record the event in surface space, which works just fine for shading a unit sphere still positioned at origin. When we transform things around, and try to cast the secondary shadow rays, it becomes painfully obvious that surface space and world space no longer coincide.
   </blockquote>
-  <div class="post-meta">Sunday, 2019-12-08 in
+</li>
+<li class="post-item">
+  <header class="post-header">
+    <div class="post-link">
+      <a href="/2019/12/06/light-and-magic/" >
+        Light and Magic
+      </a>
+    </div>
+    <div class="post-meta">Friday, 2019-12-06 in
     <a href="/category/devlog">devlog</a>
    about
     <a href="/tags/#devember" title="participation in Devember">
@@ -273,18 +293,20 @@
     <a href="/tags/#raytracing" title="">
       #raytracing</a>
   
-  </div>
-</li>
-<li class="post-item">
-  <div class="post-link">
-    <a href="/2019/12/06/light-and-magic/" >
-      Light and Magic
-    </a>
-  </div>
+    </div>
+  </header>
   <blockquote class="post-excerpt">
     The next natural step after getting basic shading to work is to have actual light sources, that can be tinted and positioned in the scene.
   </blockquote>
-  <div class="post-meta">Friday, 2019-12-06 in
+</li>
+<li class="post-item">
+  <header class="post-header">
+    <div class="post-link">
+      <a href="/2019/12/05/working-camera/" >
+        Working camera
+      </a>
+    </div>
+    <div class="post-meta">Thursday, 2019-12-05 in
     <a href="/category/devlog">devlog</a>
    about
     <a href="/tags/#devember" title="participation in Devember">
@@ -302,18 +324,20 @@
     <a href="/tags/#raytracing" title="">
       #raytracing</a>
   
-  </div>
-</li>
-<li class="post-item">
-  <div class="post-link">
-    <a href="/2019/12/05/working-camera/" >
-      Working camera
-    </a>
-  </div>
+    </div>
+  </header>
   <blockquote class="post-excerpt">
     So yesterday’s attempt at capturing an image didn’t turn out so well, because I messed up the camera, or rather the vector algebra behind everything. When I realized what I had done, I instantly remembered that similar lesson from last year; because points have w=1, while vectors have w=0, almost all vector operations will get messed up by the extra 1, if you accidentally use a point instead. Or vice versa.
   </blockquote>
-  <div class="post-meta">Thursday, 2019-12-05 in
+</li>
+<li class="post-item">
+  <header class="post-header">
+    <div class="post-link">
+      <a href="/2019/12/04/actual-pixels/" >
+        Actual pixels
+      </a>
+    </div>
+    <div class="post-meta">Wednesday, 2019-12-04 in
     <a href="/category/devlog">devlog</a>
    about
     <a href="/tags/#devember" title="participation in Devember">
@@ -331,18 +355,20 @@
     <a href="/tags/#raytracing" title="">
       #raytracing</a>
   
-  </div>
-</li>
-<li class="post-item">
-  <div class="post-link">
-    <a href="/2019/12/04/actual-pixels/" >
-      Actual pixels
-    </a>
-  </div>
+    </div>
+  </header>
   <blockquote class="post-excerpt">
     First actual image generated, using a “camera light”. The shading is too dark, for some reason I can’t figure out at the moment, so I guess tomorrow will be more of a debugging session than new feature creation.
   </blockquote>
-  <div class="post-meta">Wednesday, 2019-12-04 in
+</li>
+<li class="post-item">
+  <header class="post-header">
+    <div class="post-link">
+      <a href="/2019/12/03/pixels-on-a-canvas/" >
+        Pixels on a canvas
+      </a>
+    </div>
+    <div class="post-meta">Tuesday, 2019-12-03 in
     <a href="/category/devlog">devlog</a>
    about
     <a href="/tags/#devember" title="participation in Devember">
@@ -360,44 +386,17 @@
     <a href="/tags/#raytracing" title="">
       #raytracing</a>
   
-  </div>
-</li>
-<li class="post-item">
-  <div class="post-link">
-    <a href="/2019/12/03/pixels-on-a-canvas/" >
-      Pixels on a canvas
-    </a>
-  </div>
+    </div>
+  </header>
   <blockquote class="post-excerpt">
     Pretty much the whole point of a ray tracer such as this one is to render pretty pictures, and for that we’re going to need a canvas to render onto.
   </blockquote>
-  <div class="post-meta">Tuesday, 2019-12-03 in
-    <a href="/category/devlog">devlog</a>
-   about
-    <a href="/tags/#devember" title="participation in Devember">
-      #devember</a>,
-  
-    <a href="/tags/#devember2019" title="Devember 2019 ray tracer">
-      #devember2019</a>,
-  
-    <a href="/tags/#hourofcode" title="coding for one hour per day">
-      #hourofcode</a>,
-  
-    <a href="/tags/#swift" title="coding in Swift">
-      #swift</a>,
-  
-    <a href="/tags/#raytracing" title="">
-      #raytracing</a>
-  
-  </div>
 </li>
 </ul>
 </div>
 
       </div>
-    </section>
-
-    <footer class="site-footer">
+    </section><footer class="site-footer">
 
   <div class="wrapper">
 
@@ -430,16 +429,13 @@
       </div>
 
       <div class="footer-col footer-col-3">
-        <p>Random development ramblings, maybe.
-</p>
+        Random development ramblings, maybe.
+
       </div>
     </div>
 
   </div>
 
 </footer>
-
-
-  </body>
-
+</body>
 </html>

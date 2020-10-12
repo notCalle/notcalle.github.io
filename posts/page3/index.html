@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<html>
-
-  <head>
+<html><head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -31,11 +29,7 @@
 
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 </head>
-
-
-  <body>
-
-    <header class="site-header">
+<body><header class="site-header">
   <div class="wrapper">
     <a class="site-title" href="/">not://files v3.0</a><nav class="site-nav" id="site-navigation" aria-label="Menu">
   <label for="site-menu-toggle" class="menu-icon" aria-label="Menu">
@@ -202,9 +196,7 @@
 </nav>
 </div>
 </header>
-
-
-    <section class="page-content">
+<section class="page-content">
       <div class="wrapper">
         <div class="home">
 
@@ -268,15 +260,13 @@
   <ul class="post-list">
     
       <li class="post-item">
-  <div class="post-link">
-    <a href="/2019/12/01/basic-data-types/" >
-      Basic data types
-    </a>
-  </div>
-  <blockquote class="post-excerpt">
-    Alright, the first push to the github repo is complete. Starting out small with just the basic data types that will be at the core of everything, and some tolerance equality operators for comparisons.
-  </blockquote>
-  <div class="post-meta">Sunday, 2019-12-01 in
+  <header class="post-header">
+    <div class="post-link">
+      <a href="/2019/12/01/basic-data-types/" >
+        Basic data types
+      </a>
+    </div>
+    <div class="post-meta">Sunday, 2019-12-01 in
     <a href="/category/devlog">devlog</a>
    about
     <a href="/tags/#devember" title="participation in Devember">
@@ -291,20 +281,22 @@
     <a href="/tags/#swift" title="coding in Swift">
       #swift</a>
   
-  </div>
+    </div>
+  </header>
+  <blockquote class="post-excerpt">
+    Alright, the first push to the github repo is complete. Starting out small with just the basic data types that will be at the core of everything, and some tolerance equality operators for comparisons.
+  </blockquote>
 </li>
 
     
       <li class="post-item">
-  <div class="post-link">
-    <a href="/2019/11/30/devember-again/" >
-      Devember again
-    </a>
-  </div>
-  <blockquote class="post-excerpt">
-    This one snuck up on me faster than anticipated, but here we go.
-  </blockquote>
-  <div class="post-meta">Saturday, 2019-11-30 in
+  <header class="post-header">
+    <div class="post-link">
+      <a href="/2019/11/30/devember-again/" >
+        Devember again
+      </a>
+    </div>
+    <div class="post-meta">Saturday, 2019-11-30 in
     <a href="/category/devlog">devlog</a>
    about
     <a href="/tags/#devember" title="participation in Devember">
@@ -316,20 +308,46 @@
     <a href="/tags/#hourofcode" title="coding for one hour per day">
       #hourofcode</a>
   
-  </div>
+    </div>
+  </header>
+  <blockquote class="post-excerpt">
+    This one snuck up on me faster than anticipated, but here we go.
+  </blockquote>
 </li>
 
     
       <li class="post-item">
-  <div class="post-link">
-    <a href="/2019/01/29/soft-shadows/" >
-      Soft Shadows
-    </a>
-  </div>
+  <header class="post-header">
+    <div class="post-link">
+      <a href="/2019/01/29/soft-shadows/" >
+        Soft Shadows
+      </a>
+    </div>
+    <div class="post-meta">Tuesday, 2019-01-29 in
+    <a href="/category/devlog">devlog</a>
+   about
+    <a href="/tags/#raytracerchallenge" title="">
+      #raytracerchallenge</a>,
+  
+    <a href="/tags/#ruby" title="coding in Ruby">
+      #ruby</a>
+  
+    </div>
+  </header>
   <blockquote class="post-excerpt">
     With the recent anti-aliasing feature enables, the image quality is pretty good, but the shadow edges are still too hard to be realistic, because the light source is still just a point without surface area.
   </blockquote>
-  <div class="post-meta">Tuesday, 2019-01-29 in
+</li>
+
+    
+      <li class="post-item">
+  <header class="post-header">
+    <div class="post-link">
+      <a href="/2019/01/13/super-sampling-anti-aliasing/" >
+        Super Sampling Anti-Aliasing
+      </a>
+    </div>
+    <div class="post-meta">Sunday, 2019-01-13 in
     <a href="/category/devlog">devlog</a>
    about
     <a href="/tags/#raytracerchallenge" title="">
@@ -338,42 +356,22 @@
     <a href="/tags/#ruby" title="coding in Ruby">
       #ruby</a>
   
-  </div>
-</li>
-
-    
-      <li class="post-item">
-  <div class="post-link">
-    <a href="/2019/01/13/super-sampling-anti-aliasing/" >
-      Super Sampling Anti-Aliasing
-    </a>
-  </div>
+    </div>
+  </header>
   <blockquote class="post-excerpt">
     Remember the smoothly shaded teapot? Still looks pretty rough with all the jaggies and speckles. Well, with the shiny new multi threading support it’s actually feasible to add some image quality improvements.
   </blockquote>
-  <div class="post-meta">Sunday, 2019-01-13 in
-    <a href="/category/devlog">devlog</a>
-   about
-    <a href="/tags/#raytracerchallenge" title="">
-      #raytracerchallenge</a>,
-  
-    <a href="/tags/#ruby" title="coding in Ruby">
-      #ruby</a>
-  
-  </div>
 </li>
 
     
       <li class="post-item">
-  <div class="post-link">
-    <a href="/2019/01/12/threaded-rendering/" >
-      Threaded rendering
-    </a>
-  </div>
-  <blockquote class="post-excerpt">
-    Shaved another 30% off rendering time by inlining and some more caching, but it seems like I’m reaching the limit of what I can get out of a single thread.
-  </blockquote>
-  <div class="post-meta">Saturday, 2019-01-12 in
+  <header class="post-header">
+    <div class="post-link">
+      <a href="/2019/01/12/threaded-rendering/" >
+        Threaded rendering
+      </a>
+    </div>
+    <div class="post-meta">Saturday, 2019-01-12 in
     <a href="/category/devlog">devlog</a>
    about
     <a href="/tags/#raytracerchallenge" title="">
@@ -382,7 +380,11 @@
     <a href="/tags/#ruby" title="coding in Ruby">
       #ruby</a>
   
-  </div>
+    </div>
+  </header>
+  <blockquote class="post-excerpt">
+    Shaved another 30% off rendering time by inlining and some more caching, but it seems like I’m reaching the limit of what I can get out of a single thread.
+  </blockquote>
 </li>
 
     
@@ -449,9 +451,7 @@
 
 
       </div>
-    </section>
-
-    <footer class="site-footer">
+    </section><footer class="site-footer">
 
   <div class="wrapper">
 
@@ -484,16 +484,13 @@
       </div>
 
       <div class="footer-col footer-col-3">
-        <p>Random development ramblings, maybe.
-</p>
+        Random development ramblings, maybe.
+
       </div>
     </div>
 
   </div>
 
 </footer>
-
-
-  </body>
-
+</body>
 </html>
