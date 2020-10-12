@@ -4,7 +4,7 @@
     {%- if post.path contains "_drafts/" %} <strong>DRAFT</strong> {% endif -%}
     {{ post.date | date: "%Y-%m-%d" }}
     {%- if post.author %} • {{ author }} {% endif %}
-    —
+    —&nbsp;
   </span>
   <span class="post-link">
     <a href="{{ post.url | prepend: site.baseurl }}" >

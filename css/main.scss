@@ -15,7 +15,7 @@ $base-line-height: 1.5;
 $fixed-font-family: "Andale Mono", monospace;
 $fixed-font-size:   $base-font-size * 0.95;
 
-$spacing-unit:     30px;
+$spacing-unit:     $base-font-size;
 
 $brand-color:      #F15A29;
 
@@ -54,9 +54,4 @@ $on-laptop:        800px;
 
 
 // Import partials from `sass_dir` (defaults to `_sass`)
-@import
-        "base",
-        "layout",
-        "site-menu",
-        "syntax-highlighting"
-;
+@import "layout";

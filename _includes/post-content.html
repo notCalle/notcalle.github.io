@@ -5,23 +5,22 @@
         {{ include.post.title }}
       </a>
     </h1>
+    <div class="post-meta">
+      {%- if include.post.path contains "_drafts/" %} <strong>DRAFT</strong> {% endif -%}
+        <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+          {{- include.post.date | date: "%A, %Y-%m-%d" -}}
+        </time>
+      {% if include.post.author -%}
+        by <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <span itemprop="name">{{ include.post.author }}</span>
+        </span>
+      {%- endif %}
+
+      {%- include cat-tag.html post=include.post -%}
+    </div>
   </header>
 
   <section class="post-content" itemprop="articleBody">
     {{ include.post.content }}
   </section>
-
-  <footer class="post-meta">
-    {%- if include.post.path contains "_drafts/" %} <strong>DRAFT</strong> {% endif -%}
-    <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-      {{- include.post.date | date: "%A, %Y-%m-%d" -}}
-    </time>
-    {% if include.post.author -%}
-      by <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <span itemprop="name">{{ include.post.author }}</span>
-      </span>
-    {%- endif %}
-
-    {%- include cat-tag.html post=include.post -%}
-  </footer>
 </article>
