@@ -5,16 +5,16 @@ source "https://rubygems.org"
 gem 'jekyll', '~> 4.2.0'
 
 group :jekyll_plugins do
-  gem 'jekyll-compose'
-  gem 'jekyll-paginate'
-  gem 'jekyll-seo-tag'
-  gem 'jemoji'
   gem 'jekyll-feed'
   gem 'jekyll-gist'
+  gem 'jekyll-paginate'
   gem 'jekyll-redirect-from'
+  gem 'jekyll-seo-tag'
   gem 'jekyll-sitemap'
+  gem 'jemoji'
 end
 
 group :development do
+  gem 'jekyll-compose'
   gem 'webrick'
 end
