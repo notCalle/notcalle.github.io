@@ -1,0 +1,17 @@
+{%- assign menu = include.menu -%}
+<ul id="site-menu" class="menu">
+  {%- for item in menu.items %}
+    <li class="menu-item">
+      {% if item.url -%}
+        <a class="page-link" href="{{ item.url | prepend: site.baseurl }}">
+          {{ item.label }}
+        </a>
+      {%- elsif item.menu -%}
+        <details>
+          <summary>{{ item.label }}</summary>
+          {%- include site-menu.html menu=item.menu -%}
+        </details>
+      {% endif -%}
+    </li>
+  {%- endfor %}
+</ul>

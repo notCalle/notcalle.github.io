@@ -1,0 +1,11 @@
+---
+layout: page
+title: Tags
+---
+{%- assign sorted_tags = site.tags | sort -%}
+<ul class="tag-list">
+{%- for tag in sorted_tags -%}
+  {%- assign tag_name = tag[0] -%}
+  {%- include tag-item.html name=tag_name -%}
+{%- endfor -%}
+</ul>

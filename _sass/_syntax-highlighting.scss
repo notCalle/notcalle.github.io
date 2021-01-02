@@ -8,7 +8,15 @@
 .highlight pre {
     background-color: $background-color;
     border: 1px solid $background-color-dark;
-    border-radius: 10px;
+    border-radius: $spacing-unit/2;
+    margin: 0 -$spacing-unit/2;
+
+    @include media-query($on-palm) {
+        padding: 0 $spacing-unit/2;
+        border-left: none;
+        border-right: none;
+        border-radius: 0;
+    }
 }
 
 .highlight .hll { background-color: #272822; }

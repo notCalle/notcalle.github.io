@@ -4,8 +4,7 @@ adhd:
   title: invisible challenges in a neurotypical world
 
 algebra:
-  title: applications of linear algebra (for computer graphics)
-
+  title: applications of linear algebra
 
 celebration:
   title: it was worth to celebrate at the time, perhaps?
@@ -59,11 +58,9 @@ opengameart:
 
 pathfinding:
   title: finding paths through graphs
-  description:
 
 roguelike:
   title: vaguely resemling Rogue
-  description:
 
 ruby:
   title: coding in Ruby
