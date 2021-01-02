@@ -2,6 +2,19 @@
 # A sample Gemfile
 source "https://rubygems.org"
 
-# gem "rails"
-gem 'github-pages','>= 105', group: [:jekyll_plugins]
-gem 'jekyll-compose', group: [:jekyll_plugins]
+gem 'jekyll', '~> 4.2.0'
+
+group :jekyll_plugins do
+  gem 'jekyll-compose'
+  gem 'jekyll-paginate'
+  gem 'jekyll-seo-tag'
+  gem 'jemoji'
+  gem 'jekyll-feed'
+  gem 'jekyll-gist'
+  gem 'jekyll-redirect-from'
+  gem 'jekyll-sitemap'
+end
+
+group :development do
+  gem 'webrick'
+end
