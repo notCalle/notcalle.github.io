@@ -54,6 +54,18 @@ gist:
 feed:
   posts_limit: 100
 
+jekyll-archives:
+  enabled:
+    - categories
+    - month
+    - tags
+    - year
+  layouts:
+    category: archive/category
+    month: archive/month
+    tag: archive/tag
+    year: archive/year
+
 # Jekyll Compose
 jekyll_compose:
   auto_open: true

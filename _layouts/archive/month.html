@@ -1,0 +1,12 @@
+---
+layout: index
+---
+<header class="post-header">
+  <h1>Archive of posts from {{ page.date | date: "%B %Y" }}</h1>
+</header>
+
+<ul class="post-title-list">
+  {%- for post in page.posts %}
+    {% include post-title.html post=post %}
+  {% endfor -%}
+</ul>

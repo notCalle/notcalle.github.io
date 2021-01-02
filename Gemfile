@@ -5,6 +5,7 @@ source "https://rubygems.org"
 gem 'jekyll', '~> 4.2.0'
 
 group :jekyll_plugins do
+  gem 'jekyll-archives'
   gem 'jekyll-feed'
   gem 'jekyll-gist'
   gem 'jekyll-paginate'
@@ -12,6 +13,7 @@ group :jekyll_plugins do
   gem 'jekyll-seo-tag'
   gem 'jekyll-sitemap'
   gem 'jemoji'
+  gem 'liquid_pluralize'
 end
 
 group :development do
