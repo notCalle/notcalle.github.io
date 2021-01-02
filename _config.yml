@@ -49,14 +49,6 @@ gist:
   noscript: false
 
 # Plugins
-plugins:
-  - jekyll-redirect-from
-  - jemoji
-  - jekyll-gist
-  - jekyll-seo-tag
-  - jekyll-paginate
-  - jekyll-feed
-  - jekyll-sitemap
 
 # Feed settings
 feed:
