@@ -35,7 +35,7 @@ jobs:
           echo Skip Jekyll > _site/.nojekyll
           cp CNAME _site
           git -C _site add --all
-          echo changes=$(git -C _site status --short | grep -v feed.xml | wc -l) >> $GITHUB_ENV
+          echo changes=$(git -C _site status --short | grep -cv feed.xml) >> $GITHUB_ENV
           git -C _site commit -m 'jekyll build'
 
       - name: Deploy to pages
