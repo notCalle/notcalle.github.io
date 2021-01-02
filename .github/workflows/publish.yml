@@ -19,6 +19,10 @@ jobs:
         with:
           ruby-version: 2.7
           bundler-cache: true
+      - name: Setup git configuration
+        run: |
+          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+          git config user.name "GitHub Actions"
       - name: Prepare worktree
         run: |
           git fetch --no-tags origin gh-pages
