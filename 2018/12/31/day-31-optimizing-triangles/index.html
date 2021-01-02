@@ -6,9 +6,9 @@
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="alternate" type="application/rss+xml" title="not://files v3.0" href="https://notfiles.xyz/feed.xml">
-  <!-- Begin Jekyll SEO tag v2.6.1 -->
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>Day 31, Optimizing triangles | not://files v3.0</title>
-<meta name="generator" content="Jekyll v3.9.0" />
+<meta name="generator" content="Jekyll v4.2.0" />
 <meta property="og:title" content="Day 31, Optimizing triangles" />
 <meta name="author" content="Calle Englund" />
 <meta property="og:locale" content="en_US" />
@@ -24,7 +24,7 @@
 <meta name="twitter:site" content="@notcalle" />
 <meta name="twitter:creator" content="@notcalle" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"Calle Englund"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://notfiles.xyz/2018/12/31/day-31-optimizing-triangles/"},"description":"Triangle rendering was painfully slow, as mentioned yesterday. Putting a little reflective shine on the floor and walls of the room took rendering time past 90 minutes. After a bit of research i tried a binary bounding volume hierarchy, dividing the list of shapes into subtrees, split evenly on the largest axis of the bounding box, recursively. This way we get a spacially balanced binary tree with the actual shapes as leaves, and theoretically get \\(O(log\\ n)\\) instead of \\(O(n)\\) search time per ray. Huge difference, especially with rays branching recursively for reflections and refractions. Down from 90 to 6 minutes for the same scene.","url":"https://notfiles.xyz/2018/12/31/day-31-optimizing-triangles/","@type":"BlogPosting","headline":"Day 31, Optimizing triangles","dateModified":"2018-12-31T11:19:26+00:00","datePublished":"2018-12-31T11:19:26+00:00","@context":"https://schema.org"}</script>
+{"dateModified":"2018-12-31T11:19:26+00:00","datePublished":"2018-12-31T11:19:26+00:00","@type":"BlogPosting","description":"Triangle rendering was painfully slow, as mentioned yesterday. Putting a little reflective shine on the floor and walls of the room took rendering time past 90 minutes. After a bit of research i tried a binary bounding volume hierarchy, dividing the list of shapes into subtrees, split evenly on the largest axis of the bounding box, recursively. This way we get a spacially balanced binary tree with the actual shapes as leaves, and theoretically get \\(O(log\\ n)\\) instead of \\(O(n)\\) search time per ray. Huge difference, especially with rays branching recursively for reflections and refractions. Down from 90 to 6 minutes for the same scene.","mainEntityOfPage":{"@type":"WebPage","@id":"https://notfiles.xyz/2018/12/31/day-31-optimizing-triangles/"},"url":"https://notfiles.xyz/2018/12/31/day-31-optimizing-triangles/","author":{"@type":"Person","name":"Calle Englund"},"headline":"Day 31, Optimizing triangles","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
@@ -82,8 +82,6 @@
             License
           </a>
         </li>
-      
-    
       
     
       
