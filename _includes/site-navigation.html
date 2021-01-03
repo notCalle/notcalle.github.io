@@ -8,18 +8,5 @@
   </label>
   <input id="site-menu-toggle" class="menu-toggle" type="checkbox"/>
 
-  <ul id="site-menu" class="menu">
-    <li class="menu-item">
-      <a class="page-link" href="{{ site.baseurl }}/posts">Posts</a>
-    </li>
-    {% for my_page in site.pages %}
-      {% if my_page.title %}
-        <li class="menu-item">
-          <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">
-            {{ my_page.title }}
-          </a>
-        </li>
-      {% endif %}
-    {% endfor %}
-  </ul>
+  {%- include site-menu.html menu=site.data.menu -%}
 </nav>

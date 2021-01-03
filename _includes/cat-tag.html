@@ -1,14 +1,15 @@
 {%- assign post = include.post -%}
 {%- if post.categories.size > 0 %} in
   {%- for category in post.categories %}
-    <a href="/category/{{ category }}">
+    <a href="/category/{{ category }}/"
+       title="{{ site.data.categories[category].title }}">
       {{- category -}}
     </a>{% unless forloop.last %},{% endunless %}
   {% endfor -%}
 {%- endif -%}
 {%- if include.post.tags.size > 0 %} about
   {%- for tag in include.post.tags %}
-    <a href="/tags/#{{ tag }}" title="{{ site.data.tags[tag].title }}">
+    <a href="/tag/{{ tag }}/" title="{{ site.data.tags[tag].title }}">
       #{{ tag -}}
     </a>{% unless forloop.last %},{% endunless %}
   {% endfor -%}

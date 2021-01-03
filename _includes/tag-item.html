@@ -10,29 +10,13 @@
 {%- endfor -%}
 
 {%- if posts.size > 0 %}
-  <details class="tag-item" id="tag-{{ name }}">
-    <summary>
-      <a name="{{ name }}" title="{{ meta.title }}">
-        #{{ name }}
-      </a>
-      <span class="tag-meta">
-        ({{ posts.size }})
-      </span>
-      {%- if (show_title) %}
-        <span class="tag-meta">
-          {{ meta.title }}
-        </span>
-      {% endif -%}
-    </summary>
-
+  <li class="tag-item" id="tag-{{ name }}">
+    <a href="/tag/{{ name }}/" title="{{ meta.title }}">#{{ name }}</a>
     <div class="tag-meta">
-      {{ meta.description }}
+      {{ posts.size | pluralize: 'post', 'posts' }}
+      {% if meta.description or meta.title %}
+      about {{ meta.description | default: meta.title }}
+      {% endif %}
     </div>
-
-    <ul class="post-title-list">
-      {%- for post in posts -%}
-        {%- include post-title.html post=post -%}
-      {%- endfor -%}
-    </ul>
-  </details>
+  </li>
 {%- endif -%}

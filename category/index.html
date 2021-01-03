@@ -1,0 +1,21 @@
+---
+layout: page
+title: Categories
+---
+{%- assign sorted_cats = site.categories | sort -%}
+<ul class="tag-list">
+{%- for cat in sorted_cats -%}
+  {%- assign name = cat[0] -%}
+  {%- assign posts = cat[1] -%}
+  {%- assign meta = site.data.categories[name] -%}
+  <li class="tag-item" id="cat-{{ name }}">
+    <a href="/category/{{ name }}/" title="{{ meta.title }}">#{{ name }}</a>
+    <div class="tag-meta">
+      {{ posts.size | pluralize: 'post', 'posts' }}
+      {% if meta.description or meta.title %}
+      in {{ meta.description | default: meta.title }}
+      {% endif %}
+    </div>
+  </li>
+{%- endfor -%}
+</ul>

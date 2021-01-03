@@ -1,0 +1,35 @@
+---
+layout: page
+title: Archives
+---
+{%- assign years_posts
+    = site.posts
+    | group_by_exp: "post", "post.date | date: '%Y'"
+-%}
+<ul class="year-list">
+  {%- for year_posts in years_posts -%}
+  {%- assign year = year_posts.name -%}
+  <li>
+    <a href="/{{ year }}/">{{ year }}</a>
+    <span class="post-meta">
+      ({{ year_posts.size | pluralize: 'post', 'posts' }})
+    </span>
+
+    {%- assign months_posts
+        = year_posts.items
+        | group_by_exp: "post", "post.date | date: '%m,%B'"
+    -%}
+    <ul class="month-list">
+      {%- for month_posts in months_posts -%}
+      {%- assign month = month_posts.name | split: "," -%}
+      <li>
+        <a href="/{{ year }}/{{ month[0] }}/">{{ month[1] }}</a>
+        <span class="post-meta">
+          ({{ month_posts.size | pluralize: 'post', 'posts' }})
+        </span>
+      </li>
+      {%- endfor -%}
+    </ul>
+  </li>
+  {% endfor %}
+</ul>

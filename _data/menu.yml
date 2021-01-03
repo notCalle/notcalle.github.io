@@ -1,0 +1,13 @@
+%YAML 1.1
+---
+id: site-menu
+items:
+- label: All Posts
+  url: /posts/
+- label: Archives
+  url: /archive/
+- label: Categories
+  url: /category/
+- label: Tags
+  url: /tag/
+...

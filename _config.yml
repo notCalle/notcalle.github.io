@@ -49,18 +49,22 @@ gist:
   noscript: false
 
 # Plugins
-plugins:
-  - jekyll-redirect-from
-  - jemoji
-  - jekyll-gist
-  - jekyll-seo-tag
-  - jekyll-paginate
-  - jekyll-feed
-  - jekyll-sitemap
 
 # Feed settings
 feed:
   posts_limit: 100
+
+jekyll-archives:
+  enabled:
+    - categories
+    - month
+    - tags
+    - year
+  layouts:
+    category: archive/category
+    month: archive/month
+    tag: archive/tag
+    year: archive/year
 
 # Jekyll Compose
 jekyll_compose:
