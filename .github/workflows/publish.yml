@@ -15,20 +15,24 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
+
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.0
           bundler-cache: true
+
       - name: Setup git configuration
         run: |
           git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
           git config user.name "GitHub Actions"
+
       - name: Prepare worktree
         run: |
           git fetch --no-tags origin gh-pages
           git worktree add _site gh-pages
           git -C _site merge --no-edit --no-ff --log --strategy=ours \
             ${GITHUB_REF:-$GITHUB_SHA}
+
       - name: Build site
         run: |
           echo ::group::Jekyll Build
@@ -42,10 +46,13 @@ jobs:
           git -C _site commit -m 'jekyll build'
           echo ::endgroup::
 
+      # Only redeploy from `main`, and only if something changed, other than
+      # timestamp churn in feeds.
       - name: Deploy to pages
         if: ${{ github.ref == 'refs/heads/main' && env.changes > 0}}
         run: |
           git -C _site push
+
       - name: Cleanup worktree
         run: |
           git worktree remove _site
