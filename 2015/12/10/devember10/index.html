@@ -24,7 +24,7 @@
 <meta name="twitter:site" content="@notcalle" />
 <meta name="twitter:creator" content="@notcalle" />
 <script type="application/ld+json">
-{"dateModified":"2015-12-10T21:05:02+00:00","datePublished":"2015-12-10T21:05:02+00:00","@type":"BlogPosting","description":"Making randomness look pretty is hard, so I’ll put that on the shelf for now. Started looking at GameKit’s Graph pathfinding classes instead, which is probably more essential than getting sidetracked by making things look pretty. Defining the GridGraph at the IsoTileMap level will probably not work though, as different Actors will have their own unique capabilities to traverse the map. The Actor should probably generate their own GridGraph for their observable vicinity when they need it, and filter the graph with their traversal capabilities.","mainEntityOfPage":{"@type":"WebPage","@id":"https://notfiles.xyz/2015/12/10/devember10/"},"url":"https://notfiles.xyz/2015/12/10/devember10/","author":{"@type":"Person","name":"Calle Englund"},"headline":"devember 10th — pretty randomness is hard","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","description":"Making randomness look pretty is hard, so I’ll put that on the shelf for now. Started looking at GameKit’s Graph pathfinding classes instead, which is probably more essential than getting sidetracked by making things look pretty. Defining the GridGraph at the IsoTileMap level will probably not work though, as different Actors will have their own unique capabilities to traverse the map. The Actor should probably generate their own GridGraph for their observable vicinity when they need it, and filter the graph with their traversal capabilities.","headline":"devember 10th — pretty randomness is hard","dateModified":"2015-12-10T21:05:02+00:00","datePublished":"2015-12-10T21:05:02+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://notfiles.xyz/2015/12/10/devember10/"},"url":"https://notfiles.xyz/2015/12/10/devember10/","author":{"@type":"Person","name":"Calle Englund"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
@@ -39,158 +39,24 @@
       <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
     </svg>
   </label>
-  <input id="site-menu-toggle" class="menu-toggle" type="checkbox"/>
-
-  <ul id="site-menu" class="menu">
+  <input id="site-menu-toggle" class="menu-toggle" type="checkbox"/><ul id="site-menu" class="menu">
     <li class="menu-item">
-      <a class="page-link" href="/posts">Posts</a>
-    </li>
-    
-      
-    
-      
-        <li class="menu-item">
-          <a class="page-link" href="/tags/">
-            Tags
-          </a>
-        </li>
-      
-    
-      
-    
-      
-    
-      
-        <li class="menu-item">
-          <a class="page-link" href="/category/devlog/">
-            DevLog
-          </a>
-        </li>
-      
-    
-      
-        <li class="menu-item">
-          <a class="page-link" href="/category/discord/">
-            Discord
-          </a>
-        </li>
-      
-    
-      
-        <li class="menu-item">
-          <a class="page-link" href="/license.html">
-            License
-          </a>
-        </li>
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-  </ul>
+      <a class="page-link" href="/posts/">
+          All Posts
+        </a></li>
+    <li class="menu-item">
+      <a class="page-link" href="/archive/">
+          Archives
+        </a></li>
+    <li class="menu-item">
+      <a class="page-link" href="/category/">
+          Categories
+        </a></li>
+    <li class="menu-item">
+      <a class="page-link" href="/tag/">
+          Tags
+        </a></li>
+</ul>
 </nav>
 </div>
 </header>
@@ -207,30 +73,31 @@
     </h1>
     <div class="post-meta"><time datetime="2015-12-10T21:05:02+00:00" itemprop="datePublished">Thursday, 2015-12-10</time>
        in
-    <a href="/category/devlog">devlog</a>
+    <a href="/category/devlog/"
+       title="Development Logs">devlog</a>
    about
-    <a href="/tags/#gamedev" title="(video) game development">
+    <a href="/tag/gamedev/" title="(video) game development">
       #gamedev</a>,
   
-    <a href="/tags/#devember" title="participation in Devember">
+    <a href="/tag/devember/" title="participation in Devember">
       #devember</a>,
   
-    <a href="/tags/#devember2015" title="Devember 2015 game project">
+    <a href="/tag/devember2015/" title="Devember 2015 game project">
       #devember2015</a>,
   
-    <a href="/tags/#hourofcode" title="coding for one hour per day">
+    <a href="/tag/hourofcode/" title="coding for one hour per day">
       #hourofcode</a>,
   
-    <a href="/tags/#objc" title="coding in Objective C">
+    <a href="/tag/objc/" title="coding in Objective C">
       #objc</a>,
   
-    <a href="/tags/#spritekit" title="making games with SpriteKit">
+    <a href="/tag/spritekit/" title="making games with SpriteKit">
       #spritekit</a>,
   
-    <a href="/tags/#isometric" title="viewing a world in isometric perspective">
+    <a href="/tag/isometric/" title="viewing a world in isometric perspective">
       #isometric</a>,
   
-    <a href="/tags/#pathfinding" title="finding paths through graphs">
+    <a href="/tag/pathfinding/" title="finding paths through graphs">
       #pathfinding</a>
   </div>
   </header>
@@ -248,27 +115,28 @@
       </a>
     </div>
     <div class="post-meta">Sunday, 2015-12-13 in
-    <a href="/category/devlog">devlog</a>
+    <a href="/category/devlog/"
+       title="Development Logs">devlog</a>
    about
-    <a href="/tags/#gamedev" title="(video) game development">
+    <a href="/tag/gamedev/" title="(video) game development">
       #gamedev</a>,
   
-    <a href="/tags/#devember" title="participation in Devember">
+    <a href="/tag/devember/" title="participation in Devember">
       #devember</a>,
   
-    <a href="/tags/#devember2015" title="Devember 2015 game project">
+    <a href="/tag/devember2015/" title="Devember 2015 game project">
       #devember2015</a>,
   
-    <a href="/tags/#hourofcode" title="coding for one hour per day">
+    <a href="/tag/hourofcode/" title="coding for one hour per day">
       #hourofcode</a>,
   
-    <a href="/tags/#objc" title="coding in Objective C">
+    <a href="/tag/objc/" title="coding in Objective C">
       #objc</a>,
   
-    <a href="/tags/#spritekit" title="making games with SpriteKit">
+    <a href="/tag/spritekit/" title="making games with SpriteKit">
       #spritekit</a>,
   
-    <a href="/tags/#isometric" title="viewing a world in isometric perspective">
+    <a href="/tag/isometric/" title="viewing a world in isometric perspective">
       #isometric</a>
   
     </div>
@@ -285,27 +153,28 @@
       </a>
     </div>
     <div class="post-meta">Wednesday, 2015-12-09 in
-    <a href="/category/devlog">devlog</a>
+    <a href="/category/devlog/"
+       title="Development Logs">devlog</a>
    about
-    <a href="/tags/#gamedev" title="(video) game development">
+    <a href="/tag/gamedev/" title="(video) game development">
       #gamedev</a>,
   
-    <a href="/tags/#devember" title="participation in Devember">
+    <a href="/tag/devember/" title="participation in Devember">
       #devember</a>,
   
-    <a href="/tags/#devember2015" title="Devember 2015 game project">
+    <a href="/tag/devember2015/" title="Devember 2015 game project">
       #devember2015</a>,
   
-    <a href="/tags/#hourofcode" title="coding for one hour per day">
+    <a href="/tag/hourofcode/" title="coding for one hour per day">
       #hourofcode</a>,
   
-    <a href="/tags/#objc" title="coding in Objective C">
+    <a href="/tag/objc/" title="coding in Objective C">
       #objc</a>,
   
-    <a href="/tags/#spritekit" title="making games with SpriteKit">
+    <a href="/tag/spritekit/" title="making games with SpriteKit">
       #spritekit</a>,
   
-    <a href="/tags/#isometric" title="viewing a world in isometric perspective">
+    <a href="/tag/isometric/" title="viewing a world in isometric perspective">
       #isometric</a>
   
     </div>
@@ -322,30 +191,31 @@
       </a>
     </div>
     <div class="post-meta">Tuesday, 2015-12-08 in
-    <a href="/category/devlog">devlog</a>
+    <a href="/category/devlog/"
+       title="Development Logs">devlog</a>
    about
-    <a href="/tags/#gamedev" title="(video) game development">
+    <a href="/tag/gamedev/" title="(video) game development">
       #gamedev</a>,
   
-    <a href="/tags/#devember" title="participation in Devember">
+    <a href="/tag/devember/" title="participation in Devember">
       #devember</a>,
   
-    <a href="/tags/#devember2015" title="Devember 2015 game project">
+    <a href="/tag/devember2015/" title="Devember 2015 game project">
       #devember2015</a>,
   
-    <a href="/tags/#hourofcode" title="coding for one hour per day">
+    <a href="/tag/hourofcode/" title="coding for one hour per day">
       #hourofcode</a>,
   
-    <a href="/tags/#objc" title="coding in Objective C">
+    <a href="/tag/objc/" title="coding in Objective C">
       #objc</a>,
   
-    <a href="/tags/#spritekit" title="making games with SpriteKit">
+    <a href="/tag/spritekit/" title="making games with SpriteKit">
       #spritekit</a>,
   
-    <a href="/tags/#isometric" title="viewing a world in isometric perspective">
+    <a href="/tag/isometric/" title="viewing a world in isometric perspective">
       #isometric</a>,
   
-    <a href="/tags/#opengameart" title="using open game art assets">
+    <a href="/tag/opengameart/" title="using open game art assets">
       #opengameart</a>
   
     </div>
@@ -362,27 +232,28 @@
       </a>
     </div>
     <div class="post-meta">Monday, 2015-12-07 in
-    <a href="/category/devlog">devlog</a>
+    <a href="/category/devlog/"
+       title="Development Logs">devlog</a>
    about
-    <a href="/tags/#gamedev" title="(video) game development">
+    <a href="/tag/gamedev/" title="(video) game development">
       #gamedev</a>,
   
-    <a href="/tags/#devember" title="participation in Devember">
+    <a href="/tag/devember/" title="participation in Devember">
       #devember</a>,
   
-    <a href="/tags/#devember2015" title="Devember 2015 game project">
+    <a href="/tag/devember2015/" title="Devember 2015 game project">
       #devember2015</a>,
   
-    <a href="/tags/#hourofcode" title="coding for one hour per day">
+    <a href="/tag/hourofcode/" title="coding for one hour per day">
       #hourofcode</a>,
   
-    <a href="/tags/#objc" title="coding in Objective C">
+    <a href="/tag/objc/" title="coding in Objective C">
       #objc</a>,
   
-    <a href="/tags/#spritekit" title="making games with SpriteKit">
+    <a href="/tag/spritekit/" title="making games with SpriteKit">
       #spritekit</a>,
   
-    <a href="/tags/#isometric" title="viewing a world in isometric perspective">
+    <a href="/tag/isometric/" title="viewing a world in isometric perspective">
       #isometric</a>
   
     </div>
@@ -399,27 +270,28 @@
       </a>
     </div>
     <div class="post-meta">Sunday, 2015-12-06 in
-    <a href="/category/devlog">devlog</a>
+    <a href="/category/devlog/"
+       title="Development Logs">devlog</a>
    about
-    <a href="/tags/#gamedev" title="(video) game development">
+    <a href="/tag/gamedev/" title="(video) game development">
       #gamedev</a>,
   
-    <a href="/tags/#devember" title="participation in Devember">
+    <a href="/tag/devember/" title="participation in Devember">
       #devember</a>,
   
-    <a href="/tags/#devember2015" title="Devember 2015 game project">
+    <a href="/tag/devember2015/" title="Devember 2015 game project">
       #devember2015</a>,
   
-    <a href="/tags/#hourofcode" title="coding for one hour per day">
+    <a href="/tag/hourofcode/" title="coding for one hour per day">
       #hourofcode</a>,
   
-    <a href="/tags/#objc" title="coding in Objective C">
+    <a href="/tag/objc/" title="coding in Objective C">
       #objc</a>,
   
-    <a href="/tags/#spritekit" title="making games with SpriteKit">
+    <a href="/tag/spritekit/" title="making games with SpriteKit">
       #spritekit</a>,
   
-    <a href="/tags/#isometric" title="viewing a world in isometric perspective">
+    <a href="/tag/isometric/" title="viewing a world in isometric perspective">
       #isometric</a>
   
     </div>

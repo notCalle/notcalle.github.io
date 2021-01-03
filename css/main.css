@@ -85,15 +85,19 @@ pre > code { border: 0; padding-right: 0; padding-left: 0; }
 /** Page content */
 .page-heading { font-size: 20px; }
 
-.post-list { margin-left: 0; list-style: none; }
+.post-list, .tag-list, .year-list { margin-left: 0; list-style: none; }
 
-.post-list > li { margin-bottom: 16px; }
+.post-list > li, .tag-list > li, .year-list > li { margin-bottom: 16px; }
+
+.month-list { margin-left: 16px; list-style: none; }
 
 .post-title-list { margin-left: 16px; list-style: none; }
 
 .post-title-list .post-item { padding: unset; background-color: unset; border: unset; display: flex; align-items: first baseline; }
 
 .post-title-list .post-meta { flex: none; }
+
+.post-title-list .post-link { flex: 1; }
 
 @media screen and (max-width: 600px) { .post-title-list { margin-left: 8px; } }
 
@@ -157,7 +161,9 @@ div.post-link { font-size: 24px; }
 .pagination .menu-item.focus, .pagination .menu-item:hover { background-color: #353332; color: #f3f3f3; }
 
 /** Syntax highlighting styles */
-.highlight pre { background-color: #1b1a1a; border: 1px solid #0e0d0d; border-radius: 10px; }
+.highlight pre { background-color: #1b1a1a; border: 1px solid #0e0d0d; border-radius: 8px; margin: -8px; }
+
+@media screen and (max-width: 600px) { .highlight pre { padding: 0 8px; border-left: none; border-right: none; border-radius: 0; } }
 
 .highlight .hll { background-color: #272822; }
 
