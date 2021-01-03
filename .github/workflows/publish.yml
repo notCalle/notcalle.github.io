@@ -31,12 +31,16 @@ jobs:
             ${GITHUB_REF:-$GITHUB_SHA}
       - name: Build site
         run: |
+          echo ::group::Jekyll Build
           bundle exec jekyll build
           echo Skip Jekyll > _site/.nojekyll
           cp CNAME _site
-          git -C _site add --all
+          echo ::endgroup::
+          echo ::group::Commit Changes
+          git -C _site add --all --verbose
           echo changes=$(git -C _site status --short | grep -cv feed.xml) >> $GITHUB_ENV
           git -C _site commit -m 'jekyll build'
+          echo ::endgroup::
 
       - name: Deploy to pages
         if: ${{ github.ref == 'refs/heads/main' && env.changes > 0}}
