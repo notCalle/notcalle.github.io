@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: index
 title: Categories
 ---
 {%- assign sorted_cats = site.categories | sort -%}
@@ -9,11 +9,12 @@ title: Categories
   {%- assign posts = cat[1] -%}
   {%- assign meta = site.data.categories[name] -%}
   <li class="tag-item" id="cat-{{ name }}">
-    <a href="/category/{{ name }}/" title="{{ meta.title }}">#{{ name }}</a>
+    <a href="/category/{{ name }}/" title="{{ meta.title }}">{{ meta.title | default: name }}</a>
     <div class="tag-meta">
+      {% if meta.description %}
+      {{ posts.size }} {{ meta.description }}
+      {% else %}
       {{ posts.size | pluralize: 'post', 'posts' }}
-      {% if meta.description or meta.title %}
-      in {{ meta.description | default: meta.title }}
       {% endif %}
     </div>
   </li>

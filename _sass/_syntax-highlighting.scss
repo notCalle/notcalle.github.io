@@ -9,13 +9,15 @@
     background-color: $background-color;
     border: 1px solid $background-color-dark;
     border-radius: $spacing-unit/2;
-    margin: 0 -$spacing-unit/2;
+    margin-left: -$spacing-unit/2;
+    margin-right: -$spacing-unit/2;
+    box-shadow: 1px 1px $spacing-unit $background-color-dark;
 
     @include media-query($on-palm) {
-        padding: 0 $spacing-unit/2;
         border-left: none;
         border-right: none;
         border-radius: 0;
+        box-shadow: none;
     }
 }
 

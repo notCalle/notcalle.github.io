@@ -1,34 +1,32 @@
 ---
 layout: default
 ---
-<div class="home">
-  <ul class="post-list">
-    <li>{% include post-content.html post=page %}</li>
+<ul class="post-list">
+  <li>{% include post-content.html post=page %}</li>
 
-    {%- assign posts = "" | split: "," -%}
-    {%- for post in site.posts -%}
-      {%- if post == page -%}
-        {%- for next in posts -%}
-          {%- if forloop.last -%}
-            {%- assign posts = "" | split: "," | push: next -%}
-          {%- endif -%}
-        {%- endfor -%}
-        {%- continue -%}
-      {%- endif -%}
-
-      {%- for tag in page.tags -%}
-        {%- if post.tags contains tag -%}
-          {%- assign posts = posts | push: post -%}
-          {%- break -%}
+  {%- assign posts = "" | split: "," -%}
+  {%- for post in site.posts -%}
+    {%- if post == page -%}
+      {%- for next in posts -%}
+        {%- if forloop.last -%}
+          {%- assign posts = "" | split: "," | push: next -%}
         {%- endif -%}
       {%- endfor -%}
-    {%- endfor -%}
+      {%- continue -%}
+    {%- endif -%}
 
-    {%- for post in posts limit: 5 -%}
-      {%- if forloop.first -%}
-        <li><h2>Related posts</h2></li>
+    {%- for tag in page.tags -%}
+      {%- if post.tags contains tag -%}
+        {%- assign posts = posts | push: post -%}
+        {%- break -%}
       {%- endif -%}
-      {%- include post-excerpt.html post=post -%}
     {%- endfor -%}
-  </ul>
-</div>
+  {%- endfor -%}
+
+  {%- for post in posts limit: 5 -%}
+    {%- if forloop.first -%}
+      <li><h2>Related posts</h2></li>
+    {%- endif -%}
+    {%- include post-excerpt.html post=post -%}
+  {%- endfor -%}
+</ul>

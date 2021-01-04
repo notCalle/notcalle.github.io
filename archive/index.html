@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: index
 title: Archives
 ---
 {%- assign years_posts
@@ -9,7 +9,7 @@ title: Archives
 <ul class="year-list">
   {%- for year_posts in years_posts -%}
   {%- assign year = year_posts.name -%}
-  <li>
+  <li class="post-item">
     <a href="/{{ year }}/">{{ year }}</a>
     <span class="post-meta">
       ({{ year_posts.size | pluralize: 'post', 'posts' }})

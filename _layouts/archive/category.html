@@ -3,9 +3,9 @@ layout: index
 ---
 {%- assign meta = site.data.categories[page.title] -%}
 <header class="post-header">
-  <h1>Archive of posts in {{ meta.title | default: page.title }}</h1>
+  <h1>Archive of {{ meta.title | default: page.title }}</h1>
 
-  <span>{{ meta.description }}</span>
+  <span>{{ page.posts.size }} {{ meta.description }}</span>
 </header>
 
 <ul class="post-title-list">

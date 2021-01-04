@@ -2,11 +2,11 @@
 ---
 devlog:
   title: Development Logs
-  description: |
-    Random notes and ramblings, maybe about software development.
+  description:
+    random notes and ramblings, maybe about software development.
 
 discord:
   title: Discord
-  description: |
-    Random notes and ramblings, maybe not related to software development.
+  description:
+    random notes and ramblings, maybe not related to software development.
 ...
