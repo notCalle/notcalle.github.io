@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Momentum Lost
-category: develop
+category: devlog
 tags:
 - devember
 - devember2016
