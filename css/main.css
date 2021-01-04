@@ -85,37 +85,21 @@ pre > code { border: 0; padding-right: 0; padding-left: 0; }
 /** Page content */
 .page-heading { font-size: 20px; }
 
-.post-list, .tag-list, .year-list { margin-left: 0; list-style: none; }
+.post-list, .post-title-list, .tag-list, .year-list { margin-left: 0; list-style: none; }
 
-.post-list > li, .tag-list > li, .year-list > li { margin-bottom: 16px; }
+.post-list > li, .post-title-list > li, .tag-list > li, .year-list > li { margin-bottom: 16px; }
 
-.month-list { margin-left: 16px; list-style: none; }
+.month-list { margin-top: 16px; margin-left: 16px; list-style: none; }
 
-.post-title-list { margin-left: 16px; list-style: none; }
+@media screen and (max-width: 600px) { .month-list > li { margin: 16px; } }
 
-.post-title-list .post-item { padding: unset; background-color: unset; border: unset; display: flex; align-items: first baseline; }
+.post-item, .tag-item { padding: 16px; background-color: #282626; border: 1px solid #0e0d0d; border-radius: 16px; box-shadow: 1px 1px 16px #0e0d0d; }
 
-.post-title-list .post-meta { flex: none; }
+@media screen and (max-width: 600px) { .post-item, .tag-item { padding: 8px; border-radius: 8px; box-shadow: none; } }
 
-.post-title-list .post-link { flex: 1; }
+.post-meta { flex: none; clear: both; font-size: 14px; color: #b5b2b1; }
 
-@media screen and (max-width: 600px) { .post-title-list { margin-left: 8px; } }
-
-.post-item { padding: 16px; background-color: #282626; border: 1px solid #0e0d0d; border-radius: 16px; }
-
-@media screen and (max-width: 600px) { .post-item { padding: 8px; border-radius: 8px; } }
-
-.post-meta { clear: both; font-size: 14px; color: #b5b2b1; }
-
-div.post-link { font-size: 24px; }
-
-.tag-item { padding-top: 8px; padding-left: 8px; border: 1px solid #1b1a1a; border-radius: 16px; }
-
-.tag-item > summary:focus { outline: none; }
-
-.tag-item[open] { border: 1px solid #1b1a1a; background-color: #282626; }
-
-.tag-item > .tag-meta { margin-left: 16px; margin-bottom: 16px; }
+div.post-link { flex: 1; font-size: 24px; }
 
 .tag-meta { margin-left: 8px; margin-right: 8px; font-size: 14px; color: #b5b2b1; }
 
@@ -161,9 +145,9 @@ div.post-link { font-size: 24px; }
 .pagination .menu-item.focus, .pagination .menu-item:hover { background-color: #353332; color: #f3f3f3; }
 
 /** Syntax highlighting styles */
-.highlight pre { background-color: #1b1a1a; border: 1px solid #0e0d0d; border-radius: 8px; margin: -8px; }
+.highlight pre { background-color: #1b1a1a; border: 1px solid #0e0d0d; border-radius: 8px; margin-left: -8px; margin-right: -8px; box-shadow: 1px 1px 16px #0e0d0d; }
 
-@media screen and (max-width: 600px) { .highlight pre { padding: 0 8px; border-left: none; border-right: none; border-radius: 0; } }
+@media screen and (max-width: 600px) { .highlight pre { border-left: none; border-right: none; border-radius: 0; box-shadow: none; } }
 
 .highlight .hll { background-color: #272822; }
 
