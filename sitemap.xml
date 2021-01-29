@@ -392,10 +392,10 @@
 <loc>https://notfiles.xyz/archive/</loc>
 </url>
 <url>
-<loc>https://notfiles.xyz/posts/</loc>
+<loc>https://notfiles.xyz/category/</loc>
 </url>
 <url>
-<loc>https://notfiles.xyz/category/</loc>
+<loc>https://notfiles.xyz/posts/</loc>
 </url>
 <url>
 <loc>https://notfiles.xyz/tag/</loc>
