@@ -4,8 +4,6 @@ name: Deploy not://files v3.0
 
 on:
   push:
-  schedule:
-    - cron: "34 5 * * *"
 
 jobs:
   deploy:
