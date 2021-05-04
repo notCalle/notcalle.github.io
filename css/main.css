@@ -9,6 +9,8 @@ body { min-height: 100vh; min-width: 100vw; display: flex; display: -webkit-flex
 /** Set `margin-bottom` to maintain vertical rhythm */
 h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, figure, .highlight, .post-header, .tag-meta, .month-list, .post-list, .post-title-list, .tag-list, .year-list { margin-bottom: 16px; }
 
+@media screen and (max-width: 600px) { h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, figure, .highlight, .post-header, .tag-meta, .month-list, .post-list, .post-title-list, .tag-list, .year-list { margin-bottom: 8px; } }
+
 /** Images */
 img { max-width: 100%; vertical-align: middle; border: none; float: center; border-radius: 8px; box-shadow: 1px 1px 16px #0e0d0d; }
 
@@ -41,7 +43,7 @@ code, pre { background-color: #1b1a1a; border: 1px solid #0e0d0d; font-family: "
 
 code { border-radius: 5px; padding: 1px 5px; }
 
-pre { border-radius: 10px; padding: 8px 12px; }
+pre { border-radius: 10px; padding: 8px 8px; }
 
 pre > code { border: 0; padding-right: 0; padding-left: 0; }
 
@@ -87,9 +89,11 @@ pre > code { border: 0; padding-right: 0; padding-left: 0; }
 /** Page content */
 .page-heading { font-size: 20px; }
 
-.month-list, .post-list, .post-title-list, .tag-list, .year-list { list-style: none; }
+.post-list, .post-title-list, .tag-list, .year-list { margin-left: 0px; list-style: none; }
 
 .post-list > li, .post-title-list > li, .tag-list > li, .year-list > li { margin-bottom: 16px; }
+
+.month-list { list-style: none; }
 
 .month-list > li { margin-bottom: none; }
 
@@ -145,7 +149,7 @@ div.post-link { flex: 1; font-size: 24px; }
 /** Syntax highlighting styles */
 .highlight pre { background-color: #1b1a1a; border: 1px solid #0e0d0d; border-radius: 8px; box-shadow: 1px 1px 16px #0e0d0d; }
 
-@media screen and (max-width: 600px) { .highlight pre { border-left: none; border-right: none; border-radius: 0; box-shadow: none; } }
+@media screen and (max-width: 600px) { .highlight pre { padding: none; margin: -8px; border-left: none; border-right: none; border-radius: 0; box-shadow: none; } }
 
 .highlight .hll { background-color: #272822; }
 
