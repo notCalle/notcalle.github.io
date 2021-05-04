@@ -149,7 +149,7 @@ div.post-link { flex: 1; font-size: 24px; }
 /** Syntax highlighting styles */
 .highlight pre { background-color: #1b1a1a; border: 1px solid #0e0d0d; border-radius: 8px; box-shadow: 1px 1px 16px #0e0d0d; }
 
-@media screen and (max-width: 600px) { .highlight pre { padding: none; margin: -8px; border-left: none; border-right: none; border-radius: 0; box-shadow: none; } }
+@media screen and (max-width: 600px) { .highlight pre { padding: none; margin-left: -8px; margin-right: -8px; border-left: none; border-right: none; border-radius: 0; box-shadow: none; } }
 
 .highlight .hll { background-color: #272822; }
 
