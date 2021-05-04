@@ -42,6 +42,9 @@ p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
     margin-bottom: $spacing-unit;
+    @include media-query($on-palm) {
+        margin-bottom: $spacing-unit/2;
+    }
 }
 
 
@@ -146,8 +149,7 @@ code {
 
 pre {
     border-radius: 10px;
-    padding: 8px 12px;
-
+    padding: $spacing-unit/2 $spacing-unit/2;
     > code {
         border: 0;
         padding-right: 0;

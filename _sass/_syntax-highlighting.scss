@@ -12,6 +12,8 @@
     box-shadow: 1px 1px $spacing-unit $background-color-dark;
 
     @include media-query($on-palm) {
+        padding: none;
+        margin: -$spacing-unit/2;
         border-left: none;
         border-right: none;
         border-radius: 0;
