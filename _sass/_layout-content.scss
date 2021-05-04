@@ -6,16 +6,13 @@
     font-size: 20px;
 }
 
-%list-rhythm {
-    @extend %vertical-rhythm;
-    list-style: none;
-}
-
 .post-list,
 .post-title-list,
 .tag-list,
 .year-list {
-    @extend %list-rhythm;
+    @extend %vertical-rhythm;
+    margin-left: 0px;
+    list-style: none;
 
     > li {
         margin-bottom: $spacing-unit;
@@ -24,7 +21,9 @@
 
 .month-list,
 {
-    @extend %list-rhythm;
+    @extend %vertical-rhythm;
+    list-style: none;
+
     > li {
         margin-bottom: none;
     }
