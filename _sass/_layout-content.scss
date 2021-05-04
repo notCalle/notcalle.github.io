@@ -6,32 +6,33 @@
     font-size: 20px;
 }
 
+%list-rhythm {
+    @extend %vertical-rhythm;
+    list-style: none;
+}
+
 .post-list,
 .post-title-list,
 .tag-list,
 .year-list {
-    margin-left: 0;
-    list-style: none;
+    @extend %list-rhythm;
 
     > li {
         margin-bottom: $spacing-unit;
     }
 }
 
-.month-list {
-    margin-top: $spacing-unit;
-    margin-left: $spacing-unit;
-    list-style: none;
-    @include media-query($on-palm) {
-        > li {
-            margin: $spacing-unit;
-        }
+.month-list,
+{
+    @extend %list-rhythm;
+    > li {
+        margin-bottom: none;
     }
 }
 
 .post-item,
 .tag-item {
-    padding: $spacing-unit;
+    padding: $spacing-unit $spacing-unit 0;
     background-color: $background-color-light;
     border: 1px solid $background-color-dark;
     border-radius: $spacing-unit;
@@ -60,8 +61,8 @@ div.post-link {
 }
 
 .tag-meta {
-    margin-left: $spacing-unit / 2;
-    margin-right: $spacing-unit / 2;
+    @extend %vertical-rhythm;
+    margin-left: $spacing-unit;
     font-size: $small-font-size;
     color: $text-color-dark;
 }
@@ -70,7 +71,7 @@ div.post-link {
  * Posts
  */
 .post-header {
-    margin-bottom: $spacing-unit;
+    @extend %vertical-rhythm;
 }
 
 .post-title {
@@ -84,7 +85,7 @@ div.post-link {
 }
 
 .post-content {
-//    margin-bottom: $spacing-unit;
+    @extend %clearfix;
 
     h2 {
         font-size: 32px;
@@ -118,15 +119,13 @@ div.post-link {
     .right {
         clear: right;
         float: right;
-        margin-left: 0.5em;
-        margin-bottom: 0.5em;
+        margin-right: 0px;
     }
 
     .left {
         clear: left;
         float: left;
-        margin-right: 0.5em;
-        margin-bottom: 0.5em;
+        margin-left: 0px;
     }
 
     .max25 { max-width: 25%; }
