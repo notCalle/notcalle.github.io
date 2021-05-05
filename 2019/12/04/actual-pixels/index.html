@@ -63,16 +63,11 @@
 </header>
 <section class="page-content">
       <div class="wrapper">
-        <ul class="post-list">
-  <li><article class="post-item" itemscope itemtype="http://schema.org/BlogPosting">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">
-      <a href="/2019/12/04/actual-pixels/">
-        Actual pixels
-      </a>
-    </h1>
-    <div class="post-meta"><time datetime="2019-12-04T21:57:00+00:00" itemprop="datePublished">Wednesday, 2019-12-04</time>
-       in
+  <h1 class="post-title" itemprop="name headline">Actual pixels</h1>
+  <div class="post-meta"><time datetime="2019-12-04T21:57:00+00:00" itemprop="datePublished">Wednesday, 2019-12-04</time>
+     in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
    about
@@ -91,16 +86,18 @@
     <a href="/tag/raytracing/" title="">
       #raytracing</a>
   </div>
-  </header>
+</header>
 
-  <section class="post-content" itemprop="articleBody">
-    <p>First actual image generated, using a “camera light”. The shading is too dark, for some reason I can’t figure out at the moment, so I guess tomorrow will be more of a debugging session than new feature creation.</p>
+<section class="post-content" itemprop="articleBody">
+  <p>First actual image generated, using a “camera light”. The shading is too dark, for some reason I can’t figure out at the moment, so I guess tomorrow will be more of a debugging session than new feature creation.</p>
 
 <p><img src="/img/2019/12/shaded-sphere.png" alt="Shaded sphere" /></p>
 
-  </section>
+</section>
+
 </article>
-</li><li><h2>Related posts</h2></li><li class="post-item">
+
+<section class="post-list"><h2>Related</h2><article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2019/12/05/working-camera/" >
@@ -128,11 +125,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    So yesterday’s attempt at capturing an image didn’t turn out so well, because I messed up the camera, or rather the vector algebra behind everything. When I realized what I had done, I instantly remembered that similar lesson from last year; because points have w=1, while vectors have w=0, almost all vector operations will get messed up by the extra 1, if you accidentally use a point instead. Or vice versa.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      So yesterday’s attempt at capturing an image didn’t turn out so well, because I messed up the camera, or rather the vector algebra behind everything. When I realized what I had done, I instantly remembered that similar lesson from last year; because points have w=1, while vectors have w=0, almost all vector operations will get messed up by the extra 1, if you accidentally use a point instead. Or vice versa.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2019/12/03/pixels-on-a-canvas/" >
@@ -160,11 +160,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Pretty much the whole point of a ray tracer such as this one is to render pretty pictures, and for that we’re going to need a canvas to render onto.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      Pretty much the whole point of a ray tracer such as this one is to render pretty pictures, and for that we’re going to need a canvas to render onto.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2019/12/02/surface-normals/" >
@@ -192,11 +195,15 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Today brings normal vectors into the mix, a critical component for shading computations; the normal vector of a surface at the point where it was hit by a ray, to be precise. Because the normal depends on the hit position on the surface, and we’ll need that too, we keep that around as well.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      Today brings normal vectors into the mix, a critical component for shading computations; the normal vector of a surface at the point where it was hit by a ray, to be precise. Because the normal depends on the hit position on the surface, and we’ll need that too, we keep that around as well.
+
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2019/12/01/intersecting-spheres/" >
@@ -224,11 +231,15 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    The first piece of actual ray tracing: calculating the intersection between a ray and a sphere. To find the intersections, we need to solve the quadratic equation of the sphere being equal to the linear equation of the ray. The interpretation of imaginary roots is that the ray does not intersect the sphere.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      The first piece of actual ray tracing: calculating the intersection between a ray and a sphere. To find the intersections, we need to solve the quadratic equation of the sphere being equal to the linear equation of the ray. The interpretation of imaginary roots is that the ray does not intersect the sphere.
+
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2019/12/01/basic-data-types/" >
@@ -253,11 +264,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Alright, the first push to the [github repo] is complete. Starting out small with just the basic data types that will be at the core of everything, and some tolerance equality operators for comparisons.
-  </blockquote>
-</li>
-</ul>
+  <section class="post-excerpt">
+    <blockquote>
+      Alright, the first push to the [github repo] is complete. Starting out small with just the basic data types that will be at the core of everything, and some tolerance equality operators for comparisons.
+
+    </blockquote>
+  </section>
+</article>
+</section>
 
       </div>
     </section><footer class="site-footer">

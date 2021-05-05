@@ -63,16 +63,11 @@
 </header>
 <section class="page-content">
       <div class="wrapper">
-        <ul class="post-list">
-  <li><article class="post-item" itemscope itemtype="http://schema.org/BlogPosting">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">
-      <a href="/2019/01/06/cache-is-king/">
-        Cache is King
-      </a>
-    </h1>
-    <div class="post-meta"><time datetime="2019-01-06T19:46:24+00:00" itemprop="datePublished">Sunday, 2019-01-06</time>
-       in
+  <h1 class="post-title" itemprop="name headline">Cache is King</h1>
+  <div class="post-meta"><time datetime="2019-01-06T19:46:24+00:00" itemprop="datePublished">Sunday, 2019-01-06</time>
+     in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
    about
@@ -85,10 +80,10 @@
     <a href="/tag/ruby/" title="coding in Ruby">
       #ruby</a>
   </div>
-  </header>
+</header>
 
-  <section class="post-content" itemprop="articleBody">
-    <p>Cut teapot rendering time in half with some clever caching.</p>
+<section class="post-content" itemprop="articleBody">
+  <p>Cut teapot rendering time in half with some clever caching.</p>
 
 <p>Grouped shapes would transform intersecting rays by first asking their parent to transform it, recursively until the outermost group is reached. This caused a lot of unneccessary 4x4 matrix multiplications. Instead, the shape creates a cached  world-to-local space transform by asking its parent for their world-to-local transform and multiplying by its own. Down to one 4x4 matrix multiplication per ray intersection test instead of the nesting depth of groups-within-groups.</p>
 
@@ -96,9 +91,11 @@
 
 <p>While I was at it I made sure that matrix operations on the identity matrix are actually no-ops, which shaved another 20% from the rendering time.</p>
 
-  </section>
+</section>
+
 </article>
-</li><li><h2>Related posts</h2></li><li class="post-item">
+
+<section class="post-list"><h2>Related</h2><article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2019/01/08/light-and-magic/" >
@@ -120,11 +117,15 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Made some refinements to lighting. Originially there was only a point light without distance falloff, which is not an accurate light model in any case. The light inside the room lights the entire world, all the way to the horizon.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      
+Made some refinements to lighting. Originially there was only a point light without distance falloff, which is not an accurate light model in any case. The light inside the room lights the entire world, all the way to the horizon.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2019/01/05/day-36-constructive-solid-geometry/" >
@@ -152,11 +153,15 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    The final pre-defined feature of the project is done, Constructive Solid Geometry, implementing the boolean set operations union, intersection, and difference for solid geometries. This way we can use the basic geometric surface shapes to create more advanced shapes, without resorting to approximating by thousands of triangles.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      The final pre-defined feature of the project is done, Constructive Solid Geometry, implementing the boolean set operations union, intersection, and difference for solid geometries. This way we can use the basic geometric surface shapes to create more advanced shapes, without resorting to approximating by thousands of triangles.
+
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2019/01/02/day-33-domain-specific-language/" >
@@ -184,11 +189,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Not a single feature improvement today, but instead a bit of quality of life improvements.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      Not a single feature improvement today, but instead a bit of quality of life improvements.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2019/01/01/day-32-smoothly-interpolated-normals/" >
@@ -216,11 +224,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2018/12/31/tea-cocktails-and-a-happy-new-year/" >
@@ -239,11 +250,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    
-  </blockquote>
-</li>
-</ul>
+  <section class="post-excerpt">
+    <blockquote>
+      
+
+    </blockquote>
+  </section>
+</article>
+</section>
 
       </div>
     </section><footer class="site-footer">

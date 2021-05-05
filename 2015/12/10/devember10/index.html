@@ -63,16 +63,11 @@
 </header>
 <section class="page-content">
       <div class="wrapper">
-        <ul class="post-list">
-  <li><article class="post-item" itemscope itemtype="http://schema.org/BlogPosting">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">
-      <a href="/2015/12/10/devember10/">
-        devember 10th — pretty randomness is hard
-      </a>
-    </h1>
-    <div class="post-meta"><time datetime="2015-12-10T21:05:02+00:00" itemprop="datePublished">Thursday, 2015-12-10</time>
-       in
+  <h1 class="post-title" itemprop="name headline">devember 10th — pretty randomness is hard</h1>
+  <div class="post-meta"><time datetime="2015-12-10T21:05:02+00:00" itemprop="datePublished">Thursday, 2015-12-10</time>
+     in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
    about
@@ -100,14 +95,16 @@
     <a href="/tag/pathfinding/" title="finding paths through graphs">
       #pathfinding</a>
   </div>
-  </header>
+</header>
 
-  <section class="post-content" itemprop="articleBody">
-    <p>Making randomness look pretty is hard, so I’ll put that on the shelf for now. Started looking at GameKit’s Graph pathfinding classes instead, which is probably more essential than getting sidetracked by making things look pretty. Defining the GridGraph at the IsoTileMap level will probably not work though, as different Actors will have their own unique capabilities to traverse the map. The Actor should probably generate their own GridGraph for their observable vicinity when they need it, and filter the graph with their traversal capabilities.</p>
+<section class="post-content" itemprop="articleBody">
+  <p>Making randomness look pretty is hard, so I’ll put that on the shelf for now. Started looking at GameKit’s Graph pathfinding classes instead, which is probably more essential than getting sidetracked by making things look pretty. Defining the GridGraph at the IsoTileMap level will probably not work though, as different Actors will have their own unique capabilities to traverse the map. The Actor should probably generate their own GridGraph for their observable vicinity when they need it, and filter the graph with their traversal capabilities.</p>
 
-  </section>
+</section>
+
 </article>
-</li><li><h2>Related posts</h2></li><li class="post-item">
+
+<section class="post-list"><h2>Related</h2><article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2015/12/13/devember13/" >
@@ -141,11 +138,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    I’m a bad bad slacker person, and didn’t keep my daily hour of code promise for two consecutive days. I did however read a bit on using Perlin Noise for prettier randomness, so that’ll be a thing when I have my pathfinding sorted.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      I’m a bad bad slacker person, and didn’t keep my daily hour of code promise for two consecutive days. I did however read a bit on using Perlin Noise for prettier randomness, so that’ll be a thing when I have my pathfinding sorted.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2015/12/09/devember09/" >
@@ -179,11 +179,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Camera smoothly centers on player position.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      Camera smoothly centers on player position.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2015/12/08/devember08/" >
@@ -220,11 +223,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Refactored lots of tile related stuff, so the tile templates can hold more information than just a texture image name, e.g. the stepHeight for a tile, so we can have tiles that are not perfectly flat, but still be walkable and have actors positioned correctly.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      Refactored lots of tile related stuff, so the tile templates can hold more information than just a texture image name, e.g. the stepHeight for a tile, so we can have tiles that are not perfectly flat, but still be walkable and have actors positioned correctly.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2015/12/07/devember07/" >
@@ -258,11 +264,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Refactored movement from Player* to new superclass ActorSpriteNode.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      Refactored movement from Player* to new superclass ActorSpriteNode.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2015/12/06/devember06/" >
@@ -296,11 +305,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Lighting broke yesterday because initialization code was moved into the wrong place. Sigh. Now we have working scene lighting again.
-  </blockquote>
-</li>
-</ul>
+  <section class="post-excerpt">
+    <blockquote>
+      Lighting broke yesterday because initialization code was moved into the wrong place. Sigh. Now we have working scene lighting again.
+
+    </blockquote>
+  </section>
+</article>
+</section>
 
       </div>
     </section><footer class="site-footer">

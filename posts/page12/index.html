@@ -118,7 +118,41 @@
 
   <ul class="post-list">
     
-      <li class="post-item">
+      <article class="post-item">
+  <header class="post-header">
+    <div class="post-link">
+      <a href="/2016/12/10/path-finding/" >
+        Path Finding
+      </a>
+    </div>
+    <div class="post-meta">Saturday, 2016-12-10 in
+    <a href="/category/devlog/"
+       title="Development Logs">devlog</a>
+   about
+    <a href="/tag/devember/" title="participation in Devember">
+      #devember</a>,
+  
+    <a href="/tag/devember2016/" title="Devember 2016 game project">
+      #devember2016</a>,
+  
+    <a href="/tag/swift/" title="coding in Swift">
+      #swift</a>,
+  
+    <a href="/tag/xcode/" title="using XCode for appleOS development">
+      #xcode</a>
+  
+    </div>
+  </header>
+  <section class="post-excerpt">
+    <blockquote>
+      First attempt at using the GamePlayKit path finding GKGridGraph. Unfortunately, the playground currently crashes (because of some internal XCode bug maybe?), so it can’t be tested.
+
+    </blockquote>
+  </section>
+</article>
+
+    
+      <article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2016/12/08/gameplaykit/" >
@@ -140,13 +174,16 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Let’s try to use the builtin [A](https://en.wikipedia.org/wiki/A_search_algorithm) in GameplayKit, and see if it works for our current demands.
-  </blockquote>
-</li>
+  <section class="post-excerpt">
+    <blockquote>
+      Let’s try to use the builtin [A](https://en.wikipedia.org/wiki/A_search_algorithm) in GameplayKit, and see if it works for our current demands.
+
+    </blockquote>
+  </section>
+</article>
 
     
-      <li class="post-item">
+      <article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2016/12/07/directional-navigation/" >
@@ -168,13 +205,16 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Prereq work for implementing path finding: eight direction navigation. A tile can find its neighbours within its layer exit(direction:). Currently only within a single map region, because we haven’t implemented interregion links yet.
-  </blockquote>
-</li>
+  <section class="post-excerpt">
+    <blockquote>
+      Prereq work for implementing path finding: eight direction navigation. A tile can find its neighbours within its layer exit(direction:). Currently only within a single map region, because we haven’t implemented interregion links yet.
+
+    </blockquote>
+  </section>
+</article>
 
     
-      <li class="post-item">
+      <article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2016/12/06/caching/" >
@@ -199,13 +239,16 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Spent at huge part of the hour today troubleshooting why my API change to an init method was not being seen by the playground. Weird caching bugs? No; it turns out that XCode was building for target instead of simulator, so the playground didn’t get a rebuilt version of the framework when I hit build. Still don’t know why that changed since last time, but oh well.
-  </blockquote>
-</li>
+  <section class="post-excerpt">
+    <blockquote>
+      Spent at huge part of the hour today troubleshooting why my API change to an init method was not being seen by the playground. Weird caching bugs? No; it turns out that XCode was building for target instead of simulator, so the playground didn’t get a rebuilt version of the framework when I hit build. Still don’t know why that changed since last time, but oh well.
+
+    </blockquote>
+  </section>
+</article>
 
     
-      <li class="post-item">
+      <article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2016/12/06/fail-monday/" >
@@ -215,38 +258,13 @@
     <div class="post-meta">Tuesday, 2016-12-06
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Yesterday was a fail for this project, but I did spend the afternoon writing python code as an assignment in the LISA tutorial about Software Defined Networking, so maybe that counts as something? No? Sorry.
-  </blockquote>
-</li>
+  <section class="post-excerpt">
+    <blockquote>
+      Yesterday was a fail for this project, but I did spend the afternoon writing python code as an assignment in the LISA tutorial about Software Defined Networking, so maybe that counts as something? No? Sorry.
 
-    
-      <li class="post-item">
-  <header class="post-header">
-    <div class="post-link">
-      <a href="/2016/12/04/swift-lesson-one/" >
-        Swift First Lesson
-      </a>
-    </div>
-    <div class="post-meta">Sunday, 2016-12-04 in
-    <a href="/category/devlog/"
-       title="Development Logs">devlog</a>
-   about
-    <a href="/tag/devember/" title="participation in Devember">
-      #devember</a>,
-  
-    <a href="/tag/devember2016/" title="Devember 2016 game project">
-      #devember2016</a>,
-  
-    <a href="/tag/swift/" title="coding in Swift">
-      #swift</a>
-  
-    </div>
-  </header>
-  <blockquote class="post-excerpt">
-    The first lesson turns out to be about access control: nothing is public by default, even classes or their init methods. With public access to our classes the playground plays.
-  </blockquote>
-</li>
+    </blockquote>
+  </section>
+</article>
 
     
   </ul>

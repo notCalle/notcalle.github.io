@@ -63,16 +63,11 @@
 </header>
 <section class="page-content">
       <div class="wrapper">
-        <ul class="post-list">
-  <li><article class="post-item" itemscope itemtype="http://schema.org/BlogPosting">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">
-      <a href="/2016/12/06/caching/">
-        Caching?
-      </a>
-    </h1>
-    <div class="post-meta"><time datetime="2016-12-06T12:55:42+00:00" itemprop="datePublished">Tuesday, 2016-12-06</time>
-       in
+  <h1 class="post-title" itemprop="name headline">Caching?</h1>
+  <div class="post-meta"><time datetime="2016-12-06T12:55:42+00:00" itemprop="datePublished">Tuesday, 2016-12-06</time>
+     in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
    about
@@ -88,16 +83,18 @@
     <a href="/tag/xcode/" title="using XCode for appleOS development">
       #xcode</a>
   </div>
-  </header>
+</header>
 
-  <section class="post-content" itemprop="articleBody">
-    <p>Spent at huge part of the hour today troubleshooting why my API change to an <code class="language-plaintext highlighter-rouge">init</code> method was not being seen by the <em>playground</em>. Weird caching bugs? No; it turns out that <em>XCode</em> was building for <em>target</em> instead of <em>simulator</em>, so the <em>playground</em> didn’t get a rebuilt version of the framework when I hit <em>build</em>. Still don’t know why that changed since last time, but oh well.</p>
+<section class="post-content" itemprop="articleBody">
+  <p>Spent at huge part of the hour today troubleshooting why my API change to an <code class="language-plaintext highlighter-rouge">init</code> method was not being seen by the <em>playground</em>. Weird caching bugs? No; it turns out that <em>XCode</em> was building for <em>target</em> instead of <em>simulator</em>, so the <em>playground</em> didn’t get a rebuilt version of the framework when I hit <em>build</em>. Still don’t know why that changed since last time, but oh well.</p>
 
 <p>After that frustration was cleared I proceeded to learn that <em>Swift</em> has the same semi-dynamic <code class="language-plaintext highlighter-rouge">Array</code> notion as <em>Objective C</em> has, so they need to be properly managed with respect to reserving space and inserting new objects.</p>
 
-  </section>
+</section>
+
 </article>
-</li><li><h2>Related posts</h2></li><li class="post-item">
+
+<section class="post-list"><h2>Related</h2><article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2016/12/07/directional-navigation/" >
@@ -119,11 +116,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Prereq work for implementing path finding: eight direction navigation. A tile can find its neighbours within its layer exit(direction:). Currently only within a single map region, because we haven’t implemented interregion links yet.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      Prereq work for implementing path finding: eight direction navigation. A tile can find its neighbours within its layer exit(direction:). Currently only within a single map region, because we haven’t implemented interregion links yet.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2016/12/04/swift-lesson-one/" >
@@ -145,11 +145,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    The first lesson turns out to be about access control: nothing is public by default, even classes or their init methods. With public access to our classes the playground plays.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      The first lesson turns out to be about access control: nothing is public by default, even classes or their init methods. With public access to our classes the playground plays.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2016/12/04/travel-day/" >
@@ -168,11 +171,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    This fell apart quickly, as expected, with a friday that began in CET and ends about now in EST, with 12 hours of air travel and such in between. But development evnvironment is now setup on laptop as well, so at least there’s hope for the following days.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      This fell apart quickly, as expected, with a friday that began in CET and ends about now in EST, with 12 hours of air travel and such in between. But development evnvironment is now setup on laptop as well, so at least there’s hope for the following days.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2016/12/02/second-of-devember/" >
@@ -197,11 +203,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Trying to sketch some basic structure for possibly hierarchical map definition, and trying (failing) to use a Swift Playground to try the framework code while sketching. The playground can import my framework, but the framework classes are not accessible for some reason. That’s all I got from one hour today.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      Trying to sketch some basic structure for possibly hierarchical map definition, and trying (failing) to use a Swift Playground to try the framework code while sketching. The playground can import my framework, but the framework classes are not accessible for some reason. That’s all I got from one hour today.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2016/12/01/first-of-devember/" >
@@ -223,11 +232,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Not a single actual line of code written today, but development environment setup had to take priority. The way to manage Cocoa dependencies seems to be Carthage, so lets use that for our first known dependency, namely a new framework that will hold all reusable parts of the map handling and navigation code. Carthage looks somewhat similar to bundler of Ruby fame, so that’s nice.
-  </blockquote>
-</li>
-</ul>
+  <section class="post-excerpt">
+    <blockquote>
+      Not a single actual line of code written today, but development environment setup had to take priority. The way to manage Cocoa dependencies seems to be Carthage, so lets use that for our first known dependency, namely a new framework that will hold all reusable parts of the map handling and navigation code. Carthage looks somewhat similar to bundler of Ruby fame, so that’s nice.
+
+    </blockquote>
+  </section>
+</article>
+</section>
 
       </div>
     </section><footer class="site-footer">

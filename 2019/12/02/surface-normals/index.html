@@ -63,16 +63,11 @@
 </header>
 <section class="page-content">
       <div class="wrapper">
-        <ul class="post-list">
-  <li><article class="post-item" itemscope itemtype="http://schema.org/BlogPosting">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">
-      <a href="/2019/12/02/surface-normals/">
-        Surface normals
-      </a>
-    </h1>
-    <div class="post-meta"><time datetime="2019-12-02T17:37:00+00:00" itemprop="datePublished">Monday, 2019-12-02</time>
-       in
+  <h1 class="post-title" itemprop="name headline">Surface normals</h1>
+  <div class="post-meta"><time datetime="2019-12-02T17:37:00+00:00" itemprop="datePublished">Monday, 2019-12-02</time>
+     in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
    about
@@ -91,10 +86,10 @@
     <a href="/tag/raytracing/" title="">
       #raytracing</a>
   </div>
-  </header>
+</header>
 
-  <section class="post-content" itemprop="articleBody">
-    <p>Today brings <a href="https://en.wikipedia.org/wiki/Normal_(geometry)">normal vectors</a> into the mix, a critical component for shading computations; the normal vector of a surface at the point where it was hit by a ray, to be precise. Because the normal depends on the hit position on the surface, and we’ll need that too, we keep that around as well.</p>
+<section class="post-content" itemprop="articleBody">
+  <p>Today brings <a href="https://en.wikipedia.org/wiki/Normal_(geometry)">normal vectors</a> into the mix, a critical component for shading computations; the normal vector of a surface at the point where it was hit by a ray, to be precise. Because the normal depends on the hit position on the surface, and we’ll need that too, we keep that around as well.</p>
 
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">struct</span> <span class="kt">Hit</span> <span class="p">{</span> <span class="k">let</span> <span class="nv">surface</span><span class="p">:</span> <span class="kt">Surface</span><span class="p">;</span> <span class="k">let</span> <span class="nv">position</span><span class="p">:</span> <span class="kt">Point</span><span class="p">;</span> <span class="k">let</span> <span class="nv">normal</span><span class="p">:</span> <span class="kt">Vector</span> <span class="p">}</span>
 
@@ -104,9 +99,11 @@
 <p>For the (2-dimensional) <a href="https://en.wikipedia.org/wiki/Unit_sphere">unit sphere</a>, our only surface so far, the normal at a point on its surface can be calculated as the vector from origin: \(\overrightarrow{N}_{hit} = \dot{P}_{hit} - \dot{0}\)</p>
 
 
-  </section>
+</section>
+
 </article>
-</li><li><h2>Related posts</h2></li><li class="post-item">
+
+<section class="post-list"><h2>Related</h2><article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2019/12/03/pixels-on-a-canvas/" >
@@ -134,11 +131,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Pretty much the whole point of a ray tracer such as this one is to render pretty pictures, and for that we’re going to need a canvas to render onto.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      Pretty much the whole point of a ray tracer such as this one is to render pretty pictures, and for that we’re going to need a canvas to render onto.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2019/12/01/intersecting-spheres/" >
@@ -166,11 +166,15 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    The first piece of actual ray tracing: calculating the intersection between a ray and a sphere. To find the intersections, we need to solve the quadratic equation of the sphere being equal to the linear equation of the ray. The interpretation of imaginary roots is that the ray does not intersect the sphere.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      The first piece of actual ray tracing: calculating the intersection between a ray and a sphere. To find the intersections, we need to solve the quadratic equation of the sphere being equal to the linear equation of the ray. The interpretation of imaginary roots is that the ray does not intersect the sphere.
+
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2019/12/01/basic-data-types/" >
@@ -195,11 +199,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Alright, the first push to the [github repo] is complete. Starting out small with just the basic data types that will be at the core of everything, and some tolerance equality operators for comparisons.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      Alright, the first push to the [github repo] is complete. Starting out small with just the basic data types that will be at the core of everything, and some tolerance equality operators for comparisons.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2019/11/30/devember-again/" >
@@ -221,11 +228,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    This one snuck up on me faster than anticipated, but here we go.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      This one snuck up on me faster than anticipated, but here we go.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2019/01/08/light-and-magic/" >
@@ -247,11 +257,15 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Made some refinements to lighting. Originially there was only a point light without distance falloff, which is not an accurate light model in any case. The light inside the room lights the entire world, all the way to the horizon.
-  </blockquote>
-</li>
-</ul>
+  <section class="post-excerpt">
+    <blockquote>
+      
+Made some refinements to lighting. Originially there was only a point light without distance falloff, which is not an accurate light model in any case. The light inside the room lights the entire world, all the way to the horizon.
+
+    </blockquote>
+  </section>
+</article>
+</section>
 
       </div>
     </section><footer class="site-footer">

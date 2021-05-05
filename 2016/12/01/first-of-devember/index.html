@@ -63,16 +63,11 @@
 </header>
 <section class="page-content">
       <div class="wrapper">
-        <ul class="post-list">
-  <li><article class="post-item" itemscope itemtype="http://schema.org/BlogPosting">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">
-      <a href="/2016/12/01/first-of-devember/">
-        First of Devember
-      </a>
-    </h1>
-    <div class="post-meta"><time datetime="2016-12-01T22:02:17+00:00" itemprop="datePublished">Thursday, 2016-12-01</time>
-       in
+  <h1 class="post-title" itemprop="name headline">First of Devember</h1>
+  <div class="post-meta"><time datetime="2016-12-01T22:02:17+00:00" itemprop="datePublished">Thursday, 2016-12-01</time>
+     in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
    about
@@ -85,14 +80,16 @@
     <a href="/tag/xcode/" title="using XCode for appleOS development">
       #xcode</a>
   </div>
-  </header>
+</header>
 
-  <section class="post-content" itemprop="articleBody">
-    <p>Not a single actual line of code written today, but development environment setup had to take priority. The way to manage Cocoa dependencies seems to be <a href="https://github.com/Carthage/Carthage">Carthage</a>, so lets use that for our first known dependency, namely a new framework that will hold all reusable parts of the map handling and navigation code. <em>Carthage</em> looks somewhat similar to <em>bundler</em> of Ruby fame, so that’s nice.</p>
+<section class="post-content" itemprop="articleBody">
+  <p>Not a single actual line of code written today, but development environment setup had to take priority. The way to manage Cocoa dependencies seems to be <a href="https://github.com/Carthage/Carthage">Carthage</a>, so lets use that for our first known dependency, namely a new framework that will hold all reusable parts of the map handling and navigation code. <em>Carthage</em> looks somewhat similar to <em>bundler</em> of Ruby fame, so that’s nice.</p>
 
-  </section>
+</section>
+
 </article>
-</li><li><h2>Related posts</h2></li><li class="post-item">
+
+<section class="post-list"><h2>Related</h2><article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2016/12/02/second-of-devember/" >
@@ -117,11 +114,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Trying to sketch some basic structure for possibly hierarchical map definition, and trying (failing) to use a Swift Playground to try the framework code while sketching. The playground can import my framework, but the framework classes are not accessible for some reason. That’s all I got from one hour today.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      Trying to sketch some basic structure for possibly hierarchical map definition, and trying (failing) to use a Swift Playground to try the framework code while sketching. The playground can import my framework, but the framework classes are not accessible for some reason. That’s all I got from one hour today.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2016/11/30/gpg-signed-git-with-xcode/" >
@@ -137,11 +137,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    For work projects I’ve been working on lately, we have adopted a strict gpg signed commits and tags only policy, so I thought I’d carry that good intention over to private projects as well. Except it turns out that the execution environment in which XCode runs git does not play well with gnupg.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      For work projects I’ve been working on lately, we have adopted a strict gpg signed commits and tags only policy, so I thought I’d carry that good intention over to private projects as well. Except it turns out that the execution environment in which XCode runs git does not play well with gnupg.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2016/11/30/devember-2016-contract/" >
@@ -166,11 +169,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    I, Calle Englund, will participate to the next Devember. My Devember will be an iOS CRPG. I promise I will program for my Devember for at least an hour, every day of the next December. I will also write a daily public devlog and will make the produced code publicly available on the internet. No matter what, I will keep my promise.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      I, Calle Englund, will participate to the next Devember. My Devember will be an iOS CRPG. I promise I will program for my Devember for at least an hour, every day of the next December. I will also write a daily public devlog and will make the produced code publicly available on the internet. No matter what, I will keep my promise.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2016/10/23/devember-2016-is-coming/" >
@@ -192,11 +198,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    It’s time to start planning for this year’s Devember, and try to figure out what to code towards for an hour every day.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      It’s time to start planning for this year’s Devember, and try to figure out what to code towards for an hour every day.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2016/08/22/xcode-build-number-from-git/" >
@@ -212,11 +221,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Add this as a Run Script Phase at the end of Build Phases in your XCode project to increment your CFBundleVersion as {git commit count}.{uncommitted changes}-{gitrevid}.
-  </blockquote>
-</li>
-</ul>
+  <section class="post-excerpt">
+    <blockquote>
+      Add this as a Run Script Phase at the end of Build Phases in your XCode project to increment your CFBundleVersion as {git commit count}.{uncommitted changes}-{gitrevid}.
+
+    </blockquote>
+  </section>
+</article>
+</section>
 
       </div>
     </section><footer class="site-footer">

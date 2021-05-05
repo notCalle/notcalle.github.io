@@ -63,16 +63,11 @@
 </header>
 <section class="page-content">
       <div class="wrapper">
-        <ul class="post-list">
-  <li><article class="post-item" itemscope itemtype="http://schema.org/BlogPosting">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">
-      <a href="/2018/12/31/day-31-optimizing-triangles/">
-        Day 31, Optimizing triangles
-      </a>
-    </h1>
-    <div class="post-meta"><time datetime="2018-12-31T11:19:26+00:00" itemprop="datePublished">Monday, 2018-12-31</time>
-       in
+  <h1 class="post-title" itemprop="name headline">Day 31, Optimizing triangles</h1>
+  <div class="post-meta"><time datetime="2018-12-31T11:19:26+00:00" itemprop="datePublished">Monday, 2018-12-31</time>
+     in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
    about
@@ -91,10 +86,10 @@
     <a href="/tag/ruby/" title="coding in Ruby">
       #ruby</a>
   </div>
-  </header>
+</header>
 
-  <section class="post-content" itemprop="articleBody">
-    <p><img src="/img/2018/12/teapot-reflection.png" alt="Utah teapot in reflective room" class="right" />
+<section class="post-content" itemprop="articleBody">
+  <p><img src="/img/2018/12/teapot-reflection.png" alt="Utah teapot in reflective room" class="right" />
 Triangle rendering was painfully slow, as mentioned <a href="/2018/12/30/day-30-triangles/">yesterday</a>. Putting a little reflective shine on the floor and walls of the room took rendering time past 90 minutes. After a bit of research i tried a binary <a href="https://en.wikipedia.org/wiki/Bounding_volume_hierarchy">bounding volume hierarchy</a>, dividing the list of shapes into subtrees, split evenly on the largest axis of the bounding box, recursively. This way we get a spacially balanced binary tree with the actual shapes as leaves, and theoretically get \(O(log\ n)\) instead of \(O(n)\) search time per ray. Huge difference, especially with rays branching recursively for reflections and refractions. Down from 90 to 6 minutes for the same scene.</p>
 
 <p><img src="/img/2018/12/teapot-hi.png" alt="High-poly Utah teapot" class="right" />
@@ -103,9 +98,11 @@ Triangle rendering was painfully slow, as mentioned <a href="/2018/12/30/day-30-
 <p>This marks the end of Devember 2018, but there’s still some more work to do on the raytracer before I let it go. The flat shading of triangles needs some normal interpolation, and the primitive volumes needs some <a href="https://en.wikipedia.org/wiki/Constructive_solid_geometry">constructive solid geometry</a> operations to really shine.</p>
 
 
-  </section>
+</section>
+
 </article>
-</li><li><h2>Related posts</h2></li><li class="post-item">
+
+<section class="post-list"><h2>Related</h2><article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2018/12/31/tea-cocktails-and-a-happy-new-year/" >
@@ -124,11 +121,14 @@ Triangle rendering was painfully slow, as mentioned <a href="/2018/12/30/day-30-
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2018/12/30/day-30-triangles/" >
@@ -156,11 +156,16 @@ Triangle rendering was painfully slow, as mentioned <a href="/2018/12/30/day-30-
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    The last of the primitive shapes, the triangle. By them selves they’re pretty boring, but when you stick loads of them together they make pretty teapots. Very. Slowly. And quite chunky, because low-polygon model. It sums up to 240 triangles after dividing some larger polygons, and takes about 20–30 minutes to render at the whopping resulution of 320x256 and no reflections. I probably need to research some kind of bounding hierarchy algorithm to automagically subdivide large groups of objects.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      
+The last of the primitive shapes, the triangle. By them selves they’re pretty boring, but when you stick loads of them together they make pretty teapots. Very. Slowly. And quite chunky, because low-polygon model. It sums up to 240 triangles after dividing some larger polygons, and takes about 20–30 minutes to render at the whopping resulution of 320x256 and no reflections. I probably need to research some kind of bounding hierarchy algorithm to automagically subdivide large groups of objects.
+
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2018/12/29/day-29-groups/" >
@@ -188,11 +193,15 @@ Triangle rendering was painfully slow, as mentioned <a href="/2018/12/30/day-30-
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Transforming each object in the scene in global world reference space quickly becomes tiresome, so let’s introduce a new group “shape”. A group takes any number of objects and provides a common reference space for its children via its own transform. A group also helps reduce the search space in large scenes, by aggregating the bounding boxes of its children into a bounding box for the entire group. That way ray intersection tests against the children of the group only needs to happen when the group bounding box is intersected. Neat.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      
+Transforming each object in the scene in global world reference space quickly becomes tiresome, so let’s introduce a new group “shape”. A group takes any number of objects and provides a common reference space for its children via its own transform. A group also helps reduce the search space in large scenes, by aggregating the bounding boxes of its children into a bounding box for the entire group. That way ray intersection tests against the children of the group only needs to happen when the group bounding box is intersected. Neat.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2018/12/28/day-28-celebratory-cocktails/" >
@@ -220,11 +229,15 @@ Triangle rendering was painfully slow, as mentioned <a href="/2018/12/30/day-30-
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    The latest addition to the supported shapes is the cone, a deformed kind of cylinder, also optionally capped and restricted to an interval along its length. With all these things we can make a cocktail to celebrate. With all these transparent parts, it takes more than 8 minutes to render.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      
+The latest addition to the supported shapes is the cone, a deformed kind of cylinder, also optionally capped and restricted to an interval along its length. With all these things we can make a cocktail to celebrate. With all these transparent parts, it takes more than 8 minutes to render.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2018/12/27/day-27-cylinders-part-2/" >
@@ -252,11 +265,16 @@ Triangle rendering was painfully slow, as mentioned <a href="/2018/12/30/day-30-
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    To celebrate that cylinders can be constrained and capped at the ends, we have a remake of the cubemas scene from a few days ago, but with today’s shiny new cylinders instead of cubes.
-  </blockquote>
-</li>
-</ul>
+  <section class="post-excerpt">
+    <blockquote>
+      
+To celebrate that cylinders can be constrained and capped at the ends, we have a remake of the cubemas scene from a few days ago, but with today’s shiny new cylinders instead of cubes.
+
+
+    </blockquote>
+  </section>
+</article>
+</section>
 
       </div>
     </section><footer class="site-footer">

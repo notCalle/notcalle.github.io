@@ -63,16 +63,11 @@
 </header>
 <section class="page-content">
       <div class="wrapper">
-        <ul class="post-list">
-  <li><article class="post-item" itemscope itemtype="http://schema.org/BlogPosting">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">
-      <a href="/2018/12/11/day-11-into-the-shadows/">
-        Day 11, Into the Shadows
-      </a>
-    </h1>
-    <div class="post-meta"><time datetime="2018-12-11T21:03:54+00:00" itemprop="datePublished">Tuesday, 2018-12-11</time>
-       in
+  <h1 class="post-title" itemprop="name headline">Day 11, Into the Shadows</h1>
+  <div class="post-meta"><time datetime="2018-12-11T21:03:54+00:00" itemprop="datePublished">Tuesday, 2018-12-11</time>
+     in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
    about
@@ -91,10 +86,10 @@
     <a href="/tag/ruby/" title="coding in Ruby">
       #ruby</a>
   </div>
-  </header>
+</header>
 
-  <section class="post-content" itemprop="articleBody">
-    <p>After todays work we can render the shadows cast by objects in our scenes!</p>
+<section class="post-content" itemprop="articleBody">
+  <p>After todays work we can render the shadows cast by objects in our scenes!</p>
 
 <p>Finding out which points are in shadow is actually pretty neat, just cast a ray toward the light, and see if it hits anything else on the way. If the light is obscured, the point just gets ambiant light. When lit by multiple lights, the whole thing is just done separately for each light, and added in the end.</p>
 
@@ -102,9 +97,11 @@
 <img src="/img/2018/12/sphere-shadows.png" alt="Spheres with Shadows" />
 <img src="/img/2018/12/multi-shadow-spheres.png" alt="Multi-light Shadows" /></p>
 
-  </section>
+</section>
+
 </article>
-</li><li><h2>Related posts</h2></li><li class="post-item">
+
+<section class="post-list"><h2>Related</h2><article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2018/12/12/day-12-spheres-on-a-plane/" >
@@ -132,11 +129,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Spheres are nice and all, but we need more shapes to make the world go around. So, a little bit of refactoring to get most the juicy bits from spheres apply to every kind of shape, such as planes. So flat, and infinite.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      Spheres are nice and all, but we need more shapes to make the world go around. So, a little bit of refactoring to get most the juicy bits from spheres apply to every kind of shape, such as planes. So flat, and infinite.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2018/12/10/day-10-a-world-full-of-spheres/" >
@@ -164,11 +164,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    With the development environment fixed, using the previous progress to render a world with multiple is as simple as creating the camera:
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      With the development environment fixed, using the previous progress to render a world with multiple is as simple as creating the camera:
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2018/12/10/day-9-lost-to-ruby-environment-trouble/" >
@@ -190,11 +193,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    No progress because it turned out that the Ruby / bundler environment on my laptop was not functional anymore, so the little time I had while away over the weekend got wasted on debugging why nothing worked instead of doing something productive.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      No progress because it turned out that the Ruby / bundler environment on my laptop was not functional anymore, so the little time I had while away over the weekend got wasted on debugging why nothing worked instead of doing something productive.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2018/12/08/day-8-making-a-scene/" >
@@ -222,11 +228,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Further steps toward more pixels, teaching the world to tell what color a ray will see, and creating the necessary transforms for positioning the world in front of the camera. Then have the camera cast a ray, for each pixel in the resulting image, into the world.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      Further steps toward more pixels, teaching the world to tell what color a ray will see, and creating the necessary transforms for positioning the world in front of the camera. Then have the camera cast a ray, for each pixel in the resulting image, into the world.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2018/12/07/day-7-casting-rays-through-the-whole-world/" >
@@ -251,11 +260,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Lots of refactoring today, because old assumptions were smashed, and some cleanup of annoying duplications was needed. No new pixels yet, but maybe tomorrow? These where the previous two days pixel results, with the black background made transparent while converting them from ppm to png.
-  </blockquote>
-</li>
-</ul>
+  <section class="post-excerpt">
+    <blockquote>
+      Lots of refactoring today, because old assumptions were smashed, and some cleanup of annoying duplications was needed. No new pixels yet, but maybe tomorrow? These where the previous two days pixel results, with the black background made transparent while converting them from ppm to png.
+
+    </blockquote>
+  </section>
+</article>
+</section>
 
       </div>
     </section><footer class="site-footer">

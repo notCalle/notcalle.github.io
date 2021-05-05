@@ -63,16 +63,11 @@
 </header>
 <section class="page-content">
       <div class="wrapper">
-        <ul class="post-list">
-  <li><article class="post-item" itemscope itemtype="http://schema.org/BlogPosting">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">
-      <a href="/2018/12/04/day-4-intersections/">
-        Day 4, Intersections
-      </a>
-    </h1>
-    <div class="post-meta"><time datetime="2018-12-04T22:34:42+00:00" itemprop="datePublished">Tuesday, 2018-12-04</time>
-       in
+  <h1 class="post-title" itemprop="name headline">Day 4, Intersections</h1>
+  <div class="post-meta"><time datetime="2018-12-04T22:34:42+00:00" itemprop="datePublished">Tuesday, 2018-12-04</time>
+     in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
    about
@@ -88,10 +83,10 @@
     <a href="/tag/raytracerchallenge/" title="">
       #raytracerchallenge</a>
   </div>
-  </header>
+</header>
 
-  <section class="post-content" itemprop="articleBody">
-    <p>More math heavy stuff, calculating the positions along a ray, where it intersects a sphere. Turns out this is as simple as solving a quadratic equation, with some special coefficients.</p>
+<section class="post-content" itemprop="articleBody">
+  <p>More math heavy stuff, calculating the positions along a ray, where it intersects a sphere. Turns out this is as simple as solving a quadratic equation, with some special coefficients.</p>
 
 \[\|\dot{O} + t\overrightarrow{D} - \dot{C}\|^2 = R^2\]
 
@@ -127,9 +122,11 @@
 </code></pre></div></div>
 
 
-  </section>
+</section>
+
 </article>
-</li><li><h2>Related posts</h2></li><li class="post-item">
+
+<section class="post-list"><h2>Related</h2><article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2018/12/05/day-5-bumping-in-to-things/" >
@@ -157,11 +154,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Today I Learned that I shouldn’t have assumed the sphere would ever need to change from being a unit sphere, so intersecting gets even simpler:
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      Today I Learned that I shouldn’t have assumed the sphere would ever need to change from being a unit sphere, so intersecting gets even simpler:
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2018/12/03/day-3-casting-rays-into-spheres/" >
@@ -189,11 +189,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Finally some practical applications of the math heavy weekend, casting abstract rays at abstract spheres. Well, on a sliding scale from linear algebra to physical representation, it’s still a step in the direction.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      Finally some practical applications of the math heavy weekend, casting abstract rays at abstract spheres. Well, on a sliding scale from linear algebra to physical representation, it’s still a step in the direction.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2018/12/02/day-2-matrices-matrices-matrices-oh-and-more-matrices/" >
@@ -224,11 +227,15 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Today was spent on a heavy chunk of linear algebra, matrices. This is the foundation for everything else, so time well spent reimplementing what’s already in the stdlib, just to refresh my math skills. If there are still days left of Devember when I’m finished, I’ll come back and replace all this with the stdlib implementation instead, hoping I’m somewhat close to the same API.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      Today was spent on a heavy chunk of linear algebra, matrices. This is the foundation for everything else, so time well spent reimplementing what’s already in the stdlib, just to refresh my math skills. If there are still days left of Devember when I’m finished, I’ll come back and replace all this with the stdlib implementation instead, hoping I’m somewhat close to the same API.
+
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2018/12/01/day-1-overdoing-it/" >
@@ -256,11 +263,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    The first proper day of Devember is here. Of course I overdid it and spent all day coding, instead of just that one hour.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      The first proper day of Devember is here. Of course I overdid it and spent all day coding, instead of just that one hour.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2018/11/30/day-0-tuple-basics/" >
@@ -291,11 +301,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Oops, I started a day early.
-  </blockquote>
-</li>
-</ul>
+  <section class="post-excerpt">
+    <blockquote>
+      Oops, I started a day early.
+
+    </blockquote>
+  </section>
+</article>
+</section>
 
       </div>
     </section><footer class="site-footer">

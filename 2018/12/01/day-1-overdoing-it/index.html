@@ -63,16 +63,11 @@
 </header>
 <section class="page-content">
       <div class="wrapper">
-        <ul class="post-list">
-  <li><article class="post-item" itemscope itemtype="http://schema.org/BlogPosting">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">
-      <a href="/2018/12/01/day-1-overdoing-it/">
-        Day 1, Overdoing it
-      </a>
-    </h1>
-    <div class="post-meta"><time datetime="2018-12-01T18:51:19+00:00" itemprop="datePublished">Saturday, 2018-12-01</time>
-       in
+  <h1 class="post-title" itemprop="name headline">Day 1, Overdoing it</h1>
+  <div class="post-meta"><time datetime="2018-12-01T18:51:19+00:00" itemprop="datePublished">Saturday, 2018-12-01</time>
+     in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
    about
@@ -91,18 +86,20 @@
     <a href="/tag/ruby/" title="coding in Ruby">
       #ruby</a>
   </div>
-  </header>
+</header>
 
-  <section class="post-content" itemprop="articleBody">
-    <p>The first proper day of Devember is here. Of course I overdid it and spent all day coding, instead of just that one hour.</p>
+<section class="post-content" itemprop="articleBody">
+  <p>The first proper day of Devember is here. Of course I overdid it and spent all day coding, instead of just that one hour.</p>
 
 <p>I had intended to finish the first chapter, with arithmetic operations on vectors, and points, all being represented by that single <code class="language-plaintext highlighter-rouge">Tuple</code> class I made yesterday. A large part of that was refactoring the test infrastructure, which is to be expected this early, I guess.</p>
 
 <p>Then I got carried away, and finished the second chapter too, implementing colors, represented by the same <code class="language-plaintext highlighter-rouge">Tuple</code> class, and a drawable canvas, that can export itself in PPM format.</p>
 
-  </section>
+</section>
+
 </article>
-</li><li><h2>Related posts</h2></li><li class="post-item">
+
+<section class="post-list"><h2>Related</h2><article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2018/12/02/day-2-matrices-matrices-matrices-oh-and-more-matrices/" >
@@ -133,11 +130,15 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Today was spent on a heavy chunk of linear algebra, matrices. This is the foundation for everything else, so time well spent reimplementing what’s already in the stdlib, just to refresh my math skills. If there are still days left of Devember when I’m finished, I’ll come back and replace all this with the stdlib implementation instead, hoping I’m somewhat close to the same API.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      Today was spent on a heavy chunk of linear algebra, matrices. This is the foundation for everything else, so time well spent reimplementing what’s already in the stdlib, just to refresh my math skills. If there are still days left of Devember when I’m finished, I’ll come back and replace all this with the stdlib implementation instead, hoping I’m somewhat close to the same API.
+
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2018/11/30/day-0-tuple-basics/" >
@@ -168,11 +169,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Oops, I started a day early.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      Oops, I started a day early.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2018/11/29/devember-is-coming/" >
@@ -194,11 +198,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    It’s that time of the year again.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      It’s that time of the year again.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2016/12/21/momentum-lost/" >
@@ -217,11 +224,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    All the setbacks and distractions made me lose the momentum I needed to keep going at this thing, despite everything else that exhausts my energy.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      All the setbacks and distractions made me lose the momentum I needed to keep going at this thing, despite everything else that exhausts my energy.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2016/12/14/spritekit-evolved/" >
@@ -243,11 +253,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    While poking around, I saw an intriguing class named SKTileMapNode, and it turns out that SpriteKit has gained support for rectangular, isometric, and hexagonal tile maps since last year. Looks like I can drop all of the plans for GridMapKit and just use what’s there in the SDK already. Maybe I’ll still need some of it to implement the plans for hierarchical maps of different scale, e.g. world map, detailed terrain maps, and building/dungeon maps.
-  </blockquote>
-</li>
-</ul>
+  <section class="post-excerpt">
+    <blockquote>
+      While poking around, I saw an intriguing class named SKTileMapNode, and it turns out that SpriteKit has gained support for rectangular, isometric, and hexagonal tile maps since last year. Looks like I can drop all of the plans for GridMapKit and just use what’s there in the SDK already. Maybe I’ll still need some of it to implement the plans for hierarchical maps of different scale, e.g. world map, detailed terrain maps, and building/dungeon maps.
+
+    </blockquote>
+  </section>
+</article>
+</section>
 
       </div>
     </section><footer class="site-footer">

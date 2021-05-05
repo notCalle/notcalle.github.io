@@ -63,16 +63,11 @@
 </header>
 <section class="page-content">
       <div class="wrapper">
-        <ul class="post-list">
-  <li><article class="post-item" itemscope itemtype="http://schema.org/BlogPosting">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">
-      <a href="/2019/12/08/messy-shadows/">
-        Messy shadows
-      </a>
-    </h1>
-    <div class="post-meta"><time datetime="2019-12-08T21:14:00+00:00" itemprop="datePublished">Sunday, 2019-12-08</time>
-       in
+  <h1 class="post-title" itemprop="name headline">Messy shadows</h1>
+  <div class="post-meta"><time datetime="2019-12-08T21:14:00+00:00" itemprop="datePublished">Sunday, 2019-12-08</time>
+     in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
    about
@@ -91,16 +86,18 @@
     <a href="/tag/raytracing/" title="">
       #raytracing</a>
   </div>
-  </header>
+</header>
 
-  <section class="post-content" itemprop="articleBody">
-    <p>Apparently, I messed up some more vector algebra. Ray / surface hits currently record the event in surface space, which works just fine for shading a unit sphere still positioned at origin. When we transform things around, and try to cast the secondary shadow rays, it becomes painfully obvious that surface space and world space no longer coincide.</p>
+<section class="post-content" itemprop="articleBody">
+  <p>Apparently, I messed up some more vector algebra. Ray / surface hits currently record the event in surface space, which works just fine for shading a unit sphere still positioned at origin. When we transform things around, and try to cast the secondary shadow rays, it becomes painfully obvious that surface space and world space no longer coincide.</p>
 
 <p><img src="/img/2019/12/messy-shadows.png" alt="Messed up shadows" /></p>
 
-  </section>
+</section>
+
 </article>
-</li><li><h2>Related posts</h2></li><li class="post-item">
+
+<section class="post-list"><h2>Related</h2><article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2019/12/07/all-the-things/" >
@@ -128,11 +125,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    One limitation so far was that there could only be one surface in a scene. To get past that, we add the Group meta-surface, that contains a number of surfaces, and intersects with rays on their behalf. To make this actually useful, surfaces also need transforms to translate them out of their shared origin.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      One limitation so far was that there could only be one surface in a scene. To get past that, we add the Group meta-surface, that contains a number of surfaces, and intersects with rays on their behalf. To make this actually useful, surfaces also need transforms to translate them out of their shared origin.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2019/12/06/light-and-magic/" >
@@ -160,11 +160,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    The next natural step after getting basic shading to work is to have actual light sources, that can be tinted and positioned in the scene.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      The next natural step after getting basic shading to work is to have actual light sources, that can be tinted and positioned in the scene.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2019/12/05/working-camera/" >
@@ -192,11 +195,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    So yesterday’s attempt at capturing an image didn’t turn out so well, because I messed up the camera, or rather the vector algebra behind everything. When I realized what I had done, I instantly remembered that similar lesson from last year; because points have w=1, while vectors have w=0, almost all vector operations will get messed up by the extra 1, if you accidentally use a point instead. Or vice versa.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      So yesterday’s attempt at capturing an image didn’t turn out so well, because I messed up the camera, or rather the vector algebra behind everything. When I realized what I had done, I instantly remembered that similar lesson from last year; because points have w=1, while vectors have w=0, almost all vector operations will get messed up by the extra 1, if you accidentally use a point instead. Or vice versa.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2019/12/04/actual-pixels/" >
@@ -224,11 +230,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    First actual image generated, using a “camera light”. The shading is too dark, for some reason I can’t figure out at the moment, so I guess tomorrow will be more of a debugging session than new feature creation.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      First actual image generated, using a “camera light”. The shading is too dark, for some reason I can’t figure out at the moment, so I guess tomorrow will be more of a debugging session than new feature creation.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2019/12/03/pixels-on-a-canvas/" >
@@ -256,11 +265,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Pretty much the whole point of a ray tracer such as this one is to render pretty pictures, and for that we’re going to need a canvas to render onto.
-  </blockquote>
-</li>
-</ul>
+  <section class="post-excerpt">
+    <blockquote>
+      Pretty much the whole point of a ray tracer such as this one is to render pretty pictures, and for that we’re going to need a canvas to render onto.
+
+    </blockquote>
+  </section>
+</article>
+</section>
 
       </div>
     </section><footer class="site-footer">

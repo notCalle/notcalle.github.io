@@ -63,16 +63,11 @@
 </header>
 <section class="page-content">
       <div class="wrapper">
-        <ul class="post-list">
-  <li><article class="post-item" itemscope itemtype="http://schema.org/BlogPosting">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">
-      <a href="/2015/12/13/devember13/">
-        devember 13th — pathfinding
-      </a>
-    </h1>
-    <div class="post-meta"><time datetime="2015-12-13T16:04:39+00:00" itemprop="datePublished">Sunday, 2015-12-13</time>
-       in
+  <h1 class="post-title" itemprop="name headline">devember 13th — pathfinding</h1>
+  <div class="post-meta"><time datetime="2015-12-13T16:04:39+00:00" itemprop="datePublished">Sunday, 2015-12-13</time>
+     in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
    about
@@ -97,18 +92,20 @@
     <a href="/tag/isometric/" title="viewing a world in isometric perspective">
       #isometric</a>
   </div>
-  </header>
+</header>
 
-  <section class="post-content" itemprop="articleBody">
-    <p>I’m a bad bad slacker person, and didn’t keep my daily hour of code promise for two consecutive days. I did however read a bit on using Perlin Noise for prettier randomness, so that’ll be a thing when I have my pathfinding sorted.</p>
+<section class="post-content" itemprop="articleBody">
+  <p>I’m a bad bad slacker person, and didn’t keep my daily hour of code promise for two consecutive days. I did however read a bit on using Perlin Noise for prettier randomness, so that’ll be a thing when I have my pathfinding sorted.</p>
 
 <p>It turns out that GameKit’s builtin GKGridGraph pathfinding is not really useful for my ideas about varying cost or blockage between grid nodes, so I will probably need to throw that out and replace by my own A* graph search. Started that transition by refactoring all search related code into its own class.</p>
 
 <p>Somewhere down the line I have broken the screen to grid coordinate transform. Maybe unit tests are in order.</p>
 
-  </section>
+</section>
+
 </article>
-</li><li><h2>Related posts</h2></li><li class="post-item">
+
+<section class="post-list"><h2>Related</h2><article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2015/12/14/devember14/" >
@@ -142,11 +139,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    A possibly completely broken attempt at A, and it took hours — not *an hour.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      A possibly completely broken attempt at A, and it took hours — not *an hour.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2015/12/10/devember10/" >
@@ -183,11 +183,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Making randomness look pretty is hard, so I’ll put that on the shelf for now. Started looking at GameKit’s Graph pathfinding classes instead, which is probably more essential than getting sidetracked by making things look pretty. Defining the GridGraph at the IsoTileMap level will probably not work though, as different Actors will have their own unique capabilities to traverse the map. The Actor should probably generate their own GridGraph for their observable vicinity when they need it, and filter the graph with their traversal capabilities.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      Making randomness look pretty is hard, so I’ll put that on the shelf for now. Started looking at GameKit’s Graph pathfinding classes instead, which is probably more essential than getting sidetracked by making things look pretty. Defining the GridGraph at the IsoTileMap level will probably not work though, as different Actors will have their own unique capabilities to traverse the map. The Actor should probably generate their own GridGraph for their observable vicinity when they need it, and filter the graph with their traversal capabilities.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2015/12/09/devember09/" >
@@ -221,11 +224,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Camera smoothly centers on player position.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      Camera smoothly centers on player position.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2015/12/08/devember08/" >
@@ -262,11 +268,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Refactored lots of tile related stuff, so the tile templates can hold more information than just a texture image name, e.g. the stepHeight for a tile, so we can have tiles that are not perfectly flat, but still be walkable and have actors positioned correctly.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      Refactored lots of tile related stuff, so the tile templates can hold more information than just a texture image name, e.g. the stepHeight for a tile, so we can have tiles that are not perfectly flat, but still be walkable and have actors positioned correctly.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2015/12/07/devember07/" >
@@ -300,11 +309,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Refactored movement from Player* to new superclass ActorSpriteNode.
-  </blockquote>
-</li>
-</ul>
+  <section class="post-excerpt">
+    <blockquote>
+      Refactored movement from Player* to new superclass ActorSpriteNode.
+
+    </blockquote>
+  </section>
+</article>
+</section>
 
       </div>
     </section><footer class="site-footer">

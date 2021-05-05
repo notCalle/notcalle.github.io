@@ -61,16 +61,55 @@
 </header>
 <section class="page-content">
       <div class="wrapper">
-        <div class="home">
-  <ul class="post-list"><li><article class="post-item" itemscope itemtype="http://schema.org/BlogPosting">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">
-      <a href="/2020/10/03/linear-algebra-in-a-new-language/">
+  <h1 class="post-title" itemprop="name headline"><a href="/2021/05/05/hyperfixation-revisited/">Hyperfixation Revisited</a></h1>
+  <div class="post-meta"><strong>Follow-up to
+        <a href="/2020/09/30/hyperfixation/">Hyperfixation</a>
+      </strong>
+      <blockquote>A few days ago I was reminded that it’s almost October, which is not only Inktober, but also ADHD Awareness Month, which I spent last year getting a thorough neuropsychatric evaluation. Someone also told me that there is an ADHD Awareness Ribbon, AND IT’S MY FAVOURITE COLOR!!11 Ehm, sorry1 about that.
+
+
+  
+    
+      not sorry &#8617;
+    
+  
+
+</blockquote><time datetime="2021-05-05T00:00:00+00:00" itemprop="datePublished">Wednesday, 2021-05-05</time>
+     about
+    <a href="/tag/adhd/" title="invisible challenges in a neurotypical world">
+      #adhd</a>
+  </div>
+</header>
+
+<section class="post-content" itemprop="articleBody">
+  <p><img src="/img/2021/css-overflow.png" alt="overflow" title="Floating image extending outside its container" class="left max50" />
+For some reason I found myself browsing my old blog posts, when I got assaulted by this scene, as straight out of a horror movie.</p>
+
+<p>And while I was adding <code class="language-plaintext highlighter-rouge">@extend %clearfix</code> in places, I also thought I’d fix some other layout imperfections I noticed, and all of my morning disappeared; time to make coffee and “go to” work.</p>
+
+<h3 id="down-the-rabbit-hole-again">Down the rabbit hole again</h3>
+
+<p>This was also the first time I’ve made a follow-up to a specific post, instead of referencing earlier posts in a series on a given theme, so I needed to make that kind of relation stand out.</p>
+
+<p>While doing this, I had found horrible abuses of <code class="language-plaintext highlighter-rouge">&lt;ul&gt;</code> and <code class="language-plaintext highlighter-rouge">&lt;li&gt;</code> wrappers for vertical layout, so I ripped those out and flattened the DOM tree a bit. With this the actual blog post got promoted to be the main content, instead of just another list item with the related posts, so that’s nice.</p>
+
+<p>Now I’ve started thinking, and I should take a look at making a light theme for those who have not yet embraced the darkness; so investingation of media queries for that, and switch to using <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">custom CSS properties</a> instead of SASS variables for the color theme. That way I can wrap the color theme setup in a media query to get automatic switching, depending on the viewer’s preference.</p>
+
+
+</section>
+
+</article>
+
+<section class="post-list"><h2>Recent posts</h2><article class="post-item">
+  <header class="post-header">
+    <div class="post-link">
+      <a href="/2020/10/03/linear-algebra-in-a-new-language/" >
         Linear algebra in a new language
       </a>
-    </h1>
-    <div class="post-meta"><time datetime="" itemprop="datePublished">Saturday, 2020-10-03</time>
-       in
+    </div>
+    <div class="post-meta">Saturday, 2020-10-03 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
    about
@@ -79,88 +118,17 @@
   
     <a href="/tag/zig/" title="coding in Zig">
       #zig</a>
-  </div>
+  
+    </div>
   </header>
+  <section class="post-excerpt">
+    <blockquote>
+      For reasons unknown, I stumbled onto the [Zig] programming language, a new, still in development, low-level systems programming language; like C, but without all the bad things. So I guess quite different from C, but syntax is similarish. It uses LLVM as compiler backend, so it pretty much runs on everything less than 20 years old, and crosscompiles like that’s what you always do.
 
-  <section class="post-content" itemprop="articleBody">
-    <p>For reasons unknown, I stumbled onto the <a href="https://ziglang.org">Zig</a> programming language, a new, still in development, low-level systems programming language; like C, but without all the bad things. So I guess quite different from C, but syntax is similarish. It uses LLVM as compiler backend, so it pretty much runs on everything less than 20 years old, and crosscompiles like that’s what you always do.</p>
-
-<p>I decided to write a nice generic API for the subset of Linear Algebra that’s needed for 3D computer graphics, in case I want to write another raytracer in the near future, and optimize for performance this time.</p>
-
-<div class="language-zig highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">test</span> <span class="s">"vector cross product"</span> <span class="p">{</span>
-    <span class="k">const</span> <span class="n">x</span> <span class="o">=</span> <span class="n">vector</span><span class="p">([</span><span class="mi">_</span><span class="p">]</span><span class="kt">f32</span><span class="p">{</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span> <span class="p">});</span>
-    <span class="k">const</span> <span class="n">y</span> <span class="o">=</span> <span class="n">vector</span><span class="p">([</span><span class="mi">_</span><span class="p">]</span><span class="kt">f32</span><span class="p">{</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span> <span class="p">});</span>
-    <span class="k">const</span> <span class="n">z</span> <span class="o">=</span> <span class="n">vector</span><span class="p">([</span><span class="mi">_</span><span class="p">]</span><span class="kt">f32</span><span class="p">{</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span> <span class="p">});</span>
-
-    <span class="n">expectEqual</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">.</span><span class="nf">cross</span><span class="p">(</span><span class="n">z</span><span class="p">));</span>
-    <span class="n">expectEqual</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">.</span><span class="nf">cross</span><span class="p">(</span><span class="n">x</span><span class="p">));</span>
-    <span class="n">expectEqual</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="n">x</span><span class="p">.</span><span class="nf">cross</span><span class="p">(</span><span class="n">y</span><span class="p">));</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<p>One very cool feature that makes this possible in a statically typed, <a href="https://en.wikipedia.org/wiki/Ahead-of-time_compilation">AOT</a> compiled language is that the compiler actually interprets as much of the code it can at compile time, making the language meta-programmable in itself.</p>
-
-<div class="language-zig highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">// return anytype inference is currently a TODO compiler error so</span>
-<span class="c">// the switch on type must be duplicated instead</span>
-<span class="k">pub</span> <span class="k">fn</span> <span class="n">vector</span><span class="p">(</span><span class="n">arg</span><span class="p">:</span> <span class="n">anytype</span><span class="p">)</span> <span class="n">anytype</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="p">(</span><span class="k">switch</span> <span class="p">(</span><span class="nb">@typeInfo</span><span class="p">(</span><span class="nb">@TypeOf</span><span class="p">(</span><span class="n">arg</span><span class="p">)))</span> <span class="p">{</span>
-        <span class="p">.</span><span class="py">Array</span> <span class="o">=&gt;</span> <span class="p">|</span><span class="n">t</span><span class="p">|</span> <span class="n">VecT</span><span class="p">([</span><span class="n">t</span><span class="p">.</span><span class="py">len</span><span class="p">]</span><span class="n">t</span><span class="p">.</span><span class="py">child</span><span class="p">),</span>
-        <span class="p">.</span><span class="py">Vector</span> <span class="o">=&gt;</span> <span class="p">|</span><span class="n">t</span><span class="p">|</span> <span class="n">VecT</span><span class="p">([</span><span class="n">t</span><span class="p">.</span><span class="py">len</span><span class="p">]</span><span class="n">t</span><span class="p">.</span><span class="py">child</span><span class="p">),</span>
-        <span class="k">else</span> <span class="o">=&gt;</span> <span class="nb">@compileError</span><span class="p">(</span><span class="s">"cannot cast from "</span> <span class="o">++</span> <span class="nb">@typeName</span><span class="p">(</span><span class="nb">@TypeOf</span><span class="p">(</span><span class="n">arg</span><span class="p">))),</span>
-    <span class="p">}).</span><span class="nf">cast</span><span class="p">(</span><span class="n">arg</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<p>This constructor takes any array slice of a numeric type, or a SIMD vector, and casts into a matching <code class="language-plaintext highlighter-rouge">struct{x:f32, ...}</code> value, for convenient element access. Because types are first-class values at comptime, this is done at comptime, and reduces to <code class="language-plaintext highlighter-rouge">VecT(...).cast(...)</code>, and futher on because the actual value of <code class="language-plaintext highlighter-rouge">arg</code> does not need to be known, only its type, so those functions are also evaluated at comptime, creating the proper type <code class="language-plaintext highlighter-rouge">struct{x:f32, ...}</code> with specialized versions of all generic functions. Then the specialized <code class="language-plaintext highlighter-rouge">cast()</code> function, still at comptime, does type coersion and safely reinterprets the value as itself. Any errors found are raised as compile errors, with a proper call trace of how it got there, instead of just the file name and line number.</p>
-
-<div class="language-zig highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">const</span> <span class="n">Simd</span> <span class="o">=</span> <span class="n">std</span><span class="p">.</span><span class="py">meta</span><span class="p">.</span><span class="nf">Vector</span><span class="p">(</span><span class="nb">@This</span><span class="p">().</span><span class="py">len</span><span class="p">,</span> <span class="nb">@This</span><span class="p">().</span><span class="py">T</span><span class="p">);</span>
-
-<span class="k">pub</span> <span class="k">fn</span> <span class="n">cross</span><span class="p">(</span><span class="n">u</span><span class="p">:</span> <span class="nb">@This</span><span class="p">(),</span> <span class="n">v</span><span class="p">:</span> <span class="nb">@This</span><span class="p">())</span> <span class="nb">@This</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">use_simd</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">const</span> <span class="n">u_yzx</span><span class="p">:</span> <span class="n">Simd</span> <span class="o">=</span> <span class="o">.</span><span class="p">{</span> <span class="n">u</span><span class="p">.</span><span class="py">y</span><span class="p">,</span> <span class="n">u</span><span class="p">.</span><span class="py">z</span><span class="p">,</span> <span class="n">u</span><span class="p">.</span><span class="py">x</span> <span class="p">};</span>
-        <span class="k">const</span> <span class="n">u_zxy</span><span class="p">:</span> <span class="n">Simd</span> <span class="o">=</span> <span class="o">.</span><span class="p">{</span> <span class="n">u</span><span class="p">.</span><span class="py">z</span><span class="p">,</span> <span class="n">u</span><span class="p">.</span><span class="py">x</span><span class="p">,</span> <span class="n">u</span><span class="p">.</span><span class="py">y</span> <span class="p">};</span>
-        <span class="k">const</span> <span class="n">v_yzx</span><span class="p">:</span> <span class="n">Simd</span> <span class="o">=</span> <span class="o">.</span><span class="p">{</span> <span class="n">v</span><span class="p">.</span><span class="py">y</span><span class="p">,</span> <span class="n">v</span><span class="p">.</span><span class="py">z</span><span class="p">,</span> <span class="n">v</span><span class="p">.</span><span class="py">x</span> <span class="p">};</span>
-        <span class="k">const</span> <span class="n">v_zxy</span><span class="p">:</span> <span class="n">Simd</span> <span class="o">=</span> <span class="o">.</span><span class="p">{</span> <span class="n">v</span><span class="p">.</span><span class="py">z</span><span class="p">,</span> <span class="n">v</span><span class="p">.</span><span class="py">x</span><span class="p">,</span> <span class="n">v</span><span class="p">.</span><span class="py">y</span> <span class="p">};</span>
-
-        <span class="k">return</span> <span class="nb">@This</span><span class="p">().</span><span class="nf">cast</span><span class="p">(</span><span class="n">u_yzx</span> <span class="o">*</span> <span class="n">v_zxy</span> <span class="o">-</span> <span class="n">u_zxy</span> <span class="o">*</span> <span class="n">v_yzx</span><span class="p">);</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="nb">@This</span><span class="p">(){</span>
-            <span class="p">.</span><span class="py">x</span> <span class="o">=</span> <span class="n">u</span><span class="p">.</span><span class="py">y</span> <span class="o">*</span> <span class="n">v</span><span class="p">.</span><span class="py">z</span> <span class="o">-</span> <span class="n">u</span><span class="p">.</span><span class="py">z</span> <span class="o">*</span> <span class="n">v</span><span class="p">.</span><span class="py">y</span><span class="p">,</span>
-            <span class="p">.</span><span class="py">y</span> <span class="o">=</span> <span class="n">u</span><span class="p">.</span><span class="py">z</span> <span class="o">*</span> <span class="n">v</span><span class="p">.</span><span class="py">x</span> <span class="o">-</span> <span class="n">u</span><span class="p">.</span><span class="py">x</span> <span class="o">*</span> <span class="n">v</span><span class="p">.</span><span class="py">z</span><span class="p">,</span>
-            <span class="p">.</span><span class="py">z</span> <span class="o">=</span> <span class="n">u</span><span class="p">.</span><span class="py">x</span> <span class="o">*</span> <span class="n">v</span><span class="p">.</span><span class="py">y</span> <span class="o">-</span> <span class="n">u</span><span class="p">.</span><span class="py">y</span> <span class="o">*</span> <span class="n">v</span><span class="p">.</span><span class="py">x</span><span class="p">,</span>
-        <span class="p">};</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<p>The <code class="language-plaintext highlighter-rouge">cross()</code> function is comptime specialized for the <code class="language-plaintext highlighter-rouge">@This()</code> type, and allows conditional compilation of the SIMD or non-SIMD implementation. And again the <code class="language-plaintext highlighter-rouge">Simd</code> data type is also specialized at comptime with help of the meta programming submodule of the standard library. Due to lazy evaluation at comptime, this only happens if the SIMD version is compiled, with no need for extra guards to avoid dead code.</p>
-
-<p>If we want to run benchmarks to see of the attempted SIMD optimization gave any performance boost, we can simple instanciate all the versions of the vector type and compare.</p>
-
-<div class="language-zig highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Benchmark</span>                          <span class="n">Mean</span><span class="p">(</span><span class="n">ns</span><span class="p">)</span>
-<span class="o">-------------------------------------------</span>
-<span class="n">cross_cold</span><span class="p">([</span><span class="mi">3</span><span class="p">]</span><span class="kt">f16</span><span class="p">,</span> <span class="n">SIMD</span><span class="p">)</span>              <span class="mf">6.149</span>
-<span class="n">cross_cold</span><span class="p">([</span><span class="mi">3</span><span class="p">]</span><span class="kt">f32</span><span class="p">,</span> <span class="n">SIMD</span><span class="p">)</span>              <span class="mf">1.619</span>
-<span class="n">cross_cold</span><span class="p">([</span><span class="mi">3</span><span class="p">]</span><span class="kt">f64</span><span class="p">,</span> <span class="n">SIMD</span><span class="p">)</span>              <span class="mf">1.708</span>
-<span class="n">cross_cold</span><span class="p">([</span><span class="mi">3</span><span class="p">]</span><span class="kt">f16</span><span class="p">,</span> <span class="n">non</span><span class="o">-</span><span class="n">SIMD</span><span class="p">)</span>          <span class="mf">4.245</span>
-<span class="n">cross_cold</span><span class="p">([</span><span class="mi">3</span><span class="p">]</span><span class="kt">f32</span><span class="p">,</span> <span class="n">non</span><span class="o">-</span><span class="n">SIMD</span><span class="p">)</span>          <span class="mf">1.247</span>
-<span class="n">cross_cold</span><span class="p">([</span><span class="mi">3</span><span class="p">]</span><span class="kt">f64</span><span class="p">,</span> <span class="n">non</span><span class="o">-</span><span class="n">SIMD</span><span class="p">)</span>          <span class="mf">1.080</span>
-<span class="n">cross_hot</span><span class="p">([</span><span class="mi">3</span><span class="p">]</span><span class="kt">f16</span><span class="p">,</span> <span class="n">SIMD</span><span class="p">)</span>               <span class="mf">0.842</span>
-<span class="n">cross_hot</span><span class="p">([</span><span class="mi">3</span><span class="p">]</span><span class="kt">f32</span><span class="p">,</span> <span class="n">SIMD</span><span class="p">)</span>               <span class="mf">0.840</span>
-<span class="n">cross_hot</span><span class="p">([</span><span class="mi">3</span><span class="p">]</span><span class="kt">f64</span><span class="p">,</span> <span class="n">SIMD</span><span class="p">)</span>               <span class="mf">0.832</span>
-<span class="n">cross_hot</span><span class="p">([</span><span class="mi">3</span><span class="p">]</span><span class="kt">f16</span><span class="p">,</span> <span class="n">non</span><span class="o">-</span><span class="n">SIMD</span><span class="p">)</span>           <span class="mf">0.847</span>
-<span class="n">cross_hot</span><span class="p">([</span><span class="mi">3</span><span class="p">]</span><span class="kt">f32</span><span class="p">,</span> <span class="n">non</span><span class="o">-</span><span class="n">SIMD</span><span class="p">)</span>           <span class="mf">0.841</span>
-<span class="n">cross_hot</span><span class="p">([</span><span class="mi">3</span><span class="p">]</span><span class="kt">f64</span><span class="p">,</span> <span class="n">non</span><span class="o">-</span><span class="n">SIMD</span><span class="p">)</span>           <span class="mf">0.897</span>
-</code></pre></div></div>
-
-<p>It seems like that when data is hot in the cache, it doesn’t really matter, but cold data has much worse performance for the SIMD implementation, so that SIMD shuffle load code needs some work, and even then this particular operation doesn’t gain anything, at least not on this i7 CPU.</p>
-
-<p>Running the same language dynamically interpreted at compile time, as statically at runtime really is the best of both worlds; the blazing runtime speed of a static language, and most of the in-language meta programming capabilities of a dynamic language.</p>
-
-
+    </blockquote>
   </section>
 </article>
-</li><li><h2>Recent posts</h2></li><li class="post-item">
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2020/09/30/hyperfixation/" >
@@ -176,11 +144,22 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    A few days ago I was reminded that it’s almost October, which is not only Inktober, but also ADHD Awareness Month, which I spent last year getting a thorough neuropsychatric evaluation. Someone also told me that there is an ADHD Awareness Ribbon, AND IT’S MY FAVOURITE COLOR!!11 Ehm, sorry1 about that.            not sorry &#8617;      
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      A few days ago I was reminded that it’s almost October, which is not only Inktober, but also ADHD Awareness Month, which I spent last year getting a thorough neuropsychatric evaluation. Someone also told me that there is an ADHD Awareness Ribbon, AND IT’S MY FAVOURITE COLOR!!11 Ehm, sorry1 about that.
+
+
+  
+    
+      not sorry &#8617;
+    
+  
+
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2019/12/08/messy-shadows/" >
@@ -208,45 +187,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Apparently, I messed up some more vector algebra. Ray / surface hits currently record the event in surface space, which works just fine for shading a unit sphere still positioned at origin. When we transform things around, and try to cast the secondary shadow rays, it becomes painfully obvious that surface space and world space no longer coincide.
-  </blockquote>
-</li>
-<li class="post-item">
-  <header class="post-header">
-    <div class="post-link">
-      <a href="/2019/12/07/all-the-things/" >
-        All the things
-      </a>
-    </div>
-    <div class="post-meta">Saturday, 2019-12-07 in
-    <a href="/category/devlog/"
-       title="Development Logs">devlog</a>
-   about
-    <a href="/tag/devember/" title="participation in Devember">
-      #devember</a>,
-  
-    <a href="/tag/devember2019/" title="Devember 2019 ray tracer">
-      #devember2019</a>,
-  
-    <a href="/tag/hourofcode/" title="coding for one hour per day">
-      #hourofcode</a>,
-  
-    <a href="/tag/swift/" title="coding in Swift">
-      #swift</a>,
-  
-    <a href="/tag/raytracing/" title="">
-      #raytracing</a>
-  
-    </div>
-  </header>
-  <blockquote class="post-excerpt">
-    One limitation so far was that there could only be one surface in a scene. To get past that, we add the Group meta-surface, that contains a number of surfaces, and intersects with rays on their behalf. To make this actually useful, surfaces also need transforms to translate them out of their shared origin.
-  </blockquote>
-</li>
-</ul>
-</div>
+  <section class="post-excerpt">
+    <blockquote>
+      Apparently, I messed up some more vector algebra. Ray / surface hits currently record the event in surface space, which works just fine for shading a unit sphere still positioned at origin. When we transform things around, and try to cast the secondary shadow rays, it becomes painfully obvious that surface space and world space no longer coincide.
 
+    </blockquote>
+  </section>
+</article>
+</section>
 
       </div>
     </section><footer class="site-footer">

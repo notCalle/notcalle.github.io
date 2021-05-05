@@ -63,16 +63,11 @@
 </header>
 <section class="page-content">
       <div class="wrapper">
-        <ul class="post-list">
-  <li><article class="post-item" itemscope itemtype="http://schema.org/BlogPosting">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">
-      <a href="/2018/12/28/day-28-celebratory-cocktails/">
-        Day 28, Celebratory cocktails
-      </a>
-    </h1>
-    <div class="post-meta"><time datetime="2018-12-28T19:18:25+00:00" itemprop="datePublished">Friday, 2018-12-28</time>
-       in
+  <h1 class="post-title" itemprop="name headline">Day 28, Celebratory cocktails</h1>
+  <div class="post-meta"><time datetime="2018-12-28T19:18:25+00:00" itemprop="datePublished">Friday, 2018-12-28</time>
+     in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
    about
@@ -91,15 +86,17 @@
     <a href="/tag/ruby/" title="coding in Ruby">
       #ruby</a>
   </div>
-  </header>
+</header>
 
-  <section class="post-content" itemprop="articleBody">
-    <p><img src="/img/2018/12/cocktail-room.png" alt="Cocktail" class="right" />
+<section class="post-content" itemprop="articleBody">
+  <p><img src="/img/2018/12/cocktail-room.png" alt="Cocktail" class="right" />
 The latest addition to the supported shapes is the cone, a deformed kind of cylinder, also optionally capped and restricted to an interval along its length. With all these things we can make a cocktail to celebrate. With all these transparent parts, it takes more than 8 minutes to render.</p>
 
-  </section>
+</section>
+
 </article>
-</li><li><h2>Related posts</h2></li><li class="post-item">
+
+<section class="post-list"><h2>Related</h2><article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2018/12/29/day-29-groups/" >
@@ -127,11 +124,15 @@ The latest addition to the supported shapes is the cone, a deformed kind of cyli
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Transforming each object in the scene in global world reference space quickly becomes tiresome, so let’s introduce a new group “shape”. A group takes any number of objects and provides a common reference space for its children via its own transform. A group also helps reduce the search space in large scenes, by aggregating the bounding boxes of its children into a bounding box for the entire group. That way ray intersection tests against the children of the group only needs to happen when the group bounding box is intersected. Neat.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      
+Transforming each object in the scene in global world reference space quickly becomes tiresome, so let’s introduce a new group “shape”. A group takes any number of objects and provides a common reference space for its children via its own transform. A group also helps reduce the search space in large scenes, by aggregating the bounding boxes of its children into a bounding box for the entire group. That way ray intersection tests against the children of the group only needs to happen when the group bounding box is intersected. Neat.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2018/12/27/day-27-cylinders-part-2/" >
@@ -159,11 +160,16 @@ The latest addition to the supported shapes is the cone, a deformed kind of cyli
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    To celebrate that cylinders can be constrained and capped at the ends, we have a remake of the cubemas scene from a few days ago, but with today’s shiny new cylinders instead of cubes.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      
+To celebrate that cylinders can be constrained and capped at the ends, we have a remake of the cubemas scene from a few days ago, but with today’s shiny new cylinders instead of cubes.
+
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2018/12/26/day-26-cylinders-part-1/" >
@@ -191,11 +197,14 @@ The latest addition to the supported shapes is the cone, a deformed kind of cyli
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Devember is rapidly coming to an end, but so is the book. Just a few more shapes to go, and we’re done. Except the easy shapes are already done, so things get more complicated from here. Cylinders seem pretty easy, just a XZ-planar circle, extruded along the Y axis. Done. Except that it gets infinitely long that way, so it needs to be constrained. But then it’s hollow, so it needs to support optional end caps for when you need a closed cylinder and not just a very thin walled tube. So it’s not done yet, but probably new pixels tomorrow.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      Devember is rapidly coming to an end, but so is the book. Just a few more shapes to go, and we’re done. Except the easy shapes are already done, so things get more complicated from here. Cylinders seem pretty easy, just a XZ-planar circle, extruded along the Y axis. Done. Except that it gets infinitely long that way, so it needs to be constrained. But then it’s hollow, so it needs to support optional end caps for when you need a closed cylinder and not just a very thin walled tube. So it’s not done yet, but probably new pixels tomorrow.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2018/12/25/day-25-cubemas/" >
@@ -223,11 +232,15 @@ The latest addition to the supported shapes is the cone, a deformed kind of cyli
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Oh my god, it’s full of cubes! The scene consists of 8 cubes, two for the room, five for the table, and the traditional cubemas decoration of one glass cube on the table.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      
+Oh my god, it’s full of cubes! The scene consists of 8 cubes, two for the room, five for the table, and the traditional cubemas decoration of one glass cube on the table.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2018/12/23/day-23-cubes/" >
@@ -255,11 +268,14 @@ The latest addition to the supported shapes is the cone, a deformed kind of cyli
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    All core functionality is in place, so time for more shapes. First up is cubes, the volume contained by three perpendicular pairs of parallel planes, and aligned with the axes. So planar ray intersection with each one, and pick the snuggest fit to intersect the cube. Not quite pixel ready yet, so something for tomorrow.
-  </blockquote>
-</li>
-</ul>
+  <section class="post-excerpt">
+    <blockquote>
+      All core functionality is in place, so time for more shapes. First up is cubes, the volume contained by three perpendicular pairs of parallel planes, and aligned with the axes. So planar ray intersection with each one, and pick the snuggest fit to intersect the cube. Not quite pixel ready yet, so something for tomorrow.
+
+    </blockquote>
+  </section>
+</article>
+</section>
 
       </div>
     </section><footer class="site-footer">

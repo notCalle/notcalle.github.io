@@ -67,27 +67,21 @@
 </header>
 <section class="page-content">
       <div class="wrapper">
-        <ul class="post-list">
-  <li>
-<article class="post-item" itemscope itemtype="http://schema.org/BlogPosting">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">
-      <a href="/2020/09/30/hyperfixation/">
-        Hyperfixation
-      </a>
-    </h1>
-    <div class="post-meta">
+  <h1 class="post-title" itemprop="name headline">Hyperfixation</h1>
+  <div class="post-meta">
 <time datetime="2020-09-30T16:27:00+00:00" itemprop="datePublished">Wednesday, 2020-09-30</time>
-       in
+     in
     <a href="/category/discord/" title="Discord">discord</a>
    about
     <a href="/tag/adhd/" title="invisible challenges in a neurotypical world">
       #adhd</a>
   </div>
-  </header>
+</header>
 
-  <section class="post-content" itemprop="articleBody">
-    <p>A few days ago I was reminded that it’s almost October, which is not only <a href="https://twitter.com/inktober">Inktober</a>, but also <a href="https://duckduckgo.com/?q=adhd+awareness+month+color&amp;t=h_&amp;ia=web">ADHD Awareness Month</a>, which I spent last year getting a thorough neuropsychatric evaluation. Someone also told me that there is an ADHD Awareness Ribbon, <strong>AND IT’S MY FAVOURITE COLOR!!11</strong> Ehm, sorry<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">1</a></sup> about that.</p>
+<section class="post-content" itemprop="articleBody">
+  <p>A few days ago I was reminded that it’s almost October, which is not only <a href="https://twitter.com/inktober">Inktober</a>, but also <a href="https://duckduckgo.com/?q=adhd+awareness+month+color&amp;t=h_&amp;ia=web">ADHD Awareness Month</a>, which I spent last year getting a thorough neuropsychatric evaluation. Someone also told me that there is an ADHD Awareness Ribbon, <strong>AND IT’S MY FAVOURITE COLOR!!11</strong> Ehm, sorry<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">1</a></sup> about that.</p>
 
 <p><img src="/img/orange-ribbon.svg" alt="ADHD Orange Ribbon" class="right max25"></p>
 
@@ -125,10 +119,41 @@
   </ol>
 </div>
 
+</section>
+
+</article>
+
+<section class="post-list"><h2>Follow-up</h2>
+<article class="post-item" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <span itemprop="name headline">
+      <a href="/2021/05/05/hyperfixation-revisited/">
+        Hyperfixation Revisited
+      </a>
+    </span>
+    <span class="post-meta"><time datetime="2020-09-30T16:27:00+00:00" itemprop="datePublished">Wednesday, 2021-05-05</time>
+      
+    </span>
+  </header>
+
+  <section class="post-content" itemprop="articleBody">
+    <p><img src="/img/2021/css-overflow.png" alt="overflow" title="Floating image extending outside its container" class="left max50">
+For some reason I found myself browsing my old blog posts, when I got assaulted by this scene, as straight out of a horror movie.</p>
+
+<p>And while I was adding <code class="language-plaintext highlighter-rouge">@extend %clearfix</code> in places, I also thought I’d fix some other layout imperfections I noticed, and all of my morning disappeared; time to make coffee and “go to” work.</p>
+
+<h3 id="down-the-rabbit-hole-again">Down the rabbit hole again</h3>
+
+<p>This was also the first time I’ve made a follow-up to a specific post, instead of referencing earlier posts in a series on a given theme, so I needed to make that kind of relation stand out.</p>
+
+<p>While doing this, I had found horrible abuses of <code class="language-plaintext highlighter-rouge">&lt;ul&gt;</code> and <code class="language-plaintext highlighter-rouge">&lt;li&gt;</code> wrappers for vertical layout, so I ripped those out and flattened the DOM tree a bit. With this the actual blog post got promoted to be the main content, instead of just another list item with the related posts, so that’s nice.</p>
+
+<p>Now I’ve started thinking, and I should take a look at making a light theme for those who have not yet embraced the darkness; so investingation of media queries for that, and switch to using <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">custom CSS properties</a> instead of SASS variables for the color theme. That way I can wrap the color theme setup in a media query to get automatic switching, depending on the viewer’s preference.</p>
+
+
   </section>
 </article>
-</li>
-</ul>
+</section>
 
       </div>
     </section><footer class="site-footer">

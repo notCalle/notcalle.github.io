@@ -63,16 +63,11 @@
 </header>
 <section class="page-content">
       <div class="wrapper">
-        <ul class="post-list">
-  <li><article class="post-item" itemscope itemtype="http://schema.org/BlogPosting">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">
-      <a href="/2016/12/10/path-finding/">
-        Path Finding
-      </a>
-    </h1>
-    <div class="post-meta"><time datetime="2016-12-10T04:27:35+00:00" itemprop="datePublished">Saturday, 2016-12-10</time>
-       in
+  <h1 class="post-title" itemprop="name headline">Path Finding</h1>
+  <div class="post-meta"><time datetime="2016-12-10T04:27:35+00:00" itemprop="datePublished">Saturday, 2016-12-10</time>
+     in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
    about
@@ -88,16 +83,18 @@
     <a href="/tag/xcode/" title="using XCode for appleOS development">
       #xcode</a>
   </div>
-  </header>
+</header>
 
-  <section class="post-content" itemprop="articleBody">
-    <p>First attempt at using the <code class="language-plaintext highlighter-rouge">GamePlayKit</code> path finding <code class="language-plaintext highlighter-rouge">GKGridGraph</code>. Unfortunately, the playground currently crashes (because of some internal <em>XCode</em> bug maybe?), so it can’t be tested.</p>
+<section class="post-content" itemprop="articleBody">
+  <p>First attempt at using the <code class="language-plaintext highlighter-rouge">GamePlayKit</code> path finding <code class="language-plaintext highlighter-rouge">GKGridGraph</code>. Unfortunately, the playground currently crashes (because of some internal <em>XCode</em> bug maybe?), so it can’t be tested.</p>
 
 <p>The idea is that an actor can move if there is something present on the layer directly below them, but can’t move through layers they occupy themselves. Currently hardcoded as requirement for tiles on <code class="language-plaintext highlighter-rouge">region.layers[0]</code> but this environment evaluation should probably be a method of the actor, as e.g. flying or swimming actors might have other ideas. Also, the graph generation should be restricted to what an actor has actually see, so they can’t figure out a perfect path through unknown terrain.</p>
 
-  </section>
+</section>
+
 </article>
-</li><li><h2>Related posts</h2></li><li class="post-item">
+
+<section class="post-list"><h2>Related</h2><article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2016/12/12/xcode-bug-report/" >
@@ -119,11 +116,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Two days lost in air travel, and today’s session was all about troubleshooting the crashing Swift Playground in Xcode, so nothing useful got done today. Some cosmetic code readability fixes was commited during re-reading everything to try and figure out what could possibly cause the crashes.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      Two days lost in air travel, and today’s session was all about troubleshooting the crashing Swift Playground in Xcode, so nothing useful got done today. Some cosmetic code readability fixes was commited during re-reading everything to try and figure out what could possibly cause the crashes.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2016/12/08/gameplaykit/" >
@@ -145,11 +145,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Let’s try to use the builtin [A](https://en.wikipedia.org/wiki/A_search_algorithm) in GameplayKit, and see if it works for our current demands.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      Let’s try to use the builtin [A](https://en.wikipedia.org/wiki/A_search_algorithm) in GameplayKit, and see if it works for our current demands.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2016/12/07/directional-navigation/" >
@@ -171,11 +174,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Prereq work for implementing path finding: eight direction navigation. A tile can find its neighbours within its layer exit(direction:). Currently only within a single map region, because we haven’t implemented interregion links yet.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      Prereq work for implementing path finding: eight direction navigation. A tile can find its neighbours within its layer exit(direction:). Currently only within a single map region, because we haven’t implemented interregion links yet.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2016/12/06/caching/" >
@@ -200,11 +206,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Spent at huge part of the hour today troubleshooting why my API change to an init method was not being seen by the playground. Weird caching bugs? No; it turns out that XCode was building for target instead of simulator, so the playground didn’t get a rebuilt version of the framework when I hit build. Still don’t know why that changed since last time, but oh well.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      Spent at huge part of the hour today troubleshooting why my API change to an init method was not being seen by the playground. Weird caching bugs? No; it turns out that XCode was building for target instead of simulator, so the playground didn’t get a rebuilt version of the framework when I hit build. Still don’t know why that changed since last time, but oh well.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2016/12/04/swift-lesson-one/" >
@@ -226,11 +235,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    The first lesson turns out to be about access control: nothing is public by default, even classes or their init methods. With public access to our classes the playground plays.
-  </blockquote>
-</li>
-</ul>
+  <section class="post-excerpt">
+    <blockquote>
+      The first lesson turns out to be about access control: nothing is public by default, even classes or their init methods. With public access to our classes the playground plays.
+
+    </blockquote>
+  </section>
+</article>
+</section>
 
       </div>
     </section><footer class="site-footer">

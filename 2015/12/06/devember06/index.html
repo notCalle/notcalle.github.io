@@ -63,16 +63,11 @@
 </header>
 <section class="page-content">
       <div class="wrapper">
-        <ul class="post-list">
-  <li><article class="post-item" itemscope itemtype="http://schema.org/BlogPosting">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">
-      <a href="/2015/12/06/devember06/">
-        devember 6th
-      </a>
-    </h1>
-    <div class="post-meta"><time datetime="2015-12-06T16:15:14+00:00" itemprop="datePublished">Sunday, 2015-12-06</time>
-       in
+  <h1 class="post-title" itemprop="name headline">devember 6th</h1>
+  <div class="post-meta"><time datetime="2015-12-06T16:15:14+00:00" itemprop="datePublished">Sunday, 2015-12-06</time>
+     in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
    about
@@ -97,18 +92,20 @@
     <a href="/tag/isometric/" title="viewing a world in isometric perspective">
       #isometric</a>
   </div>
-  </header>
+</header>
 
-  <section class="post-content" itemprop="articleBody">
-    <p>Lighting broke yesterday because initialization code was moved into the wrong place. Sigh. Now we have working scene lighting again.</p>
+<section class="post-content" itemprop="articleBody">
+  <p>Lighting broke yesterday because initialization code was moved into the wrong place. Sigh. Now we have working scene lighting again.</p>
 
 <p>Redone sprite node classes to inherit from our own base ITSpriteNode instead of SKSpriteNode, so common IsoTile logic can be added there. For now there are north/south/west/east relations to neighboring tiles on the map, and objects placed on the map can simply ask their parent tile for directions when then want to move around.</p>
 
 <p>I’ll probably need to refactor some generic ActorSpriteNode code out of PlayerSpriteNode when the need to add AI actors to the scene arises.</p>
 
-  </section>
+</section>
+
 </article>
-</li><li><h2>Related posts</h2></li><li class="post-item">
+
+<section class="post-list"><h2>Related</h2><article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2015/12/07/devember07/" >
@@ -142,11 +139,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Refactored movement from Player* to new superclass ActorSpriteNode.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      Refactored movement from Player* to new superclass ActorSpriteNode.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2015/12/05/devember05/" >
@@ -180,11 +180,15 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Coding on the train today. WASD movement and simple dynamic lighting.For some reason lighting broke when making more sane spritenode tree structure.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      Coding on the train today. WASD movement and simple dynamic lighting.
+For some reason lighting broke when making more sane spritenode tree structure.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2015/12/04/devember04/" >
@@ -218,11 +222,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Support for layered sprites on base tiles, for dynamic objects being displayed on top of floor tiles. Click to teleport player sprite to a tile.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      Support for layered sprites on base tiles, for dynamic objects being displayed on top of floor tiles. Click to teleport player sprite to a tile.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2015/12/03/devember03/" >
@@ -256,11 +263,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Isometric coordinate transforms between tile grid positions and screen space sorted out. We can now display a z-sorted grid of floor tiles on screen, and pick tiles in the grid via screen coordinates.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      Isometric coordinate transforms between tile grid positions and screen space sorted out. We can now display a z-sorted grid of floor tiles on screen, and pick tiles in the grid via screen coordinates.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2015/12/02/devember02/" >
@@ -294,11 +304,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Restructured most code from yesterday. Primitive tilemap setup.
-  </blockquote>
-</li>
-</ul>
+  <section class="post-excerpt">
+    <blockquote>
+      Restructured most code from yesterday. Primitive tilemap setup.
+
+    </blockquote>
+  </section>
+</article>
+</section>
 
       </div>
     </section><footer class="site-footer">

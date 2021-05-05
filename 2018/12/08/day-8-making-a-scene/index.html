@@ -63,16 +63,11 @@
 </header>
 <section class="page-content">
       <div class="wrapper">
-        <ul class="post-list">
-  <li><article class="post-item" itemscope itemtype="http://schema.org/BlogPosting">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">
-      <a href="/2018/12/08/day-8-making-a-scene/">
-        Day 8, Making a scene
-      </a>
-    </h1>
-    <div class="post-meta"><time datetime="2018-12-08T16:00:00+00:00" itemprop="datePublished">Saturday, 2018-12-08</time>
-       in
+  <h1 class="post-title" itemprop="name headline">Day 8, Making a scene</h1>
+  <div class="post-meta"><time datetime="2018-12-08T16:00:00+00:00" itemprop="datePublished">Saturday, 2018-12-08</time>
+     in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
    about
@@ -91,14 +86,16 @@
     <a href="/tag/ruby/" title="coding in Ruby">
       #ruby</a>
   </div>
-  </header>
+</header>
 
-  <section class="post-content" itemprop="articleBody">
-    <p>Further steps toward more pixels, teaching the world to tell what color a ray will see, and creating the necessary transforms for positioning the world in front of the camera. Then have the camera cast a ray, for each pixel in the resulting image, into the world.</p>
+<section class="post-content" itemprop="articleBody">
+  <p>Further steps toward more pixels, teaching the world to tell what color a ray will see, and creating the necessary transforms for positioning the world in front of the camera. Then have the camera cast a ray, for each pixel in the resulting image, into the world.</p>
 
-  </section>
+</section>
+
 </article>
-</li><li><h2>Related posts</h2></li><li class="post-item">
+
+<section class="post-list"><h2>Related</h2><article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2018/12/10/day-9-lost-to-ruby-environment-trouble/" >
@@ -120,11 +117,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    No progress because it turned out that the Ruby / bundler environment on my laptop was not functional anymore, so the little time I had while away over the weekend got wasted on debugging why nothing worked instead of doing something productive.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      No progress because it turned out that the Ruby / bundler environment on my laptop was not functional anymore, so the little time I had while away over the weekend got wasted on debugging why nothing worked instead of doing something productive.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2018/12/07/day-7-casting-rays-through-the-whole-world/" >
@@ -149,11 +149,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Lots of refactoring today, because old assumptions were smashed, and some cleanup of annoying duplications was needed. No new pixels yet, but maybe tomorrow? These where the previous two days pixel results, with the black background made transparent while converting them from ppm to png.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      Lots of refactoring today, because old assumptions were smashed, and some cleanup of annoying duplications was needed. No new pixels yet, but maybe tomorrow? These where the previous two days pixel results, with the black background made transparent while converting them from ppm to png.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2018/12/06/day-6-shadows-light-and-magic/" >
@@ -181,11 +184,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    More than just hit detection, we’ve moved into the realm of reflection, lighting and shading. This is mainly about projecting vectors on other vectors, using dot products \(\overrightarrow{v1} \cdot \overrightarrow{v2}\) to measure the length of the projection. For that we need to find normal vectors of surfaces, and a light source.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      More than just hit detection, we’ve moved into the realm of reflection, lighting and shading. This is mainly about projecting vectors on other vectors, using dot products \(\overrightarrow{v1} \cdot \overrightarrow{v2}\) to measure the length of the projection. For that we need to find normal vectors of surfaces, and a light source.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2018/12/05/day-5-bumping-in-to-things/" >
@@ -213,11 +219,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Today I Learned that I shouldn’t have assumed the sphere would ever need to change from being a unit sphere, so intersecting gets even simpler:
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      Today I Learned that I shouldn’t have assumed the sphere would ever need to change from being a unit sphere, so intersecting gets even simpler:
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2018/12/04/day-4-intersections/" >
@@ -242,11 +251,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    More math heavy stuff, calculating the positions along a ray, where it intersects a sphere. Turns out this is as simple as solving a quadratic equation, with some special coefficients.
-  </blockquote>
-</li>
-</ul>
+  <section class="post-excerpt">
+    <blockquote>
+      More math heavy stuff, calculating the positions along a ray, where it intersects a sphere. Turns out this is as simple as solving a quadratic equation, with some special coefficients.
+
+    </blockquote>
+  </section>
+</article>
+</section>
 
       </div>
     </section><footer class="site-footer">

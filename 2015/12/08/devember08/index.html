@@ -63,16 +63,11 @@
 </header>
 <section class="page-content">
       <div class="wrapper">
-        <ul class="post-list">
-  <li><article class="post-item" itemscope itemtype="http://schema.org/BlogPosting">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">
-      <a href="/2015/12/08/devember08/">
-        devember 8th — randomized maps
-      </a>
-    </h1>
-    <div class="post-meta"><time datetime="2015-12-08T22:48:11+00:00" itemprop="datePublished">Tuesday, 2015-12-08</time>
-       in
+  <h1 class="post-title" itemprop="name headline">devember 8th — randomized maps</h1>
+  <div class="post-meta"><time datetime="2015-12-08T22:48:11+00:00" itemprop="datePublished">Tuesday, 2015-12-08</time>
+     in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
    about
@@ -100,16 +95,18 @@
     <a href="/tag/opengameart/" title="using open game art assets">
       #opengameart</a>
   </div>
-  </header>
+</header>
 
-  <section class="post-content" itemprop="articleBody">
-    <p>Refactored lots of tile related stuff, so the tile templates can hold more information than just a texture image name, e.g. the stepHeight for a tile, so we can have tiles that are not perfectly flat, but still be walkable and have actors positioned correctly.</p>
+<section class="post-content" itemprop="articleBody">
+  <p>Refactored lots of tile related stuff, so the tile templates can hold more information than just a texture image name, e.g. the stepHeight for a tile, so we can have tiles that are not perfectly flat, but still be walkable and have actors positioned correctly.</p>
 
 <p>Loaded some [http://opengameart.org/] tile artwork to get something to work with for randomized map generation.</p>
 
-  </section>
+</section>
+
 </article>
-</li><li><h2>Related posts</h2></li><li class="post-item">
+
+<section class="post-list"><h2>Related</h2><article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2015/12/09/devember09/" >
@@ -143,11 +140,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Camera smoothly centers on player position.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      Camera smoothly centers on player position.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2015/12/07/devember07/" >
@@ -181,11 +181,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Refactored movement from Player* to new superclass ActorSpriteNode.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      Refactored movement from Player* to new superclass ActorSpriteNode.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2015/12/06/devember06/" >
@@ -219,11 +222,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Lighting broke yesterday because initialization code was moved into the wrong place. Sigh. Now we have working scene lighting again.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      Lighting broke yesterday because initialization code was moved into the wrong place. Sigh. Now we have working scene lighting again.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2015/12/05/devember05/" >
@@ -257,11 +263,15 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Coding on the train today. WASD movement and simple dynamic lighting.For some reason lighting broke when making more sane spritenode tree structure.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      Coding on the train today. WASD movement and simple dynamic lighting.
+For some reason lighting broke when making more sane spritenode tree structure.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2015/12/04/devember04/" >
@@ -295,11 +305,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Support for layered sprites on base tiles, for dynamic objects being displayed on top of floor tiles. Click to teleport player sprite to a tile.
-  </blockquote>
-</li>
-</ul>
+  <section class="post-excerpt">
+    <blockquote>
+      Support for layered sprites on base tiles, for dynamic objects being displayed on top of floor tiles. Click to teleport player sprite to a tile.
+
+    </blockquote>
+  </section>
+</article>
+</section>
 
       </div>
     </section><footer class="site-footer">

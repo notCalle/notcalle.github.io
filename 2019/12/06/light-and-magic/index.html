@@ -63,16 +63,11 @@
 </header>
 <section class="page-content">
       <div class="wrapper">
-        <ul class="post-list">
-  <li><article class="post-item" itemscope itemtype="http://schema.org/BlogPosting">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">
-      <a href="/2019/12/06/light-and-magic/">
-        Light and Magic
-      </a>
-    </h1>
-    <div class="post-meta"><time datetime="2019-12-06T21:32:00+00:00" itemprop="datePublished">Friday, 2019-12-06</time>
-       in
+  <h1 class="post-title" itemprop="name headline">Light and Magic</h1>
+  <div class="post-meta"><time datetime="2019-12-06T21:32:00+00:00" itemprop="datePublished">Friday, 2019-12-06</time>
+     in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
    about
@@ -91,10 +86,10 @@
     <a href="/tag/raytracing/" title="">
       #raytracing</a>
   </div>
-  </header>
+</header>
 
-  <section class="post-content" itemprop="articleBody">
-    <p>The next natural step after getting basic shading to work is to have actual light sources, that can be tinted and positioned in the scene.</p>
+<section class="post-content" itemprop="articleBody">
+  <p>The next natural step after getting basic shading to work is to have actual light sources, that can be tinted and positioned in the scene.</p>
 
 <p>Enter the <code class="language-plaintext highlighter-rouge">PointLight()</code> and <code class="language-plaintext highlighter-rouge">DistantLight()</code> classes of lights. A point light can be translated to a position, and irradiates the scene spherically from that position, and will be attenuated by distance. A distant light on the other hand, irradiates the scene with parallel rays of light, with the same power, and direction all over (like the fake “camera light”).</p>
 
@@ -102,9 +97,11 @@
 
 <p><img src="/img/2019/12/light-and-magic.png" alt="Light &amp; Magic" /></p>
 
-  </section>
+</section>
+
 </article>
-</li><li><h2>Related posts</h2></li><li class="post-item">
+
+<section class="post-list"><h2>Related</h2><article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2019/12/07/all-the-things/" >
@@ -132,11 +129,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    One limitation so far was that there could only be one surface in a scene. To get past that, we add the Group meta-surface, that contains a number of surfaces, and intersects with rays on their behalf. To make this actually useful, surfaces also need transforms to translate them out of their shared origin.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      One limitation so far was that there could only be one surface in a scene. To get past that, we add the Group meta-surface, that contains a number of surfaces, and intersects with rays on their behalf. To make this actually useful, surfaces also need transforms to translate them out of their shared origin.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2019/12/05/working-camera/" >
@@ -164,11 +164,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    So yesterday’s attempt at capturing an image didn’t turn out so well, because I messed up the camera, or rather the vector algebra behind everything. When I realized what I had done, I instantly remembered that similar lesson from last year; because points have w=1, while vectors have w=0, almost all vector operations will get messed up by the extra 1, if you accidentally use a point instead. Or vice versa.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      So yesterday’s attempt at capturing an image didn’t turn out so well, because I messed up the camera, or rather the vector algebra behind everything. When I realized what I had done, I instantly remembered that similar lesson from last year; because points have w=1, while vectors have w=0, almost all vector operations will get messed up by the extra 1, if you accidentally use a point instead. Or vice versa.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2019/12/04/actual-pixels/" >
@@ -196,11 +199,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    First actual image generated, using a “camera light”. The shading is too dark, for some reason I can’t figure out at the moment, so I guess tomorrow will be more of a debugging session than new feature creation.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      First actual image generated, using a “camera light”. The shading is too dark, for some reason I can’t figure out at the moment, so I guess tomorrow will be more of a debugging session than new feature creation.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2019/12/03/pixels-on-a-canvas/" >
@@ -228,11 +234,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Pretty much the whole point of a ray tracer such as this one is to render pretty pictures, and for that we’re going to need a canvas to render onto.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      Pretty much the whole point of a ray tracer such as this one is to render pretty pictures, and for that we’re going to need a canvas to render onto.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2019/12/02/surface-normals/" >
@@ -260,11 +269,15 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Today brings normal vectors into the mix, a critical component for shading computations; the normal vector of a surface at the point where it was hit by a ray, to be precise. Because the normal depends on the hit position on the surface, and we’ll need that too, we keep that around as well.
-  </blockquote>
-</li>
-</ul>
+  <section class="post-excerpt">
+    <blockquote>
+      Today brings normal vectors into the mix, a critical component for shading computations; the normal vector of a surface at the point where it was hit by a ray, to be precise. Because the normal depends on the hit position on the surface, and we’ll need that too, we keep that around as well.
+
+
+    </blockquote>
+  </section>
+</article>
+</section>
 
       </div>
     </section><footer class="site-footer">

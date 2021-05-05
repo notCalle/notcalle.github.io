@@ -63,16 +63,11 @@
 </header>
 <section class="page-content">
       <div class="wrapper">
-        <ul class="post-list">
-  <li><article class="post-item" itemscope itemtype="http://schema.org/BlogPosting">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">
-      <a href="/2015/12/07/devember07/">
-        devember 7th — actors walk on top of map tiles
-      </a>
-    </h1>
-    <div class="post-meta"><time datetime="2015-12-07T20:37:58+00:00" itemprop="datePublished">Monday, 2015-12-07</time>
-       in
+  <h1 class="post-title" itemprop="name headline">devember 7th — actors walk on top of map tiles</h1>
+  <div class="post-meta"><time datetime="2015-12-07T20:37:58+00:00" itemprop="datePublished">Monday, 2015-12-07</time>
+     in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
    about
@@ -97,18 +92,20 @@
     <a href="/tag/isometric/" title="viewing a world in isometric perspective">
       #isometric</a>
   </div>
-  </header>
+</header>
 
-  <section class="post-content" itemprop="articleBody">
-    <p>Refactored movement from Player* to new superclass ActorSpriteNode.</p>
+<section class="post-content" itemprop="articleBody">
+  <p>Refactored movement from Player* to new superclass ActorSpriteNode.</p>
 
 <p>Actors will now stand on top of map tiles (with the assumption that the top surface is the isometric bounding box for the tile). No more walking inside walls and such ghostly nonsense.</p>
 
 <p>Actors has a limited step height that they can reach when moving, and can’t move between tiles with greater height difference (as measured in base tile halfwidth). This should probably be replaced with an ActionPoint cost function of step height in the future.</p>
 
-  </section>
+</section>
+
 </article>
-</li><li><h2>Related posts</h2></li><li class="post-item">
+
+<section class="post-list"><h2>Related</h2><article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2015/12/08/devember08/" >
@@ -145,11 +142,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Refactored lots of tile related stuff, so the tile templates can hold more information than just a texture image name, e.g. the stepHeight for a tile, so we can have tiles that are not perfectly flat, but still be walkable and have actors positioned correctly.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      Refactored lots of tile related stuff, so the tile templates can hold more information than just a texture image name, e.g. the stepHeight for a tile, so we can have tiles that are not perfectly flat, but still be walkable and have actors positioned correctly.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2015/12/06/devember06/" >
@@ -183,11 +183,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Lighting broke yesterday because initialization code was moved into the wrong place. Sigh. Now we have working scene lighting again.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      Lighting broke yesterday because initialization code was moved into the wrong place. Sigh. Now we have working scene lighting again.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2015/12/05/devember05/" >
@@ -221,11 +224,15 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Coding on the train today. WASD movement and simple dynamic lighting.For some reason lighting broke when making more sane spritenode tree structure.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      Coding on the train today. WASD movement and simple dynamic lighting.
+For some reason lighting broke when making more sane spritenode tree structure.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2015/12/04/devember04/" >
@@ -259,11 +266,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Support for layered sprites on base tiles, for dynamic objects being displayed on top of floor tiles. Click to teleport player sprite to a tile.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      Support for layered sprites on base tiles, for dynamic objects being displayed on top of floor tiles. Click to teleport player sprite to a tile.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2015/12/03/devember03/" >
@@ -297,11 +307,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Isometric coordinate transforms between tile grid positions and screen space sorted out. We can now display a z-sorted grid of floor tiles on screen, and pick tiles in the grid via screen coordinates.
-  </blockquote>
-</li>
-</ul>
+  <section class="post-excerpt">
+    <blockquote>
+      Isometric coordinate transforms between tile grid positions and screen space sorted out. We can now display a z-sorted grid of floor tiles on screen, and pick tiles in the grid via screen coordinates.
+
+    </blockquote>
+  </section>
+</article>
+</section>
 
       </div>
     </section><footer class="site-footer">

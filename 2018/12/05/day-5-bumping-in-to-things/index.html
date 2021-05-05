@@ -63,16 +63,11 @@
 </header>
 <section class="page-content">
       <div class="wrapper">
-        <ul class="post-list">
-  <li><article class="post-item" itemscope itemtype="http://schema.org/BlogPosting">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">
-      <a href="/2018/12/05/day-5-bumping-in-to-things/">
-        Day 5, Assume nothing
-      </a>
-    </h1>
-    <div class="post-meta"><time datetime="2018-12-05T09:45:08+00:00" itemprop="datePublished">Wednesday, 2018-12-05</time>
-       in
+  <h1 class="post-title" itemprop="name headline">Day 5, Assume nothing</h1>
+  <div class="post-meta"><time datetime="2018-12-05T09:45:08+00:00" itemprop="datePublished">Wednesday, 2018-12-05</time>
+     in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
    about
@@ -91,10 +86,10 @@
     <a href="/tag/ruby/" title="coding in Ruby">
       #ruby</a>
   </div>
-  </header>
+</header>
 
-  <section class="post-content" itemprop="articleBody">
-    <p><em>Today I Learned</em> that I shouldn’t have assumed the sphere would ever need to change from being a unit sphere, so intersecting gets even simpler:</p>
+<section class="post-content" itemprop="articleBody">
+  <p><em>Today I Learned</em> that I shouldn’t have assumed the sphere would ever need to change from being a unit sphere, so intersecting gets even simpler:</p>
 
 \[\|\dot{O} + t\overrightarrow{D}\|^2 - 1 = 0\]
 
@@ -129,9 +124,11 @@ x1 \\ y1 \\ z1 \\ 0
 <p>Like ma<del>gic</del>th.</p>
 
 
-  </section>
+</section>
+
 </article>
-</li><li><h2>Related posts</h2></li><li class="post-item">
+
+<section class="post-list"><h2>Related</h2><article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2018/12/06/day-6-shadows-light-and-magic/" >
@@ -159,11 +156,14 @@ x1 \\ y1 \\ z1 \\ 0
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    More than just hit detection, we’ve moved into the realm of reflection, lighting and shading. This is mainly about projecting vectors on other vectors, using dot products \(\overrightarrow{v1} \cdot \overrightarrow{v2}\) to measure the length of the projection. For that we need to find normal vectors of surfaces, and a light source.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      More than just hit detection, we’ve moved into the realm of reflection, lighting and shading. This is mainly about projecting vectors on other vectors, using dot products \(\overrightarrow{v1} \cdot \overrightarrow{v2}\) to measure the length of the projection. For that we need to find normal vectors of surfaces, and a light source.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2018/12/04/day-4-intersections/" >
@@ -188,11 +188,14 @@ x1 \\ y1 \\ z1 \\ 0
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    More math heavy stuff, calculating the positions along a ray, where it intersects a sphere. Turns out this is as simple as solving a quadratic equation, with some special coefficients.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      More math heavy stuff, calculating the positions along a ray, where it intersects a sphere. Turns out this is as simple as solving a quadratic equation, with some special coefficients.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2018/12/03/day-3-casting-rays-into-spheres/" >
@@ -220,11 +223,14 @@ x1 \\ y1 \\ z1 \\ 0
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Finally some practical applications of the math heavy weekend, casting abstract rays at abstract spheres. Well, on a sliding scale from linear algebra to physical representation, it’s still a step in the direction.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      Finally some practical applications of the math heavy weekend, casting abstract rays at abstract spheres. Well, on a sliding scale from linear algebra to physical representation, it’s still a step in the direction.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2018/12/02/day-2-matrices-matrices-matrices-oh-and-more-matrices/" >
@@ -255,11 +261,15 @@ x1 \\ y1 \\ z1 \\ 0
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Today was spent on a heavy chunk of linear algebra, matrices. This is the foundation for everything else, so time well spent reimplementing what’s already in the stdlib, just to refresh my math skills. If there are still days left of Devember when I’m finished, I’ll come back and replace all this with the stdlib implementation instead, hoping I’m somewhat close to the same API.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      Today was spent on a heavy chunk of linear algebra, matrices. This is the foundation for everything else, so time well spent reimplementing what’s already in the stdlib, just to refresh my math skills. If there are still days left of Devember when I’m finished, I’ll come back and replace all this with the stdlib implementation instead, hoping I’m somewhat close to the same API.
+
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2018/12/01/day-1-overdoing-it/" >
@@ -287,11 +297,14 @@ x1 \\ y1 \\ z1 \\ 0
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    The first proper day of Devember is here. Of course I overdid it and spent all day coding, instead of just that one hour.
-  </blockquote>
-</li>
-</ul>
+  <section class="post-excerpt">
+    <blockquote>
+      The first proper day of Devember is here. Of course I overdid it and spent all day coding, instead of just that one hour.
+
+    </blockquote>
+  </section>
+</article>
+</section>
 
       </div>
     </section><footer class="site-footer">

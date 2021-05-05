@@ -63,34 +63,31 @@
 </header>
 <section class="page-content">
       <div class="wrapper">
-        <ul class="post-list">
-  <li><article class="post-item" itemscope itemtype="http://schema.org/BlogPosting">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">
-      <a href="/2016/08/22/xcode-build-number-from-git/">
-        XCode build number from git
-      </a>
-    </h1>
-    <div class="post-meta"><time datetime="2016-08-22T21:44:14+00:00" itemprop="datePublished">Monday, 2016-08-22</time>
-       in
+  <h1 class="post-title" itemprop="name headline">XCode build number from git</h1>
+  <div class="post-meta"><time datetime="2016-08-22T21:44:14+00:00" itemprop="datePublished">Monday, 2016-08-22</time>
+     in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
    about
     <a href="/tag/xcode/" title="using XCode for appleOS development">
       #xcode</a>
   </div>
-  </header>
+</header>
 
-  <section class="post-content" itemprop="articleBody">
-    <p>Add this as a <strong>Run Script Phase</strong> at the end of <strong>Build Phases</strong> in your XCode project to increment your CFBundleVersion as <em>{git commit count}.{uncommitted changes}-{gitrevid}</em>.</p>
+<section class="post-content" itemprop="articleBody">
+  <p>Add this as a <strong>Run Script Phase</strong> at the end of <strong>Build Phases</strong> in your XCode project to increment your CFBundleVersion as <em>{git commit count}.{uncommitted changes}-{gitrevid}</em>.</p>
 
 <script src="https://gist.github.com/notCalle/af53a0b3ccac6123c8a2d2337a48dc6a.js"> </script>
 
 <p>When the build is made from a cleanly committed git repository the version will be N.0-XXXXXXX. Intermediary test builds will have N.D-XXXXXXX with the size of the diff from the actual committed version as minor.</p>
 
-  </section>
+</section>
+
 </article>
-</li><li><h2>Related posts</h2></li><li class="post-item">
+
+<section class="post-list"><h2>Related</h2><article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2016/11/30/gpg-signed-git-with-xcode/" >
@@ -106,11 +103,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    For work projects I’ve been working on lately, we have adopted a strict gpg signed commits and tags only policy, so I thought I’d carry that good intention over to private projects as well. Except it turns out that the execution environment in which XCode runs git does not play well with gnupg.
-  </blockquote>
-</li>
-</ul>
+  <section class="post-excerpt">
+    <blockquote>
+      For work projects I’ve been working on lately, we have adopted a strict gpg signed commits and tags only policy, so I thought I’d carry that good intention over to private projects as well. Except it turns out that the execution environment in which XCode runs git does not play well with gnupg.
+
+    </blockquote>
+  </section>
+</article>
+</section>
 
       </div>
     </section><footer class="site-footer">

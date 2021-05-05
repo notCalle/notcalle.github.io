@@ -63,16 +63,11 @@
 </header>
 <section class="page-content">
       <div class="wrapper">
-        <ul class="post-list">
-  <li><article class="post-item" itemscope itemtype="http://schema.org/BlogPosting">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">
-      <a href="/2019/12/01/basic-data-types/">
-        Basic data types
-      </a>
-    </h1>
-    <div class="post-meta"><time datetime="2019-12-01T10:29:00+00:00" itemprop="datePublished">Sunday, 2019-12-01</time>
-       in
+  <h1 class="post-title" itemprop="name headline">Basic data types</h1>
+  <div class="post-meta"><time datetime="2019-12-01T10:29:00+00:00" itemprop="datePublished">Sunday, 2019-12-01</time>
+     in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
    about
@@ -88,10 +83,10 @@
     <a href="/tag/swift/" title="coding in Swift">
       #swift</a>
   </div>
-  </header>
+</header>
 
-  <section class="post-content" itemprop="articleBody">
-    <p>Alright, the first push to the <a href="https://github.com/notCalle/swift-raytrace.git">github repo</a> is complete. Starting out small with just the basic data types that will be at the core of everything, and some tolerance equality operators for comparisons.</p>
+<section class="post-content" itemprop="articleBody">
+  <p>Alright, the first push to the <a href="https://github.com/notCalle/swift-raytrace.git">github repo</a> is complete. Starting out small with just the basic data types that will be at the core of everything, and some tolerance equality operators for comparisons.</p>
 
 <p>The constructor functions <code class="language-plaintext highlighter-rouge">point()</code> and <code class="language-plaintext highlighter-rouge">vector()</code> use the neat trick of tagging with <code class="language-plaintext highlighter-rouge">.w = 1.0</code> for Points and <code class="language-plaintext highlighter-rouge">.w = 0.0</code> for Vectors.</p>
 
@@ -106,9 +101,11 @@
 <p>On a side note, I’m trying out the <a href="https://en.wikipedia.org/wiki/Pomodoro_Technique">pomodoro technique</a> to manage my ability to focus for this project; working in sets of 25 minutes, and taking 5 minute breaks. Maybe I should rephrase the Devember contract as I will work for two pomodoros per day, instead of one hour. Plus one pomodoro for the devlog.</p>
 
 
-  </section>
+</section>
+
 </article>
-</li><li><h2>Related posts</h2></li><li class="post-item">
+
+<section class="post-list"><h2>Related</h2><article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2019/12/01/intersecting-spheres/" >
@@ -136,11 +133,15 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    The first piece of actual ray tracing: calculating the intersection between a ray and a sphere. To find the intersections, we need to solve the quadratic equation of the sphere being equal to the linear equation of the ray. The interpretation of imaginary roots is that the ray does not intersect the sphere.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      The first piece of actual ray tracing: calculating the intersection between a ray and a sphere. To find the intersections, we need to solve the quadratic equation of the sphere being equal to the linear equation of the ray. The interpretation of imaginary roots is that the ray does not intersect the sphere.
+
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2019/11/30/devember-again/" >
@@ -162,11 +163,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    This one snuck up on me faster than anticipated, but here we go.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      This one snuck up on me faster than anticipated, but here we go.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2019/01/08/light-and-magic/" >
@@ -188,11 +192,15 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Made some refinements to lighting. Originially there was only a point light without distance falloff, which is not an accurate light model in any case. The light inside the room lights the entire world, all the way to the horizon.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      
+Made some refinements to lighting. Originially there was only a point light without distance falloff, which is not an accurate light model in any case. The light inside the room lights the entire world, all the way to the horizon.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2019/01/06/cache-is-king/" >
@@ -214,11 +222,14 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Cut teapot rendering time in half with some clever caching.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      Cut teapot rendering time in half with some clever caching.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2019/01/05/day-36-constructive-solid-geometry/" >
@@ -246,11 +257,15 @@
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    The final pre-defined feature of the project is done, Constructive Solid Geometry, implementing the boolean set operations union, intersection, and difference for solid geometries. This way we can use the basic geometric surface shapes to create more advanced shapes, without resorting to approximating by thousands of triangles.
-  </blockquote>
-</li>
-</ul>
+  <section class="post-excerpt">
+    <blockquote>
+      The final pre-defined feature of the project is done, Constructive Solid Geometry, implementing the boolean set operations union, intersection, and difference for solid geometries. This way we can use the basic geometric surface shapes to create more advanced shapes, without resorting to approximating by thousands of triangles.
+
+
+    </blockquote>
+  </section>
+</article>
+</section>
 
       </div>
     </section><footer class="site-footer">

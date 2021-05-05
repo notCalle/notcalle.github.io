@@ -63,16 +63,11 @@
 </header>
 <section class="page-content">
       <div class="wrapper">
-        <ul class="post-list">
-  <li><article class="post-item" itemscope itemtype="http://schema.org/BlogPosting">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">
-      <a href="/2019/01/05/day-36-constructive-solid-geometry/">
-        Day 36, Constructive Solid Geometry
-      </a>
-    </h1>
-    <div class="post-meta"><time datetime="2019-01-05T12:05:22+00:00" itemprop="datePublished">Saturday, 2019-01-05</time>
-       in
+  <h1 class="post-title" itemprop="name headline">Day 36, Constructive Solid Geometry</h1>
+  <div class="post-meta"><time datetime="2019-01-05T12:05:22+00:00" itemprop="datePublished">Saturday, 2019-01-05</time>
+     in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
    about
@@ -91,10 +86,10 @@
     <a href="/tag/ruby/" title="coding in Ruby">
       #ruby</a>
   </div>
-  </header>
+</header>
 
-  <section class="post-content" itemprop="articleBody">
-    <p>The final pre-defined feature of the project is done, <a href="https://en.wikipedia.org/wiki/Constructive_solid_geometry">Constructive Solid Geometry</a>, implementing the boolean set operations <code class="language-plaintext highlighter-rouge">union</code>, <code class="language-plaintext highlighter-rouge">intersection</code>, and <code class="language-plaintext highlighter-rouge">difference</code> for solid geometries. This way we can use the basic geometric surface shapes to create more advanced shapes, without resorting to approximating by thousands of triangles.</p>
+<section class="post-content" itemprop="articleBody">
+  <p>The final pre-defined feature of the project is done, <a href="https://en.wikipedia.org/wiki/Constructive_solid_geometry">Constructive Solid Geometry</a>, implementing the boolean set operations <code class="language-plaintext highlighter-rouge">union</code>, <code class="language-plaintext highlighter-rouge">intersection</code>, and <code class="language-plaintext highlighter-rouge">difference</code> for solid geometries. This way we can use the basic geometric surface shapes to create more advanced shapes, without resorting to approximating by thousands of triangles.</p>
 
 <p class="clear"><img src="/img/2019/01/csg-union.png" alt="Union" class="left" />
 The CSG union operation joins the surface of two shapes, such that the outer geometry is preserved, but the overlapping geometry on the inside is removed, constructing a new surface.</p>
@@ -109,9 +104,11 @@ The last of the operations, CSG difference, removes the intersection from the le
 With some clever arrangement of CSG operations we can create some pretty complex geometry from just some cylinders and spheres.</p>
 
 
-  </section>
+</section>
+
 </article>
-</li><li><h2>Related posts</h2></li><li class="post-item">
+
+<section class="post-list"><h2>Related</h2><article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2019/01/06/cache-is-king/" >
@@ -133,11 +130,14 @@ With some clever arrangement of CSG operations we can create some pretty complex
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Cut teapot rendering time in half with some clever caching.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      Cut teapot rendering time in half with some clever caching.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2019/01/02/day-33-domain-specific-language/" >
@@ -165,11 +165,14 @@ With some clever arrangement of CSG operations we can create some pretty complex
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Not a single feature improvement today, but instead a bit of quality of life improvements.
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      Not a single feature improvement today, but instead a bit of quality of life improvements.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2019/01/01/day-32-smoothly-interpolated-normals/" >
@@ -197,11 +200,14 @@ With some clever arrangement of CSG operations we can create some pretty complex
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2018/12/31/tea-cocktails-and-a-happy-new-year/" >
@@ -220,11 +226,14 @@ With some clever arrangement of CSG operations we can create some pretty complex
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    
-  </blockquote>
-</li>
-<li class="post-item">
+  <section class="post-excerpt">
+    <blockquote>
+      
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="/2018/12/31/day-31-optimizing-triangles/" >
@@ -252,11 +261,16 @@ With some clever arrangement of CSG operations we can create some pretty complex
   
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    Triangle rendering was painfully slow, as mentioned yesterday. Putting a little reflective shine on the floor and walls of the room took rendering time past 90 minutes. After a bit of research i tried a binary bounding volume hierarchy, dividing the list of shapes into subtrees, split evenly on the largest axis of the bounding box, recursively. This way we get a spacially balanced binary tree with the actual shapes as leaves, and theoretically get \(O(log\ n)\) instead of \(O(n)\) search time per ray. Huge difference, especially with rays branching recursively for reflections and refractions. Down from 90 to 6 minutes for the same scene.
-  </blockquote>
-</li>
-</ul>
+  <section class="post-excerpt">
+    <blockquote>
+      
+Triangle rendering was painfully slow, as mentioned yesterday. Putting a little reflective shine on the floor and walls of the room took rendering time past 90 minutes. After a bit of research i tried a binary bounding volume hierarchy, dividing the list of shapes into subtrees, split evenly on the largest axis of the bounding box, recursively. This way we get a spacially balanced binary tree with the actual shapes as leaves, and theoretically get \(O(log\ n)\) instead of \(O(n)\) search time per ray. Huge difference, especially with rays branching recursively for reflections and refractions. Down from 90 to 6 minutes for the same scene.
+
+
+    </blockquote>
+  </section>
+</article>
+</section>
 
       </div>
     </section><footer class="site-footer">
