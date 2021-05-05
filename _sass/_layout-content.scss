@@ -61,6 +61,12 @@
     clear: both;
     font-size: $small-font-size;
     color: $text-color-dark;
+
+    h2 {
+        font-size: $small-font-size;
+        margin-bottom: $spacing-unit/2;
+    }
+    blockquote { margin: 0 $spacing-unit; }
 }
 
 div.post-link {
