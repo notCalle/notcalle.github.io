@@ -9,15 +9,6 @@
     {%- endif -%}
   </h1>
   <div class="post-meta">
-    {%- if follows -%}
-      <strong>Follow-up to
-        <a href="{{ follows.url | prepend: site.baseurl }}">
-          {{- follows.title -}}
-        </a>
-      </strong>
-      <blockquote>{{ follows.excerpt | strip_html }}</blockquote>
-    {%- endif -%}
-
     {%- if post.path contains "_drafts/" %} <strong>DRAFT</strong> {% endif -%}
       <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
         {{- post.date | date: "%A, %Y-%m-%d" -}}
@@ -30,6 +21,19 @@
 
     {%- include cat-tag.html post=post -%}
   </div>
+  {%- if follows -%}
+    <div class="post-meta">
+      Follow-up to
+        <a href="{{ follows.url | prepend: site.baseurl }}">
+          {{- follows.title -}}
+        </a>
+
+      <blockquote>
+      {{ follows.excerpt | strip_html }}
+      </blockquote>
+    </div>
+  {%- endif -%}
+
 </header>
 
 <section class="post-content" itemprop="articleBody">

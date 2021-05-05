@@ -61,6 +61,8 @@
     clear: both;
     font-size: $small-font-size;
     color: $text-color-dark;
+
+    blockquote { margin: $spacing-unit/2 $spacing-unit; }
 }
 
 div.post-link {
