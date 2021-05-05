@@ -85,8 +85,7 @@
   
     <a href="/tag/raytracing/" title="">
       #raytracing</a>
-  </div>
-</header>
+  </div></header>
 
 <section class="post-content" itemprop="articleBody">
   <p>Apparently, I messed up some more vector algebra. Ray / surface hits currently record the event in surface space, which works just fine for shading a unit sphere still positioned at origin. When we transform things around, and try to cast the secondary shadow rays, it becomes painfully obvious that surface space and world space no longer coincide.</p>

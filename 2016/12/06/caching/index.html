@@ -82,8 +82,7 @@
   
     <a href="/tag/xcode/" title="using XCode for appleOS development">
       #xcode</a>
-  </div>
-</header>
+  </div></header>
 
 <section class="post-content" itemprop="articleBody">
   <p>Spent at huge part of the hour today troubleshooting why my API change to an <code class="language-plaintext highlighter-rouge">init</code> method was not being seen by the <em>playground</em>. Weird caching bugs? No; it turns out that <em>XCode</em> was building for <em>target</em> instead of <em>simulator</em>, so the <em>playground</em> didn’t get a rebuilt version of the framework when I hit <em>build</em>. Still don’t know why that changed since last time, but oh well.</p>

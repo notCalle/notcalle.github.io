@@ -94,8 +94,7 @@
   
     <a href="/tag/pathfinding/" title="finding paths through graphs">
       #pathfinding</a>
-  </div>
-</header>
+  </div></header>
 
 <section class="post-content" itemprop="articleBody">
   <p>Making randomness look pretty is hard, so I’ll put that on the shelf for now. Started looking at GameKit’s Graph pathfinding classes instead, which is probably more essential than getting sidetracked by making things look pretty. Defining the GridGraph at the IsoTileMap level will probably not work though, as different Actors will have their own unique capabilities to traverse the map. The Actor should probably generate their own GridGraph for their observable vicinity when they need it, and filter the graph with their traversal capabilities.</p>
