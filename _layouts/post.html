@@ -1,32 +1,52 @@
 ---
 layout: default
 ---
-<ul class="post-list">
-  <li>{% include post-content.html post=page %}</li>
+{%- assign follows =
+      site.posts | find_exp: "it", "it.id == page.follows"
+-%}
+{%- assign followed =
+      site.posts | where_exp: "it", "it.follows == page.id"
+-%}
+{%- assign followed_ids = followed | map: "id" -%}
+{%- assign related = "" | split: "," -%}
 
-  {%- assign posts = "" | split: "," -%}
-  {%- for post in site.posts -%}
-    {%- if post == page -%}
-      {%- for next in posts -%}
-        {%- if forloop.last -%}
-          {%- assign posts = "" | split: "," | push: next -%}
-        {%- endif -%}
-      {%- endfor -%}
-      {%- continue -%}
+{%- for post in site.posts -%}
+  {%- if post == page -%}
+    {%- assign next = related | last -%}
+    {%- if next -%}
+      {%- assign related = "" | split: "," | push: next -%}
     {%- endif -%}
+    {%- continue -%}
+  {%- endif -%}
 
-    {%- for tag in page.tags -%}
-      {%- if post.tags contains tag -%}
-        {%- assign posts = posts | push: post -%}
-        {%- break -%}
-      {%- endif -%}
-    {%- endfor -%}
+  {%- if page.follows == post.id or followed_ids contains post.id -%}
+    {%- continue -%}
+  {%- endif -%}
+
+  {%- assign related_tags =
+        post.tags | find_exp: "tag", "page.tags contains tag"
+  -%}
+  {%- if related_tags -%}
+    {%- assign related = related | push: post -%}
+  {%- endif -%}
+{%- endfor -%}
+
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  {% include post-article.html post=page %}
+</article>
+
+<section class="post-list">
+  {%- for post in followed -%}
+    {%- if forloop.first -%}
+      <h2>Follow-up</h2>
+    {%- endif -%}
+    {% include post-addendum.html post=post %}
   {%- endfor -%}
 
-  {%- for post in posts limit: 5 -%}
+  {%- for post in related limit: 5 -%}
     {%- if forloop.first -%}
-      <li><h2>Related posts</h2></li>
+      <h2>Related</h2>
     {%- endif -%}
     {%- include post-excerpt.html post=post -%}
   {%- endfor -%}
-</ul>
+</section>

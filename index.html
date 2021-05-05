@@ -1,18 +1,18 @@
 ---
-layout: index
+layout: default
 ---
-<div class="home">
-  <ul class="post-list">
-    {%- assign first_post = site.posts | first -%}
-    <li>{% include post-content.html post=first_post %}</li>
+{%- assign first_post = site.posts | first -%}
+{%- assign posts = site.posts | shift -%}
 
-    {%- assign posts = site.posts | shift -%}
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  {% include post-article.html post=first_post %}
+</article>
 
-    {%- for post in posts limit:3 -%}
-      {%- if forloop.first -%}
-        <li><h2>Recent posts</h2></li>
-      {%- endif -%}
-      {% include post-excerpt.html post=post %}
-    {%- endfor -%}
-  </ul>
-</div>
+<section class="post-list">
+  {%- for post in posts limit:3 -%}
+    {%- if forloop.first -%}
+      <h2>Recent posts</h2>
+    {%- endif -%}
+    {% include post-excerpt.html post=post %}
+  {%- endfor -%}
+</section>

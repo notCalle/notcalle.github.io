@@ -30,14 +30,9 @@
  */
 .page-content {
     background-color: $background-color;
-    padding: $spacing-unit 0;
+    padding: $spacing-unit 0 0;
     flex-grow: 1;
     z-index: 0;
-}
-@include media-query($on-palm) {
-    .page-content {
-        padding: $spacing-unit/2 0;
-    }
 }
 
 @import "layout-content";

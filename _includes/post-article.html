@@ -1,0 +1,37 @@
+{%- assign post = include.post | default: page -%}
+{%- assign follows = site.posts | find_exp: "it", "it.id == post.follows" -%}
+<header class="post-header">
+  <h1 class="post-title" itemprop="name headline">
+    {%- if post == page -%}
+      {{ post.title }}
+    {%- else -%}
+      <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+    {%- endif -%}
+  </h1>
+  <div class="post-meta">
+    {%- if follows -%}
+      <strong>Follow-up to
+        <a href="{{ follows.url | prepend: site.baseurl }}">
+          {{- follows.title -}}
+        </a>
+      </strong>
+      <blockquote>{{ follows.excerpt | strip_html }}</blockquote>
+    {%- endif -%}
+
+    {%- if post.path contains "_drafts/" %} <strong>DRAFT</strong> {% endif -%}
+      <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
+        {{- post.date | date: "%A, %Y-%m-%d" -}}
+      </time>
+    {% if post.author -%}
+      by <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">{{ post.author }}</span>
+      </span>
+    {%- endif %}
+
+    {%- include cat-tag.html post=post -%}
+  </div>
+</header>
+
+<section class="post-content" itemprop="articleBody">
+  {{ post.content }}
+</section>

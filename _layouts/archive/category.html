@@ -8,8 +8,8 @@ layout: default
   <span>{{ page.posts.size }} {{ meta.description }}</span>
 </header>
 
-<ul class="post-title-list">
+<section class="post-title-list">
   {%- for post in page.posts %}
     {% include post-title.html post=post %}
   {% endfor -%}
-</ul>
+</section>

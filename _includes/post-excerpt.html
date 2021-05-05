@@ -1,4 +1,4 @@
-<li class="post-item">
+<article class="post-item">
   <header class="post-header">
     <div class="post-link">
       <a href="{{ include.post.url | prepend: site.baseurl }}" >
@@ -12,7 +12,9 @@
       {%- include cat-tag.html post=include.post %}
     </div>
   </header>
-  <blockquote class="post-excerpt">
-    {{ include.post.excerpt | strip_html | strip_newlines }}
-  </blockquote>
-</li>
+  <section class="post-excerpt">
+    <blockquote>
+      {{ include.post.excerpt | strip_html }}
+    </blockquote>
+  </section>
+</article>
