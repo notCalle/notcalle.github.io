@@ -65,9 +65,10 @@
     blockquote { margin: $spacing-unit/2 $spacing-unit; }
 }
 
-div.post-link {
+.post-link {
     flex: 1;
-    font-size: 24px;
+    /*font-size: 24px;*/
+    margin: 0px;
 }
 
 .post-excerpt {

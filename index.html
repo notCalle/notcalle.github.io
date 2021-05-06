@@ -11,7 +11,7 @@ layout: default
 <section class="post-list">
   {%- for post in posts limit:3 -%}
     {%- if forloop.first -%}
-      <h2>Recent posts</h2>
+      <h2>Previous posts</h2>
     {%- endif -%}
     {% include post-excerpt.html post=post %}
   {%- endfor -%}

@@ -14,7 +14,7 @@ layout: default
   {%- if post == page -%}
     {%- assign next = related | last -%}
     {%- if next -%}
-      {%- assign related = "" | split: "," | push: next -%}
+      {%- assign related = "" | split: "," -%}
     {%- endif -%}
     {%- continue -%}
   {%- endif -%}
@@ -31,11 +31,10 @@ layout: default
   {%- endif -%}
 {%- endfor -%}
 
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-  {% include post-article.html post=page %}
-</article>
+{%- include post-article.html post=page -%}
 
 <section class="post-list">
+  {%- assign followed = followed | reverse -%}
   {%- for post in followed -%}
     {%- if forloop.first -%}
       <h2>Follow-up</h2>
@@ -43,9 +42,14 @@ layout: default
     {% include post-addendum.html post=post %}
   {%- endfor -%}
 
-  {%- for post in related limit: 5 -%}
+  {%- if next -%}
+    <h2>Next related</h2>
+    {%- include post-excerpt.html post=next -%}
+  {%- endif -%}
+
+  {%- for post in related limit: 3 -%}
     {%- if forloop.first -%}
-      <h2>Related</h2>
+      <h2>Previous related</h2>
     {%- endif -%}
     {%- include post-excerpt.html post=post -%}
   {%- endfor -%}

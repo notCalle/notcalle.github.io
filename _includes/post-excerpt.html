@@ -1,10 +1,10 @@
 <article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="{{ include.post.url | prepend: site.baseurl }}" >
         {{ include.post.title }}
       </a>
-    </div>
+    </h3>
     <div class="post-meta">
       {%- if include.post.path contains "_drafts/" %} <strong>DRAFT</strong> {% endif -%}
       {{ include.post.date | date: "%A, %Y-%m-%d" }}
