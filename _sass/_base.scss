@@ -12,7 +12,7 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 html {
-    font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+    font: var(--base-font-weight) #{$base-font-size}/#{$base-line-height} $base-font-family;
     color: var(--base-text-color);
     background-color: var(--base-bg-color);
     -webkit-text-size-adjust: 100%;
@@ -125,7 +125,7 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-    color: var(--base-brand-color);
+    color: var(--accent-color);
     text-decoration: none;
 
     &:hover {
@@ -149,6 +149,7 @@ blockquote {
 }
 
 code, pre {
+    color: var(--base-text-color);
     background-color: var(--base-bg-color);
     border: 1px solid var(--dark-bg-color);
     font-family: $fixed-font-family;

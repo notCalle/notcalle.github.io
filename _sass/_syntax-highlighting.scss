@@ -5,8 +5,12 @@
     @extend %vertical-rhythm;
 }
 
+.highlight code, pre {
+    color: var(--code-text-color);
+    background-color: var(--code-bg-color);
+    font-weight: var(--code-font-weight);
+}
 .highlight pre {
-    background-color: var(--base-bg-color);
     border: 1px solid var(--dark-bg-color);
     border-radius: $spacing-unit/2;
     box-shadow: 1px 1px $spacing-unit var(--dark-bg-color);

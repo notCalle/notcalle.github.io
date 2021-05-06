@@ -12,18 +12,53 @@ $dark-background-color:		darken($dark-gray-color, 45%);
 $dark-text-color:			lighten($dark-gray-color, 40%);
 
 :root {
+	--base-font-weight: 400;
+	--code-font-weight: 400;
+
 	--base-brand-color: #{$brand-color)};
 	--light-brand-color: #{lighten($brand-color, 10%))};
 	--dark-brand-color: #{darken($brand-color, 10%))};
+	--accent-color: #{$brand-color)};
 
 	--base-gray-color: #{$dark-gray-color)};
 	--light-gray-color: #{lighten($dark-gray-color, 30%))};
 	--dark-gray-color: #{darken($dark-gray-color, 30%))};
 
 	--base-bg-color: #{$dark-background-color)};
+	--code-bg-color: #{$dark-background-color)};
 	--light-bg-color: #{lighten($dark-background-color, 5%))};
 	--dark-bg-color: #{darken($dark-background-color, 5%))};
 
 	--base-text-color: #{$dark-text-color)};
+	--code-text-color: #{$dark-text-color)};
 	--fade-text-color: #{darken($dark-text-color, 25%))};
+}
+
+//
+// My future's so bright, I gotta wear shades
+//
+$light-gray-color:			$gray-color;
+$light-background-color:	lighten($light-gray-color, 40%);
+$light-text-color:			darken($light-gray-color, 45%);
+
+@media screen and (prefers-color-scheme: light) {
+	:root {
+		--base-font-weight: 450;
+		--code-font-weight: 400;
+
+		--accent-color: #{darken($brand-color, 20%))};
+
+		--base-gray-color: #{$light-gray-color)};
+		--light-gray-color: #{lighten($light-gray-color, 30%))};
+		--dark-gray-color: #{darken($light-gray-color, 30%))};
+
+		--base-bg-color: #{$light-background-color)};
+		--code-bg-color: #{$dark-background-color)};
+		--light-bg-color: #{lighten($light-background-color, 5%))};
+		--dark-bg-color: #{darken($light-background-color, 5%))};
+
+		--base-text-color: #{$light-text-color)};
+		--code-text-color: #{$dark-text-color)};
+		--fade-text-color: #{lighten($light-text-color, 25%))};
+	}
 }
