@@ -4,6 +4,8 @@ title: Hyperfixation
 category: discord
 tags:
 - adhd
+- scss
+- jekyll
 date: 2020-09-30 18:27 +0200
 ---
 A few days ago I was reminded that it's almost October, which is not only [Inktober], but also [ADHD Awareness Month], which I spent last year getting a thorough neuropsychatric evaluation. Someone also told me that there is an ADHD Awareness Ribbon, **AND IT'S MY FAVOURITE COLOR!!11** Ehm, sorry[^2] about that.

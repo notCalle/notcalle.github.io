@@ -2,8 +2,11 @@
 layout: post
 title: Hyperfixation Revisited
 follows: /2020/09/30/hyperfixation
+category: discord
 tags:
 - adhd
+- scss
+- jekyll
 ---
 ![overflow]{:.left.max50}
 For some reason I found myself browsing my old blog posts, when I got assaulted by this scene, as straight out of a horror movie.
