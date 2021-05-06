@@ -48,6 +48,11 @@ hourofcode:
 isometric:
   title: viewing a world in isometric perspective
 
+jekyll:
+  title: static web site generation
+  description:
+    using the static web site generator <a href="http://jekyllrb.com">Jekyll</a>.
+
 objc:
   title: coding in Objective C
 
@@ -64,6 +69,11 @@ roguelike:
 
 ruby:
   title: coding in Ruby
+
+scss:
+  title: sassy cascading style sheets
+  description:
+    <a href="https://sass-lang.com">sassifying</a> all the cascading style sheets.
 
 spritekit:
   title: making games with SpriteKit
