@@ -49,7 +49,7 @@ blockquote { color: var(--fade-text-color); font-style: italic; padding-left: 1e
 
 blockquote > :last-child { margin-bottom: 0; }
 
-code, pre { color: var(--base-text-color); background-color: var(--base-bg-color); border: 1px solid var(--dark-bg-color); font-family: "Andale Mono", monospace; font-size: 15.2px; overflow-x: auto; }
+code, pre { color: var(--base-text-color); background-color: var(--base-bg-color); border: 1px solid var(--dark-bg-color); font-family: "Andale Mono", monospace; font-size: 14px; overflow-x: auto; }
 
 code { border-radius: 5px; padding: 1px 5px; }
 
@@ -154,7 +154,7 @@ pre > code { border: 0; padding-right: 0; padding-left: 0; }
 
 .post-content .spoiler { color: var(--base-bg-color); font-style: unset; background-color: var(--base-bg-color); }
 
-.post-content .emoji { border: none; margin: 0px; padding: 0px; box-shadow: none; }
+.post-content .nowrap { white-space: nowrap; }
 
 .footnotes { border-top: thin solid var(--base-brand-color); padding-top: 4px; color: var(--fade-text-color); margin-top: 16px; }
 
