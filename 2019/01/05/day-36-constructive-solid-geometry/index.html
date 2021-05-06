@@ -24,7 +24,7 @@
 <meta name="twitter:site" content="@notcalle" />
 <meta name="twitter:creator" content="@notcalle" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","description":"The final pre-defined feature of the project is done, Constructive Solid Geometry, implementing the boolean set operations union, intersection, and difference for solid geometries. This way we can use the basic geometric surface shapes to create more advanced shapes, without resorting to approximating by thousands of triangles.","headline":"Day 36, Constructive Solid Geometry","dateModified":"2019-01-05T12:05:22+00:00","datePublished":"2019-01-05T12:05:22+00:00","url":"https://notfiles.xyz/2019/01/05/day-36-constructive-solid-geometry/","author":{"@type":"Person","name":"Calle Englund"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://notfiles.xyz/2019/01/05/day-36-constructive-solid-geometry/"},"@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","description":"The final pre-defined feature of the project is done, Constructive Solid Geometry, implementing the boolean set operations union, intersection, and difference for solid geometries. This way we can use the basic geometric surface shapes to create more advanced shapes, without resorting to approximating by thousands of triangles.","headline":"Day 36, Constructive Solid Geometry","dateModified":"2019-01-05T12:05:22+00:00","datePublished":"2019-01-05T12:05:22+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://notfiles.xyz/2019/01/05/day-36-constructive-solid-geometry/"},"url":"https://notfiles.xyz/2019/01/05/day-36-constructive-solid-geometry/","author":{"@type":"Person","name":"Calle Englund"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <script id="mathjax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script id="mermaid-script" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script><script type="text/javascript">
     mermaid.initialize({theme:"dark"})
@@ -65,9 +65,9 @@
       <div class="wrapper">
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-  <h1 class="post-title" itemprop="name headline">Day 36, Constructive Solid Geometry</h1>
-  <div class="post-meta"><time datetime="2019-01-05T12:05:22+00:00" itemprop="datePublished">Saturday, 2019-01-05</time>
-     in
+    <h1 class="post-title" itemprop="name headline">Day 36, Constructive Solid Geometry</h1>
+    <div class="post-meta"><time datetime="2019-01-05T12:05:22+00:00" itemprop="datePublished">Saturday, 2019-01-05</time>
+       in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
    about
@@ -87,8 +87,8 @@
       #ruby</a>
   </div></header>
 
-<section class="post-content" itemprop="articleBody">
-  <p>The final pre-defined feature of the project is done, <a href="https://en.wikipedia.org/wiki/Constructive_solid_geometry">Constructive Solid Geometry</a>, implementing the boolean set operations <code class="language-plaintext highlighter-rouge">union</code>, <code class="language-plaintext highlighter-rouge">intersection</code>, and <code class="language-plaintext highlighter-rouge">difference</code> for solid geometries. This way we can use the basic geometric surface shapes to create more advanced shapes, without resorting to approximating by thousands of triangles.</p>
+  <section class="post-content" itemprop="articleBody">
+    <p>The final pre-defined feature of the project is done, <a href="https://en.wikipedia.org/wiki/Constructive_solid_geometry">Constructive Solid Geometry</a>, implementing the boolean set operations <code class="language-plaintext highlighter-rouge">union</code>, <code class="language-plaintext highlighter-rouge">intersection</code>, and <code class="language-plaintext highlighter-rouge">difference</code> for solid geometries. This way we can use the basic geometric surface shapes to create more advanced shapes, without resorting to approximating by thousands of triangles.</p>
 
 <p class="clear"><img src="/img/2019/01/csg-union.png" alt="Union" class="left" />
 The CSG union operation joins the surface of two shapes, such that the outer geometry is preserved, but the overlapping geometry on the inside is removed, constructing a new surface.</p>
@@ -103,17 +103,15 @@ The last of the operations, CSG difference, removes the intersection from the le
 With some clever arrangement of CSG operations we can create some pretty complex geometry from just some cylinders and spheres.</p>
 
 
-</section>
-
+  </section>
 </article>
-
-<section class="post-list"><h2>Related</h2><article class="post-item">
+<section class="post-list"><h2>Next related</h2><article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2019/01/06/cache-is-king/" >
         Cache is King
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Sunday, 2019-01-06 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -136,13 +134,13 @@ With some clever arrangement of CSG operations we can create some pretty complex
     </blockquote>
   </section>
 </article>
-<article class="post-item">
+<h2>Previous related</h2><article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2019/01/02/day-33-domain-specific-language/" >
         Day 33, Domain-Specific Language
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Wednesday, 2019-01-02 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -173,11 +171,11 @@ With some clever arrangement of CSG operations we can create some pretty complex
 </article>
 <article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2019/01/01/day-32-smoothly-interpolated-normals/" >
         Day 32, Smoothly interpolated normals
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Tuesday, 2019-01-01 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -208,11 +206,11 @@ With some clever arrangement of CSG operations we can create some pretty complex
 </article>
 <article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2018/12/31/tea-cocktails-and-a-happy-new-year/" >
         Tea, Cocktails, and a Happy New Year
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Monday, 2018-12-31 in
     <a href="/category/discord/"
        title="Discord">discord</a>
@@ -228,43 +226,6 @@ With some clever arrangement of CSG operations we can create some pretty complex
   <section class="post-excerpt">
     <blockquote>
       
-
-    </blockquote>
-  </section>
-</article>
-<article class="post-item">
-  <header class="post-header">
-    <div class="post-link">
-      <a href="/2018/12/31/day-31-optimizing-triangles/" >
-        Day 31, Optimizing triangles
-      </a>
-    </div>
-    <div class="post-meta">Monday, 2018-12-31 in
-    <a href="/category/devlog/"
-       title="Development Logs">devlog</a>
-   about
-    <a href="/tag/devember/" title="participation in Devember">
-      #devember</a>,
-  
-    <a href="/tag/devember2018/" title="Devember 2018 ray tracer challenge">
-      #devember2018</a>,
-  
-    <a href="/tag/hourofcode/" title="coding for one hour per day">
-      #hourofcode</a>,
-  
-    <a href="/tag/raytracerchallenge/" title="">
-      #raytracerchallenge</a>,
-  
-    <a href="/tag/ruby/" title="coding in Ruby">
-      #ruby</a>
-  
-    </div>
-  </header>
-  <section class="post-excerpt">
-    <blockquote>
-      
-Triangle rendering was painfully slow, as mentioned yesterday. Putting a little reflective shine on the floor and walls of the room took rendering time past 90 minutes. After a bit of research i tried a binary bounding volume hierarchy, dividing the list of shapes into subtrees, split evenly on the largest axis of the bounding box, recursively. This way we get a spacially balanced binary tree with the actual shapes as leaves, and theoretically get \(O(log\ n)\) instead of \(O(n)\) search time per ray. Huge difference, especially with rays branching recursively for reflections and refractions. Down from 90 to 6 minutes for the same scene.
-
 
     </blockquote>
   </section>

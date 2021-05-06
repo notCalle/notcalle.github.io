@@ -24,7 +24,7 @@
 <meta name="twitter:site" content="@notcalle" />
 <meta name="twitter:creator" content="@notcalle" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","description":"Spent at huge part of the hour today troubleshooting why my API change to an init method was not being seen by the playground. Weird caching bugs? No; it turns out that XCode was building for target instead of simulator, so the playground didn’t get a rebuilt version of the framework when I hit build. Still don’t know why that changed since last time, but oh well.","headline":"Caching?","dateModified":"2016-12-06T12:55:42+00:00","datePublished":"2016-12-06T12:55:42+00:00","url":"https://notfiles.xyz/2016/12/06/caching/","author":{"@type":"Person","name":"Calle Englund"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://notfiles.xyz/2016/12/06/caching/"},"@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","description":"Spent at huge part of the hour today troubleshooting why my API change to an init method was not being seen by the playground. Weird caching bugs? No; it turns out that XCode was building for target instead of simulator, so the playground didn’t get a rebuilt version of the framework when I hit build. Still don’t know why that changed since last time, but oh well.","headline":"Caching?","dateModified":"2016-12-06T12:55:42+00:00","datePublished":"2016-12-06T12:55:42+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://notfiles.xyz/2016/12/06/caching/"},"url":"https://notfiles.xyz/2016/12/06/caching/","author":{"@type":"Person","name":"Calle Englund"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <script id="mathjax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script id="mermaid-script" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script><script type="text/javascript">
     mermaid.initialize({theme:"dark"})
@@ -65,9 +65,9 @@
       <div class="wrapper">
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-  <h1 class="post-title" itemprop="name headline">Caching?</h1>
-  <div class="post-meta"><time datetime="2016-12-06T12:55:42+00:00" itemprop="datePublished">Tuesday, 2016-12-06</time>
-     in
+    <h1 class="post-title" itemprop="name headline">Caching?</h1>
+    <div class="post-meta"><time datetime="2016-12-06T12:55:42+00:00" itemprop="datePublished">Tuesday, 2016-12-06</time>
+       in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
    about
@@ -84,22 +84,20 @@
       #xcode</a>
   </div></header>
 
-<section class="post-content" itemprop="articleBody">
-  <p>Spent at huge part of the hour today troubleshooting why my API change to an <code class="language-plaintext highlighter-rouge">init</code> method was not being seen by the <em>playground</em>. Weird caching bugs? No; it turns out that <em>XCode</em> was building for <em>target</em> instead of <em>simulator</em>, so the <em>playground</em> didn’t get a rebuilt version of the framework when I hit <em>build</em>. Still don’t know why that changed since last time, but oh well.</p>
+  <section class="post-content" itemprop="articleBody">
+    <p>Spent at huge part of the hour today troubleshooting why my API change to an <code class="language-plaintext highlighter-rouge">init</code> method was not being seen by the <em>playground</em>. Weird caching bugs? No; it turns out that <em>XCode</em> was building for <em>target</em> instead of <em>simulator</em>, so the <em>playground</em> didn’t get a rebuilt version of the framework when I hit <em>build</em>. Still don’t know why that changed since last time, but oh well.</p>
 
 <p>After that frustration was cleared I proceeded to learn that <em>Swift</em> has the same semi-dynamic <code class="language-plaintext highlighter-rouge">Array</code> notion as <em>Objective C</em> has, so they need to be properly managed with respect to reserving space and inserting new objects.</p>
 
-</section>
-
+  </section>
 </article>
-
-<section class="post-list"><h2>Related</h2><article class="post-item">
+<section class="post-list"><h2>Next related</h2><article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2016/12/07/directional-navigation/" >
         Directional Navigation
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Wednesday, 2016-12-07 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -122,13 +120,13 @@
     </blockquote>
   </section>
 </article>
-<article class="post-item">
+<h2>Previous related</h2><article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2016/12/04/swift-lesson-one/" >
         Swift First Lesson
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Sunday, 2016-12-04 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -153,11 +151,11 @@
 </article>
 <article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2016/12/04/travel-day/" >
         Travel Double Day
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Sunday, 2016-12-04 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -179,11 +177,11 @@
 </article>
 <article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2016/12/02/second-of-devember/" >
         Second of Devember
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Friday, 2016-12-02 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -205,35 +203,6 @@
   <section class="post-excerpt">
     <blockquote>
       Trying to sketch some basic structure for possibly hierarchical map definition, and trying (failing) to use a Swift Playground to try the framework code while sketching. The playground can import my framework, but the framework classes are not accessible for some reason. That’s all I got from one hour today.
-
-    </blockquote>
-  </section>
-</article>
-<article class="post-item">
-  <header class="post-header">
-    <div class="post-link">
-      <a href="/2016/12/01/first-of-devember/" >
-        First of Devember
-      </a>
-    </div>
-    <div class="post-meta">Thursday, 2016-12-01 in
-    <a href="/category/devlog/"
-       title="Development Logs">devlog</a>
-   about
-    <a href="/tag/devember/" title="participation in Devember">
-      #devember</a>,
-  
-    <a href="/tag/devember2016/" title="Devember 2016 game project">
-      #devember2016</a>,
-  
-    <a href="/tag/xcode/" title="using XCode for appleOS development">
-      #xcode</a>
-  
-    </div>
-  </header>
-  <section class="post-excerpt">
-    <blockquote>
-      Not a single actual line of code written today, but development environment setup had to take priority. The way to manage Cocoa dependencies seems to be Carthage, so lets use that for our first known dependency, namely a new framework that will hold all reusable parts of the map handling and navigation code. Carthage looks somewhat similar to bundler of Ruby fame, so that’s nice.
 
     </blockquote>
   </section>

@@ -24,7 +24,7 @@
 <meta name="twitter:site" content="@notcalle" />
 <meta name="twitter:creator" content="@notcalle" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","description":"The next natural step after getting basic shading to work is to have actual light sources, that can be tinted and positioned in the scene.","headline":"Light and Magic","dateModified":"2019-12-06T21:32:00+00:00","datePublished":"2019-12-06T21:32:00+00:00","url":"https://notfiles.xyz/2019/12/06/light-and-magic/","author":{"@type":"Person","name":"Calle Englund"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://notfiles.xyz/2019/12/06/light-and-magic/"},"@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","description":"The next natural step after getting basic shading to work is to have actual light sources, that can be tinted and positioned in the scene.","headline":"Light and Magic","dateModified":"2019-12-06T21:32:00+00:00","datePublished":"2019-12-06T21:32:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://notfiles.xyz/2019/12/06/light-and-magic/"},"url":"https://notfiles.xyz/2019/12/06/light-and-magic/","author":{"@type":"Person","name":"Calle Englund"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <script id="mathjax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script id="mermaid-script" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script><script type="text/javascript">
     mermaid.initialize({theme:"dark"})
@@ -65,9 +65,9 @@
       <div class="wrapper">
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-  <h1 class="post-title" itemprop="name headline">Light and Magic</h1>
-  <div class="post-meta"><time datetime="2019-12-06T21:32:00+00:00" itemprop="datePublished">Friday, 2019-12-06</time>
-     in
+    <h1 class="post-title" itemprop="name headline">Light and Magic</h1>
+    <div class="post-meta"><time datetime="2019-12-06T21:32:00+00:00" itemprop="datePublished">Friday, 2019-12-06</time>
+       in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
    about
@@ -87,8 +87,8 @@
       #raytracing</a>
   </div></header>
 
-<section class="post-content" itemprop="articleBody">
-  <p>The next natural step after getting basic shading to work is to have actual light sources, that can be tinted and positioned in the scene.</p>
+  <section class="post-content" itemprop="articleBody">
+    <p>The next natural step after getting basic shading to work is to have actual light sources, that can be tinted and positioned in the scene.</p>
 
 <p>Enter the <code class="language-plaintext highlighter-rouge">PointLight()</code> and <code class="language-plaintext highlighter-rouge">DistantLight()</code> classes of lights. A point light can be translated to a position, and irradiates the scene spherically from that position, and will be attenuated by distance. A distant light on the other hand, irradiates the scene with parallel rays of light, with the same power, and direction all over (like the fake “camera light”).</p>
 
@@ -96,17 +96,15 @@
 
 <p><img src="/img/2019/12/light-and-magic.png" alt="Light &amp; Magic" /></p>
 
-</section>
-
+  </section>
 </article>
-
-<section class="post-list"><h2>Related</h2><article class="post-item">
+<section class="post-list"><h2>Next related</h2><article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2019/12/07/all-the-things/" >
         All the things
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Saturday, 2019-12-07 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -135,13 +133,13 @@
     </blockquote>
   </section>
 </article>
-<article class="post-item">
+<h2>Previous related</h2><article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2019/12/05/working-camera/" >
         Working camera
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Thursday, 2019-12-05 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -172,11 +170,11 @@
 </article>
 <article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2019/12/04/actual-pixels/" >
         Actual pixels
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Wednesday, 2019-12-04 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -207,11 +205,11 @@
 </article>
 <article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2019/12/03/pixels-on-a-canvas/" >
         Pixels on a canvas
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Tuesday, 2019-12-03 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -236,42 +234,6 @@
   <section class="post-excerpt">
     <blockquote>
       Pretty much the whole point of a ray tracer such as this one is to render pretty pictures, and for that we’re going to need a canvas to render onto.
-
-    </blockquote>
-  </section>
-</article>
-<article class="post-item">
-  <header class="post-header">
-    <div class="post-link">
-      <a href="/2019/12/02/surface-normals/" >
-        Surface normals
-      </a>
-    </div>
-    <div class="post-meta">Monday, 2019-12-02 in
-    <a href="/category/devlog/"
-       title="Development Logs">devlog</a>
-   about
-    <a href="/tag/devember/" title="participation in Devember">
-      #devember</a>,
-  
-    <a href="/tag/devember2019/" title="Devember 2019 ray tracer">
-      #devember2019</a>,
-  
-    <a href="/tag/hourofcode/" title="coding for one hour per day">
-      #hourofcode</a>,
-  
-    <a href="/tag/swift/" title="coding in Swift">
-      #swift</a>,
-  
-    <a href="/tag/raytracing/" title="">
-      #raytracing</a>
-  
-    </div>
-  </header>
-  <section class="post-excerpt">
-    <blockquote>
-      Today brings normal vectors into the mix, a critical component for shading computations; the normal vector of a surface at the point where it was hit by a ray, to be precise. Because the normal depends on the hit position on the surface, and we’ll need that too, we keep that around as well.
-
 
     </blockquote>
   </section>

@@ -24,7 +24,7 @@
 <meta name="twitter:site" content="@notcalle" />
 <meta name="twitter:creator" content="@notcalle" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","description":"Refactored movement from Player* to new superclass ActorSpriteNode.","headline":"devember 7th — actors walk on top of map tiles","dateModified":"2015-12-07T20:37:58+00:00","datePublished":"2015-12-07T20:37:58+00:00","url":"https://notfiles.xyz/2015/12/07/devember07/","author":{"@type":"Person","name":"Calle Englund"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://notfiles.xyz/2015/12/07/devember07/"},"@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","description":"Refactored movement from Player* to new superclass ActorSpriteNode.","headline":"devember 7th — actors walk on top of map tiles","dateModified":"2015-12-07T20:37:58+00:00","datePublished":"2015-12-07T20:37:58+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://notfiles.xyz/2015/12/07/devember07/"},"url":"https://notfiles.xyz/2015/12/07/devember07/","author":{"@type":"Person","name":"Calle Englund"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <script id="mathjax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script id="mermaid-script" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script><script type="text/javascript">
     mermaid.initialize({theme:"dark"})
@@ -65,9 +65,9 @@
       <div class="wrapper">
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-  <h1 class="post-title" itemprop="name headline">devember 7th — actors walk on top of map tiles</h1>
-  <div class="post-meta"><time datetime="2015-12-07T20:37:58+00:00" itemprop="datePublished">Monday, 2015-12-07</time>
-     in
+    <h1 class="post-title" itemprop="name headline">devember 7th — actors walk on top of map tiles</h1>
+    <div class="post-meta"><time datetime="2015-12-07T20:37:58+00:00" itemprop="datePublished">Monday, 2015-12-07</time>
+       in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
    about
@@ -93,24 +93,22 @@
       #isometric</a>
   </div></header>
 
-<section class="post-content" itemprop="articleBody">
-  <p>Refactored movement from Player* to new superclass ActorSpriteNode.</p>
+  <section class="post-content" itemprop="articleBody">
+    <p>Refactored movement from Player* to new superclass ActorSpriteNode.</p>
 
 <p>Actors will now stand on top of map tiles (with the assumption that the top surface is the isometric bounding box for the tile). No more walking inside walls and such ghostly nonsense.</p>
 
 <p>Actors has a limited step height that they can reach when moving, and can’t move between tiles with greater height difference (as measured in base tile halfwidth). This should probably be replaced with an ActionPoint cost function of step height in the future.</p>
 
-</section>
-
+  </section>
 </article>
-
-<section class="post-list"><h2>Related</h2><article class="post-item">
+<section class="post-list"><h2>Next related</h2><article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2015/12/08/devember08/" >
         devember 8th — randomized maps
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Tuesday, 2015-12-08 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -148,13 +146,13 @@
     </blockquote>
   </section>
 </article>
-<article class="post-item">
+<h2>Previous related</h2><article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2015/12/06/devember06/" >
         devember 6th
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Sunday, 2015-12-06 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -191,11 +189,11 @@
 </article>
 <article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2015/12/05/devember05/" >
         devember 5th
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Saturday, 2015-12-05 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -233,11 +231,11 @@ For some reason lighting broke when making more sane spritenode tree structure.
 </article>
 <article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2015/12/04/devember04/" >
         devember 4th
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Friday, 2015-12-04 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -268,47 +266,6 @@ For some reason lighting broke when making more sane spritenode tree structure.
   <section class="post-excerpt">
     <blockquote>
       Support for layered sprites on base tiles, for dynamic objects being displayed on top of floor tiles. Click to teleport player sprite to a tile.
-
-    </blockquote>
-  </section>
-</article>
-<article class="post-item">
-  <header class="post-header">
-    <div class="post-link">
-      <a href="/2015/12/03/devember03/" >
-        devember 3rd
-      </a>
-    </div>
-    <div class="post-meta">Thursday, 2015-12-03 in
-    <a href="/category/devlog/"
-       title="Development Logs">devlog</a>
-   about
-    <a href="/tag/gamedev/" title="(video) game development">
-      #gamedev</a>,
-  
-    <a href="/tag/devember/" title="participation in Devember">
-      #devember</a>,
-  
-    <a href="/tag/devember2015/" title="Devember 2015 game project">
-      #devember2015</a>,
-  
-    <a href="/tag/hourofcode/" title="coding for one hour per day">
-      #hourofcode</a>,
-  
-    <a href="/tag/objc/" title="coding in Objective C">
-      #objc</a>,
-  
-    <a href="/tag/spritekit/" title="making games with SpriteKit">
-      #spritekit</a>,
-  
-    <a href="/tag/isometric/" title="viewing a world in isometric perspective">
-      #isometric</a>
-  
-    </div>
-  </header>
-  <section class="post-excerpt">
-    <blockquote>
-      Isometric coordinate transforms between tile grid positions and screen space sorted out. We can now display a z-sorted grid of floor tiles on screen, and pick tiles in the grid via screen coordinates.
 
     </blockquote>
   </section>

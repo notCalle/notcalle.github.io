@@ -24,7 +24,7 @@
 <meta name="twitter:site" content="@notcalle" />
 <meta name="twitter:creator" content="@notcalle" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","description":"Shaved another 30% off rendering time by inlining and some more caching, but it seems like I’m reaching the limit of what I can get out of a single thread.","headline":"Threaded rendering","dateModified":"2019-01-12T23:21:39+00:00","datePublished":"2019-01-12T23:21:39+00:00","url":"https://notfiles.xyz/2019/01/12/threaded-rendering/","author":{"@type":"Person","name":"Calle Englund"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://notfiles.xyz/2019/01/12/threaded-rendering/"},"@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","description":"Shaved another 30% off rendering time by inlining and some more caching, but it seems like I’m reaching the limit of what I can get out of a single thread.","headline":"Threaded rendering","dateModified":"2019-01-12T23:21:39+00:00","datePublished":"2019-01-12T23:21:39+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://notfiles.xyz/2019/01/12/threaded-rendering/"},"url":"https://notfiles.xyz/2019/01/12/threaded-rendering/","author":{"@type":"Person","name":"Calle Englund"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <script id="mathjax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script id="mermaid-script" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script><script type="text/javascript">
     mermaid.initialize({theme:"dark"})
@@ -65,9 +65,9 @@
       <div class="wrapper">
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-  <h1 class="post-title" itemprop="name headline">Threaded rendering</h1>
-  <div class="post-meta"><time datetime="2019-01-12T23:21:39+00:00" itemprop="datePublished">Saturday, 2019-01-12</time>
-     in
+    <h1 class="post-title" itemprop="name headline">Threaded rendering</h1>
+    <div class="post-meta"><time datetime="2019-01-12T23:21:39+00:00" itemprop="datePublished">Saturday, 2019-01-12</time>
+       in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
    about
@@ -78,8 +78,8 @@
       #ruby</a>
   </div></header>
 
-<section class="post-content" itemprop="articleBody">
-  <p>Shaved another 30% off rendering time by inlining and some more caching, but it seems like I’m reaching the limit of what I can get out of a single thread.</p>
+  <section class="post-content" itemprop="articleBody">
+    <p>Shaved another 30% off rendering time by inlining and some more caching, but it seems like I’m reaching the limit of what I can get out of a single thread.</p>
 
 <div class="language-pry highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">[1] pry(#&lt;GlisteningRuby::DSL::Scene&gt;</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">render</span> <span class="n">verbose</span><span class="ss">:true</span>
 <span class="go"> Setup time: 0.532384 s
@@ -111,17 +111,15 @@ Render time: 77.613168 s
  Total time: 78.173624 s
 </span></code></pre></div></div>
 
-</section>
-
+  </section>
 </article>
-
-<section class="post-list"><h2>Related</h2><article class="post-item">
+<section class="post-list"><h2>Next related</h2><article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2019/01/13/super-sampling-anti-aliasing/" >
         Super Sampling Anti-Aliasing
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Sunday, 2019-01-13 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -143,13 +141,13 @@ Remember the smoothly shaded teapot? Still looks pretty rough with all the jaggi
     </blockquote>
   </section>
 </article>
-<article class="post-item">
+<h2>Previous related</h2><article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2019/01/08/light-and-magic/" >
         Light and Magic
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Tuesday, 2019-01-08 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -175,11 +173,11 @@ Made some refinements to lighting. Originially there was only a point light with
 </article>
 <article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2019/01/06/cache-is-king/" >
         Cache is King
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Sunday, 2019-01-06 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -204,11 +202,11 @@ Made some refinements to lighting. Originially there was only a point light with
 </article>
 <article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2019/01/05/day-36-constructive-solid-geometry/" >
         Day 36, Constructive Solid Geometry
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Saturday, 2019-01-05 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -234,41 +232,6 @@ Made some refinements to lighting. Originially there was only a point light with
     <blockquote>
       The final pre-defined feature of the project is done, Constructive Solid Geometry, implementing the boolean set operations union, intersection, and difference for solid geometries. This way we can use the basic geometric surface shapes to create more advanced shapes, without resorting to approximating by thousands of triangles.
 
-
-    </blockquote>
-  </section>
-</article>
-<article class="post-item">
-  <header class="post-header">
-    <div class="post-link">
-      <a href="/2019/01/02/day-33-domain-specific-language/" >
-        Day 33, Domain-Specific Language
-      </a>
-    </div>
-    <div class="post-meta">Wednesday, 2019-01-02 in
-    <a href="/category/devlog/"
-       title="Development Logs">devlog</a>
-   about
-    <a href="/tag/devember/" title="participation in Devember">
-      #devember</a>,
-  
-    <a href="/tag/devember2018/" title="Devember 2018 ray tracer challenge">
-      #devember2018</a>,
-  
-    <a href="/tag/hourofcode/" title="coding for one hour per day">
-      #hourofcode</a>,
-  
-    <a href="/tag/raytracerchallenge/" title="">
-      #raytracerchallenge</a>,
-  
-    <a href="/tag/ruby/" title="coding in Ruby">
-      #ruby</a>
-  
-    </div>
-  </header>
-  <section class="post-excerpt">
-    <blockquote>
-      Not a single feature improvement today, but instead a bit of quality of life improvements.
 
     </blockquote>
   </section>

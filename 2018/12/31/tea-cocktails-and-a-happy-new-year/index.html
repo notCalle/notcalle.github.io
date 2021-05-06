@@ -24,7 +24,7 @@
 <meta name="twitter:site" content="@notcalle" />
 <meta name="twitter:creator" content="@notcalle" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","description":"Random development ramblings, maybe.","headline":"Tea, Cocktails, and a Happy New Year","dateModified":"2018-12-31T23:00:15+00:00","datePublished":"2018-12-31T23:00:15+00:00","url":"https://notfiles.xyz/2018/12/31/tea-cocktails-and-a-happy-new-year/","author":{"@type":"Person","name":"Calle Englund"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://notfiles.xyz/2018/12/31/tea-cocktails-and-a-happy-new-year/"},"@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","description":"Random development ramblings, maybe.","headline":"Tea, Cocktails, and a Happy New Year","dateModified":"2018-12-31T23:00:15+00:00","datePublished":"2018-12-31T23:00:15+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://notfiles.xyz/2018/12/31/tea-cocktails-and-a-happy-new-year/"},"url":"https://notfiles.xyz/2018/12/31/tea-cocktails-and-a-happy-new-year/","author":{"@type":"Person","name":"Calle Englund"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <script id="mathjax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script id="mermaid-script" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script><script type="text/javascript">
     mermaid.initialize({theme:"dark"})
@@ -65,9 +65,9 @@
       <div class="wrapper">
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-  <h1 class="post-title" itemprop="name headline">Tea, Cocktails, and a Happy New Year</h1>
-  <div class="post-meta"><time datetime="2018-12-31T23:00:15+00:00" itemprop="datePublished">Monday, 2018-12-31</time>
-     in
+    <h1 class="post-title" itemprop="name headline">Tea, Cocktails, and a Happy New Year</h1>
+    <div class="post-meta"><time datetime="2018-12-31T23:00:15+00:00" itemprop="datePublished">Monday, 2018-12-31</time>
+       in
     <a href="/category/discord/"
        title="Discord">discord</a>
    about
@@ -78,22 +78,20 @@
       #raytracerchallenge</a>
   </div></header>
 
-<section class="post-content" itemprop="articleBody">
-  <p><img src="/img/2018/12/teapot-and-cocktails.png" alt="Tea and Cocktails" /></p>
+  <section class="post-content" itemprop="articleBody">
+    <p><img src="/img/2018/12/teapot-and-cocktails.png" alt="Tea and Cocktails" /></p>
 
 <p>Let’s have some tea and cocktails to celebrate the end of 2018.</p>
 
-</section>
-
+  </section>
 </article>
-
-<section class="post-list"><h2>Related</h2><article class="post-item">
+<section class="post-list"><h2>Next related</h2><article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2019/01/01/day-32-smoothly-interpolated-normals/" >
         Day 32, Smoothly interpolated normals
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Tuesday, 2019-01-01 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -122,13 +120,13 @@
     </blockquote>
   </section>
 </article>
-<article class="post-item">
+<h2>Previous related</h2><article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2018/12/31/day-31-optimizing-triangles/" >
         Day 31, Optimizing triangles
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Monday, 2018-12-31 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -161,11 +159,11 @@ Triangle rendering was painfully slow, as mentioned yesterday. Putting a little 
 </article>
 <article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2018/12/30/day-30-triangles/" >
         Day 30, Triangles and teapots
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Sunday, 2018-12-30 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -198,11 +196,11 @@ The last of the primitive shapes, the triangle. By them selves they’re pretty 
 </article>
 <article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2018/12/29/day-29-groups/" >
         Day 29, Groups
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Saturday, 2018-12-29 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -228,42 +226,6 @@ The last of the primitive shapes, the triangle. By them selves they’re pretty 
     <blockquote>
       
 Transforming each object in the scene in global world reference space quickly becomes tiresome, so let’s introduce a new group “shape”. A group takes any number of objects and provides a common reference space for its children via its own transform. A group also helps reduce the search space in large scenes, by aggregating the bounding boxes of its children into a bounding box for the entire group. That way ray intersection tests against the children of the group only needs to happen when the group bounding box is intersected. Neat.
-
-    </blockquote>
-  </section>
-</article>
-<article class="post-item">
-  <header class="post-header">
-    <div class="post-link">
-      <a href="/2018/12/28/day-28-celebratory-cocktails/" >
-        Day 28, Celebratory cocktails
-      </a>
-    </div>
-    <div class="post-meta">Friday, 2018-12-28 in
-    <a href="/category/devlog/"
-       title="Development Logs">devlog</a>
-   about
-    <a href="/tag/devember/" title="participation in Devember">
-      #devember</a>,
-  
-    <a href="/tag/devember2018/" title="Devember 2018 ray tracer challenge">
-      #devember2018</a>,
-  
-    <a href="/tag/hourofcode/" title="coding for one hour per day">
-      #hourofcode</a>,
-  
-    <a href="/tag/raytracerchallenge/" title="">
-      #raytracerchallenge</a>,
-  
-    <a href="/tag/ruby/" title="coding in Ruby">
-      #ruby</a>
-  
-    </div>
-  </header>
-  <section class="post-excerpt">
-    <blockquote>
-      
-The latest addition to the supported shapes is the cone, a deformed kind of cylinder, also optionally capped and restricted to an interval along its length. With all these things we can make a cocktail to celebrate. With all these transparent parts, it takes more than 8 minutes to render.
 
     </blockquote>
   </section>

@@ -24,7 +24,7 @@
 <meta name="twitter:site" content="@notcalle" />
 <meta name="twitter:creator" content="@notcalle" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","description":"First attempt at using the GamePlayKit path finding GKGridGraph. Unfortunately, the playground currently crashes (because of some internal XCode bug maybe?), so it can’t be tested.","headline":"Path Finding","dateModified":"2016-12-10T04:27:35+00:00","datePublished":"2016-12-10T04:27:35+00:00","url":"https://notfiles.xyz/2016/12/10/path-finding/","author":{"@type":"Person","name":"Calle Englund"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://notfiles.xyz/2016/12/10/path-finding/"},"@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","description":"First attempt at using the GamePlayKit path finding GKGridGraph. Unfortunately, the playground currently crashes (because of some internal XCode bug maybe?), so it can’t be tested.","headline":"Path Finding","dateModified":"2016-12-10T04:27:35+00:00","datePublished":"2016-12-10T04:27:35+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://notfiles.xyz/2016/12/10/path-finding/"},"url":"https://notfiles.xyz/2016/12/10/path-finding/","author":{"@type":"Person","name":"Calle Englund"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <script id="mathjax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script id="mermaid-script" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script><script type="text/javascript">
     mermaid.initialize({theme:"dark"})
@@ -65,9 +65,9 @@
       <div class="wrapper">
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-  <h1 class="post-title" itemprop="name headline">Path Finding</h1>
-  <div class="post-meta"><time datetime="2016-12-10T04:27:35+00:00" itemprop="datePublished">Saturday, 2016-12-10</time>
-     in
+    <h1 class="post-title" itemprop="name headline">Path Finding</h1>
+    <div class="post-meta"><time datetime="2016-12-10T04:27:35+00:00" itemprop="datePublished">Saturday, 2016-12-10</time>
+       in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
    about
@@ -84,22 +84,20 @@
       #xcode</a>
   </div></header>
 
-<section class="post-content" itemprop="articleBody">
-  <p>First attempt at using the <code class="language-plaintext highlighter-rouge">GamePlayKit</code> path finding <code class="language-plaintext highlighter-rouge">GKGridGraph</code>. Unfortunately, the playground currently crashes (because of some internal <em>XCode</em> bug maybe?), so it can’t be tested.</p>
+  <section class="post-content" itemprop="articleBody">
+    <p>First attempt at using the <code class="language-plaintext highlighter-rouge">GamePlayKit</code> path finding <code class="language-plaintext highlighter-rouge">GKGridGraph</code>. Unfortunately, the playground currently crashes (because of some internal <em>XCode</em> bug maybe?), so it can’t be tested.</p>
 
 <p>The idea is that an actor can move if there is something present on the layer directly below them, but can’t move through layers they occupy themselves. Currently hardcoded as requirement for tiles on <code class="language-plaintext highlighter-rouge">region.layers[0]</code> but this environment evaluation should probably be a method of the actor, as e.g. flying or swimming actors might have other ideas. Also, the graph generation should be restricted to what an actor has actually see, so they can’t figure out a perfect path through unknown terrain.</p>
 
-</section>
-
+  </section>
 </article>
-
-<section class="post-list"><h2>Related</h2><article class="post-item">
+<section class="post-list"><h2>Next related</h2><article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2016/12/12/xcode-bug-report/" >
         Xcode Bug Report
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Monday, 2016-12-12 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -122,13 +120,13 @@
     </blockquote>
   </section>
 </article>
-<article class="post-item">
+<h2>Previous related</h2><article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2016/12/08/gameplaykit/" >
         GameplayKit A*?
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Thursday, 2016-12-08 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -153,11 +151,11 @@
 </article>
 <article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2016/12/07/directional-navigation/" >
         Directional Navigation
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Wednesday, 2016-12-07 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -182,11 +180,11 @@
 </article>
 <article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2016/12/06/caching/" >
         Caching?
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Tuesday, 2016-12-06 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -208,35 +206,6 @@
   <section class="post-excerpt">
     <blockquote>
       Spent at huge part of the hour today troubleshooting why my API change to an init method was not being seen by the playground. Weird caching bugs? No; it turns out that XCode was building for target instead of simulator, so the playground didn’t get a rebuilt version of the framework when I hit build. Still don’t know why that changed since last time, but oh well.
-
-    </blockquote>
-  </section>
-</article>
-<article class="post-item">
-  <header class="post-header">
-    <div class="post-link">
-      <a href="/2016/12/04/swift-lesson-one/" >
-        Swift First Lesson
-      </a>
-    </div>
-    <div class="post-meta">Sunday, 2016-12-04 in
-    <a href="/category/devlog/"
-       title="Development Logs">devlog</a>
-   about
-    <a href="/tag/devember/" title="participation in Devember">
-      #devember</a>,
-  
-    <a href="/tag/devember2016/" title="Devember 2016 game project">
-      #devember2016</a>,
-  
-    <a href="/tag/swift/" title="coding in Swift">
-      #swift</a>
-  
-    </div>
-  </header>
-  <section class="post-excerpt">
-    <blockquote>
-      The first lesson turns out to be about access control: nothing is public by default, even classes or their init methods. With public access to our classes the playground plays.
 
     </blockquote>
   </section>

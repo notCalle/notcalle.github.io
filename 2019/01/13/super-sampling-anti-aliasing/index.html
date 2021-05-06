@@ -24,7 +24,7 @@
 <meta name="twitter:site" content="@notcalle" />
 <meta name="twitter:creator" content="@notcalle" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","description":"Remember the smoothly shaded teapot? Still looks pretty rough with all the jaggies and speckles. Well, with the shiny new multi threading support it’s actually feasible to add some image quality improvements.","headline":"Super Sampling Anti-Aliasing","dateModified":"2019-01-13T10:35:32+00:00","datePublished":"2019-01-13T10:35:32+00:00","url":"https://notfiles.xyz/2019/01/13/super-sampling-anti-aliasing/","author":{"@type":"Person","name":"Calle Englund"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://notfiles.xyz/2019/01/13/super-sampling-anti-aliasing/"},"@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","description":"Remember the smoothly shaded teapot? Still looks pretty rough with all the jaggies and speckles. Well, with the shiny new multi threading support it’s actually feasible to add some image quality improvements.","headline":"Super Sampling Anti-Aliasing","dateModified":"2019-01-13T10:35:32+00:00","datePublished":"2019-01-13T10:35:32+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://notfiles.xyz/2019/01/13/super-sampling-anti-aliasing/"},"url":"https://notfiles.xyz/2019/01/13/super-sampling-anti-aliasing/","author":{"@type":"Person","name":"Calle Englund"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <script id="mathjax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script id="mermaid-script" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script><script type="text/javascript">
     mermaid.initialize({theme:"dark"})
@@ -65,9 +65,9 @@
       <div class="wrapper">
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-  <h1 class="post-title" itemprop="name headline">Super Sampling Anti-Aliasing</h1>
-  <div class="post-meta"><time datetime="2019-01-13T10:35:32+00:00" itemprop="datePublished">Sunday, 2019-01-13</time>
-     in
+    <h1 class="post-title" itemprop="name headline">Super Sampling Anti-Aliasing</h1>
+    <div class="post-meta"><time datetime="2019-01-13T10:35:32+00:00" itemprop="datePublished">Sunday, 2019-01-13</time>
+       in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
    about
@@ -78,8 +78,8 @@
       #ruby</a>
   </div></header>
 
-<section class="post-content" itemprop="articleBody">
-  <p><img src="/img/2019/01/teapot-jaggies.png" alt="Jaggy Utah Teapot" class="right" />
+  <section class="post-content" itemprop="articleBody">
+    <p><img src="/img/2019/01/teapot-jaggies.png" alt="Jaggy Utah Teapot" class="right" />
 Remember the smoothly shaded teapot? Still looks pretty rough with all the jaggies and speckles. Well, with the shiny new <a href="/2019/01/13/threaded-rendering/">multi threading</a> support it’s actually feasible to add some image quality improvements.</p>
 
 <div class="language-pry clear highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">[1] pry(#&lt;GlisteningRuby::DSL::Scene&gt;</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">render</span> <span class="n">verbose</span><span class="ss">:true</span><span class="p">,</span> <span class="n">threads</span><span class="p">:</span><span class="mi">8</span>
@@ -98,17 +98,15 @@ Render time: 561.85829 s
 </span></code></pre></div></div>
 
 
-</section>
-
+  </section>
 </article>
-
-<section class="post-list"><h2>Related</h2><article class="post-item">
+<section class="post-list"><h2>Next related</h2><article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2019/01/29/soft-shadows/" >
         Soft Shadows
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Tuesday, 2019-01-29 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -129,13 +127,13 @@ With the recent anti-aliasing feature enables, the image quality is pretty good,
     </blockquote>
   </section>
 </article>
-<article class="post-item">
+<h2>Previous related</h2><article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2019/01/12/threaded-rendering/" >
         Threaded rendering
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Saturday, 2019-01-12 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -157,11 +155,11 @@ With the recent anti-aliasing feature enables, the image quality is pretty good,
 </article>
 <article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2019/01/08/light-and-magic/" >
         Light and Magic
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Tuesday, 2019-01-08 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -187,11 +185,11 @@ Made some refinements to lighting. Originially there was only a point light with
 </article>
 <article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2019/01/06/cache-is-king/" >
         Cache is King
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Sunday, 2019-01-06 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -210,42 +208,6 @@ Made some refinements to lighting. Originially there was only a point light with
   <section class="post-excerpt">
     <blockquote>
       Cut teapot rendering time in half with some clever caching.
-
-    </blockquote>
-  </section>
-</article>
-<article class="post-item">
-  <header class="post-header">
-    <div class="post-link">
-      <a href="/2019/01/05/day-36-constructive-solid-geometry/" >
-        Day 36, Constructive Solid Geometry
-      </a>
-    </div>
-    <div class="post-meta">Saturday, 2019-01-05 in
-    <a href="/category/devlog/"
-       title="Development Logs">devlog</a>
-   about
-    <a href="/tag/devember/" title="participation in Devember">
-      #devember</a>,
-  
-    <a href="/tag/devember2018/" title="Devember 2018 ray tracer challenge">
-      #devember2018</a>,
-  
-    <a href="/tag/raytracerchallenge/" title="">
-      #raytracerchallenge</a>,
-  
-    <a href="/tag/hourofcode/" title="coding for one hour per day">
-      #hourofcode</a>,
-  
-    <a href="/tag/ruby/" title="coding in Ruby">
-      #ruby</a>
-  
-    </div>
-  </header>
-  <section class="post-excerpt">
-    <blockquote>
-      The final pre-defined feature of the project is done, Constructive Solid Geometry, implementing the boolean set operations union, intersection, and difference for solid geometries. This way we can use the basic geometric surface shapes to create more advanced shapes, without resorting to approximating by thousands of triangles.
-
 
     </blockquote>
   </section>

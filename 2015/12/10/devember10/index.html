@@ -24,7 +24,7 @@
 <meta name="twitter:site" content="@notcalle" />
 <meta name="twitter:creator" content="@notcalle" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","description":"Making randomness look pretty is hard, so I’ll put that on the shelf for now. Started looking at GameKit’s Graph pathfinding classes instead, which is probably more essential than getting sidetracked by making things look pretty. Defining the GridGraph at the IsoTileMap level will probably not work though, as different Actors will have their own unique capabilities to traverse the map. The Actor should probably generate their own GridGraph for their observable vicinity when they need it, and filter the graph with their traversal capabilities.","headline":"devember 10th — pretty randomness is hard","dateModified":"2015-12-10T21:05:02+00:00","datePublished":"2015-12-10T21:05:02+00:00","url":"https://notfiles.xyz/2015/12/10/devember10/","author":{"@type":"Person","name":"Calle Englund"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://notfiles.xyz/2015/12/10/devember10/"},"@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","description":"Making randomness look pretty is hard, so I’ll put that on the shelf for now. Started looking at GameKit’s Graph pathfinding classes instead, which is probably more essential than getting sidetracked by making things look pretty. Defining the GridGraph at the IsoTileMap level will probably not work though, as different Actors will have their own unique capabilities to traverse the map. The Actor should probably generate their own GridGraph for their observable vicinity when they need it, and filter the graph with their traversal capabilities.","headline":"devember 10th — pretty randomness is hard","dateModified":"2015-12-10T21:05:02+00:00","datePublished":"2015-12-10T21:05:02+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://notfiles.xyz/2015/12/10/devember10/"},"url":"https://notfiles.xyz/2015/12/10/devember10/","author":{"@type":"Person","name":"Calle Englund"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <script id="mathjax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script id="mermaid-script" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script><script type="text/javascript">
     mermaid.initialize({theme:"dark"})
@@ -65,9 +65,9 @@
       <div class="wrapper">
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-  <h1 class="post-title" itemprop="name headline">devember 10th — pretty randomness is hard</h1>
-  <div class="post-meta"><time datetime="2015-12-10T21:05:02+00:00" itemprop="datePublished">Thursday, 2015-12-10</time>
-     in
+    <h1 class="post-title" itemprop="name headline">devember 10th — pretty randomness is hard</h1>
+    <div class="post-meta"><time datetime="2015-12-10T21:05:02+00:00" itemprop="datePublished">Thursday, 2015-12-10</time>
+       in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
    about
@@ -96,20 +96,18 @@
       #pathfinding</a>
   </div></header>
 
-<section class="post-content" itemprop="articleBody">
-  <p>Making randomness look pretty is hard, so I’ll put that on the shelf for now. Started looking at GameKit’s Graph pathfinding classes instead, which is probably more essential than getting sidetracked by making things look pretty. Defining the GridGraph at the IsoTileMap level will probably not work though, as different Actors will have their own unique capabilities to traverse the map. The Actor should probably generate their own GridGraph for their observable vicinity when they need it, and filter the graph with their traversal capabilities.</p>
+  <section class="post-content" itemprop="articleBody">
+    <p>Making randomness look pretty is hard, so I’ll put that on the shelf for now. Started looking at GameKit’s Graph pathfinding classes instead, which is probably more essential than getting sidetracked by making things look pretty. Defining the GridGraph at the IsoTileMap level will probably not work though, as different Actors will have their own unique capabilities to traverse the map. The Actor should probably generate their own GridGraph for their observable vicinity when they need it, and filter the graph with their traversal capabilities.</p>
 
-</section>
-
+  </section>
 </article>
-
-<section class="post-list"><h2>Related</h2><article class="post-item">
+<section class="post-list"><h2>Next related</h2><article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2015/12/13/devember13/" >
         devember 13th — pathfinding
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Sunday, 2015-12-13 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -144,13 +142,13 @@
     </blockquote>
   </section>
 </article>
-<article class="post-item">
+<h2>Previous related</h2><article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2015/12/09/devember09/" >
         devember 9th — smooth autocentering camera
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Wednesday, 2015-12-09 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -187,11 +185,11 @@
 </article>
 <article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2015/12/08/devember08/" >
         devember 8th — randomized maps
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Tuesday, 2015-12-08 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -231,11 +229,11 @@
 </article>
 <article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2015/12/07/devember07/" >
         devember 7th — actors walk on top of map tiles
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Monday, 2015-12-07 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -266,47 +264,6 @@
   <section class="post-excerpt">
     <blockquote>
       Refactored movement from Player* to new superclass ActorSpriteNode.
-
-    </blockquote>
-  </section>
-</article>
-<article class="post-item">
-  <header class="post-header">
-    <div class="post-link">
-      <a href="/2015/12/06/devember06/" >
-        devember 6th
-      </a>
-    </div>
-    <div class="post-meta">Sunday, 2015-12-06 in
-    <a href="/category/devlog/"
-       title="Development Logs">devlog</a>
-   about
-    <a href="/tag/gamedev/" title="(video) game development">
-      #gamedev</a>,
-  
-    <a href="/tag/devember/" title="participation in Devember">
-      #devember</a>,
-  
-    <a href="/tag/devember2015/" title="Devember 2015 game project">
-      #devember2015</a>,
-  
-    <a href="/tag/hourofcode/" title="coding for one hour per day">
-      #hourofcode</a>,
-  
-    <a href="/tag/objc/" title="coding in Objective C">
-      #objc</a>,
-  
-    <a href="/tag/spritekit/" title="making games with SpriteKit">
-      #spritekit</a>,
-  
-    <a href="/tag/isometric/" title="viewing a world in isometric perspective">
-      #isometric</a>
-  
-    </div>
-  </header>
-  <section class="post-excerpt">
-    <blockquote>
-      Lighting broke yesterday because initialization code was moved into the wrong place. Sigh. Now we have working scene lighting again.
 
     </blockquote>
   </section>

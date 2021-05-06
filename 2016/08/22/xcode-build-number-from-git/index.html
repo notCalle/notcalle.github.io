@@ -24,7 +24,7 @@
 <meta name="twitter:site" content="@notcalle" />
 <meta name="twitter:creator" content="@notcalle" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","description":"Add this as a Run Script Phase at the end of Build Phases in your XCode project to increment your CFBundleVersion as {git commit count}.{uncommitted changes}-{gitrevid}.","headline":"XCode build number from git","dateModified":"2016-08-22T21:44:14+00:00","datePublished":"2016-08-22T21:44:14+00:00","url":"https://notfiles.xyz/2016/08/22/xcode-build-number-from-git/","author":{"@type":"Person","name":"Calle Englund"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://notfiles.xyz/2016/08/22/xcode-build-number-from-git/"},"@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","description":"Add this as a Run Script Phase at the end of Build Phases in your XCode project to increment your CFBundleVersion as {git commit count}.{uncommitted changes}-{gitrevid}.","headline":"XCode build number from git","dateModified":"2016-08-22T21:44:14+00:00","datePublished":"2016-08-22T21:44:14+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://notfiles.xyz/2016/08/22/xcode-build-number-from-git/"},"url":"https://notfiles.xyz/2016/08/22/xcode-build-number-from-git/","author":{"@type":"Person","name":"Calle Englund"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <script id="mathjax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script id="mermaid-script" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script><script type="text/javascript">
     mermaid.initialize({theme:"dark"})
@@ -65,9 +65,9 @@
       <div class="wrapper">
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-  <h1 class="post-title" itemprop="name headline">XCode build number from git</h1>
-  <div class="post-meta"><time datetime="2016-08-22T21:44:14+00:00" itemprop="datePublished">Monday, 2016-08-22</time>
-     in
+    <h1 class="post-title" itemprop="name headline">XCode build number from git</h1>
+    <div class="post-meta"><time datetime="2016-08-22T21:44:14+00:00" itemprop="datePublished">Monday, 2016-08-22</time>
+       in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
    about
@@ -75,24 +75,22 @@
       #xcode</a>
   </div></header>
 
-<section class="post-content" itemprop="articleBody">
-  <p>Add this as a <strong>Run Script Phase</strong> at the end of <strong>Build Phases</strong> in your XCode project to increment your CFBundleVersion as <em>{git commit count}.{uncommitted changes}-{gitrevid}</em>.</p>
+  <section class="post-content" itemprop="articleBody">
+    <p>Add this as a <strong>Run Script Phase</strong> at the end of <strong>Build Phases</strong> in your XCode project to increment your CFBundleVersion as <em>{git commit count}.{uncommitted changes}-{gitrevid}</em>.</p>
 
 <script src="https://gist.github.com/notCalle/af53a0b3ccac6123c8a2d2337a48dc6a.js"> </script>
 
 <p>When the build is made from a cleanly committed git repository the version will be N.0-XXXXXXX. Intermediary test builds will have N.D-XXXXXXX with the size of the diff from the actual committed version as minor.</p>
 
-</section>
-
+  </section>
 </article>
-
-<section class="post-list"><h2>Related</h2><article class="post-item">
+<section class="post-list"><h2>Next related</h2><article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2016/11/30/gpg-signed-git-with-xcode/" >
         GPG signed Git with XCode
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Wednesday, 2016-11-30 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>

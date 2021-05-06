@@ -24,7 +24,7 @@
 <meta name="twitter:site" content="@notcalle" />
 <meta name="twitter:creator" content="@notcalle" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","description":"Prereq work for implementing path finding: eight direction navigation. A tile can find its neighbours within its layer exit(direction:). Currently only within a single map region, because we haven’t implemented interregion links yet.","headline":"Directional Navigation","dateModified":"2016-12-07T13:05:41+00:00","datePublished":"2016-12-07T13:05:41+00:00","url":"https://notfiles.xyz/2016/12/07/directional-navigation/","author":{"@type":"Person","name":"Calle Englund"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://notfiles.xyz/2016/12/07/directional-navigation/"},"@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","description":"Prereq work for implementing path finding: eight direction navigation. A tile can find its neighbours within its layer exit(direction:). Currently only within a single map region, because we haven’t implemented interregion links yet.","headline":"Directional Navigation","dateModified":"2016-12-07T13:05:41+00:00","datePublished":"2016-12-07T13:05:41+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://notfiles.xyz/2016/12/07/directional-navigation/"},"url":"https://notfiles.xyz/2016/12/07/directional-navigation/","author":{"@type":"Person","name":"Calle Englund"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <script id="mathjax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script id="mermaid-script" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script><script type="text/javascript">
     mermaid.initialize({theme:"dark"})
@@ -65,9 +65,9 @@
       <div class="wrapper">
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-  <h1 class="post-title" itemprop="name headline">Directional Navigation</h1>
-  <div class="post-meta"><time datetime="2016-12-07T13:05:41+00:00" itemprop="datePublished">Wednesday, 2016-12-07</time>
-     in
+    <h1 class="post-title" itemprop="name headline">Directional Navigation</h1>
+    <div class="post-meta"><time datetime="2016-12-07T13:05:41+00:00" itemprop="datePublished">Wednesday, 2016-12-07</time>
+       in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
    about
@@ -81,20 +81,18 @@
       #swift</a>
   </div></header>
 
-<section class="post-content" itemprop="articleBody">
-  <p>Prereq work for implementing path finding: eight direction navigation. A tile can find its neighbours within its layer <code class="language-plaintext highlighter-rouge">exit(direction:)</code>. Currently only within a single map region, because we haven’t implemented interregion links yet.</p>
+  <section class="post-content" itemprop="articleBody">
+    <p>Prereq work for implementing path finding: eight direction navigation. A tile can find its neighbours within its layer <code class="language-plaintext highlighter-rouge">exit(direction:)</code>. Currently only within a single map region, because we haven’t implemented interregion links yet.</p>
 
-</section>
-
+  </section>
 </article>
-
-<section class="post-list"><h2>Related</h2><article class="post-item">
+<section class="post-list"><h2>Next related</h2><article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2016/12/08/gameplaykit/" >
         GameplayKit A*?
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Thursday, 2016-12-08 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -117,13 +115,13 @@
     </blockquote>
   </section>
 </article>
-<article class="post-item">
+<h2>Previous related</h2><article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2016/12/06/caching/" >
         Caching?
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Tuesday, 2016-12-06 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -151,11 +149,11 @@
 </article>
 <article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2016/12/04/swift-lesson-one/" >
         Swift First Lesson
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Sunday, 2016-12-04 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -180,11 +178,11 @@
 </article>
 <article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2016/12/04/travel-day/" >
         Travel Double Day
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Sunday, 2016-12-04 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -200,38 +198,6 @@
   <section class="post-excerpt">
     <blockquote>
       This fell apart quickly, as expected, with a friday that began in CET and ends about now in EST, with 12 hours of air travel and such in between. But development evnvironment is now setup on laptop as well, so at least there’s hope for the following days.
-
-    </blockquote>
-  </section>
-</article>
-<article class="post-item">
-  <header class="post-header">
-    <div class="post-link">
-      <a href="/2016/12/02/second-of-devember/" >
-        Second of Devember
-      </a>
-    </div>
-    <div class="post-meta">Friday, 2016-12-02 in
-    <a href="/category/devlog/"
-       title="Development Logs">devlog</a>
-   about
-    <a href="/tag/devember/" title="participation in Devember">
-      #devember</a>,
-  
-    <a href="/tag/devember2016/" title="Devember 2016 game project">
-      #devember2016</a>,
-  
-    <a href="/tag/swift/" title="coding in Swift">
-      #swift</a>,
-  
-    <a href="/tag/xcode/" title="using XCode for appleOS development">
-      #xcode</a>
-  
-    </div>
-  </header>
-  <section class="post-excerpt">
-    <blockquote>
-      Trying to sketch some basic structure for possibly hierarchical map definition, and trying (failing) to use a Swift Playground to try the framework code while sketching. The playground can import my framework, but the framework classes are not accessible for some reason. That’s all I got from one hour today.
 
     </blockquote>
   </section>

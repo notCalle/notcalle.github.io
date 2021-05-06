@@ -24,7 +24,7 @@
 <meta name="twitter:site" content="@notcalle" />
 <meta name="twitter:creator" content="@notcalle" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","description":"More than just hit detection, we’ve moved into the realm of reflection, lighting and shading. This is mainly about projecting vectors on other vectors, using dot products \\(\\overrightarrow{v1} \\cdot \\overrightarrow{v2}\\) to measure the length of the projection. For that we need to find normal vectors of surfaces, and a light source.","headline":"Day 6, Shadows, Light and Magic","dateModified":"2018-12-06T08:19:12+00:00","datePublished":"2018-12-06T08:19:12+00:00","url":"https://notfiles.xyz/2018/12/06/day-6-shadows-light-and-magic/","author":{"@type":"Person","name":"Calle Englund"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://notfiles.xyz/2018/12/06/day-6-shadows-light-and-magic/"},"@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","description":"More than just hit detection, we’ve moved into the realm of reflection, lighting and shading. This is mainly about projecting vectors on other vectors, using dot products \\(\\overrightarrow{v1} \\cdot \\overrightarrow{v2}\\) to measure the length of the projection. For that we need to find normal vectors of surfaces, and a light source.","headline":"Day 6, Shadows, Light and Magic","dateModified":"2018-12-06T08:19:12+00:00","datePublished":"2018-12-06T08:19:12+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://notfiles.xyz/2018/12/06/day-6-shadows-light-and-magic/"},"url":"https://notfiles.xyz/2018/12/06/day-6-shadows-light-and-magic/","author":{"@type":"Person","name":"Calle Englund"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <script id="mathjax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script id="mermaid-script" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script><script type="text/javascript">
     mermaid.initialize({theme:"dark"})
@@ -65,9 +65,9 @@
       <div class="wrapper">
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-  <h1 class="post-title" itemprop="name headline">Day 6, Shadows, Light and Magic</h1>
-  <div class="post-meta"><time datetime="2018-12-06T08:19:12+00:00" itemprop="datePublished">Thursday, 2018-12-06</time>
-     in
+    <h1 class="post-title" itemprop="name headline">Day 6, Shadows, Light and Magic</h1>
+    <div class="post-meta"><time datetime="2018-12-06T08:19:12+00:00" itemprop="datePublished">Thursday, 2018-12-06</time>
+       in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
    about
@@ -87,8 +87,8 @@
       #ruby</a>
   </div></header>
 
-<section class="post-content" itemprop="articleBody">
-  <p>More than just hit detection, we’ve moved into the realm of reflection, lighting and shading. This is mainly about projecting vectors on other vectors, using dot products \(\overrightarrow{v1} \cdot \overrightarrow{v2}\) to measure the length of the projection. For that we need to find normal vectors of surfaces, and a light source.</p>
+  <section class="post-content" itemprop="articleBody">
+    <p>More than just hit detection, we’ve moved into the realm of reflection, lighting and shading. This is mainly about projecting vectors on other vectors, using dot products \(\overrightarrow{v1} \cdot \overrightarrow{v2}\) to measure the length of the projection. For that we need to find normal vectors of surfaces, and a light source.</p>
 
 <p>The point light source is simple enough, just a position and an intensity.</p>
 
@@ -111,17 +111,15 @@
 <p>With that in place we can calculate the shade where the ray hits a sphere, by using the <a href="https://en.wikipedia.org/wiki/Phong_reflection_model">Phong reflection</a> model.</p>
 
 
-</section>
-
+  </section>
 </article>
-
-<section class="post-list"><h2>Related</h2><article class="post-item">
+<section class="post-list"><h2>Next related</h2><article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2018/12/07/day-7-casting-rays-through-the-whole-world/" >
         Day 7, Casting rays through the whole world
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Friday, 2018-12-07 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -147,13 +145,13 @@
     </blockquote>
   </section>
 </article>
-<article class="post-item">
+<h2>Previous related</h2><article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2018/12/05/day-5-bumping-in-to-things/" >
         Day 5, Assume nothing
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Wednesday, 2018-12-05 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -184,11 +182,11 @@
 </article>
 <article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2018/12/04/day-4-intersections/" >
         Day 4, Intersections
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Tuesday, 2018-12-04 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -216,11 +214,11 @@
 </article>
 <article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2018/12/03/day-3-casting-rays-into-spheres/" >
         Day 3, Casting rays into spheres
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Monday, 2018-12-03 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -245,45 +243,6 @@
   <section class="post-excerpt">
     <blockquote>
       Finally some practical applications of the math heavy weekend, casting abstract rays at abstract spheres. Well, on a sliding scale from linear algebra to physical representation, it’s still a step in the direction.
-
-    </blockquote>
-  </section>
-</article>
-<article class="post-item">
-  <header class="post-header">
-    <div class="post-link">
-      <a href="/2018/12/02/day-2-matrices-matrices-matrices-oh-and-more-matrices/" >
-        Day 2, Matrices, matrices, matrices. Oh, and more matrices
-      </a>
-    </div>
-    <div class="post-meta">Sunday, 2018-12-02 in
-    <a href="/category/devlog/"
-       title="Development Logs">devlog</a>
-   about
-    <a href="/tag/devember/" title="participation in Devember">
-      #devember</a>,
-  
-    <a href="/tag/devember2018/" title="Devember 2018 ray tracer challenge">
-      #devember2018</a>,
-  
-    <a href="/tag/hourofcode/" title="coding for one hour per day">
-      #hourofcode</a>,
-  
-    <a href="/tag/ruby/" title="coding in Ruby">
-      #ruby</a>,
-  
-    <a href="/tag/raytracerchallenge/" title="">
-      #raytracerchallenge</a>,
-  
-    <a href="/tag/tauism/" title="">
-      #tauism</a>
-  
-    </div>
-  </header>
-  <section class="post-excerpt">
-    <blockquote>
-      Today was spent on a heavy chunk of linear algebra, matrices. This is the foundation for everything else, so time well spent reimplementing what’s already in the stdlib, just to refresh my math skills. If there are still days left of Devember when I’m finished, I’ll come back and replace all this with the stdlib implementation instead, hoping I’m somewhat close to the same API.
-
 
     </blockquote>
   </section>

@@ -24,7 +24,7 @@
 <meta name="twitter:site" content="@notcalle" />
 <meta name="twitter:creator" content="@notcalle" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","description":"The first piece of actual ray tracing: calculating the intersection between a ray and a sphere. To find the intersections, we need to solve the quadratic equation of the sphere being equal to the linear equation of the ray. The interpretation of imaginary roots is that the ray does not intersect the sphere.","headline":"Intersecting spheres","dateModified":"2019-12-01T17:19:00+00:00","datePublished":"2019-12-01T17:19:00+00:00","url":"https://notfiles.xyz/2019/12/01/intersecting-spheres/","author":{"@type":"Person","name":"Calle Englund"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://notfiles.xyz/2019/12/01/intersecting-spheres/"},"@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","description":"The first piece of actual ray tracing: calculating the intersection between a ray and a sphere. To find the intersections, we need to solve the quadratic equation of the sphere being equal to the linear equation of the ray. The interpretation of imaginary roots is that the ray does not intersect the sphere.","headline":"Intersecting spheres","dateModified":"2019-12-01T17:19:00+00:00","datePublished":"2019-12-01T17:19:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://notfiles.xyz/2019/12/01/intersecting-spheres/"},"url":"https://notfiles.xyz/2019/12/01/intersecting-spheres/","author":{"@type":"Person","name":"Calle Englund"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <script id="mathjax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script id="mermaid-script" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script><script type="text/javascript">
     mermaid.initialize({theme:"dark"})
@@ -65,9 +65,9 @@
       <div class="wrapper">
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-  <h1 class="post-title" itemprop="name headline">Intersecting spheres</h1>
-  <div class="post-meta"><time datetime="2019-12-01T17:19:00+00:00" itemprop="datePublished">Sunday, 2019-12-01</time>
-     in
+    <h1 class="post-title" itemprop="name headline">Intersecting spheres</h1>
+    <div class="post-meta"><time datetime="2019-12-01T17:19:00+00:00" itemprop="datePublished">Sunday, 2019-12-01</time>
+       in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
    about
@@ -87,8 +87,8 @@
       #raytracing</a>
   </div></header>
 
-<section class="post-content" itemprop="articleBody">
-  <p>The first piece of actual ray tracing: calculating the <a href="https://en.wikipedia.org/wiki/Line–sphere_intersection">intersection between a ray and a sphere</a>. To find the intersections, we need to solve the quadratic equation of the sphere being equal to the linear equation of the ray. The interpretation of imaginary roots is that the ray does not intersect the sphere.</p>
+  <section class="post-content" itemprop="articleBody">
+    <p>The first piece of actual ray tracing: calculating the <a href="https://en.wikipedia.org/wiki/Line–sphere_intersection">intersection between a ray and a sphere</a>. To find the intersections, we need to solve the quadratic equation of the sphere being equal to the linear equation of the ray. The interpretation of imaginary roots is that the ray does not intersect the sphere.</p>
 
 <p>Combining the sphere equation \(\|\dot{x} - \dot{C}\|^2 = R^2\) and the line equation \(\dot{x} = \dot{O} + t\overrightarrow{D}\) we get:</p>
 
@@ -100,17 +100,15 @@
 
 <p><em>On another pomodorian side note, actually taking the 5 minute breaks every 25 minutes is really hard, but I’m starting to see how it might be worth it, by not falling into a hyperfocus trance until suddenly SO HANGRY AND WHERE DID THE DAY GO?!</em></p>
 
-</section>
-
+  </section>
 </article>
-
-<section class="post-list"><h2>Related</h2><article class="post-item">
+<section class="post-list"><h2>Next related</h2><article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2019/12/02/surface-normals/" >
         Surface normals
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Monday, 2019-12-02 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -140,13 +138,13 @@
     </blockquote>
   </section>
 </article>
-<article class="post-item">
+<h2>Previous related</h2><article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2019/12/01/basic-data-types/" >
         Basic data types
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Sunday, 2019-12-01 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -174,11 +172,11 @@
 </article>
 <article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2019/11/30/devember-again/" >
         Devember again
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Saturday, 2019-11-30 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -203,11 +201,11 @@
 </article>
 <article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2019/01/08/light-and-magic/" >
         Light and Magic
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Tuesday, 2019-01-08 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -227,35 +225,6 @@
     <blockquote>
       
 Made some refinements to lighting. Originially there was only a point light without distance falloff, which is not an accurate light model in any case. The light inside the room lights the entire world, all the way to the horizon.
-
-    </blockquote>
-  </section>
-</article>
-<article class="post-item">
-  <header class="post-header">
-    <div class="post-link">
-      <a href="/2019/01/06/cache-is-king/" >
-        Cache is King
-      </a>
-    </div>
-    <div class="post-meta">Sunday, 2019-01-06 in
-    <a href="/category/devlog/"
-       title="Development Logs">devlog</a>
-   about
-    <a href="/tag/raytracerchallenge/" title="">
-      #raytracerchallenge</a>,
-  
-    <a href="/tag/hourofcode/" title="coding for one hour per day">
-      #hourofcode</a>,
-  
-    <a href="/tag/ruby/" title="coding in Ruby">
-      #ruby</a>
-  
-    </div>
-  </header>
-  <section class="post-excerpt">
-    <blockquote>
-      Cut teapot rendering time in half with some clever caching.
 
     </blockquote>
   </section>

@@ -24,7 +24,7 @@
 <meta name="twitter:site" content="@notcalle" />
 <meta name="twitter:creator" content="@notcalle" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","description":"Pretty much the whole point of a ray tracer such as this one is to render pretty pictures, and for that we’re going to need a canvas to render onto.","headline":"Pixels on a canvas","dateModified":"2019-12-03T22:06:00+00:00","datePublished":"2019-12-03T22:06:00+00:00","url":"https://notfiles.xyz/2019/12/03/pixels-on-a-canvas/","author":{"@type":"Person","name":"Calle Englund"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://notfiles.xyz/2019/12/03/pixels-on-a-canvas/"},"@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","description":"Pretty much the whole point of a ray tracer such as this one is to render pretty pictures, and for that we’re going to need a canvas to render onto.","headline":"Pixels on a canvas","dateModified":"2019-12-03T22:06:00+00:00","datePublished":"2019-12-03T22:06:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://notfiles.xyz/2019/12/03/pixels-on-a-canvas/"},"url":"https://notfiles.xyz/2019/12/03/pixels-on-a-canvas/","author":{"@type":"Person","name":"Calle Englund"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <script id="mathjax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script id="mermaid-script" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script><script type="text/javascript">
     mermaid.initialize({theme:"dark"})
@@ -65,9 +65,9 @@
       <div class="wrapper">
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-  <h1 class="post-title" itemprop="name headline">Pixels on a canvas</h1>
-  <div class="post-meta"><time datetime="2019-12-03T22:06:00+00:00" itemprop="datePublished">Tuesday, 2019-12-03</time>
-     in
+    <h1 class="post-title" itemprop="name headline">Pixels on a canvas</h1>
+    <div class="post-meta"><time datetime="2019-12-03T22:06:00+00:00" itemprop="datePublished">Tuesday, 2019-12-03</time>
+       in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
    about
@@ -87,8 +87,8 @@
       #raytracing</a>
   </div></header>
 
-<section class="post-content" itemprop="articleBody">
-  <p>Pretty much the whole point of a ray tracer such as this one is to render pretty pictures, and for that we’re going to need a canvas to render onto.</p>
+  <section class="post-content" itemprop="articleBody">
+    <p>Pretty much the whole point of a ray tracer such as this one is to render pretty pictures, and for that we’re going to need a canvas to render onto.</p>
 
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">typedef</span> <span class="kt">Pixel</span> <span class="o">=</span> <span class="n">simd_float4</span>
 
@@ -97,17 +97,15 @@
 
 <p>Pixels can be set on the canvas, and it can be inspected to see what’s already there. When the rendering is complete the canvas can be exported for display or file output.</p>
 
-</section>
-
+  </section>
 </article>
-
-<section class="post-list"><h2>Related</h2><article class="post-item">
+<section class="post-list"><h2>Next related</h2><article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2019/12/04/actual-pixels/" >
         Actual pixels
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Wednesday, 2019-12-04 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -136,13 +134,13 @@
     </blockquote>
   </section>
 </article>
-<article class="post-item">
+<h2>Previous related</h2><article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2019/12/02/surface-normals/" >
         Surface normals
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Monday, 2019-12-02 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -174,11 +172,11 @@
 </article>
 <article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2019/12/01/intersecting-spheres/" >
         Intersecting spheres
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Sunday, 2019-12-01 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -210,11 +208,11 @@
 </article>
 <article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2019/12/01/basic-data-types/" >
         Basic data types
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Sunday, 2019-12-01 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -236,35 +234,6 @@
   <section class="post-excerpt">
     <blockquote>
       Alright, the first push to the [github repo] is complete. Starting out small with just the basic data types that will be at the core of everything, and some tolerance equality operators for comparisons.
-
-    </blockquote>
-  </section>
-</article>
-<article class="post-item">
-  <header class="post-header">
-    <div class="post-link">
-      <a href="/2019/11/30/devember-again/" >
-        Devember again
-      </a>
-    </div>
-    <div class="post-meta">Saturday, 2019-11-30 in
-    <a href="/category/devlog/"
-       title="Development Logs">devlog</a>
-   about
-    <a href="/tag/devember/" title="participation in Devember">
-      #devember</a>,
-  
-    <a href="/tag/devember2019/" title="Devember 2019 ray tracer">
-      #devember2019</a>,
-  
-    <a href="/tag/hourofcode/" title="coding for one hour per day">
-      #hourofcode</a>
-  
-    </div>
-  </header>
-  <section class="post-excerpt">
-    <blockquote>
-      This one snuck up on me faster than anticipated, but here we go.
 
     </blockquote>
   </section>

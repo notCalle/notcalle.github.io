@@ -24,7 +24,7 @@
 <meta name="twitter:site" content="@notcalle" />
 <meta name="twitter:creator" content="@notcalle" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","description":"Lots of refactoring today, because old assumptions were smashed, and some cleanup of annoying duplications was needed. No new pixels yet, but maybe tomorrow? These where the previous two days pixel results, with the black background made transparent while converting them from ppm to png.","headline":"Day 7, Casting rays through the whole world","dateModified":"2018-12-07T20:41:39+00:00","datePublished":"2018-12-07T20:41:39+00:00","url":"https://notfiles.xyz/2018/12/07/day-7-casting-rays-through-the-whole-world/","author":{"@type":"Person","name":"Calle Englund"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://notfiles.xyz/2018/12/07/day-7-casting-rays-through-the-whole-world/"},"@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","description":"Lots of refactoring today, because old assumptions were smashed, and some cleanup of annoying duplications was needed. No new pixels yet, but maybe tomorrow? These where the previous two days pixel results, with the black background made transparent while converting them from ppm to png.","headline":"Day 7, Casting rays through the whole world","dateModified":"2018-12-07T20:41:39+00:00","datePublished":"2018-12-07T20:41:39+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://notfiles.xyz/2018/12/07/day-7-casting-rays-through-the-whole-world/"},"url":"https://notfiles.xyz/2018/12/07/day-7-casting-rays-through-the-whole-world/","author":{"@type":"Person","name":"Calle Englund"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <script id="mathjax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script id="mermaid-script" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script><script type="text/javascript">
     mermaid.initialize({theme:"dark"})
@@ -65,9 +65,9 @@
       <div class="wrapper">
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-  <h1 class="post-title" itemprop="name headline">Day 7, Casting rays through the whole world</h1>
-  <div class="post-meta"><time datetime="2018-12-07T20:41:39+00:00" itemprop="datePublished">Friday, 2018-12-07</time>
-     in
+    <h1 class="post-title" itemprop="name headline">Day 7, Casting rays through the whole world</h1>
+    <div class="post-meta"><time datetime="2018-12-07T20:41:39+00:00" itemprop="datePublished">Friday, 2018-12-07</time>
+       in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
    about
@@ -84,25 +84,23 @@
       #raytracerchallenge</a>
   </div></header>
 
-<section class="post-content" itemprop="articleBody">
-  <p>Lots of refactoring today, because old assumptions were smashed, and some cleanup of annoying duplications was needed. No new pixels yet, but maybe tomorrow? These where the previous two days pixel results, with the black background made transparent while converting them from <code class="language-plaintext highlighter-rouge">ppm</code> to <code class="language-plaintext highlighter-rouge">png</code>.</p>
+  <section class="post-content" itemprop="articleBody">
+    <p>Lots of refactoring today, because old assumptions were smashed, and some cleanup of annoying duplications was needed. No new pixels yet, but maybe tomorrow? These where the previous two days pixel results, with the black background made transparent while converting them from <code class="language-plaintext highlighter-rouge">ppm</code> to <code class="language-plaintext highlighter-rouge">png</code>.</p>
 
 <p><img src="/img/2018/12/sphere.png" alt="Flat Sphere" />
 <img src="/img/2018/12/lit-sphere.png" alt="Phong Sphere" /></p>
 
 <p>Casting a ray through the world is as simple as casting it through every object in the world, and collating the resulting intersections.</p>
 
-</section>
-
+  </section>
 </article>
-
-<section class="post-list"><h2>Related</h2><article class="post-item">
+<section class="post-list"><h2>Next related</h2><article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2018/12/08/day-8-making-a-scene/" >
         Day 8, Making a scene
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Saturday, 2018-12-08 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -131,13 +129,13 @@
     </blockquote>
   </section>
 </article>
-<article class="post-item">
+<h2>Previous related</h2><article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2018/12/06/day-6-shadows-light-and-magic/" >
         Day 6, Shadows, Light and Magic
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Thursday, 2018-12-06 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -168,11 +166,11 @@
 </article>
 <article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2018/12/05/day-5-bumping-in-to-things/" >
         Day 5, Assume nothing
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Wednesday, 2018-12-05 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -203,11 +201,11 @@
 </article>
 <article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2018/12/04/day-4-intersections/" >
         Day 4, Intersections
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Tuesday, 2018-12-04 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -229,41 +227,6 @@
   <section class="post-excerpt">
     <blockquote>
       More math heavy stuff, calculating the positions along a ray, where it intersects a sphere. Turns out this is as simple as solving a quadratic equation, with some special coefficients.
-
-    </blockquote>
-  </section>
-</article>
-<article class="post-item">
-  <header class="post-header">
-    <div class="post-link">
-      <a href="/2018/12/03/day-3-casting-rays-into-spheres/" >
-        Day 3, Casting rays into spheres
-      </a>
-    </div>
-    <div class="post-meta">Monday, 2018-12-03 in
-    <a href="/category/devlog/"
-       title="Development Logs">devlog</a>
-   about
-    <a href="/tag/devember/" title="participation in Devember">
-      #devember</a>,
-  
-    <a href="/tag/devember2018/" title="Devember 2018 ray tracer challenge">
-      #devember2018</a>,
-  
-    <a href="/tag/hourofcode/" title="coding for one hour per day">
-      #hourofcode</a>,
-  
-    <a href="/tag/raytracerchallenge/" title="">
-      #raytracerchallenge</a>,
-  
-    <a href="/tag/ruby/" title="coding in Ruby">
-      #ruby</a>
-  
-    </div>
-  </header>
-  <section class="post-excerpt">
-    <blockquote>
-      Finally some practical applications of the math heavy weekend, casting abstract rays at abstract spheres. Well, on a sliding scale from linear algebra to physical representation, it’s still a step in the direction.
 
     </blockquote>
   </section>

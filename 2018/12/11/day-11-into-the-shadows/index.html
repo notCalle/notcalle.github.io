@@ -24,7 +24,7 @@
 <meta name="twitter:site" content="@notcalle" />
 <meta name="twitter:creator" content="@notcalle" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","description":"After todays work we can render the shadows cast by objects in our scenes!","headline":"Day 11, Into the Shadows","dateModified":"2018-12-11T21:03:54+00:00","datePublished":"2018-12-11T21:03:54+00:00","url":"https://notfiles.xyz/2018/12/11/day-11-into-the-shadows/","author":{"@type":"Person","name":"Calle Englund"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://notfiles.xyz/2018/12/11/day-11-into-the-shadows/"},"@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","description":"After todays work we can render the shadows cast by objects in our scenes!","headline":"Day 11, Into the Shadows","dateModified":"2018-12-11T21:03:54+00:00","datePublished":"2018-12-11T21:03:54+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://notfiles.xyz/2018/12/11/day-11-into-the-shadows/"},"url":"https://notfiles.xyz/2018/12/11/day-11-into-the-shadows/","author":{"@type":"Person","name":"Calle Englund"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <script id="mathjax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script id="mermaid-script" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script><script type="text/javascript">
     mermaid.initialize({theme:"dark"})
@@ -65,9 +65,9 @@
       <div class="wrapper">
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-  <h1 class="post-title" itemprop="name headline">Day 11, Into the Shadows</h1>
-  <div class="post-meta"><time datetime="2018-12-11T21:03:54+00:00" itemprop="datePublished">Tuesday, 2018-12-11</time>
-     in
+    <h1 class="post-title" itemprop="name headline">Day 11, Into the Shadows</h1>
+    <div class="post-meta"><time datetime="2018-12-11T21:03:54+00:00" itemprop="datePublished">Tuesday, 2018-12-11</time>
+       in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
    about
@@ -87,8 +87,8 @@
       #ruby</a>
   </div></header>
 
-<section class="post-content" itemprop="articleBody">
-  <p>After todays work we can render the shadows cast by objects in our scenes!</p>
+  <section class="post-content" itemprop="articleBody">
+    <p>After todays work we can render the shadows cast by objects in our scenes!</p>
 
 <p>Finding out which points are in shadow is actually pretty neat, just cast a ray toward the light, and see if it hits anything else on the way. If the light is obscured, the point just gets ambiant light. When lit by multiple lights, the whole thing is just done separately for each light, and added in the end.</p>
 
@@ -96,17 +96,15 @@
 <img src="/img/2018/12/sphere-shadows.png" alt="Spheres with Shadows" />
 <img src="/img/2018/12/multi-shadow-spheres.png" alt="Multi-light Shadows" /></p>
 
-</section>
-
+  </section>
 </article>
-
-<section class="post-list"><h2>Related</h2><article class="post-item">
+<section class="post-list"><h2>Next related</h2><article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2018/12/12/day-12-spheres-on-a-plane/" >
         Day 12, Spheres on a plane
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Wednesday, 2018-12-12 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -135,13 +133,13 @@
     </blockquote>
   </section>
 </article>
-<article class="post-item">
+<h2>Previous related</h2><article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2018/12/10/day-10-a-world-full-of-spheres/" >
         Day 10, A world full of spheres
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Monday, 2018-12-10 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -172,11 +170,11 @@
 </article>
 <article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2018/12/10/day-9-lost-to-ruby-environment-trouble/" >
         Day  9, lost to Ruby environment trouble
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Monday, 2018-12-10 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -201,11 +199,11 @@
 </article>
 <article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2018/12/08/day-8-making-a-scene/" >
         Day 8, Making a scene
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Saturday, 2018-12-08 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -230,38 +228,6 @@
   <section class="post-excerpt">
     <blockquote>
       Further steps toward more pixels, teaching the world to tell what color a ray will see, and creating the necessary transforms for positioning the world in front of the camera. Then have the camera cast a ray, for each pixel in the resulting image, into the world.
-
-    </blockquote>
-  </section>
-</article>
-<article class="post-item">
-  <header class="post-header">
-    <div class="post-link">
-      <a href="/2018/12/07/day-7-casting-rays-through-the-whole-world/" >
-        Day 7, Casting rays through the whole world
-      </a>
-    </div>
-    <div class="post-meta">Friday, 2018-12-07 in
-    <a href="/category/devlog/"
-       title="Development Logs">devlog</a>
-   about
-    <a href="/tag/devember/" title="participation in Devember">
-      #devember</a>,
-  
-    <a href="/tag/devember2018/" title="Devember 2018 ray tracer challenge">
-      #devember2018</a>,
-  
-    <a href="/tag/hourofcode/" title="coding for one hour per day">
-      #hourofcode</a>,
-  
-    <a href="/tag/raytracerchallenge/" title="">
-      #raytracerchallenge</a>
-  
-    </div>
-  </header>
-  <section class="post-excerpt">
-    <blockquote>
-      Lots of refactoring today, because old assumptions were smashed, and some cleanup of annoying duplications was needed. No new pixels yet, but maybe tomorrow? These where the previous two days pixel results, with the black background made transparent while converting them from ppm to png.
 
     </blockquote>
   </section>

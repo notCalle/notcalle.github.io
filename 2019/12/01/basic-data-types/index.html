@@ -24,7 +24,7 @@
 <meta name="twitter:site" content="@notcalle" />
 <meta name="twitter:creator" content="@notcalle" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","description":"Alright, the first push to the [github repo] is complete. Starting out small with just the basic data types that will be at the core of everything, and some tolerance equality operators for comparisons.","headline":"Basic data types","dateModified":"2019-12-01T10:29:00+00:00","datePublished":"2019-12-01T10:29:00+00:00","url":"https://notfiles.xyz/2019/12/01/basic-data-types/","author":{"@type":"Person","name":"Calle Englund"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://notfiles.xyz/2019/12/01/basic-data-types/"},"@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","description":"Alright, the first push to the [github repo] is complete. Starting out small with just the basic data types that will be at the core of everything, and some tolerance equality operators for comparisons.","headline":"Basic data types","dateModified":"2019-12-01T10:29:00+00:00","datePublished":"2019-12-01T10:29:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://notfiles.xyz/2019/12/01/basic-data-types/"},"url":"https://notfiles.xyz/2019/12/01/basic-data-types/","author":{"@type":"Person","name":"Calle Englund"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <script id="mathjax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script id="mermaid-script" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script><script type="text/javascript">
     mermaid.initialize({theme:"dark"})
@@ -65,9 +65,9 @@
       <div class="wrapper">
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-  <h1 class="post-title" itemprop="name headline">Basic data types</h1>
-  <div class="post-meta"><time datetime="2019-12-01T10:29:00+00:00" itemprop="datePublished">Sunday, 2019-12-01</time>
-     in
+    <h1 class="post-title" itemprop="name headline">Basic data types</h1>
+    <div class="post-meta"><time datetime="2019-12-01T10:29:00+00:00" itemprop="datePublished">Sunday, 2019-12-01</time>
+       in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
    about
@@ -84,8 +84,8 @@
       #swift</a>
   </div></header>
 
-<section class="post-content" itemprop="articleBody">
-  <p>Alright, the first push to the <a href="https://github.com/notCalle/swift-raytrace.git">github repo</a> is complete. Starting out small with just the basic data types that will be at the core of everything, and some tolerance equality operators for comparisons.</p>
+  <section class="post-content" itemprop="articleBody">
+    <p>Alright, the first push to the <a href="https://github.com/notCalle/swift-raytrace.git">github repo</a> is complete. Starting out small with just the basic data types that will be at the core of everything, and some tolerance equality operators for comparisons.</p>
 
 <p>The constructor functions <code class="language-plaintext highlighter-rouge">point()</code> and <code class="language-plaintext highlighter-rouge">vector()</code> use the neat trick of tagging with <code class="language-plaintext highlighter-rouge">.w = 1.0</code> for Points and <code class="language-plaintext highlighter-rouge">.w = 0.0</code> for Vectors.</p>
 
@@ -100,17 +100,15 @@
 <p>On a side note, I’m trying out the <a href="https://en.wikipedia.org/wiki/Pomodoro_Technique">pomodoro technique</a> to manage my ability to focus for this project; working in sets of 25 minutes, and taking 5 minute breaks. Maybe I should rephrase the Devember contract as I will work for two pomodoros per day, instead of one hour. Plus one pomodoro for the devlog.</p>
 
 
-</section>
-
+  </section>
 </article>
-
-<section class="post-list"><h2>Related</h2><article class="post-item">
+<section class="post-list"><h2>Next related</h2><article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2019/12/01/intersecting-spheres/" >
         Intersecting spheres
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Sunday, 2019-12-01 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -140,13 +138,13 @@
     </blockquote>
   </section>
 </article>
-<article class="post-item">
+<h2>Previous related</h2><article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2019/11/30/devember-again/" >
         Devember again
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Saturday, 2019-11-30 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -171,11 +169,11 @@
 </article>
 <article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2019/01/08/light-and-magic/" >
         Light and Magic
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Tuesday, 2019-01-08 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -201,11 +199,11 @@ Made some refinements to lighting. Originially there was only a point light with
 </article>
 <article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2019/01/06/cache-is-king/" >
         Cache is King
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Sunday, 2019-01-06 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -224,42 +222,6 @@ Made some refinements to lighting. Originially there was only a point light with
   <section class="post-excerpt">
     <blockquote>
       Cut teapot rendering time in half with some clever caching.
-
-    </blockquote>
-  </section>
-</article>
-<article class="post-item">
-  <header class="post-header">
-    <div class="post-link">
-      <a href="/2019/01/05/day-36-constructive-solid-geometry/" >
-        Day 36, Constructive Solid Geometry
-      </a>
-    </div>
-    <div class="post-meta">Saturday, 2019-01-05 in
-    <a href="/category/devlog/"
-       title="Development Logs">devlog</a>
-   about
-    <a href="/tag/devember/" title="participation in Devember">
-      #devember</a>,
-  
-    <a href="/tag/devember2018/" title="Devember 2018 ray tracer challenge">
-      #devember2018</a>,
-  
-    <a href="/tag/raytracerchallenge/" title="">
-      #raytracerchallenge</a>,
-  
-    <a href="/tag/hourofcode/" title="coding for one hour per day">
-      #hourofcode</a>,
-  
-    <a href="/tag/ruby/" title="coding in Ruby">
-      #ruby</a>
-  
-    </div>
-  </header>
-  <section class="post-excerpt">
-    <blockquote>
-      The final pre-defined feature of the project is done, Constructive Solid Geometry, implementing the boolean set operations union, intersection, and difference for solid geometries. This way we can use the basic geometric surface shapes to create more advanced shapes, without resorting to approximating by thousands of triangles.
-
 
     </blockquote>
   </section>

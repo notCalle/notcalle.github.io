@@ -24,7 +24,7 @@
 <meta name="twitter:site" content="@notcalle" />
 <meta name="twitter:creator" content="@notcalle" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","description":"Cut teapot rendering time in half with some clever caching.","headline":"Cache is King","dateModified":"2019-01-06T19:46:24+00:00","datePublished":"2019-01-06T19:46:24+00:00","url":"https://notfiles.xyz/2019/01/06/cache-is-king/","author":{"@type":"Person","name":"Calle Englund"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://notfiles.xyz/2019/01/06/cache-is-king/"},"@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","description":"Cut teapot rendering time in half with some clever caching.","headline":"Cache is King","dateModified":"2019-01-06T19:46:24+00:00","datePublished":"2019-01-06T19:46:24+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://notfiles.xyz/2019/01/06/cache-is-king/"},"url":"https://notfiles.xyz/2019/01/06/cache-is-king/","author":{"@type":"Person","name":"Calle Englund"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <script id="mathjax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script id="mermaid-script" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script><script type="text/javascript">
     mermaid.initialize({theme:"dark"})
@@ -65,9 +65,9 @@
       <div class="wrapper">
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-  <h1 class="post-title" itemprop="name headline">Cache is King</h1>
-  <div class="post-meta"><time datetime="2019-01-06T19:46:24+00:00" itemprop="datePublished">Sunday, 2019-01-06</time>
-     in
+    <h1 class="post-title" itemprop="name headline">Cache is King</h1>
+    <div class="post-meta"><time datetime="2019-01-06T19:46:24+00:00" itemprop="datePublished">Sunday, 2019-01-06</time>
+       in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
    about
@@ -81,8 +81,8 @@
       #ruby</a>
   </div></header>
 
-<section class="post-content" itemprop="articleBody">
-  <p>Cut teapot rendering time in half with some clever caching.</p>
+  <section class="post-content" itemprop="articleBody">
+    <p>Cut teapot rendering time in half with some clever caching.</p>
 
 <p>Grouped shapes would transform intersecting rays by first asking their parent to transform it, recursively until the outermost group is reached. This caused a lot of unneccessary 4x4 matrix multiplications. Instead, the shape creates a cached  world-to-local space transform by asking its parent for their world-to-local transform and multiplying by its own. Down to one 4x4 matrix multiplication per ray intersection test instead of the nesting depth of groups-within-groups.</p>
 
@@ -90,17 +90,15 @@
 
 <p>While I was at it I made sure that matrix operations on the identity matrix are actually no-ops, which shaved another 20% from the rendering time.</p>
 
-</section>
-
+  </section>
 </article>
-
-<section class="post-list"><h2>Related</h2><article class="post-item">
+<section class="post-list"><h2>Next related</h2><article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2019/01/08/light-and-magic/" >
         Light and Magic
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Tuesday, 2019-01-08 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -124,13 +122,13 @@ Made some refinements to lighting. Originially there was only a point light with
     </blockquote>
   </section>
 </article>
-<article class="post-item">
+<h2>Previous related</h2><article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2019/01/05/day-36-constructive-solid-geometry/" >
         Day 36, Constructive Solid Geometry
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Saturday, 2019-01-05 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -162,11 +160,11 @@ Made some refinements to lighting. Originially there was only a point light with
 </article>
 <article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2019/01/02/day-33-domain-specific-language/" >
         Day 33, Domain-Specific Language
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Wednesday, 2019-01-02 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -197,11 +195,11 @@ Made some refinements to lighting. Originially there was only a point light with
 </article>
 <article class="post-item">
   <header class="post-header">
-    <div class="post-link">
+    <h3 class="post-link">
       <a href="/2019/01/01/day-32-smoothly-interpolated-normals/" >
         Day 32, Smoothly interpolated normals
       </a>
-    </div>
+    </h3>
     <div class="post-meta">Tuesday, 2019-01-01 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -220,32 +218,6 @@ Made some refinements to lighting. Originially there was only a point light with
   
     <a href="/tag/ruby/" title="coding in Ruby">
       #ruby</a>
-  
-    </div>
-  </header>
-  <section class="post-excerpt">
-    <blockquote>
-      
-
-    </blockquote>
-  </section>
-</article>
-<article class="post-item">
-  <header class="post-header">
-    <div class="post-link">
-      <a href="/2018/12/31/tea-cocktails-and-a-happy-new-year/" >
-        Tea, Cocktails, and a Happy New Year
-      </a>
-    </div>
-    <div class="post-meta">Monday, 2018-12-31 in
-    <a href="/category/discord/"
-       title="Discord">discord</a>
-   about
-    <a href="/tag/celebration/" title="it was worth to celebrate at the time, perhaps?">
-      #celebration</a>,
-  
-    <a href="/tag/raytracerchallenge/" title="">
-      #raytracerchallenge</a>
   
     </div>
   </header>
