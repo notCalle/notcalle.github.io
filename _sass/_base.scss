@@ -13,8 +13,8 @@ dl, dd, ol, ul, figure {
  */
 html {
     font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
-    color: $text-color;
-    background-color: $background-color;
+    color: var(--base-text-color);
+    background-color: var(--base-bg-color);
     -webkit-text-size-adjust: 100%;
     -webkit-font-feature-settings: "kern" 1;
     -moz-font-feature-settings: "kern" 1;
@@ -74,7 +74,7 @@ img {
     border: none;
     float: center;
     border-radius: $spacing-unit/2;
-    box-shadow: 1px 1px $spacing-unit $background-color-dark;
+    box-shadow: 1px 1px $spacing-unit var(--dark-bg-color);
     @include media-query($on-palm) {
         border-radius: $spacing-unit/4;
         box-shadow: none;
@@ -125,11 +125,11 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-    color: $brand-color;
+    color: var(--base-brand-color);
     text-decoration: none;
 
     &:hover {
-        color: $text-color;
+        color: var(--base-text-color);
         text-decoration: underline;
     }
 }
@@ -140,7 +140,7 @@ a {
  * Blockquotes
  */
 blockquote {
-    color: $text-color-dark;
+    color: var(--fade-text-color);
     font-style: italic;
     padding-left: 1ex;
     > :last-child {
@@ -149,8 +149,8 @@ blockquote {
 }
 
 code, pre {
-    background-color: $background-color;
-    border: 1px solid $background-color-dark;
+    background-color: var(--base-bg-color);
+    border: 1px solid var(--dark-bg-color);
     font-family: $fixed-font-family;
     font-size: $fixed-font-size;
     overflow-x: auto;
@@ -220,7 +220,7 @@ pre {
         vertical-align: middle;
 
         path {
-            fill: $grey-color;
+            fill: var(--base-gray-color);
         }
     }
 }

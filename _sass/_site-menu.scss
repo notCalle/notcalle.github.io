@@ -18,29 +18,29 @@
         line-height: $base-line-height;
         margin-left: 10px;
         padding: 3px 6px;
-        border: thin solid darken($brand-color, 10%);
+        border: thin solid var(--dark-brand-color);
         border-radius: 5px;
         list-style-type: none;
-        background-color: darken($brand-color, 5%);
+        background-color: var(--brand-brand-color);
         &:hover {
-            background-color: $brand-color;
+            background-color: var(--light-brand-color);
 
             .page-link {
-                color: $text-color;
+                color: var(--base-text-color);
             }
         }
     }
 
     .page-link {
-        color: $background-color;
+        color: var(--base-bg-color);
     }
 
     @include media-query($on-palm) {
         position: absolute;
         top: 9px;
         right: $spacing-unit / 2;
-        background-color: lighten($background-color-light, 5%);
-        border: 1px solid $background-color-dark;
+        background-color: var(--light-bg-color);
+        border: 1px solid var(--dark-bg-color);
         border-radius: 5px;
         text-align: right;
 
@@ -65,7 +65,7 @@
                 height: 15px;
 
                 path {
-                    fill: $text-color;
+                    fill: var(--base-text-color);
                 }
             }
         }
@@ -90,7 +90,7 @@
         }
 
         .page-link {
-            color: $brand-color;
+            color: var(--base-brand-color);
         }
     }
 }

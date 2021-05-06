@@ -4,7 +4,7 @@
  * Site header
  */
 .site-header {
-    background: $brand-color;
+    background: var(--base-brand-color);
     min-height: 56px;
     padding: 0;
 
@@ -14,7 +14,7 @@
 }
 
 .site-title {
-    color: $background-color;
+    color: var(--base-bg-color);
     font-size: 26px;
     font-weight: 300;
     line-height: 56px;
@@ -29,7 +29,7 @@
  * Page content
  */
 .page-content {
-    background-color: $background-color;
+    background-color: var(--base-bg-color);
     padding: $spacing-unit 0 0;
     flex-grow: 1;
     z-index: 0;
@@ -41,8 +41,8 @@
  * Site footer
  */
 .site-footer {
-    background: $background-color;
-    border-top: 2px solid $brand-color;
+    background: var(--base-bg-color);
+    border-top: 2px solid var(--base-brand-color);
     padding: $spacing-unit/2 0;
     z-index: 0;
 }
@@ -65,7 +65,7 @@
 
 .footer-col-wrapper {
     @extend %clearfix;
-    color: $text-color-dark;
+    color: var(--dark-text-color);
     display: flex;
     flex-flow: row wrap;
     align-items: first baseline;

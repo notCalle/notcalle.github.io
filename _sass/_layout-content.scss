@@ -30,11 +30,11 @@
 }
 
 %contentframe {
-    background-color: $background-color-light;
+    background-color: var(--light-bg-color);
     padding: $spacing-unit $spacing-unit 0;
-    border: 1px solid $background-color-dark;
+    border: 1px solid var(--dark-bg-color);
     border-radius: $spacing-unit;
-    box-shadow: 1px 1px $spacing-unit $background-color-dark;
+    box-shadow: 1px 1px $spacing-unit var(--dark-bg-color);
 
     @include media-query($on-palm) {
         padding: $spacing-unit/2 $spacing-unit/2 0;
@@ -60,7 +60,7 @@
     flex: none;
     clear: both;
     font-size: $small-font-size;
-    color: $text-color-dark;
+    color: var(--fade-text-color);
 
     blockquote { margin: $spacing-unit/2 $spacing-unit; }
 }
@@ -79,7 +79,7 @@ div.post-link {
     @extend %vertical-rhythm;
     margin-left: $spacing-unit;
     font-size: $small-font-size;
-    color: $text-color-dark;
+    color: var(--fade-text-color);
 }
 
 /**
@@ -106,13 +106,13 @@ div.post-link {
     h5 { font-size: $base-font-size*9/8; }
     h6 { font-size: $base-font-size*9/8; }
 
-    h2, h3, h4, h5, h6 { color: $text-color-dark; }
+    h2, h3, h4, h5, h6 { color: var(--fade-text-color); }
 
-    h2 { border-top: thin solid $text-color-dark; }
-    h2, h3, h5 { border-bottom: thin solid $text-color-dark; }
+    h2 { border-top: thin solid var(--fade-text-color); }
+    h2, h3, h5 { border-bottom: thin solid var(--fade-text-color); }
 
     blockquote {
-        border-left: 2px solid $text-color-dark;
+        border-left: 2px solid var(--fade-text-color);
     }
 
     .clear {
@@ -146,9 +146,9 @@ div.post-link {
     }
 
     .spoiler {
-        color: $background-color;
+        color: var(--base-bg-color);
         font-style: unset;
-        background-color: $background-color;
+        background-color: var(--base-bg-color);
     }
 
     .emoji {
@@ -160,9 +160,9 @@ div.post-link {
 }
 
 .footnotes {
-    border-top: thin solid $brand-color;
+    border-top: thin solid var(--base-brand-color);
     padding-top: $spacing-unit/4;
-    color: $text-color-dark;
+    color: var(--fade-text-color);
     margin-top: $spacing-unit;
 }
 
@@ -175,8 +175,8 @@ div.post-link {
     margin-bottom: $spacing-unit;
 
     .menu-item {
-        border: thin solid $background-color-dark;
-        background-color: $background-color-light;
+        border: thin solid var(--dark-bg-color);
+        background-color: var(--light-bg-color);
         border-radius: 5px;
         padding: 3px 5px;
         margin: 0 5px;
@@ -189,8 +189,8 @@ div.post-link {
 
     .menu-item.focus,
     .menu-item:hover {
-        background-color: lighten($background-color-light, 5%);
-        color: $text-color;
+        background-color: var(--light-bg-color);
+        color: var(--text-color);
     }
 }
 

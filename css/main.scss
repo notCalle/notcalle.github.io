@@ -3,9 +3,11 @@
 ---
 @charset "utf-8";
 
+//
+// Base SCSS Variables
+//
 
-
-// Our variables
+// fonts
 $base-font-family: "Avenir Next", sans-serif;
 $base-font-size:   16px;
 $base-font-weight: 400;
@@ -17,26 +19,13 @@ $fixed-font-size:   $base-font-size * 0.95;
 
 $spacing-unit:     $base-font-size;
 
-$brand-color:      #F15A29;
-
-$grey-color:       desaturate($brand-color, 85%);
-$grey-color-light: lighten($grey-color, 30%);
-$grey-color-dark:  darken($grey-color, 30%);
-
-$background-color:          darken($grey-color, 45%);
-$background-color-light:    lighten($background-color, 5%);
-$background-color-dark:     darken($background-color, 5%);
-
-$text-color:        lighten($grey-color, 40%);
-$text-color-dark:   darken($text-color, 25%);
+// colors
 
 // Width of the content area
 $content-width:    800px;
 
 $on-palm:          600px;
 $on-laptop:        800px;
-
-
 
 // Use media queries like this:
 // @include media-query($on-palm) {
@@ -51,7 +40,6 @@ $on-laptop:        800px;
     }
 }
 
-
-
 // Import partials from `sass_dir` (defaults to `_sass`)
+@import "color-schemes";
 @import "layout";
