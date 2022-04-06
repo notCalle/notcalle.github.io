@@ -103,7 +103,7 @@ GEM
       unicode-display_width (~> 1.1, >= 1.1.1)
     unicode-display_width (1.7.0)
     webrick (1.7.0)
-    yajl-ruby (1.4.1)
+    yajl-ruby (1.4.2)
 
 PLATFORMS
   ruby
