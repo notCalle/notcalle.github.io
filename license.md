@@ -24,7 +24,7 @@
 <meta name="twitter:site" content="@notcalle" />
 <meta name="twitter:creator" content="@notcalle" />
 <script type="application/ld+json">
-{"headline":"License","dateModified":"2015-11-30T21:33:37+00:00","datePublished":"2015-11-30T21:33:37+00:00","description":"Random development ramblings, maybe.","mainEntityOfPage":{"@type":"WebPage","@id":"https://notfiles.xyz/license.md"},"url":"https://notfiles.xyz/license.md","author":{"@type":"Person","name":"Calle Englund"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+{"datePublished":"2015-11-30T21:33:37+00:00","dateModified":"2015-11-30T21:33:37+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://notfiles.xyz/license.md"},"url":"https://notfiles.xyz/license.md","author":{"@type":"Person","name":"Calle Englund"},"@type":"BlogPosting","headline":"License","description":"Random development ramblings, maybe.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <script id="mathjax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script id="mermaid-script" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script><script type="text/javascript">
     mermaid.initialize({theme:"dark"})
