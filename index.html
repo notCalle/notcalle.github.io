@@ -6,9 +6,9 @@
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="alternate" type="application/rss+xml" title="not://files v3.0" href="https://notfiles.xyz/feed.xml">
-  <!-- Begin Jekyll SEO tag v2.7.1 -->
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>not://files v3.0 | Random development ramblings, maybe.</title>
-<meta name="generator" content="Jekyll v4.2.0" />
+<meta name="generator" content="Jekyll v4.2.2" />
 <meta property="og:title" content="not://files v3.0" />
 <meta name="author" content="Calle Englund" />
 <meta property="og:locale" content="en_US" />
@@ -17,12 +17,13 @@
 <link rel="canonical" href="https://notfiles.xyz/" />
 <meta property="og:url" content="https://notfiles.xyz/" />
 <meta property="og:site_name" content="not://files v3.0" />
+<meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="not://files v3.0" />
 <meta name="twitter:site" content="@notcalle" />
 <meta name="twitter:creator" content="@notcalle" />
 <script type="application/ld+json">
-{"name":"Calle Englund","sameAs":["https://twitter.com/notcalle"],"url":"https://notfiles.xyz/","author":{"@type":"Person","name":"Calle Englund"},"@type":"WebSite","headline":"not://files v3.0","description":"Random development ramblings, maybe.","@context":"https://schema.org"}</script>
+{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"Calle Englund"},"description":"Random development ramblings, maybe.","headline":"not://files v3.0","name":"Calle Englund","sameAs":["https://twitter.com/notcalle"],"url":"https://notfiles.xyz/"}</script>
 <!-- End Jekyll SEO tag -->
 <script id="mathjax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script id="mermaid-script" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script><script type="text/javascript">
     mermaid.initialize({theme:"dark"})
@@ -64,9 +65,184 @@
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline"><a href="/2021/05/06/further-down-the-rabbit-hole/">Further down the rabbit hole</a></h1>
-    <div class="post-meta"><time datetime="2021-05-06T00:00:00+00:00" itemprop="datePublished">Thursday, 2021-05-06</time>
-       in
+    <h1 class="post-title" itemprop="name headline"><a href="/2022/05/11/ruby-raytracer-on-m1/">Ruby raytracer on M1</a></h1>
+    <div class="post-meta"><time datetime="2022-05-11T20:52:00+00:00" itemprop="datePublished">Wednesday, 2022-05-11</time>
+       about
+    <a href="/tag/raytracerchallenge/" title="">
+      #raytracerchallenge</a>,
+  
+    <a href="/tag/raytracing/" title="">
+      #raytracing</a>,
+  
+    <a href="/tag/ruby/" title="coding in Ruby">
+      #ruby</a>
+  </div></header>
+
+  <section class="post-content" itemprop="articleBody">
+    <p>While doing something else than I was planning to, I accedentally came back to
+the raytracer I once wrote in Ruby, and decided that the important thing just
+now is to benchmark my <em>MacBook Pro M1</em> against those old results. I guess
+this will actually be <em>Ruby 3 on M1</em> vs <em>Ruby 2 on i7</em>, because time happened.</p>
+
+<h3 id="single-threaded">Single-threaded</h3>
+
+<p>Starting out with the single threaded teapot rendering benchmark. This should
+give a pretty good measure of raw performance.</p>
+
+<h6 id="macbook-pro-m1-2021">MacBook Pro M1 (2021)</h6>
+
+<div class="language-pry highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">[1] pry(#&lt;GlisteningRuby::DSL::Scene&gt;</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">render</span> <span class="n">verbose</span><span class="ss">:true</span>
+<span class="go"> Setup time: 0.272459 s
+Render time: 354.255657 s
+ Total time: 354.528116 s
+</span></code></pre></div></div>
+
+<h6 id="imac-i7-2012">iMac i7 (2012)</h6>
+
+<div class="language-pry highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">[1] pry(#&lt;GlisteningRuby::DSL::Scene&gt;</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">render</span> <span class="n">verbose</span><span class="ss">:true</span>
+<span class="go"> Setup time: 0.532384 s
+Render time: 259.392946 s
+ Total time: 259.92533 s
+</span></code></pre></div></div>
+
+<p>But wait? Setup time is twice as fast, but rendering is 30% slower? To quote
+Arueshalae, <em>something is not right here.</em></p>
+
+<h3 id="multi-threaded">Multi-threaded</h3>
+
+<p>This the one that made the i7 melt, without providing much more pixels per
+second than at half the threads. Let’s see how the M1 fares here. Both have
+about the same capacity of maximum performance threads, and the same total
+level of parallelism. <em>4C + 4c</em> vs <em>4C * 2T</em>.</p>
+
+<h6 id="macbook-pro-m1-2021-1">MacBook Pro M1 (2021)</h6>
+
+<div class="language-pry highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">[2] pry(#&lt;GlisteningRuby::DSL::Scene&gt;</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">render</span> <span class="n">verbose</span><span class="ss">:true</span><span class="p">,</span> <span class="n">threads</span><span class="p">:</span><span class="mi">8</span>
+<span class="go"> Setup time: 0.261933 s
+Render time: 70.432901 s
+ Total time: 70.694834 s
+</span></code></pre></div></div>
+
+<p>So, render time is about 1/5 of single-threaded. With the highly suboptimal
+implementation, I guess this is about as good as can be expected. I think this
+was the first time I could actually hear the CPU fan, in the year I’ve had
+this machine.</p>
+
+<h6 id="imac-i7-2012-1">iMac i7 (2012)</h6>
+
+<div class="language-pry highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">[3] pry(#&lt;GlisteningRuby::DSL::Scene&gt;</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">render</span> <span class="n">verbose</span><span class="ss">:true</span><span class="p">,</span> <span class="n">threads</span><span class="p">:</span><span class="mi">8</span>
+<span class="go"> Setup time: 0.560456 s
+Render time: 77.613168 s
+ Total time: 78.173624 s
+</span></code></pre></div></div>
+
+<p>Now we’re suddenly doing better than the i7, but that might be due to
+thermal throttling? Could also be that the “efficiency” cores add more crunch
+to the mix than the hyperthreads did.</p>
+
+<p>Still, the setup — <a href="/2018/12/31/day-31-optimizing-triangles/">building the Kd-tree</a> — is twice as fast. This does not add up.</p>
+
+<h3 id="face-palm">Face palm</h3>
+
+<p>Those earlier benchmarks were run after all the primary optimizations had been
+made, but before all the extra — performance draining — render quality
+features were added.</p>
+
+<p>Like soft shadows.</p>
+
+<p>All. Those. Shadow. Rays. The Shadow? <strong>The Shadow!</strong> Rays!</p>
+
+<p>Easily fixed, just adjust the spherical light source to point size, and all
+those extra shadow rays goes away.</p>
+
+<h3 id="hard-shadows">Hard shadows</h3>
+
+<p>There we go; twice as fast single-threaded rendering.</p>
+
+<div class="language-pry highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">[1] pry(#&lt;GlisteningRuby::DSL::Scene&gt;</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">render</span> <span class="n">verbose</span><span class="ss">:true</span>
+<span class="go"> Setup time: 0.240659 s
+Render time: 122.153057 s
+ Total time: 122.393716 s
+</span></code></pre></div></div>
+
+<p><strong>BOOM</strong> lightning fast — almost thrice as fast multi-threaded</p>
+
+<div class="language-pry highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">[2] pry(#&lt;GlisteningRuby::DSL::Scene&gt;</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">render</span> <span class="n">verbose</span><span class="ss">:true</span><span class="p">,</span> <span class="n">threads</span><span class="p">:</span><span class="mi">8</span>
+<span class="go"> Setup time: 0.266847 s
+Render time: 28.061283 s
+ Total time: 28.32813 s
+</span></code></pre></div></div>
+
+<p>Mystery solved, but where’s the fun in stopping now?</p>
+
+<h3 id="going-all-in--soft-shadows-and-anti-aliasing">Going All In — Soft Shadows and Anti-Aliasing</h3>
+
+<p>The <a href="/2019/01/29/soft-shadows/">final original benchmark</a> was rendering soft shadows with velvet smooth
+anti-aliasing, so let’s do that too, while we’re here.</p>
+
+<h6 id="macbook-pro-m1-2021-2">MacBook Pro M1 (2021)</h6>
+
+<p>This time we might have hit the thermal throttling of the M1 as well, because
+the CPU fan is wheezing increasingly louder, and the hand rest is getting warm
+and toasty like you’d want when coming home on a cold winter night.</p>
+
+<div class="language-pry highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">[1] pry(#&lt;GlisteningRuby::DSL::Scene&gt;</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">render</span> <span class="n">verbose</span><span class="ss">:true</span><span class="p">,</span> <span class="n">threads</span><span class="p">:</span><span class="mi">8</span><span class="p">,</span> <span class="n">ssaa</span><span class="p">:</span><span class="mi">3</span>
+<span class="go"> Setup time: 0.23379 s
+Render time: 601.335931 s
+ Total time: 601.569721 s
+</span></code></pre></div></div>
+
+<h6 id="imac-i7-2012-2">iMac i7 (2012)</h6>
+
+<p>This time we’re only 2 1/2 times as fast on the M1, and by the sound and feel
+of it, thermal throttling is very much in effect.</p>
+
+<div class="language-pry highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">[1] pry(#&lt;GlisteningRuby::DSL::Scene&gt;</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">render</span> <span class="n">verbose</span><span class="ss">:true</span><span class="p">,</span> <span class="n">threads</span><span class="p">:</span><span class="mi">8</span><span class="p">,</span> <span class="n">ssaa</span><span class="p">:</span><span class="mi">3</span>
+<span class="go"> Setup time: 0.563097 s
+Render time: 1501.46532 s
+ Total time: 1502.028417 s
+</span></code></pre></div></div>
+
+<p>But wait, there’s more!</p>
+
+<h3 id="my-other-computer-is-also-an-arm">My other computer is also an ARM</h3>
+
+<p>So, I bought two new computers last year. The other was a Raspberry Pi 400.</p>
+
+<p>This is a 4 core passively cooled beast, but still running overclocked from
+1.8GHz to 2.2GHz without breaking a sweat. For normal “heavy” use, like
+running video streams from rC3 all day, that is.</p>
+
+<h6 id="bonus-raspberry-pi-400-oc-22ghz">Bonus: Raspberry Pi 400 OC 2.2GHz</h6>
+
+<p>Sitting steady at 66°C core temperature with 30% of the rendering done, and an
+estimate of 2400s to go. This estimate will go up though, because the first
+30% is the easy part.</p>
+
+<div class="language-pry highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">[6] pry(#&lt;GlisteningRuby::DSL::Scene&gt;</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">render</span> <span class="n">verbose</span><span class="ss">:true</span><span class="p">,</span> <span class="n">threads</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span> <span class="n">ssaa</span><span class="p">:</span><span class="mi">3</span>
+<span class="go"> Setup time: 1.374378639 s
+Render time: 5541.122792698 s
+ Total time: 5542.497171337 s
+</span></code></pre></div></div>
+
+<p>There we go. The final results are in. M1 beats everything by far, as expected,
+but the RPi400 is just 9 times slower, on passive cooling. Not warmer to the
+touch after 1 1/2 hours of hard work, than the actively cooled M1 was after
+10 minutes.</p>
+
+  </section>
+</article>
+
+</article>
+
+<section class="post-list"><h2>Previous posts</h2><article class="post-item">
+  <header class="post-header">
+    <h3 class="post-link">
+      <a href="/2021/05/06/further-down-the-rabbit-hole/" >
+        Further down the rabbit hole
+      </a>
+    </h3>
+    <div class="post-meta">Thursday, 2021-05-06 in
     <a href="/category/discord/"
        title="Discord">discord</a>
    about
@@ -75,67 +251,18 @@
   
     <a href="/tag/scss/" title="sassy cascading style sheets">
       #scss</a>
-  </div></header>
+  
+    </div>
+  </header>
+  <section class="post-excerpt">
+    <blockquote>
+      Hello darkness, my old friend
 
-  <section class="post-content" itemprop="articleBody">
-    <h3 id="hello-darkness-my-old-friend">Hello darkness, my old friend</h3>
-<p><img src="/img/2021/hello-darkness.png" alt="" title="web page with dark color scheme" class="right max25" /></p>
 
-<p>I woke up way too early, and couldn’t go back to sleep. What better way to spend a few hours before regular wake-up time, than hacking sassy style sheets?</p>
-
-<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$brand-color</span><span class="p">:</span> <span class="mh">#F15A29</span><span class="p">;</span>
-<span class="nv">$gray-color</span><span class="p">:</span>  <span class="nf">desaturate</span><span class="p">(</span><span class="nv">$brand-color</span><span class="o">,</span> <span class="m">85%</span><span class="p">);</span>
-</code></pre></div></div>
-
-<p>All color theming is now rewritten to use custom CSS properties instead of SCSS variables, and just the definition of the properties are SCSS. For some reason the jekyll sassifier does not expand <code class="language-plaintext nowrap highlighter-rouge">$variable</code> in custom properties, so all those had to be wrapped in <code class="language-plaintext nowrap highlighter-rouge">#{$variable}</code> interpolations instead.</p>
-
-<div class="language-scss clear highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$dark-gray-color</span><span class="p">:</span>           <span class="nv">$gray-color</span><span class="p">;</span>
-<span class="nv">$dark-background-color</span><span class="p">:</span>     <span class="nf">darken</span><span class="p">(</span><span class="nv">$dark-gray-color</span><span class="o">,</span> <span class="m">45%</span><span class="p">);</span>
-<span class="nv">$dark-text-color</span><span class="p">:</span>           <span class="nf">lighten</span><span class="p">(</span><span class="nv">$dark-gray-color</span><span class="o">,</span> <span class="m">40%</span><span class="p">);</span>
-
-<span class="nd">:root</span> <span class="p">{</span>
-    <span class="na">--base-bg-color</span><span class="p">:</span>        <span class="si">#{</span><span class="nv">$dark-background-color</span><span class="p">)</span><span class="si">}</span><span class="p">;</span>
-    <span class="na">--light-bg-color</span><span class="p">:</span>       <span class="si">#{</span><span class="nf">lighten</span><span class="p">(</span><span class="nv">$dark-background-color</span><span class="o">,</span> <span class="m">5%</span><span class="p">))</span><span class="si">}</span><span class="p">;</span>
-    <span class="na">--dark-bg-color</span><span class="p">:</span>        <span class="si">#{</span><span class="nf">darken</span><span class="p">(</span><span class="nv">$dark-background-color</span><span class="o">,</span> <span class="m">5%</span><span class="p">))</span><span class="si">}</span><span class="p">;</span>
-
-    <span class="na">--base-text-color</span><span class="p">:</span>      <span class="si">#{</span><span class="nv">$dark-text-color</span><span class="p">)</span><span class="si">}</span><span class="p">;</span>
-    <span class="na">--fade-text-color</span><span class="p">:</span>      <span class="si">#{</span><span class="nf">darken</span><span class="p">(</span><span class="nv">$dark-text-color</span><span class="o">,</span> <span class="m">25%</span><span class="p">))</span><span class="si">}</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<h3 id="the-futures-so-bright-i-gotta-wear-shades">The future’s so bright, I gotta wear shades</h3>
-<p><img src="/img/2021/omg-so-bright.png" alt="" title="web page with light color scheme" class="right max25" /></p>
-
-<p>Down, and down, we go.</p>
-
-<p>With the theming rewrite, it’s much easier to define variations of the theme, and let <code class="language-plaintext nowrap highlighter-rouge">@media</code> selectors do the work of picking the correct one. In the future this can easily be extended to also accomodate e.g. <em>high contrast</em> preferences.</p>
-
-<p>This is the first stab of the light color scheme, that will be presented to viewers with a preference of being blinded, but this will take more work to get right.</p>
-
-<p>Code syntax higlighting blocks still use the dark theme, because code is supposed to be read in the darkness anyway.</p>
-
-<div class="language-scss clear highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$light-gray-color</span><span class="p">:</span>          <span class="nv">$gray-color</span><span class="p">;</span>
-<span class="nv">$light-background-color</span><span class="p">:</span>    <span class="nf">lighten</span><span class="p">(</span><span class="nv">$light-gray-color</span><span class="o">,</span> <span class="m">40%</span><span class="p">);</span>
-<span class="nv">$light-text-color</span><span class="p">:</span>          <span class="nf">darken</span><span class="p">(</span><span class="nv">$light-gray-color</span><span class="o">,</span> <span class="m">45%</span><span class="p">);</span>
-
-<span class="k">@media</span> <span class="n">screen</span> <span class="nf">and</span> <span class="p">(</span><span class="n">prefers-color-scheme</span><span class="o">:</span> <span class="n">light</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nd">:root</span> <span class="p">{</span>
-        <span class="na">--base-bg-color</span><span class="p">:</span>    <span class="si">#{</span><span class="nv">$light-background-color</span><span class="p">)</span><span class="si">}</span><span class="p">;</span>
-        <span class="na">--light-bg-color</span><span class="p">:</span>   <span class="si">#{</span><span class="nf">lighten</span><span class="p">(</span><span class="nv">$light-background-color</span><span class="o">,</span> <span class="m">5%</span><span class="p">))</span><span class="si">}</span><span class="p">;</span>
-        <span class="na">--dark-bg-color</span><span class="p">:</span>    <span class="si">#{</span><span class="nf">darken</span><span class="p">(</span><span class="nv">$light-background-color</span><span class="o">,</span> <span class="m">5%</span><span class="p">))</span><span class="si">}</span><span class="p">;</span>
-
-        <span class="na">--base-text-color</span><span class="p">:</span>  <span class="si">#{</span><span class="nv">$light-text-color</span><span class="p">)</span><span class="si">}</span><span class="p">;</span>
-        <span class="na">--fade-text-color</span><span class="p">:</span>  <span class="si">#{</span><span class="nf">lighten</span><span class="p">(</span><span class="nv">$light-text-color</span><span class="o">,</span> <span class="m">25%</span><span class="p">))</span><span class="si">}</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
+    </blockquote>
   </section>
 </article>
-
-</article>
-
-<section class="post-list"><h2>Previous posts</h2><article class="post-item">
+<article class="post-item">
   <header class="post-header">
     <h3 class="post-link">
       <a href="/2021/05/05/hyperfixation-revisited/" >
@@ -188,43 +315,6 @@ For some reason I found myself browsing my old blog posts, when I got assaulted 
   <section class="post-excerpt">
     <blockquote>
       For reasons unknown, I stumbled onto the [Zig] programming language, a new, still in development, low-level systems programming language; like C, but without all the bad things. So I guess quite different from C, but syntax is similarish. It uses LLVM as compiler backend, so it pretty much runs on everything less than 20 years old, and crosscompiles like that’s what you always do.
-
-    </blockquote>
-  </section>
-</article>
-<article class="post-item">
-  <header class="post-header">
-    <h3 class="post-link">
-      <a href="/2020/09/30/hyperfixation/" >
-        Hyperfixation
-      </a>
-    </h3>
-    <div class="post-meta">Wednesday, 2020-09-30 in
-    <a href="/category/discord/"
-       title="Discord">discord</a>
-   about
-    <a href="/tag/adhd/" title="invisible challenges in a neurotypical world">
-      #adhd</a>,
-  
-    <a href="/tag/scss/" title="sassy cascading style sheets">
-      #scss</a>,
-  
-    <a href="/tag/jekyll/" title="static web site generation">
-      #jekyll</a>
-  
-    </div>
-  </header>
-  <section class="post-excerpt">
-    <blockquote>
-      A few days ago I was reminded that it’s almost October, which is not only Inktober, but also ADHD Awareness Month, which I spent last year getting a thorough neuropsychatric evaluation. Someone also told me that there is an ADHD Awareness Ribbon, AND IT’S MY FAVOURITE COLOR!!11 Ehm, sorry1 about that.
-
-
-  
-    
-      not sorry &#x21a9;
-    
-  
-
 
     </blockquote>
   </section>

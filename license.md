@@ -6,9 +6,9 @@
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="alternate" type="application/rss+xml" title="not://files v3.0" href="https://notfiles.xyz/feed.xml">
-  <!-- Begin Jekyll SEO tag v2.7.1 -->
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>License | not://files v3.0</title>
-<meta name="generator" content="Jekyll v4.2.0" />
+<meta name="generator" content="Jekyll v4.2.2" />
 <meta property="og:title" content="License" />
 <meta name="author" content="Calle Englund" />
 <meta property="og:locale" content="en_US" />
@@ -24,7 +24,7 @@
 <meta name="twitter:site" content="@notcalle" />
 <meta name="twitter:creator" content="@notcalle" />
 <script type="application/ld+json">
-{"datePublished":"2015-11-30T21:33:37+00:00","dateModified":"2015-11-30T21:33:37+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://notfiles.xyz/license.md"},"url":"https://notfiles.xyz/license.md","author":{"@type":"Person","name":"Calle Englund"},"@type":"BlogPosting","headline":"License","description":"Random development ramblings, maybe.","@context":"https://schema.org"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Calle Englund"},"dateModified":"2015-11-30T21:33:37+00:00","datePublished":"2015-11-30T21:33:37+00:00","description":"Random development ramblings, maybe.","headline":"License","mainEntityOfPage":{"@type":"WebPage","@id":"https://notfiles.xyz/license.md"},"url":"https://notfiles.xyz/license.md"}</script>
 <!-- End Jekyll SEO tag -->
 <script id="mathjax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script id="mermaid-script" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script><script type="text/javascript">
     mermaid.initialize({theme:"dark"})
