@@ -232,7 +232,65 @@ touch after 1 1/2 hours of hard work, than the actively cooled M1 was after
 
   </section>
 </article>
-<section class="post-list"><h2>Previous related</h2><article class="post-item">
+<section class="post-list"><h2>Follow-up</h2><article class="post-item" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <h3 class="post-link" itemprop="name headline">
+      <a href="/2022/05/12/rpi-400-bonus-benchmarks/">
+        RasPi 400 bonus benchmarks
+      </a>
+    </h3>
+    <span class="post-meta"><time datetime="2022-05-11T20:52:00+00:00" itemprop="datePublished">Thursday, 2022-05-12</time>
+      
+    </span>
+  </header>
+
+  <section class="post-content" itemprop="articleBody">
+    <p>I didn’t quite finish the bonus benchmarks, so for the sake of completeness,
+here we go. The missing ones for the <em>RasPi 400</em>.</p>
+
+<h3 id="hard-shadows">Hard shadows</h3>
+
+<p>The Raspi only got a chance to show off with the heaviest of the benchmarks,
+so let’s see how it does in the lower end of teapot image quality.</p>
+
+<h6 id="raspberry-pi-400-oc-22ghz-single-threaded">Raspberry Pi 400 OC 2.2GHz (single threaded)</h6>
+
+<p>Single threaded performance still tracks at about the same ratio of \(1/9\) <em>M1</em>.</p>
+
+<div class="language-pry highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">[1] pry(#&lt;GlisteningRuby::DSL::Scene&gt;</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">render</span> <span class="n">verbose</span><span class="ss">:true</span>
+<span class="go"> Setup time: 1.375927773 s
+Render time: 852.156157512 s
+ Total time: 853.532085285 s
+</span></code></pre></div></div>
+
+<h6 id="raspberry-pi-400-oc-22ghz-multi-threaded">Raspberry Pi 400 OC 2.2GHz (multi-threaded)</h6>
+
+<p>This one would seem a bit unfair, because the <em>RasPi 400</em> only gets 4 threads
+to do the work, instead of 8 threads for the other ones.</p>
+
+<div class="language-pry highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">[2] pry(#&lt;GlisteningRuby::DSL::Scene&gt;</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">render</span> <span class="n">verbose</span><span class="ss">:true</span><span class="p">,</span> <span class="n">threads</span><span class="p">:</span><span class="mi">4</span>
+<span class="go"> Setup time: 1.379623305 s
+Render time: 292.012566677 s
+ Total time: 293.392189982 s
+</span></code></pre></div></div>
+
+<p>The huge falloff in performance for those last 4 threads shows pretty clearly
+here. The <em>RasPi 400</em> performance/thread scales pretty well at \(3/4\), given
+the huge overhead of the threaded renderer, but the <em>M1</em> only did \(4/8\), and
+the <em>i7</em> was even worse with \(3/8\).</p>
+
+<p>Still, \(4 *\) <em>M1</em> is more than \(3 *\) <em>RasPi 400</em>, so the total
+performance ratio when using every single bit of crunch there is, is less
+than \(1/10\) <em>M1</em>.</p>
+
+<p>More interesting is that the <em>RasPi 400</em> did the soft-shadows render at only
+\(19 *\) the time for hard-shadows, but the <em>M1</em> took more than \(21 *\) the
+time. The passive thermal design of the <em>RasPi 400</em> continues to amaze me,
+especially given the long history of overheated pies.</p>
+
+  </section>
+</article>
+<h2>Previous related</h2><article class="post-item">
   <header class="post-header">
     <h3 class="post-link">
       <a href="/2019/12/08/messy-shadows/" >

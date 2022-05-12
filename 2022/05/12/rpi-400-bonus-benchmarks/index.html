@@ -7,25 +7,24 @@
   <link rel="stylesheet" href="/css/main.css">
   <link rel="alternate" type="application/rss+xml" title="not://files v3.0" href="https://notfiles.xyz/feed.xml">
   <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Page 3 of 21 for not://files v3.0 | Random development ramblings, maybe.</title>
+<title>RasPi 400 bonus benchmarks | not://files v3.0</title>
 <meta name="generator" content="Jekyll v4.2.2" />
-<meta property="og:title" content="not://files v3.0" />
+<meta property="og:title" content="RasPi 400 bonus benchmarks" />
 <meta name="author" content="Calle Englund" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Random development ramblings, maybe." />
-<meta property="og:description" content="Random development ramblings, maybe." />
-<link rel="canonical" href="https://notfiles.xyz/posts/page3/" />
-<meta property="og:url" content="https://notfiles.xyz/posts/page3/" />
+<meta name="description" content="I didn’t quite finish the bonus benchmarks, so for the sake of completeness, here we go. The missing ones for the RasPi 400." />
+<meta property="og:description" content="I didn’t quite finish the bonus benchmarks, so for the sake of completeness, here we go. The missing ones for the RasPi 400." />
+<link rel="canonical" href="https://notfiles.xyz/2022/05/12/rpi-400-bonus-benchmarks/" />
+<meta property="og:url" content="https://notfiles.xyz/2022/05/12/rpi-400-bonus-benchmarks/" />
 <meta property="og:site_name" content="not://files v3.0" />
-<meta property="og:type" content="website" />
-<link rel="prev" href="https://notfiles.xyz/posts/page2" />
-<link rel="next" href="https://notfiles.xyz/posts/page4" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-05-12T18:34:00+00:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="not://files v3.0" />
+<meta property="twitter:title" content="RasPi 400 bonus benchmarks" />
 <meta name="twitter:site" content="@notcalle" />
 <meta name="twitter:creator" content="@notcalle" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Calle Englund"},"description":"Random development ramblings, maybe.","headline":"not://files v3.0","url":"https://notfiles.xyz/posts/page3/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Calle Englund"},"dateModified":"2022-05-12T18:34:00+00:00","datePublished":"2022-05-12T18:34:00+00:00","description":"I didn’t quite finish the bonus benchmarks, so for the sake of completeness, here we go. The missing ones for the RasPi 400.","headline":"RasPi 400 bonus benchmarks","mainEntityOfPage":{"@type":"WebPage","@id":"https://notfiles.xyz/2022/05/12/rpi-400-bonus-benchmarks/"},"url":"https://notfiles.xyz/2022/05/12/rpi-400-bonus-benchmarks/"}</script>
 <!-- End Jekyll SEO tag -->
 <script id="mathjax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script id="mermaid-script" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script><script type="text/javascript">
     mermaid.initialize({theme:"dark"})
@@ -64,75 +63,86 @@
 </header>
 <section class="page-content">
       <div class="wrapper">
-        <div class="home">
-
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">RasPi 400 bonus benchmarks</h1>
+    <div class="post-meta"><time datetime="2022-05-12T18:34:00+00:00" itemprop="datePublished">Thursday, 2022-05-12</time>
+       about
+    <a href="/tag/raytracerchallenge/" title="">
+      #raytracerchallenge</a>,
   
-
-
-
-
-
-<nav class="pagination" role="menubar">
+    <a href="/tag/raytracing/" title="">
+      #raytracing</a>,
   
+    <a href="/tag/ruby/" title="coding in Ruby">
+      #ruby</a>
+  </div><div class="post-meta">
+        Follow-up to
+          <a href="/2022/05/11/ruby-raytracer-on-m1/">Ruby raytracer on M1</a>
 
-  
+        <blockquote>
+        While doing something else than I was planning to, I accedentally came back to
+the raytracer I once wrote in Ruby, and decided that the important thing just
+now is to benchmark my MacBook Pro M1 against those old results. I guess
+this will actually be Ruby 3 on M1 vs Ruby 2 on i7, because time happened.
 
-  
+        </blockquote>
+      </div></header>
 
-  
-    
+  <section class="post-content" itemprop="articleBody">
+    <p>I didn’t quite finish the bonus benchmarks, so for the sake of completeness,
+here we go. The missing ones for the <em>RasPi 400</em>.</p>
 
-    
-      <a class="menu-item" href="/posts" role="menuitem">1</a>
-    
-  
-    
+<h3 id="hard-shadows">Hard shadows</h3>
 
-    
-      <a class="menu-item" href="/posts/page2" role="menuitem">2</a>
-    
-  
-    
+<p>The Raspi only got a chance to show off with the heaviest of the benchmarks,
+so let’s see how it does in the lower end of teapot image quality.</p>
 
-    
-      <span class="menu-item focus">3</span>
-    
-  
-    
+<h6 id="raspberry-pi-400-oc-22ghz-single-threaded">Raspberry Pi 400 OC 2.2GHz (single threaded)</h6>
 
-    
-      <a class="menu-item" href="/posts/page4" role="menuitem">4</a>
-    
-  
-    
+<p>Single threaded performance still tracks at about the same ratio of \(1/9\) <em>M1</em>.</p>
 
-    
-      <a class="menu-item" href="/posts/page5" role="menuitem">5</a>
-    
-  
+<div class="language-pry highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">[1] pry(#&lt;GlisteningRuby::DSL::Scene&gt;</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">render</span> <span class="n">verbose</span><span class="ss">:true</span>
+<span class="go"> Setup time: 1.375927773 s
+Render time: 852.156157512 s
+ Total time: 853.532085285 s
+</span></code></pre></div></div>
 
-  
-    <a class="menu-item" href="/posts/page6">&gt;</a>
-  
+<h6 id="raspberry-pi-400-oc-22ghz-multi-threaded">Raspberry Pi 400 OC 2.2GHz (multi-threaded)</h6>
 
-  
-    <a class="menu-item" href="/posts/page21">
-      21
-    </a>
-  
-</nav>
+<p>This one would seem a bit unfair, because the <em>RasPi 400</em> only gets 4 threads
+to do the work, instead of 8 threads for the other ones.</p>
 
+<div class="language-pry highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">[2] pry(#&lt;GlisteningRuby::DSL::Scene&gt;</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">render</span> <span class="n">verbose</span><span class="ss">:true</span><span class="p">,</span> <span class="n">threads</span><span class="p">:</span><span class="mi">4</span>
+<span class="go"> Setup time: 1.379623305 s
+Render time: 292.012566677 s
+ Total time: 293.392189982 s
+</span></code></pre></div></div>
 
-  <ul class="post-list">
-    
-      <article class="post-item">
+<p>The huge falloff in performance for those last 4 threads shows pretty clearly
+here. The <em>RasPi 400</em> performance/thread scales pretty well at \(3/4\), given
+the huge overhead of the threaded renderer, but the <em>M1</em> only did \(4/8\), and
+the <em>i7</em> was even worse with \(3/8\).</p>
+
+<p>Still, \(4 *\) <em>M1</em> is more than \(3 *\) <em>RasPi 400</em>, so the total
+performance ratio when using every single bit of crunch there is, is less
+than \(1/10\) <em>M1</em>.</p>
+
+<p>More interesting is that the <em>RasPi 400</em> did the soft-shadows render at only
+\(19 *\) the time for hard-shadows, but the <em>M1</em> took more than \(21 *\) the
+time. The passive thermal design of the <em>RasPi 400</em> continues to amaze me,
+especially given the long history of overheated pies.</p>
+
+  </section>
+</article>
+<section class="post-list"><h2>Previous related</h2><article class="post-item">
   <header class="post-header">
     <h3 class="post-link">
-      <a href="/2019/12/04/actual-pixels/" >
-        Actual pixels
+      <a href="/2019/12/08/messy-shadows/" >
+        Messy shadows
       </a>
     </h3>
-    <div class="post-meta">Wednesday, 2019-12-04 in
+    <div class="post-meta">Sunday, 2019-12-08 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
    about
@@ -155,21 +165,19 @@
   </header>
   <section class="post-excerpt">
     <blockquote>
-      First actual image generated, using a “camera light”. The shading is too dark, for some reason I can’t figure out at the moment, so I guess tomorrow will be more of a debugging session than new feature creation.
+      Apparently, I messed up some more vector algebra. Ray / surface hits currently record the event in surface space, which works just fine for shading a unit sphere still positioned at origin. When we transform things around, and try to cast the secondary shadow rays, it becomes painfully obvious that surface space and world space no longer coincide.
 
     </blockquote>
   </section>
 </article>
-
-    
-      <article class="post-item">
+<article class="post-item">
   <header class="post-header">
     <h3 class="post-link">
-      <a href="/2019/12/03/pixels-on-a-canvas/" >
-        Pixels on a canvas
+      <a href="/2019/12/07/all-the-things/" >
+        All the things
       </a>
     </h3>
-    <div class="post-meta">Tuesday, 2019-12-03 in
+    <div class="post-meta">Saturday, 2019-12-07 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
    about
@@ -192,21 +200,19 @@
   </header>
   <section class="post-excerpt">
     <blockquote>
-      Pretty much the whole point of a ray tracer such as this one is to render pretty pictures, and for that we’re going to need a canvas to render onto.
+      One limitation so far was that there could only be one surface in a scene. To get past that, we add the Group meta-surface, that contains a number of surfaces, and intersects with rays on their behalf. To make this actually useful, surfaces also need transforms to translate them out of their shared origin.
 
     </blockquote>
   </section>
 </article>
-
-    
-      <article class="post-item">
+<article class="post-item">
   <header class="post-header">
     <h3 class="post-link">
-      <a href="/2019/12/02/surface-normals/" >
-        Surface normals
+      <a href="/2019/12/06/light-and-magic/" >
+        Light and Magic
       </a>
     </h3>
-    <div class="post-meta">Monday, 2019-12-02 in
+    <div class="post-meta">Friday, 2019-12-06 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
    about
@@ -229,147 +235,12 @@
   </header>
   <section class="post-excerpt">
     <blockquote>
-      Today brings normal vectors into the mix, a critical component for shading computations; the normal vector of a surface at the point where it was hit by a ray, to be precise. Because the normal depends on the hit position on the surface, and we’ll need that too, we keep that around as well.
-
-
-    </blockquote>
-  </section>
-</article>
-
-    
-      <article class="post-item">
-  <header class="post-header">
-    <h3 class="post-link">
-      <a href="/2019/12/01/intersecting-spheres/" >
-        Intersecting spheres
-      </a>
-    </h3>
-    <div class="post-meta">Sunday, 2019-12-01 in
-    <a href="/category/devlog/"
-       title="Development Logs">devlog</a>
-   about
-    <a href="/tag/devember/" title="participation in Devember">
-      #devember</a>,
-  
-    <a href="/tag/devember2019/" title="Devember 2019 ray tracer">
-      #devember2019</a>,
-  
-    <a href="/tag/hourofcode/" title="coding for one hour per day">
-      #hourofcode</a>,
-  
-    <a href="/tag/swift/" title="coding in Swift">
-      #swift</a>,
-  
-    <a href="/tag/raytracing/" title="">
-      #raytracing</a>
-  
-    </div>
-  </header>
-  <section class="post-excerpt">
-    <blockquote>
-      The first piece of actual ray tracing: calculating the intersection between a ray and a sphere. To find the intersections, we need to solve the quadratic equation of the sphere being equal to the linear equation of the ray. The interpretation of imaginary roots is that the ray does not intersect the sphere.
-
+      The next natural step after getting basic shading to work is to have actual light sources, that can be tinted and positioned in the scene.
 
     </blockquote>
   </section>
 </article>
-
-    
-      <article class="post-item">
-  <header class="post-header">
-    <h3 class="post-link">
-      <a href="/2019/12/01/basic-data-types/" >
-        Basic data types
-      </a>
-    </h3>
-    <div class="post-meta">Sunday, 2019-12-01 in
-    <a href="/category/devlog/"
-       title="Development Logs">devlog</a>
-   about
-    <a href="/tag/devember/" title="participation in Devember">
-      #devember</a>,
-  
-    <a href="/tag/devember2019/" title="Devember 2019 ray tracer">
-      #devember2019</a>,
-  
-    <a href="/tag/hourofcode/" title="coding for one hour per day">
-      #hourofcode</a>,
-  
-    <a href="/tag/swift/" title="coding in Swift">
-      #swift</a>
-  
-    </div>
-  </header>
-  <section class="post-excerpt">
-    <blockquote>
-      Alright, the first push to the [github repo] is complete. Starting out small with just the basic data types that will be at the core of everything, and some tolerance equality operators for comparisons.
-
-    </blockquote>
-  </section>
-</article>
-
-    
-  </ul>
-
-  
-
-
-
-
-
-<nav class="pagination" role="menubar">
-  
-
-  
-
-  
-
-  
-    
-
-    
-      <a class="menu-item" href="/posts" role="menuitem">1</a>
-    
-  
-    
-
-    
-      <a class="menu-item" href="/posts/page2" role="menuitem">2</a>
-    
-  
-    
-
-    
-      <span class="menu-item focus">3</span>
-    
-  
-    
-
-    
-      <a class="menu-item" href="/posts/page4" role="menuitem">4</a>
-    
-  
-    
-
-    
-      <a class="menu-item" href="/posts/page5" role="menuitem">5</a>
-    
-  
-
-  
-    <a class="menu-item" href="/posts/page6">&gt;</a>
-  
-
-  
-    <a class="menu-item" href="/posts/page21">
-      21
-    </a>
-  
-</nav>
-
-
-</div>
-
+</section>
 
       </div>
     </section><footer class="site-footer">

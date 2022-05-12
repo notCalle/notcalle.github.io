@@ -65,8 +65,8 @@
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline"><a href="/2022/05/11/ruby-raytracer-on-m1/">Ruby raytracer on M1</a></h1>
-    <div class="post-meta"><time datetime="2022-05-11T20:52:00+00:00" itemprop="datePublished">Wednesday, 2022-05-11</time>
+    <h1 class="post-title" itemprop="name headline"><a href="/2022/05/12/rpi-400-bonus-benchmarks/">RasPi 400 bonus benchmarks</a></h1>
+    <div class="post-meta"><time datetime="2022-05-12T18:34:00+00:00" itemprop="datePublished">Thursday, 2022-05-12</time>
        about
     <a href="/tag/raytracerchallenge/" title="">
       #raytracerchallenge</a>,
@@ -76,159 +76,62 @@
   
     <a href="/tag/ruby/" title="coding in Ruby">
       #ruby</a>
-  </div></header>
+  </div><div class="post-meta">
+        Follow-up to
+          <a href="/2022/05/11/ruby-raytracer-on-m1/">Ruby raytracer on M1</a>
+
+        <blockquote>
+        While doing something else than I was planning to, I accedentally came back to
+the raytracer I once wrote in Ruby, and decided that the important thing just
+now is to benchmark my MacBook Pro M1 against those old results. I guess
+this will actually be Ruby 3 on M1 vs Ruby 2 on i7, because time happened.
+
+        </blockquote>
+      </div></header>
 
   <section class="post-content" itemprop="articleBody">
-    <p>While doing something else than I was planning to, I accedentally came back to
-the raytracer I once wrote in Ruby, and decided that the important thing just
-now is to benchmark my <em>MacBook Pro M1</em> against those old results. I guess
-this will actually be <em>Ruby 3 on M1</em> vs <em>Ruby 2 on i7</em>, because time happened.</p>
-
-<h3 id="single-threaded">Single-threaded</h3>
-
-<p>Starting out with the single threaded teapot rendering benchmark. This should
-give a pretty good measure of raw performance.</p>
-
-<h6 id="macbook-pro-m1-2021">MacBook Pro M1 (2021)</h6>
-
-<div class="language-pry highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">[1] pry(#&lt;GlisteningRuby::DSL::Scene&gt;</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">render</span> <span class="n">verbose</span><span class="ss">:true</span>
-<span class="go"> Setup time: 0.272459 s
-Render time: 354.255657 s
- Total time: 354.528116 s
-</span></code></pre></div></div>
-
-<h6 id="imac-i7-2012">iMac i7 (2012)</h6>
-
-<div class="language-pry highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">[1] pry(#&lt;GlisteningRuby::DSL::Scene&gt;</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">render</span> <span class="n">verbose</span><span class="ss">:true</span>
-<span class="go"> Setup time: 0.532384 s
-Render time: 259.392946 s
- Total time: 259.92533 s
-</span></code></pre></div></div>
-
-<p>But wait? Setup time is twice as fast, but rendering is 30% slower? To quote
-Arueshalae, <em>something is not right here.</em></p>
-
-<h3 id="multi-threaded">Multi-threaded</h3>
-
-<p>This the one that made the i7 melt, without providing much more pixels per
-second than at half the threads. Let’s see how the M1 fares here. Both have
-about the same capacity of maximum performance threads, and the same total
-level of parallelism. <em>4C + 4c</em> vs <em>4C * 2T</em>.</p>
-
-<h6 id="macbook-pro-m1-2021-1">MacBook Pro M1 (2021)</h6>
-
-<div class="language-pry highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">[2] pry(#&lt;GlisteningRuby::DSL::Scene&gt;</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">render</span> <span class="n">verbose</span><span class="ss">:true</span><span class="p">,</span> <span class="n">threads</span><span class="p">:</span><span class="mi">8</span>
-<span class="go"> Setup time: 0.261933 s
-Render time: 70.432901 s
- Total time: 70.694834 s
-</span></code></pre></div></div>
-
-<p>So, render time is about 1/5 of single-threaded. With the highly suboptimal
-implementation, I guess this is about as good as can be expected. I think this
-was the first time I could actually hear the CPU fan, in the year I’ve had
-this machine.</p>
-
-<h6 id="imac-i7-2012-1">iMac i7 (2012)</h6>
-
-<div class="language-pry highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">[3] pry(#&lt;GlisteningRuby::DSL::Scene&gt;</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">render</span> <span class="n">verbose</span><span class="ss">:true</span><span class="p">,</span> <span class="n">threads</span><span class="p">:</span><span class="mi">8</span>
-<span class="go"> Setup time: 0.560456 s
-Render time: 77.613168 s
- Total time: 78.173624 s
-</span></code></pre></div></div>
-
-<p>Now we’re suddenly doing better than the i7, but that might be due to
-thermal throttling? Could also be that the “efficiency” cores add more crunch
-to the mix than the hyperthreads did.</p>
-
-<p>Still, the setup — <a href="/2018/12/31/day-31-optimizing-triangles/">building the Kd-tree</a> — is twice as fast. This does not add up.</p>
-
-<h3 id="face-palm">Face palm</h3>
-
-<p>Those earlier benchmarks were run after all the primary optimizations had been
-made, but before all the extra — performance draining — render quality
-features were added.</p>
-
-<p>Like soft shadows.</p>
-
-<p>All. Those. Shadow. Rays. The Shadow? <strong>The Shadow!</strong> Rays!</p>
-
-<p>Easily fixed, just adjust the spherical light source to point size, and all
-those extra shadow rays goes away.</p>
+    <p>I didn’t quite finish the bonus benchmarks, so for the sake of completeness,
+here we go. The missing ones for the <em>RasPi 400</em>.</p>
 
 <h3 id="hard-shadows">Hard shadows</h3>
 
-<p>There we go; twice as fast single-threaded rendering.</p>
+<p>The Raspi only got a chance to show off with the heaviest of the benchmarks,
+so let’s see how it does in the lower end of teapot image quality.</p>
+
+<h6 id="raspberry-pi-400-oc-22ghz-single-threaded">Raspberry Pi 400 OC 2.2GHz (single threaded)</h6>
+
+<p>Single threaded performance still tracks at about the same ratio of \(1/9\) <em>M1</em>.</p>
 
 <div class="language-pry highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">[1] pry(#&lt;GlisteningRuby::DSL::Scene&gt;</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">render</span> <span class="n">verbose</span><span class="ss">:true</span>
-<span class="go"> Setup time: 0.240659 s
-Render time: 122.153057 s
- Total time: 122.393716 s
+<span class="go"> Setup time: 1.375927773 s
+Render time: 852.156157512 s
+ Total time: 853.532085285 s
 </span></code></pre></div></div>
 
-<p><strong>BOOM</strong> lightning fast — almost thrice as fast multi-threaded</p>
+<h6 id="raspberry-pi-400-oc-22ghz-multi-threaded">Raspberry Pi 400 OC 2.2GHz (multi-threaded)</h6>
 
-<div class="language-pry highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">[2] pry(#&lt;GlisteningRuby::DSL::Scene&gt;</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">render</span> <span class="n">verbose</span><span class="ss">:true</span><span class="p">,</span> <span class="n">threads</span><span class="p">:</span><span class="mi">8</span>
-<span class="go"> Setup time: 0.266847 s
-Render time: 28.061283 s
- Total time: 28.32813 s
+<p>This one would seem a bit unfair, because the <em>RasPi 400</em> only gets 4 threads
+to do the work, instead of 8 threads for the other ones.</p>
+
+<div class="language-pry highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">[2] pry(#&lt;GlisteningRuby::DSL::Scene&gt;</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">render</span> <span class="n">verbose</span><span class="ss">:true</span><span class="p">,</span> <span class="n">threads</span><span class="p">:</span><span class="mi">4</span>
+<span class="go"> Setup time: 1.379623305 s
+Render time: 292.012566677 s
+ Total time: 293.392189982 s
 </span></code></pre></div></div>
 
-<p>Mystery solved, but where’s the fun in stopping now?</p>
+<p>The huge falloff in performance for those last 4 threads shows pretty clearly
+here. The <em>RasPi 400</em> performance/thread scales pretty well at \(3/4\), given
+the huge overhead of the threaded renderer, but the <em>M1</em> only did \(4/8\), and
+the <em>i7</em> was even worse with \(3/8\).</p>
 
-<h3 id="going-all-in--soft-shadows-and-anti-aliasing">Going All In — Soft Shadows and Anti-Aliasing</h3>
+<p>Still, \(4 *\) <em>M1</em> is more than \(3 *\) <em>RasPi 400</em>, so the total
+performance ratio when using every single bit of crunch there is, is less
+than \(1/10\) <em>M1</em>.</p>
 
-<p>The <a href="/2019/01/29/soft-shadows/">final original benchmark</a> was rendering soft shadows with velvet smooth
-anti-aliasing, so let’s do that too, while we’re here.</p>
-
-<h6 id="macbook-pro-m1-2021-2">MacBook Pro M1 (2021)</h6>
-
-<p>This time we might have hit the thermal throttling of the M1 as well, because
-the CPU fan is wheezing increasingly louder, and the hand rest is getting warm
-and toasty like you’d want when coming home on a cold winter night.</p>
-
-<div class="language-pry highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">[1] pry(#&lt;GlisteningRuby::DSL::Scene&gt;</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">render</span> <span class="n">verbose</span><span class="ss">:true</span><span class="p">,</span> <span class="n">threads</span><span class="p">:</span><span class="mi">8</span><span class="p">,</span> <span class="n">ssaa</span><span class="p">:</span><span class="mi">3</span>
-<span class="go"> Setup time: 0.23379 s
-Render time: 601.335931 s
- Total time: 601.569721 s
-</span></code></pre></div></div>
-
-<h6 id="imac-i7-2012-2">iMac i7 (2012)</h6>
-
-<p>This time we’re only 2 1/2 times as fast on the M1, and by the sound and feel
-of it, thermal throttling is very much in effect.</p>
-
-<div class="language-pry highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">[1] pry(#&lt;GlisteningRuby::DSL::Scene&gt;</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">render</span> <span class="n">verbose</span><span class="ss">:true</span><span class="p">,</span> <span class="n">threads</span><span class="p">:</span><span class="mi">8</span><span class="p">,</span> <span class="n">ssaa</span><span class="p">:</span><span class="mi">3</span>
-<span class="go"> Setup time: 0.563097 s
-Render time: 1501.46532 s
- Total time: 1502.028417 s
-</span></code></pre></div></div>
-
-<p>But wait, there’s more!</p>
-
-<h3 id="my-other-computer-is-also-an-arm">My other computer is also an ARM</h3>
-
-<p>So, I bought two new computers last year. The other was a Raspberry Pi 400.</p>
-
-<p>This is a 4 core passively cooled beast, but still running overclocked from
-1.8GHz to 2.2GHz without breaking a sweat. For normal “heavy” use, like
-running video streams from rC3 all day, that is.</p>
-
-<h6 id="bonus-raspberry-pi-400-oc-22ghz">Bonus: Raspberry Pi 400 OC 2.2GHz</h6>
-
-<p>Sitting steady at 66°C core temperature with 30% of the rendering done, and an
-estimate of 2400s to go. This estimate will go up though, because the first
-30% is the easy part.</p>
-
-<div class="language-pry highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">[6] pry(#&lt;GlisteningRuby::DSL::Scene&gt;</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">render</span> <span class="n">verbose</span><span class="ss">:true</span><span class="p">,</span> <span class="n">threads</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span> <span class="n">ssaa</span><span class="p">:</span><span class="mi">3</span>
-<span class="go"> Setup time: 1.374378639 s
-Render time: 5541.122792698 s
- Total time: 5542.497171337 s
-</span></code></pre></div></div>
-
-<p>There we go. The final results are in. M1 beats everything by far, as expected,
-but the RPi400 is just 9 times slower, on passive cooling. Not warmer to the
-touch after 1 1/2 hours of hard work, than the actively cooled M1 was after
-10 minutes.</p>
+<p>More interesting is that the <em>RasPi 400</em> did the soft-shadows render at only
+\(19 *\) the time for hard-shadows, but the <em>M1</em> took more than \(21 *\) the
+time. The passive thermal design of the <em>RasPi 400</em> continues to amaze me,
+especially given the long history of overheated pies.</p>
 
   </section>
 </article>
@@ -236,6 +139,35 @@ touch after 1 1/2 hours of hard work, than the actively cooled M1 was after
 </article>
 
 <section class="post-list"><h2>Previous posts</h2><article class="post-item">
+  <header class="post-header">
+    <h3 class="post-link">
+      <a href="/2022/05/11/ruby-raytracer-on-m1/" >
+        Ruby raytracer on M1
+      </a>
+    </h3>
+    <div class="post-meta">Wednesday, 2022-05-11 about
+    <a href="/tag/raytracerchallenge/" title="">
+      #raytracerchallenge</a>,
+  
+    <a href="/tag/raytracing/" title="">
+      #raytracing</a>,
+  
+    <a href="/tag/ruby/" title="coding in Ruby">
+      #ruby</a>
+  
+    </div>
+  </header>
+  <section class="post-excerpt">
+    <blockquote>
+      While doing something else than I was planning to, I accedentally came back to
+the raytracer I once wrote in Ruby, and decided that the important thing just
+now is to benchmark my MacBook Pro M1 against those old results. I guess
+this will actually be Ruby 3 on M1 vs Ruby 2 on i7, because time happened.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
   <header class="post-header">
     <h3 class="post-link">
       <a href="/2021/05/06/further-down-the-rabbit-hole/" >
@@ -289,32 +221,6 @@ touch after 1 1/2 hours of hard work, than the actively cooled M1 was after
       
 For some reason I found myself browsing my old blog posts, when I got assaulted by this scene, as straight out of a horror movie.
 
-
-    </blockquote>
-  </section>
-</article>
-<article class="post-item">
-  <header class="post-header">
-    <h3 class="post-link">
-      <a href="/2020/10/03/linear-algebra-in-a-new-language/" >
-        Linear algebra in a new language
-      </a>
-    </h3>
-    <div class="post-meta">Saturday, 2020-10-03 in
-    <a href="/category/devlog/"
-       title="Development Logs">devlog</a>
-   about
-    <a href="/tag/algebra/" title="applications of linear algebra">
-      #algebra</a>,
-  
-    <a href="/tag/zig/" title="coding in Zig">
-      #zig</a>
-  
-    </div>
-  </header>
-  <section class="post-excerpt">
-    <blockquote>
-      For reasons unknown, I stumbled onto the [Zig] programming language, a new, still in development, low-level systems programming language; like C, but without all the bad things. So I guess quite different from C, but syntax is similarish. It uses LLVM as compiler backend, so it pretty much runs on everything less than 20 years old, and crosscompiles like that’s what you always do.
 
     </blockquote>
   </section>

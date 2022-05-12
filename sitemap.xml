@@ -401,7 +401,11 @@
 <lastmod>2022-05-11T20:52:00+00:00</lastmod>
 </url>
 <url>
-<loc>https://notfiles.xyz/category/</loc>
+<loc>https://notfiles.xyz/2022/05/12/rpi-400-bonus-benchmarks/</loc>
+<lastmod>2022-05-12T18:34:00+00:00</lastmod>
+</url>
+<url>
+<loc>https://notfiles.xyz/archive/</loc>
 </url>
 <url>
 <loc>https://notfiles.xyz/posts/</loc>
@@ -410,7 +414,7 @@
 <loc>https://notfiles.xyz/tag/</loc>
 </url>
 <url>
-<loc>https://notfiles.xyz/archive/</loc>
+<loc>https://notfiles.xyz/category/</loc>
 </url>
 <url>
 <loc>https://notfiles.xyz/</loc>
@@ -618,5 +622,8 @@
 </url>
 <url>
 <loc>https://notfiles.xyz/posts/page20/</loc>
+</url>
+<url>
+<loc>https://notfiles.xyz/posts/page21/</loc>
 </url>
 </urlset>
