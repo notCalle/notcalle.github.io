@@ -6,6 +6,7 @@ tags:
 - raytracing
 - ruby
 date: 2022-05-11 22:52 +0200
+category: discord
 ---
 While doing something else than I was planning to, I accedentally came back to
 the raytracer I once wrote in Ruby, and decided that the important thing just

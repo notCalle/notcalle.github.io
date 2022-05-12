@@ -7,6 +7,7 @@ tags:
 - raytracing
 - ruby
 date: 2022-05-12 20:34 +0200
+category: discord
 ---
 I didn't quite finish the bonus benchmarks, so for the sake of completeness,
 here we go. The missing ones for the _RasPi 400_.
