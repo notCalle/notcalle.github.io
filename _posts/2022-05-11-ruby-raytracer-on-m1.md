@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Ruby raytracer on M1
-follows: "/2019/01/13/threaded-rendering"
 tags:
 - raytracerchallenge
 - raytracing
