@@ -16,9 +16,9 @@ social:
   name: Calle Englund
   email: calle@notfiles.xyz
   links:
-    twitter.com: notCalle
-    github.com: notCalle
-    mastodon.social: notCalle
+    - https://github.com/notCalle
+    - https://mastodon.social/@notCalle
+    - https://twitter.com/@notCalle
 
 # Defaults
 defaults:

@@ -13,12 +13,12 @@
       <div class="footer-col footer-col-2">
         <ul class="social-media-list">
           {%- for link in site.social.links %}
-          {%- assign network=link[0] -%}
-          {%- assign username=link[1] -%}
+          {%- assign network = link | split: '/' | slice: 2 | join -%}
+          {%- assign username = link | split: '/' | slice: -1 | join -%}
           <li title="{{ site.data.social[network].title }}">
-            <i class="icon {{ site.data.social[network].font_awesome }}"></i>
-            <a rel="me" href="{{ site.data.social[network].base_url }}{{ username }}">
-              {{ username }}
+            <a rel="me" href="{{ link }}">
+              <i class="icon {{ site.data.social[network].font_awesome }}"></i>
+              {{ username }}{{ site.data.social[network].username_suffix }}
             </a>
           </li>
           {%- endfor %}

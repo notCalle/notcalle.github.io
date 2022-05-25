@@ -1,14 +1,12 @@
 mastodon.social:
-  base_url: https://mastodon.social/@
   font_awesome: fab fa-mastodon
   title: Mastodon
+  username_suffix: '@mastodon.social'
 
 github.com:
-  base_url: https://github.com/
   font_awesome: fab fa-github
   title: GitHub
 
 twitter.com:
-  base_url: https://twitter.com/@
   font_awesome: fab fa-twitter
   title: Twitter

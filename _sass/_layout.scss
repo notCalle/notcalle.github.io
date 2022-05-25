@@ -60,6 +60,8 @@
 .contact-list,
 .social-media-list {
     list-style: none;
+    white-space: nowrap;
+    overflow: hidden;
     margin: 0;
 }
 
