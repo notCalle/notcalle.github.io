@@ -2,12 +2,11 @@
 // Color Schemes
 //
 $brand-color:	#F15A29;
-$gray-color:	desaturate($brand-color, 85%);
 
 //
 // Hello darkness, my old friend
 //
-$dark-gray-color:			$gray-color;
+$dark-gray-color:			desaturate($brand-color, 75%);
 $dark-background-color:		darken($dark-gray-color, 45%);
 $dark-text-color:			lighten($dark-gray-color, 40%);
 
@@ -37,7 +36,7 @@ $dark-text-color:			lighten($dark-gray-color, 40%);
 //
 // My future's so bright, I gotta wear shades
 //
-$light-gray-color:			$gray-color;
+$light-gray-color:			desaturate($brand-color, 25%);
 $light-background-color:	lighten($light-gray-color, 40%);
 $light-text-color:			darken($light-gray-color, 45%);
 
