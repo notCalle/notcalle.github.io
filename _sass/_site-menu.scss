@@ -48,9 +48,10 @@
             display: block;
             float: right;
             width: 36px;
-            height: 26px;
-            line-height: 0;
-            padding-top: 10px;
+            height: 30px;
+            line-height: 0px;
+            padding-top: 6px;
+            font-size: 24px;
             text-align: center;
             cursor: pointer;
             -webkit-touch-callout: none;
@@ -59,15 +60,6 @@
             -moz-user-select: none;
             -ms-user-select: none;
             user-select: none;
-
-            > svg {
-                width: 18px;
-                height: 15px;
-
-                path {
-                    fill: var(--base-text-color);
-                }
-            }
         }
 
         .menu {
