@@ -20,6 +20,11 @@ social:
     - https://mastodon.social/@notCalle
     - https://twitter.com/@notCalle
 
+security:
+  contacts:
+    - mailto:security@notfiles.xyz
+  expires: 2038-01-19T03:14:07Z
+
 # Defaults
 defaults:
   - scope:

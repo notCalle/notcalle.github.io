@@ -1,0 +1,8 @@
+---
+permalink: .well-known/security.txt
+---
+Canonical: {{ site.url }}/.well-known/security.txt
+{% for contact in site.security.contacts -%}
+Contact: {{ contact }}
+{% endfor -%}
+Expires: {{ site.security.expires }}
