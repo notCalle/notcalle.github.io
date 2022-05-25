@@ -1,3 +1,8 @@
+mastodon.social:
+  base_url: https://mastodon.social/@
+  font_awesome: fab fa-mastodon
+  title: Mastodon
+
 github.com:
   base_url: https://github.com/
   font_awesome: fab fa-github
