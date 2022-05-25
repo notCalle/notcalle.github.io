@@ -19,6 +19,13 @@ $fixed-font-size:   $base-font-size * 0.875;
 
 $spacing-unit:     $base-font-size;
 
+// Font Awesome
+
+$fa-font-path: "../webfonts";
+@import "font-awesome/fontawesome.scss";
+@import "font-awesome/solid.scss";
+@import "font-awesome/brands.scss";
+
 // colors
 
 // Width of the content area
