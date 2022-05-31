@@ -4976,7 +4976,7 @@ readers do not read off random characters that represent icons */
 
 :root { --base-font-weight: 400; --code-font-weight: 400; --base-brand-color: #F15A29; --light-brand-color: #f47f59; --dark-brand-color: #d9400e; --accent-color: #F15A29; --base-gray-color: #9c867f; --light-gray-color: #ded7d5; --dark-gray-color: #493c38; --base-bg-color: #1e1917; --code-bg-color: #1e1917; --light-bg-color: #2c2422; --dark-bg-color: #0f0d0c; --base-text-color: #f5f2f1; --code-text-color: #f5f2f1; --fade-text-color: #bdaeaa; }
 
-@media screen and (prefers-color-scheme: light) { :root { --base-font-weight: 450; --code-font-weight: 400; --accent-color: #a9320b; --base-gray-color: #d56946; --light-gray-color: #f1cec2; --dark-gray-color: #692c18; --base-bg-color: #fbefeb; --code-bg-color: #1e1917; --light-bg-color: white; --dark-bg-color: #f6ded7; --base-text-color: #2b120a; --code-text-color: #f5f2f1; --fade-text-color: #923d22; } }
+@media screen and (prefers-color-scheme: light) { :root { --base-font-weight: 450; --code-font-weight: 400; --accent-color: #a9320b; --base-gray-color: #9c867f; --light-gray-color: #ded7d5; --dark-gray-color: #493c38; --base-bg-color: #f5f2f1; --code-bg-color: #1e1917; --light-bg-color: white; --dark-bg-color: #e9e5e3; --base-text-color: #1e1917; --code-text-color: #f5f2f1; --fade-text-color: #65544f; } }
 
 /** Reset some basic elements */
 body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, figure { margin: 0; padding: 0; }
