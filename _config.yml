@@ -73,9 +73,5 @@ jekyll-archives:
 jekyll_compose:
   auto_open: true
 
-script:
-  mathjax:
-    src: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js
-  mermaid:
-    init: mermaid.initialize({theme:"dark"})
-    src: https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js
+katex:
+  js_path: _lib/katex/0.15.6
