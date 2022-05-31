@@ -25,10 +25,17 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Calle Englund"},"dateModified":"2022-05-11T20:52:00+00:00","datePublished":"2022-05-11T20:52:00+00:00","description":"While doing something else than I was planning to, I accedentally came back to the raytracer I once wrote in Ruby, and decided that the important thing just now is to benchmark my MacBook Pro M1 against those old results. I guess this will actually be Ruby 3 on M1 vs Ruby 2 on i7, because time happened.","headline":"Ruby raytracer on M1","mainEntityOfPage":{"@type":"WebPage","@id":"https://notfiles.xyz/2022/05/11/ruby-raytracer-on-m1/"},"url":"https://notfiles.xyz/2022/05/11/ruby-raytracer-on-m1/"}</script>
 <!-- End Jekyll SEO tag -->
-<script id="mathjax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script id="mermaid-script" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script><script type="text/javascript">
-    mermaid.initialize({theme:"dark"})
-  </script>
-  </head>
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.css" integrity="sha384-ZPe7yZ91iWxYumsBEOn7ieg8q/o+qh/hQpSaPow8T6BwALcXSCS6C6fSRPIAnTQs" crossorigin="anonymous">
+
+  <!-- The loading of KaTeX is deferred to speed up page rendering -->
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.js" integrity="sha384-ljao5I1l+8KYFXG7LNEA7DyaFvuvSCmedUf6Y6JI7LJqiu8q5dEivP2nDdFH31V4" crossorigin="anonymous"></script>
+
+  <!-- To automatically render math in text elements, include the auto-render extension: -->
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"></script>
+</head>
 <body><header class="site-header">
   <div class="wrapper">
     <a class="site-title" href="/">not://files v3.0</a><nav class="site-nav" id="site-navigation" aria-label="Menu">
@@ -253,7 +260,7 @@ so let’s see how it does in the lower end of teapot image quality.</p>
 
 <h6 id="raspberry-pi-400-oc-22ghz-single-threaded">Raspberry Pi 400 OC 2.2GHz (single threaded)</h6>
 
-<p>Single threaded performance still tracks at about the same ratio of \(1/9\) <em>M1</em>.</p>
+<p>Single threaded performance still tracks at about the same ratio of <em>1/9 M1</em>.</p>
 
 <div class="language-pry highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">[1] pry(#&lt;GlisteningRuby::DSL::Scene&gt;</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">render</span> <span class="n">verbose</span><span class="ss">:true</span>
 <span class="go"> Setup time: 1.375927773 s
@@ -273,16 +280,16 @@ Render time: 292.012566677 s
 </span></code></pre></div></div>
 
 <p>The huge falloff in performance for those last 4 threads shows pretty clearly
-here. The <em>RasPi 400</em> performance/thread scales pretty well at \(3/4\), given
-the huge overhead of the threaded renderer, but the <em>M1</em> only did \(4/8\), and
-the <em>i7</em> was even worse with \(3/8\).</p>
+here. The <em>RasPi 400</em> performance/thread scales pretty well at <em>3/4</em>, given
+the huge overhead of the threaded renderer, but the <em>M1</em> only did <em>4/8</em>, and
+the <em>i7</em> was even worse with <em>3/8</em>.</p>
 
-<p>Still, \(4 *\) <em>M1</em> is more than \(3 *\) <em>RasPi 400</em>, so the total
+<p>Still, <em>4x M1</em> is more than <em>3x RasPi 400</em>, so the total
 performance ratio when using every single bit of crunch there is, is less
-than \(1/10\) <em>M1</em>.</p>
+than <em>1/10 M1</em>.</p>
 
 <p>More interesting is that the <em>RasPi 400</em> did the soft-shadows render at only
-\(19 *\) the time for hard-shadows, but the <em>M1</em> took more than \(21 *\) the
+<em>19x the time for hard-shadows, but the _M1</em> took more than <em>21x</em> the
 time. The passive thermal design of the <em>RasPi 400</em> continues to amaze me,
 especially given the long history of overheated pies.</p>
 

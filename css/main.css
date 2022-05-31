@@ -5048,6 +5048,11 @@ pre > code { border: 0; padding-right: 0; padding-left: 0; }
 
 .icon > svg path { fill: var(--base-gray-color); }
 
+/** KaTeX */
+.katex { font-size: 1.0em !important; }
+
+.katex-display .katex { font-size: 1.3em !important; }
+
 /** Site header */
 .site-header { background: var(--base-brand-color); min-height: 56px; padding: 0; position: relative; z-index: 1; }
 

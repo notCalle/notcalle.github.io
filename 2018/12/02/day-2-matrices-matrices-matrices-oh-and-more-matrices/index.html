@@ -25,10 +25,17 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Calle Englund"},"dateModified":"2018-12-02T22:45:24+00:00","datePublished":"2018-12-02T22:45:24+00:00","description":"Today was spent on a heavy chunk of linear algebra, matrices. This is the foundation for everything else, so time well spent reimplementing what’s already in the stdlib, just to refresh my math skills. If there are still days left of Devember when I’m finished, I’ll come back and replace all this with the stdlib implementation instead, hoping I’m somewhat close to the same API.","headline":"Day 2, Matrices, matrices, matrices. Oh, and more matrices","mainEntityOfPage":{"@type":"WebPage","@id":"https://notfiles.xyz/2018/12/02/day-2-matrices-matrices-matrices-oh-and-more-matrices/"},"url":"https://notfiles.xyz/2018/12/02/day-2-matrices-matrices-matrices-oh-and-more-matrices/"}</script>
 <!-- End Jekyll SEO tag -->
-<script id="mathjax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script id="mermaid-script" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script><script type="text/javascript">
-    mermaid.initialize({theme:"dark"})
-  </script>
-  </head>
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.css" integrity="sha384-ZPe7yZ91iWxYumsBEOn7ieg8q/o+qh/hQpSaPow8T6BwALcXSCS6C6fSRPIAnTQs" crossorigin="anonymous">
+
+  <!-- The loading of KaTeX is deferred to speed up page rendering -->
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.js" integrity="sha384-ljao5I1l+8KYFXG7LNEA7DyaFvuvSCmedUf6Y6JI7LJqiu8q5dEivP2nDdFH31V4" crossorigin="anonymous"></script>
+
+  <!-- To automatically render math in text elements, include the auto-render extension: -->
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"></script>
+</head>
 <body><header class="site-header">
   <div class="wrapper">
     <a class="site-title" href="/">not://files v3.0</a><nav class="site-nav" id="site-navigation" aria-label="Menu">
