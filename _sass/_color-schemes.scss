@@ -36,7 +36,7 @@ $dark-text-color:			lighten($dark-gray-color, 40%);
 //
 // My future's so bright, I gotta wear shades
 //
-$light-gray-color:			desaturate($brand-color, 25%);
+$light-gray-color:			desaturate($brand-color, 75%);
 $light-background-color:	lighten($light-gray-color, 40%);
 $light-text-color:			darken($light-gray-color, 45%);
 
