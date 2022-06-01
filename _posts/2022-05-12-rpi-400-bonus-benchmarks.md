@@ -50,6 +50,6 @@ performance ratio when using every single bit of crunch there is, is less
 than _1/10 M1_.
 
 More interesting is that the _RasPi 400_ did the soft-shadows render at only
-_19x the time for hard-shadows, but the _M1_ took more than _21x_ the
+_19x_ the time for hard-shadows, but the _M1_ took more than _21x_ the
 time. The passive thermal design of the _RasPi 400_ continues to amaze me,
 especially given the long history of overheated pies.
