@@ -4,7 +4,4 @@ permalink: robots.txt
 ---
 Sitemap: {{ site.url }}/sitemap.xml
 User-Agent: *
-{%- assign pages_noindex = site.pages | where: 'sitemap', false -%}
-{% for page in pages_noindex %}
-Disallow: {{ page.url }}
-{%- endfor %}
+Allow: /
