@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#F15A29">
-
+  <meta name="robots" content="noindex">
   <link rel="stylesheet" href="/css/main.css">
   <link rel="alternate" type="application/rss+xml" title="not://files v3.0" href="https://notfiles.xyz/feed.xml">
   <!-- Begin Jekyll SEO tag v2.8.0 -->
