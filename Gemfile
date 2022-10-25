@@ -22,4 +22,5 @@ end
 group :development do
   gem 'jekyll-compose'
   gem 'webrick'
+  gem 'html-proofer'
 end

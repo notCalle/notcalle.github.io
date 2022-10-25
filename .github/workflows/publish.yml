@@ -44,6 +44,10 @@ jobs:
           git -C _site commit -m 'jekyll build'
           echo ::endgroup::
 
+      - name: Verify site links
+        run: |
+          bundle exec htmlproofer _site --only-4xx
+
       # Only redeploy from `main`, and only if something changed, other than
       # timestamp churn in feeds.
       - name: Deploy to pages
