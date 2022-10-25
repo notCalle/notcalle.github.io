@@ -18,11 +18,11 @@
 <meta property="og:url" content="https://notfiles.xyz/license.md" />
 <meta property="og:site_name" content="not://files v3.0" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2015-11-30T21:33:37+00:00" />
+<meta property="article:published_time" content="2015-11-30T22:33:37+01:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="License" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Calle Englund"},"dateModified":"2015-11-30T21:33:37+00:00","datePublished":"2015-11-30T21:33:37+00:00","description":"Random development ramblings, maybe.","headline":"License","mainEntityOfPage":{"@type":"WebPage","@id":"https://notfiles.xyz/license.md"},"url":"https://notfiles.xyz/license.md"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Calle Englund"},"dateModified":"2015-11-30T22:33:37+01:00","datePublished":"2015-11-30T22:33:37+01:00","description":"Random development ramblings, maybe.","headline":"License","mainEntityOfPage":{"@type":"WebPage","@id":"https://notfiles.xyz/license.md"},"url":"https://notfiles.xyz/license.md"}</script>
 <!-- End Jekyll SEO tag -->
 
 

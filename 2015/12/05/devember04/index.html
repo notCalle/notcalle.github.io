@@ -7,22 +7,22 @@
   <link rel="stylesheet" href="/css/main.css">
   <link rel="alternate" type="application/rss+xml" title="not://files v3.0" href="https://notfiles.xyz/feed.xml">
   <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>devember 9th — smooth autocentering camera | not://files v3.0</title>
+<title>devember 4th | not://files v3.0</title>
 <meta name="generator" content="Jekyll v4.2.2" />
-<meta property="og:title" content="devember 9th — smooth autocentering camera" />
+<meta property="og:title" content="devember 4th" />
 <meta name="author" content="Calle Englund" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Camera smoothly centers on player position." />
-<meta property="og:description" content="Camera smoothly centers on player position." />
-<link rel="canonical" href="https://notfiles.xyz/2015/12/09/devember09/" />
-<meta property="og:url" content="https://notfiles.xyz/2015/12/09/devember09/" />
+<meta name="description" content="Support for layered sprites on base tiles, for dynamic objects being displayed on top of floor tiles. Click to teleport player sprite to a tile." />
+<meta property="og:description" content="Support for layered sprites on base tiles, for dynamic objects being displayed on top of floor tiles. Click to teleport player sprite to a tile." />
+<link rel="canonical" href="https://notfiles.xyz/2015/12/05/devember04/" />
+<meta property="og:url" content="https://notfiles.xyz/2015/12/05/devember04/" />
 <meta property="og:site_name" content="not://files v3.0" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2015-12-09T23:02:06+00:00" />
+<meta property="article:published_time" content="2015-12-05T00:00:59+01:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="devember 9th — smooth autocentering camera" />
+<meta property="twitter:title" content="devember 4th" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Calle Englund"},"dateModified":"2015-12-09T23:02:06+00:00","datePublished":"2015-12-09T23:02:06+00:00","description":"Camera smoothly centers on player position.","headline":"devember 9th — smooth autocentering camera","mainEntityOfPage":{"@type":"WebPage","@id":"https://notfiles.xyz/2015/12/09/devember09/"},"url":"https://notfiles.xyz/2015/12/09/devember09/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Calle Englund"},"dateModified":"2015-12-05T00:00:59+01:00","datePublished":"2015-12-05T00:00:59+01:00","description":"Support for layered sprites on base tiles, for dynamic objects being displayed on top of floor tiles. Click to teleport player sprite to a tile.","headline":"devember 4th","mainEntityOfPage":{"@type":"WebPage","@id":"https://notfiles.xyz/2015/12/05/devember04/"},"url":"https://notfiles.xyz/2015/12/05/devember04/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -66,8 +66,8 @@
       <div class="wrapper">
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">devember 9th — smooth autocentering camera</h1>
-    <div class="post-meta"><time datetime="2015-12-09T23:02:06+00:00" itemprop="datePublished">Wednesday, 2015-12-09</time>
+    <h1 class="post-title" itemprop="name headline">devember 4th</h1>
+    <div class="post-meta"><time datetime="2015-12-05T00:00:59+01:00" itemprop="datePublished">Saturday, 2015-12-05</time>
        in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
@@ -95,20 +95,20 @@
   </div></header>
 
   <section class="post-content" itemprop="articleBody">
-    <p>Camera smoothly centers on player position.</p>
+    <p>Support for layered sprites on base tiles, for dynamic objects being displayed on top of floor tiles. Click to teleport player sprite to a tile.</p>
 
-<p>Trying to create autofiltering for bordertiles between two kinds, e.g. banks between water and grass tiles, but messed up the logic somewhere, causing a huge mess. Also for way more than one hour, causing past midnight.</p>
+<p>Coding while drunk is hard.</p>
 
   </section>
 </article>
 <section class="post-list"><h2>Next related</h2><article class="post-item">
   <header class="post-header">
     <h3 class="post-link">
-      <a href="/2015/12/10/devember10/" >
-        devember 10th — pretty randomness is hard
+      <a href="/2015/12/05/devember05/" >
+        devember 5th
       </a>
     </h3>
-    <div class="post-meta">Thursday, 2015-12-10 in
+    <div class="post-meta">Saturday, 2015-12-05 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
    about
@@ -131,16 +131,14 @@
       #spritekit</a>,
   
     <a href="/tag/isometric/" title="viewing a world in isometric perspective">
-      #isometric</a>,
-  
-    <a href="/tag/pathfinding/" title="finding paths through graphs">
-      #pathfinding</a>
+      #isometric</a>
   
     </div>
   </header>
   <section class="post-excerpt">
     <blockquote>
-      Making randomness look pretty is hard, so I’ll put that on the shelf for now. Started looking at GameKit’s Graph pathfinding classes instead, which is probably more essential than getting sidetracked by making things look pretty. Defining the GridGraph at the IsoTileMap level will probably not work though, as different Actors will have their own unique capabilities to traverse the map. The Actor should probably generate their own GridGraph for their observable vicinity when they need it, and filter the graph with their traversal capabilities.
+      Coding on the train today. WASD movement and simple dynamic lighting.
+For some reason lighting broke when making more sane spritenode tree structure.
 
     </blockquote>
   </section>
@@ -148,55 +146,11 @@
 <h2>Previous related</h2><article class="post-item">
   <header class="post-header">
     <h3 class="post-link">
-      <a href="/2015/12/08/devember08/" >
-        devember 8th — randomized maps
+      <a href="/2015/12/03/devember03/" >
+        devember 3rd
       </a>
     </h3>
-    <div class="post-meta">Tuesday, 2015-12-08 in
-    <a href="/category/devlog/"
-       title="Development Logs">devlog</a>
-   about
-    <a href="/tag/gamedev/" title="(video) game development">
-      #gamedev</a>,
-  
-    <a href="/tag/devember/" title="participation in Devember">
-      #devember</a>,
-  
-    <a href="/tag/devember2015/" title="Devember 2015 game project">
-      #devember2015</a>,
-  
-    <a href="/tag/hourofcode/" title="coding for one hour per day">
-      #hourofcode</a>,
-  
-    <a href="/tag/objc/" title="coding in Objective C">
-      #objc</a>,
-  
-    <a href="/tag/spritekit/" title="making games with SpriteKit">
-      #spritekit</a>,
-  
-    <a href="/tag/isometric/" title="viewing a world in isometric perspective">
-      #isometric</a>,
-  
-    <a href="/tag/opengameart/" title="using open game art assets">
-      #opengameart</a>
-  
-    </div>
-  </header>
-  <section class="post-excerpt">
-    <blockquote>
-      Refactored lots of tile related stuff, so the tile templates can hold more information than just a texture image name, e.g. the stepHeight for a tile, so we can have tiles that are not perfectly flat, but still be walkable and have actors positioned correctly.
-
-    </blockquote>
-  </section>
-</article>
-<article class="post-item">
-  <header class="post-header">
-    <h3 class="post-link">
-      <a href="/2015/12/07/devember07/" >
-        devember 7th — actors walk on top of map tiles
-      </a>
-    </h3>
-    <div class="post-meta">Monday, 2015-12-07 in
+    <div class="post-meta">Thursday, 2015-12-03 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
    about
@@ -225,7 +179,7 @@
   </header>
   <section class="post-excerpt">
     <blockquote>
-      Refactored movement from Player* to new superclass ActorSpriteNode.
+      Isometric coordinate transforms between tile grid positions and screen space sorted out. We can now display a z-sorted grid of floor tiles on screen, and pick tiles in the grid via screen coordinates.
 
     </blockquote>
   </section>
@@ -233,11 +187,11 @@
 <article class="post-item">
   <header class="post-header">
     <h3 class="post-link">
-      <a href="/2015/12/06/devember06/" >
-        devember 6th
+      <a href="/2015/12/02/devember02/" >
+        devember 2nd
       </a>
     </h3>
-    <div class="post-meta">Sunday, 2015-12-06 in
+    <div class="post-meta">Wednesday, 2015-12-02 in
     <a href="/category/devlog/"
        title="Development Logs">devlog</a>
    about
@@ -266,7 +220,51 @@
   </header>
   <section class="post-excerpt">
     <blockquote>
-      Lighting broke yesterday because initialization code was moved into the wrong place. Sigh. Now we have working scene lighting again.
+      Restructured most code from yesterday. Primitive tilemap setup.
+
+    </blockquote>
+  </section>
+</article>
+<article class="post-item">
+  <header class="post-header">
+    <h3 class="post-link">
+      <a href="/2015/12/01/devember01/" >
+        devember 1st
+      </a>
+    </h3>
+    <div class="post-meta">Tuesday, 2015-12-01 in
+    <a href="/category/devlog/"
+       title="Development Logs">devlog</a>
+   about
+    <a href="/tag/gamedev/" title="(video) game development">
+      #gamedev</a>,
+  
+    <a href="/tag/devember/" title="participation in Devember">
+      #devember</a>,
+  
+    <a href="/tag/devember2015/" title="Devember 2015 game project">
+      #devember2015</a>,
+  
+    <a href="/tag/hourofcode/" title="coding for one hour per day">
+      #hourofcode</a>,
+  
+    <a href="/tag/objc/" title="coding in Objective C">
+      #objc</a>,
+  
+    <a href="/tag/spritekit/" title="making games with SpriteKit">
+      #spritekit</a>,
+  
+    <a href="/tag/roguelike/" title="vaguely resemling Rogue">
+      #roguelike</a>,
+  
+    <a href="/tag/isometric/" title="viewing a world in isometric perspective">
+      #isometric</a>
+  
+    </div>
+  </header>
+  <section class="post-excerpt">
+    <blockquote>
+      This will be an isometric roguelike game, so first thing out should be looking for existing IsoTileMap toolkits; but hey — this is an Hour of Code, so why not start from scratch. Almost: I’ll build on SpriteKit (and GameplayKit when we get that far).
 
     </blockquote>
   </section>
