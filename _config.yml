@@ -51,6 +51,8 @@ paginate_path: "/posts/page:num"
 gist:
   noscript: false
 
+timezone: Europe/Stockholm
+
 # Plugins
 
 # Feed settings
