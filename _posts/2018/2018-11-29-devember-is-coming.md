@@ -16,4 +16,4 @@ I, _Calle Englund_, will participate to the next [Devember][]. My Devember will 
 "The Raytracer Challenge", is a book about building a raytracer, from scratch, using a fully test driven methodology. The book describes each step in Cucumber features, and the reader conjures test code that verifies each feature, and code that satisfies the tests.
 
 [Devember]: https://devember.org
-[The Raytracer Challenge]: http://raytracerchallenge.com
+[The Raytracer Challenge]: https://raytracerchallenge.com

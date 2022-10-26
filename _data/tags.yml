@@ -51,7 +51,7 @@ isometric:
 jekyll:
   title: static web site generation
   description:
-    using the static web site generator <a href="http://jekyllrb.com">Jekyll</a>.
+    using the static web site generator <a href="https://jekyllrb.com">Jekyll</a>.
 
 objc:
   title: coding in Objective C
@@ -59,7 +59,7 @@ objc:
 opengameart:
   title: using open game art assets
   description:
-    using assets from <a href="http://opengameart.org">OpenGameArt.Org</a>.
+    using assets from <a href="https://opengameart.org">OpenGameArt.Org</a>.
 
 pathfinding:
   title: finding paths through graphs
