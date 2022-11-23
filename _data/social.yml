@@ -3,6 +3,11 @@ mastodon.social:
   title: Mastodon
   username_suffix: '@mastodon.social'
 
+mstdn.social:
+  font_awesome: fab fa-mastodon
+  title: Mastodon
+  username_suffix: '@mstdn.social'
+
 github.com:
   font_awesome: fab fa-github
   title: GitHub
