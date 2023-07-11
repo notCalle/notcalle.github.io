@@ -44,11 +44,19 @@ jobs:
           git -C _site commit -m 'jekyll build'
           echo ::endgroup::
 
+      - name: Cache HTMLProofer
+        id: cache-htmlproofer
+        uses: actions/cache@v2
+        with:
+          path: tmp/.htmlproofer
+          key: ${{ runner.os }}-htmlproofer
+
       - name: Verify site links
         run: |
           bundle exec htmlproofer \
             --only-4xx \
             --swap-urls "https\\://$(cat CNAME)/:/" \
+            --cache '{"timeframe":{"external":"1w"}}' \
             _site
 
       # Only redeploy from `main`, and only if something changed, other than
