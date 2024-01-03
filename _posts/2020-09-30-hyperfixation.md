@@ -32,7 +32,7 @@ Hi, I'm Calle, I have ADHD.
 
 `git push`
 
-[Inktober]: https://twitter.com/inktober
+[Inktober]: https://inktober.com
 [ADHD Awareness Month]: https://duckduckgo.com/?q=adhd+awareness+month+color&t=h_&ia=web
 [^1]: authoritatively picked from some random site with awareness ribbons that I found and lost again
 [^2]: not sorry
