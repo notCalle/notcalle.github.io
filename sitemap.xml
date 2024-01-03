@@ -405,10 +405,14 @@
 <lastmod>2022-05-12T20:34:00+02:00</lastmod>
 </url>
 <url>
-<loc>https://notfiles.xyz/tag/</loc>
+<loc>https://notfiles.xyz/2024/01/02/ruby-raytracer-on-mac-studio-m2/</loc>
+<lastmod>2024-01-02T22:48:00+01:00</lastmod>
 </url>
 <url>
 <loc>https://notfiles.xyz/category/</loc>
+</url>
+<url>
+<loc>https://notfiles.xyz/tag/</loc>
 </url>
 <url>
 <loc>https://notfiles.xyz/archive/</loc>
@@ -565,5 +569,11 @@
 </url>
 <url>
 <loc>https://notfiles.xyz/2022/05/</loc>
+</url>
+<url>
+<loc>https://notfiles.xyz/2024/</loc>
+</url>
+<url>
+<loc>https://notfiles.xyz/2024/01/</loc>
 </url>
 </urlset>

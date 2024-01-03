@@ -294,6 +294,100 @@ especially given the long history of overheated pies.</p>
 
   </section>
 </article>
+<article class="post-item" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <h3 class="post-link" itemprop="name headline">
+      <a href="/2024/01/02/ruby-raytracer-on-mac-studio-m2/">
+        Ruby Raytracer on M2 Max
+      </a>
+    </h3>
+    <span class="post-meta"><time datetime="2022-05-11T22:52:00+02:00" itemprop="datePublished">Tuesday, 2024-01-02</time>
+      
+    </span>
+  </header>
+
+  <section class="post-content" itemprop="articleBody">
+    <p>A few years — and iterations of the <em>Apple M-series</em> — has passed, and I recently found myself in possession of a <em>Mac Studio M2</em>, in its base configuration of <em>8P + 4E</em> CPU cores, and even more ridiculous<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup> amounts of cache.</p>
+
+<p>But the burning question is, does it deliver on the promise of up to 18% CPU speed improvement?</p>
+
+<h3 id="hard-shadows">Hard shadows</h3>
+
+<p>The base-line benchmark, as before, is the single-threaded render without any fancy rendering techniques active</p>
+
+<h6 id="mac-studio-m2-2023">Mac Studio M2 (2023)</h6>
+
+<div class="language-pry highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">[1] pry(#&lt;GlisteningRuby::DSL::Scene&gt;</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">render</span> <span class="n">verbose</span><span class="ss">:true</span>
+<span class="go"> Setup time: 0.178938 s
+Render time: 104.306864 s
+ Total time: 104.485802 s
+</span></code></pre></div></div>
+
+<p>That’s a 17% improvement in single-core performance over the M1, so right on the spot.</p>
+
+<h6 id="macbook-pro-m1-2021">MacBook Pro M1 (2021)</h6>
+
+<div class="language-pry highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">[1] pry(#&lt;GlisteningRuby::DSL::Scene&gt;</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">render</span> <span class="n">verbose</span><span class="ss">:true</span>
+<span class="go"> Setup time: 0.240659 s
+Render time: 122.153057 s
+ Total time: 122.393716 s
+</span></code></pre></div></div>
+
+<p>Then we get into the unfair territory, because the M1 did the multi-threaded benchmark using all its P-, and E-cores, where the M2 Max can let its P-cores do all the work.</p>
+
+<h6 id="mac-studio-m2-2023-1">Mac Studio M2 (2023)</h6>
+
+<div class="language-pry highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">[1] pry(#&lt;GlisteningRuby::DSL::Scene&gt;</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">render</span> <span class="n">verbose</span><span class="ss">:true</span><span class="p">,</span> <span class="n">threads</span><span class="p">:</span><span class="mi">8</span>
+<span class="go"> Setup time: 0.173121 s
+Render time: 15.689671 s
+ Total time: 15.862792 s
+</span></code></pre></div></div>
+
+<p><strong>BOOM</strong> even lightning faster — over six and a half times as fast multi-threaded, and almost twice (1.79x) as fast as the M1 was.</p>
+
+<h6 id="macbook-pro-m1-2021-1">MacBook Pro M1 (2021)</h6>
+
+<div class="language-pry highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">[2] pry(#&lt;GlisteningRuby::DSL::Scene&gt;</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">render</span> <span class="n">verbose</span><span class="ss">:true</span><span class="p">,</span> <span class="n">threads</span><span class="p">:</span><span class="mi">8</span>
+<span class="go"> Setup time: 0.266847 s
+Render time: 28.061283 s
+ Total time: 28.32813 s
+</span></code></pre></div></div>
+
+<h3 id="going-all-in--soft-shadows-and-anti-aliasing">Going All In — Soft Shadows and Anti-Aliasing</h3>
+
+<p>This time, we’re throwing everything we have, letting the tiny E-cores do what they can to help along.</p>
+
+<h6 id="mac-studio-m2-2023-2">Mac Studio M2 (2023)</h6>
+
+<div class="language-pry highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">[1] pry(#&lt;GlisteningRuby::DSL::Scene&gt;</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">render</span> <span class="n">verbose</span><span class="ss">:true</span><span class="p">,</span> <span class="n">threads</span><span class="p">:</span><span class="mi">12</span><span class="p">,</span> <span class="n">ssaa</span><span class="p">:</span><span class="mi">3</span>
+<span class="go"> Setup time: 0.17466 s
+Render time: 304.752032 s
+ Total time: 304.926692 s
+</span></code></pre></div></div>
+
+<p>Just shy of twice (1.97x) the crunch of an M1, in the extremely unfair final round.</p>
+
+<h6 id="macbook-pro-m1-2021-2">MacBook Pro M1 (2021)</h6>
+
+<div class="language-pry highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">[1] pry(#&lt;GlisteningRuby::DSL::Scene&gt;</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">render</span> <span class="n">verbose</span><span class="ss">:true</span><span class="p">,</span> <span class="n">threads</span><span class="p">:</span><span class="mi">8</span><span class="p">,</span> <span class="n">ssaa</span><span class="p">:</span><span class="mi">3</span>
+<span class="go"> Setup time: 0.23379 s
+Render time: 601.335931 s
+ Total time: 601.569721 s
+</span></code></pre></div></div>
+
+<p>Still, this is an extremely inefficient raytracer, and nothing we can throw at it will make renders reasonable. All the benchmarks yield a 320x256 image, which of course is the standard Amiga PAL low-res, and would take days to run with an optimized raytracer on an actual Amiga.</p>
+
+<p>Which raises the next question, is it more efficient to emulate an Amiga, running an optimized raytracer, than this nonsense one I made in Ruby?</p>
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p>This monster has 87 MiB L1+L2+L3 cache in total. <em>It can fit my entire first hard-drive (52 MB) in CPU cache.</em> <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+  </section>
+</article>
 <h2>Previous related</h2><article class="post-item">
   <header class="post-header">
     <h3 class="post-link">
