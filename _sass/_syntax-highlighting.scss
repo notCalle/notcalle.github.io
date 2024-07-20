@@ -12,13 +12,13 @@
 }
 .highlight pre {
     border: 1px solid var(--dark-bg-color);
-    border-radius: $spacing-unit/2;
+    border-radius: calc($spacing-unit / 2);
     box-shadow: 1px 1px $spacing-unit var(--dark-bg-color);
 
     @include media-query($on-palm) {
         padding: none;
-        margin-left: -$spacing-unit/2;
-        margin-right: -$spacing-unit/2;
+        margin-left: calc($spacing-unit / -2);
+        margin-right: calc($spacing-unit / -2);
         border-left: none;
         border-right: none;
         border-radius: 0;
