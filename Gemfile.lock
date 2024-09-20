@@ -33,7 +33,7 @@ GEM
     fiber-annotation (0.2.0)
     fiber-local (1.0.0)
     forwardable-extended (2.6.0)
-    google-protobuf (4.27.2)
+    google-protobuf (4.27.5)
       bigdecimal
       rake (>= 13)
     hashery (2.1.2)
