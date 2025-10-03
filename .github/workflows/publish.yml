@@ -1,9 +1,11 @@
 %YAML 1.1
 ---
-name: Deploy not://files v3.0
+name: Publish not://files v3.0
 
-on:
+'on':
   push:
+    branches:
+      - main
 
 jobs:
   deploy:

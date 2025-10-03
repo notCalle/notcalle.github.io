@@ -1,0 +1,44 @@
+%YAML 1.1
+---
+name: Validate not://files v3.0
+
+'on':
+  push:
+    branches-ignore:
+      - main
+      - dependabot/**
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.3
+          bundler-cache: true
+
+      - name: Build site
+        run: |
+          bundle exec jekyll build
+
+      - name: Cache HTMLProofer
+        id: cache-htmlproofer
+        uses: actions/cache@v4
+        with:
+          path: tmp/.htmlproofer
+          key: ${{ runner.os }}-htmlproofer
+
+      - name: Verify site links
+        run: |
+          bundle exec htmlproofer \
+            --only-4xx \
+            --ignore-status-codes 402,403,408 \
+            --swap-urls "https\\://$(cat CNAME)/:/" \
+            --cache '{"timeframe":{"external":"1w"}}' \
+            _site
+...
