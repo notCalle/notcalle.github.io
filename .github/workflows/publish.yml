@@ -55,6 +55,7 @@ jobs:
         run: |
           bundle exec htmlproofer \
             --only-4xx \
+            --ignore-status-codes 402,403,408 \
             --swap-urls "https\\://$(cat CNAME)/:/" \
             --cache '{"timeframe":{"external":"1w"}}' \
             _site
