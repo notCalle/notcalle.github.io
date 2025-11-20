@@ -1,8 +1,26 @@
 ---
 permalink: .well-known/security.txt
 ---
-Canonical: {{ site.url }}/.well-known/security.txt
-{% for contact in site.security.contacts -%}
-Contact: {{ contact }}
-{% endfor -%}
-Expires: {{ site.security.expires }}
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+Canonical: https://notfiles.xyz/.well-known/security.txt
+Contact: mailto:security@notfiles.xyz
+Encryption: https://notfiles.xyz/pgp.txt
+Expires: 2038-01-19T03:14:07Z
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCAAdFiEEUkfRnF0Lrnz+kdO7c7l5ZHROjcAFAmke/NgACgkQc7l5ZHRO
+jcCOYQ//RP1988yGQLqDwIGVW9FxRP+On4dUEDarZAG2YyHQqFgIonArjan1YYZ7
+6WagV/AEGCFva847qo6m0B5/aDUWf/hBeqH8mf5A7OIqsnIIyStsb/D9A4O8c1Be
+GK+P8kpUuScUYE2klEJHH7YRkd9gDL8eKdsy1gdRSbgjCRnKxltK1q4VJf/LGLz0
+Yu4rRofgrMjeTwfnVjlrneAJkd2gunePrS1oeanQmcr970BH8hogbkLDRejKAVR8
+gGvfBRVD2l7wRCXqAabcv6ZBYTNOxg73En8Jpr0N0b5NItkRA+w7R/3DIxh5by3K
+HMa/k5+uV7Q34y8TUnS6NXgSsfk24yXcMrz9Mr/DRa5WkEEEqGaO7W5eVdULgXZ8
+UWpjAbmskVHvZSSDQCBBc754jGZy+zP6p38K7Nm4uPL/rq8LeVTuHQy4RZwEz8ju
+jxcm1uC/CL9fN3Ss3ckdr6bOkkzNkVIBtSmaHuVlFYFuXVi8RbhUfFQLbhHlhOGO
+klVY4lDP+su+1dNQOWaO8X/jsbp10DQ+9e7RxdXNF9ImpSYneCMIhdLq4mlj4b2s
+3Sp6N0Uf8u1OV+ik9SvNLtXn2XXOfVzEVLD6HAnL8Eu1o8Qav8zUVstpTz0i5Opc
+T8JOO1VuY4ujtcwdK3O/YziW8ncqjSDlv+/vvMCVxs9afg+30ww=
+=BIhU
+-----END PGP SIGNATURE-----
